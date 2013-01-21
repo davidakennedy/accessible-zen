@@ -21,6 +21,7 @@
 						<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
 					</ul>
 				</aside>
+			<?php endif; // end first sidebar widget area ?>
 				
 			<?php if ( ! dynamic_sidebar( 'sidebar-2' ) ) : ?>
 
@@ -32,5 +33,5 @@
 						<?php wp_meta(); ?>
 					</ul>
 				</aside>
-			<?php endif; // end sidebar widget area ?>
+			<?php endif; // end second sidebar widget area ?>
 		</div><!-- #secondary .widget-area -->
