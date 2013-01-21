@@ -6,6 +6,7 @@
  * @since ZH 1.0
  */
 ?>
+	<?php if ( is_active_sidebar( 'sidebar-1' ) || is_active_sidebar( 'sidebar-2' ) ) : ?>
 		<div id="secondary" class="widget-area" role="complementary">
 			<?php do_action( 'before_sidebar' ); ?>
 			<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
@@ -20,6 +21,8 @@
 						<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
 					</ul>
 				</aside>
+				
+			<?php if ( ! dynamic_sidebar( 'sidebar-2' ) ) : ?>
 
 				<aside id="meta" class="widget">
 					<h1 class="widget-title"><?php _e( 'Meta', 'zh' ); ?></h1>
@@ -29,6 +32,5 @@
 						<?php wp_meta(); ?>
 					</ul>
 				</aside>
-
 			<?php endif; // end sidebar widget area ?>
 		</div><!-- #secondary .widget-area -->
