@@ -98,6 +98,11 @@ function zh_scripts() {
 	global $post;
 
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
+	
+	wp_enqueue_style(
+        'font_stylesheet', # replace with a name for your font stylesheet
+        'http://fonts.googleapis.com/css?family=Raleway' # replace with url to your font stylesheet
+    );
 
 	wp_enqueue_script( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), '20120206', true );
 
