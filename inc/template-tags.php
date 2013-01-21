@@ -27,8 +27,8 @@ function zh_content_nav( $nav_id ) {
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
-		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'zh' ) . '</span> %title' ); ?>
-		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'zh' ) . '</span>' ); ?>
+		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( 'Previous Post: ', 'Previous post link', 'zh' ) . '</span> %title' ); ?>
+		<?php next_post_link( '<div class="nav-next">%link</div>', '<span class="meta-nav">' . _x( 'Next Post: ', 'Next post link', 'zh' ) . '</span> %title' ); ?>
 
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
@@ -110,15 +110,54 @@ if ( ! function_exists( 'zh_posted_on' ) ) :
  * @since ZH 1.0
  */
 function zh_posted_on() {
-	printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'zh' ),
+	printf( __( 'Posted: <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>.<br />', 'zh' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
-		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-		esc_attr( sprintf( __( 'View all posts by %s', 'zh' ), get_the_author() ) ),
-		esc_html( get_the_author() )
+		esc_html( get_the_date( 'm.d.Y' ) )
 	);
+}
+endif;
+
+if ( ! function_exists( 'zh_cats_and_tags' ) ) :
+/**
+ * Prints HTML with information for the categories and tags.
+ *
+ * @since ZH 1.0
+ */
+function zh_cats_and_tags() {
+
+			/* translators: used between list items, there is a space after the comma */
+			$category_list = get_the_category_list( __( ', ', 'zh' ) );
+
+			/* translators: used between list items, there is a space after the comma */
+			$tag_list = get_the_tag_list( '', ', ' );
+
+			if ( ! zh_categorized_blog() ) {
+				// This blog only has 1 category so we just need to worry about tags in the meta text
+				if ( '' != $tag_list ) {
+					$meta_text = __( 'Tagged: %2$s.<br /> Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.<br />', 'zh' );
+				} else {
+					$meta_text = __( 'Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.<br />', 'zh' );
+				}
+
+			} else {
+				// But this blog has loads of categories so we should probably display them here
+				if ( '' != $tag_list ) {
+					$meta_text = __( 'Posted in: %1$s.<br /> Tagged: %2$s.<br /> Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.<br />', 'zh' );
+				} else {
+					$meta_text = __( 'Posted in: %1$s.<br /> Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.<br />', 'zh' );
+				}
+
+			} // end check for categories on this blog
+
+			printf(
+				$meta_text,
+				$category_list,
+				$tag_list,
+				get_permalink(),
+				the_title_attribute( 'echo=0' )
+			);
 }
 endif;
 
