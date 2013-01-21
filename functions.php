@@ -83,10 +83,21 @@ function zh_widgets_init() {
 	register_sidebar( array(
 		'name' => __( 'Sidebar', 'zh' ),
 		'id' => 'sidebar-1',
+		'description'   => 'A widget area for the left side of the footer',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
-		'before_title' => '<h1 class="widget-title">',
-		'after_title' => '</h1>',
+		'before_title' => '<h4 class="widget-title">',
+		'after_title' => '</h4>',
+	) );
+	
+	register_sidebar( array(
+		'name' => __( 'Sidebar', 'zh' ),
+		'id' => 'sidebar-2',
+		'description'   => 'A widget area for the right side of the footer',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h4 class="widget-title">',
+		'after_title' => '</h4>',
 	) );
 }
 add_action( 'widgets_init', 'zh_widgets_init' );
