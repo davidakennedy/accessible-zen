@@ -64,6 +64,7 @@ function zh_setup() {
 	 */
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'zh' ),
+		'secondary' => __( 'Secondary Menu', 'zh' )
 	) );
 
 	/**
