@@ -49,13 +49,16 @@ function zh_setup() {
 	 */
 	add_theme_support( 'automatic-feed-links' );
 
+	/** This theme styles the visual editor with editor-style.css to match the theme style. */
+	add_editor_style();
+	
 	/**
 	 * Enable support for Post Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
 
 	/**
-	 * This theme uses wp_nav_menu() in one location.
+	 * This theme uses wp_nav_menu() in two locations.
 	 */
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'zh' ),
