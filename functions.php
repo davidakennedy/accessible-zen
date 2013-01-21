@@ -88,7 +88,7 @@ add_action( 'after_setup_theme', 'zh_setup' );
  */
 function zh_widgets_init() {
 	register_sidebar( array(
-		'name' => __( 'Sidebar', 'zh' ),
+		'name' => __( 'Footer Widget Area One', 'zh' ),
 		'id' => 'sidebar-1',
 		'description'   => 'A widget area for the left side of the footer',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -98,7 +98,7 @@ function zh_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-		'name' => __( 'Sidebar', 'zh' ),
+		'name' => __( 'Footer Widget Area Two', 'zh' ),
 		'id' => 'sidebar-2',
 		'description'   => 'A widget area for the right side of the footer',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',

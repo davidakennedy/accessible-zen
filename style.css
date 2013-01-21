@@ -92,6 +92,50 @@ a img {
 	border: 0;
 }
 
+/* =Structure
+----------------------------------------------- */
+#page {
+	margin: 1.5em auto 3em;
+	max-width: 48em;
+	width: 92%;
+}
+/* column grid */
+.g1,.g2 {
+	display: block;
+	position: relative;
+	margin: 0 1.613% 0;
+}
+/* 1 column grid */
+.g1,.g2 {
+	width: 96.774%;
+}
+
+/* Media Queries
+----------------------------------------------- */
+
+/* Min. width of 600 pixels */
+@media only screen and (min-width: 37.5em) {
+	/* COLUMN GRID */
+	.g1,.g2 {display: inline; float: left}
+	
+	/* 2 COLUMN GRID */
+	.g1 {width: 96.774%;}
+	.g2 {width: 46.774%;}
+	body {
+	}
+	img.site-banner {
+		margin: 0 1.613% 0;
+	}
+
+/* Min. width of 1024 pixels */	
+@media only screen and (min-width: 64em) { 
+		body {	
+	}
+	img.site-banner {
+		margin: 0 1.613% 0;
+	}
+}
+}
 
 /* =Global
 ----------------------------------------------- */
@@ -325,30 +369,163 @@ a:active {
 	color: midnightblue;
 }
 
+/* Others
+----------------------------------------------- */
+strong,
+b,
+dt {
+	font-weight: bold;
+}
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+var,
+address {
+	font-style: normal;
+}
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline; /* Position 'sub' and 'sup' without affecting line-height */
+}
+sup {
+	top: -0.5em; /* Move superscripted text up */
+}
+sub {
+	bottom: -0.25em; /* Move subscripted text down */
+}
+/* For image replacement */
+.ir {
+	display: block;
+	border: 0;
+	text-indent: -999em;
+	overflow: hidden;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	text-align: left;
+	direction: ltr;
+	*line-height: 0;
+}
+.ir br {
+	display: none;
+}
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+	display: none !important;
+	visibility: hidden;
+}
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+	visibility: hidden;
+}
+
+/*
+Use a class of .island whenever you want to box off an area of content as per: csswizardry.com/2011/10/the-island-object/
+Extend with classes like .promo to apply different colours etc to draw attention.
+*/
+.island {
+	padding: 1.5em;
+}
+	.island > :last-child {
+		margin-bottom: 0;
+	}
+/*
+Based on @stubbornellaâ€™s media object: stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+<a class="media promo">
+	<img src=product.jpg alt="" class=img>
+	<p class=body>Get Product for half price!</p>
+</a>
+*/
+.media {
+	display: block;
+}
+	.media .img {
+		float: left;
+		margin-right: 10px;
+	}
+	.media .body {
+		overflow: hidden;
+		margin-bottom: 0;
+	}
+/* Create an abstraction, as per: csswizardry.com/2011/09/the-nav-abstraction/ */
+.nav {
+	list-style: none none outside;
+	margin-left: 0;
+}
+.nav li {
+	display: inline;
+}
+.nav a {
+	display: inline;
+}
+.nolist {
+	list-style: none none outside;
+	margin:0;
+	padding:0;
+}
+
 /* Alignment */
 .alignleft {
 	display: inline;
 	float: left;
-	margin-right: 1.5em;
+	margin-bottom: 0.5em;
+	margin-right: 1em;
 }
 .alignright {
 	display: inline;
 	float: right;
-	margin-left: 1.5em;
+	margin-bottom: 0.5em;
+	margin-left: 1em;
 }
 .aligncenter {
 	clear: both;
 	display: block;
-	margin: 0 auto;
+	margin: 0 auto 1.5em;
 }
-
-/* Text meant only for screen readers */
-.assistive-text {
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
+/* Contain floats: h5bp.com/q */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
 }
-
+.cf:after {
+    clear: both;
+}
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+.clear {
+	clear: both;
+}
 
 /* =Menu
 ----------------------------------------------- */

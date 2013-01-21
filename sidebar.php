@@ -16,15 +16,15 @@
 	
 	// If we get this far, we have widgets. Let do this.
 	?>
-		<div id="secondary" class="widget-area" role="complementary">
+		<div id="secondary" class="widget-area cf" role="complementary">
 	        <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
-	        <div class="first footer-widgets">
+	        <div class="first footer-widgets g2 cf">
 	                <?php dynamic_sidebar( 'sidebar-1' ); ?>
 	        </div><!-- .first -->
 	        <?php endif; ?>
 	
 	        <?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
-	        <div class="second footer-widgets">
+	        <div class="second footer-widgets g2 cf">
 	                <?php dynamic_sidebar( 'sidebar-2' ); ?>
 	        </div><!-- .second -->
 	        <?php endif; ?>
