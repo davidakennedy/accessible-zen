@@ -139,36 +139,309 @@ a img {
 
 /* =Global
 ----------------------------------------------- */
-
+html {
+	font-size: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	-webkit-text-size-adjust: 100%
+	/* Force scrollbar in non-IE and Remove iOS text size adjust without disabling user zoom */
+}
 body,
 button,
 input,
 select,
 textarea {
-	color: #404040;
-	font-family: sans-serif;
-	font-size: 16px;
-	font-size: 1.6rem;
+	color: #333;
+	font: 500 100%/1.5 Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+	font-smoothing: antialiased;
+	*font-size: 1em; /* IE7 and older can't resize px based text */
 	line-height: 1.5;
+	margin: 0 auto;
+	min-height: 100%;
+	text-rendering: optimizeLegibility; 
+	-webkit-font-smoothing: antialiased; /* Improve default text rendering, handling of kerning pairs and ligatures */
 }
 
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
 	clear: both;
+  	font-family: 'Raleway', Tahoma, Arial, sans-serif;
+  	margin: 0;
+  	text-rendering: optimizelegibility;
+  	text-shadow:1px 1px 1px rgba(0,0,0,.10);
+}
+.site-content h1,
+.site-content h2,
+.site-content h3,
+.site-content h4,
+.site-content h5,
+.site-content h6 {
+	text-align: center;
 }
 hr {
-	background-color: #ccc;
+	border-top: 2px solid #000;
+	display: block;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
+	padding: 0;
+}
+/* Composed to a scale of 16px, 20px, 24px, 30px, 36px and 46px */
+h1, .h1 {
+	color: #999;
+	font-size: 2.875em; /* 46px */
+	line-height: 1em;
+	margin: 0 0 0.5em;
+}
+h2, .h2 {
+	color: #333;
+	font-size: 2.25em; /* 36px */
+	line-height: 1em;
+	margin: 0 0 0.5em;
+}
+h3, .h3 {
+	color: #666;
+	font-size: 1.875em; /* 30px */
+	line-height: 1em;
+	margin: 0 0 0.5em;
+} 
+h4, .h4 {
+	color: #000;
+	font-size: 1.5em; /* 24px */
+	line-height: 1em;
+	margin: 0 0 0.5em;
+}
+h5, .h5 {
+	color: #666;
+	font-size: 1.25em; /* 20px */
+	line-height: 1em;
+	margin: 0 0 0.5em;
+	text-transform: uppercase;
+}
+h6, .h6 {
+	color: #666;
+	font-size: 1em; /* 16px */
+	line-height: 1em;
+	margin: 0 0 0.5em;
+}
+p,
+ul,
+blockquote,
+pre,
+td,
+th,
+label {
+	font-size: 1em; /* 16px / 24px */
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+}
+small,
+p.small {
+	font-size: 0.875em; /* 14px */
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+}
+big,
+p.big {
+	font-size: 1.125em; /* 18px */
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
 }
 
-/* Text elements */
-p {
-	margin-bottom: 1.5em;
+/* Code */
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word; /* Allow line wrapping of 'pre' */
 }
-ul, ol {
+pre,
+code,
+kbd,
+samp {
+	background: #f4f4f4;
+	font-family: Menlo, Consolas, 'DejaVu Sans Mono', Monaco, monospace;
+	font-size: 1em;
+	line-height: 1.5em;
+	margin-bottom: 1.5em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 0.25em;
+}
+
+/* Tables */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+td {
+	vertical-align: top;
+}
+th {
+	font-weight: bold;
+	text-align: left;
+}
+tr, th, td {
+	border-bottom: 0 solid #000;
+	padding-right: 1.5em;
+}
+
+/* Forms */
+form {
+	margin: 0 0 1.5em 0;
+}
+form ul {
+  list-style-type: none;
+  margin: 0 0 1.5em 0;
+  padding: 0;
+}
+fieldset {
+	border: 0;
+	border-width: 0;
+	margin-bottom: 1.5em;
+	padding: 0;
+}
+textarea {
+	overflow: auto;
+	resize: vertical;
+	vertical-align: top;
+}
+legend {
+	border: 0;
+	color: #444;
+	display: block;
+	*margin-left: -.75em;
+	padding: 0;
+	width: 100%;
+	white-space: normal;
+}
+/* Indicate that 'label' will shift focus to the associated form element */
+label {
+	color: #333;
+	cursor: pointer;
+}
+button, input, select, textarea {
+	font-size: 100%;
+	margin: 0;
+	vertical-align: baseline;
+	*vertical-align: middle; /* IE7 and older */
+}
+button, input {
+	line-height: normal;
+	*overflow: visible;
+}
+button, input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid #ccc;
+	border-color: #ccc #ccc #bbb #ccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background: #e6e6e6;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 15px 17px rgba(255,255,255,0.5), inset 0 -5px 12px rgba(0,0,0,0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 15px 17px rgba(255,255,255,0.5), inset 0 -5px 12px rgba(0,0,0,0.05);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 15px 17px rgba(255,255,255,0.5), inset 0 -5px 12px rgba(0,0,0,0.05);
+	color: rgba(0,0,0,.8);
+	cursor: pointer;
+	padding: 0.3125em;
+	text-shadow: 0 1px 0 rgba(255,255,255,.8);
+	-webkit-appearance: button;
+}
+button:hover,
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa #bbb;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 15px 17px rgba(255,255,255,0.8), inset 0 -5px 12px rgba(0,0,0,0.02);
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 15px 17px rgba(255,255,255,0.8), inset 0 -5px 12px rgba(0,0,0,0.02);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 15px 17px rgba(255,255,255,0.8), inset 0 -5px 12px rgba(0,0,0,0.02);
+}
+button:focus,
+html input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+.menu-toggle:focus,
+.cta:focus,
+button:active,
+html input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	border-color: #aaa #bbb #bbb #bbb;
+	-webkit-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.5), inset 0 2px 5px rgba(0,0,0,0.15);
+	-moz-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.5), inset 0 2px 5px rgba(0,0,0,0.15);
+	box-shadow: inset 0 -1px 0 rgba(255,255,255,0.5), inset 0 2px 5px rgba(0,0,0,0.15);
+}
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+}
+input[type="search"] {
+	-webkit-appearance: textfield;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+input[type=text],
+input[type=email],
+textarea {
+	color: #333;
+	background: #f4f4f4;
+	border: 1px solid #d3d3d3;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+	color: #333;
+}
+input[type=text],
+input[type=email] {
+	padding: 0.1875em;
+}
+
+/* Quotes */
+blockquote, q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+blockquote,
+q,
+cite {
+	font-style: italic;
+}
+blockquote {
+	border-left: 3px solid #d3d3d3;
+	color: #000;
+	margin: 1em 1.5em;
+	padding-left: 1.5em;
+}
+blockquote > p {
+	padding: 0;
+}
+
+/* Lists */
+ul,
+ol {
+	list-style-position: inside;
 	margin: 0 0 1.5em 3em;
+	padding: 0;
 }
 ul {
 	list-style: disc;
@@ -176,197 +449,142 @@ ul {
 ol {
 	list-style: decimal;
 }
-ul ul, ol ol, ul ol, ol ul {
+#secondary ul, #secondary ol {
+	list-style: none none outside;
+	margin: 0;
+	padding:0;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
 	margin-bottom: 0;
 	margin-left: 1.5em;
 }
-dt {
-	font-weight: bold;
-}
-dd {
+dl dd {
 	margin: 0 1.5em 1.5em;
 }
-b, strong {
-	font-weight: bold;
+dt {
+	font-family: 'Raleway', Tahoma, Arial, sans-serif;
 }
-dfn, cite, em, i {
-	font-style: italic;
-}
-blockquote {
-	margin: 0 1.5em;
-}
-address {
-	margin: 0 0 1.5em;
-}
-pre {
-	background: #eee;
-	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
-	font-size: 1.5rem;
-	line-height: 1.6;
-	margin-bottom: 1.6em;
-	padding: 1.6em;
-	overflow: auto;
-	max-width: 100%;
-}
-code, kbd, tt, var {
-	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-}
-abbr, acronym {
-	border-bottom: 1px dotted #666;
-	cursor: help;
-}
-mark, ins {
-	background: #fff9c0;
+
+/* Hyperlinks */
+a {
+	color: #666;
 	text-decoration: none;
+	border-width: 0 0 1px 0;
+	border-style: none none solid none;
+	border-color: #c0c0c0;
 }
-sup,
-sub {
-	font-size: 75%;
-	height: 0;
-	line-height: 0;
+a:visited {
+	color: #666;
+	text-decoration: none;
+	border-width: 0 0 1px 0;
+	border-style: none none solid none;
+	border-color: #c0c0c0;
+}
+a:hover,
+a:active,
+a:focus {
+	color: #333;
+	text-decoration: none;
+	border-width: 0 0 1px 0;
+	border-style: none none solid none;
+	border-color: #999;
+}
+a:active,
+a:focus {
+	/* Give clicked links a depressed effect. */
 	position: relative;
-	vertical-align: baseline;
+	top: 1px;
 }
-sup {
-	bottom: 1ex;
+a:focus {
+	outline: thin dotted red;
 }
-sub {
-	top: .5ex;
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover,
+a:active {
+	outline: 0;
 }
-small {
-	font-size: 75%;
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: #666;
+	text-decoration: none;
+	border-width: 0 0 1px 0;
+	border-style: none none solid none;
+	border-color: #666;
 }
-big {
-	font-size: 125%;
+h1 a:visited,
+h2 a:visited,
+h3 a:visited,
+h4 a:visited,
+h5 a:visited,
+h6 a:visited {
+	color: #666;
+	text-decoration: none;
+	border-width: 0 0 1px 0;
+	border-style: none none solid none;
+	border-color: #666;
 }
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+	color: #333;
+	text-decoration: none;
+	border-width: 0 0 1px 0;
+	border-style: none none solid none;
+	border-color: #333;
+}
+
+/* Media */
 figure {
 	margin: 0;
 }
-table {
-	margin: 0 0 1.5em;
-	width: 100%;
+img,
+object,
+embed,
+video {
+	max-width: 100%; /* Fluid images */
+	_width: 100%;
 }
-th {
-	font-weight: bold;
-}
-button,
-input,
-select,
-textarea {
-	font-size: 100%; /* Corrects font size not being inherited in all browsers */
-	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
-	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
-	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
-}
-button,
-input {
-	line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
-	*overflow: visible;  /* Corrects inner spacing displayed oddly in IE6/7 */
-}
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	border: 1px solid #ccc;
-	border-color: #ccc #ccc #bbb #ccc;
-	border-radius: 3px;
-	background: #fafafa; /* Old browsers */
-	background: -moz-linear-gradient(top,  #fafafa 60%, #e6e6e6 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%,#fafafa), color-stop(100%,#e6e6e6)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #fafafa 60%,#e6e6e6 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #fafafa 60%,#e6e6e6 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #fafafa 60%,#e6e6e6 100%); /* IE10+ */
-	background: linear-gradient(top,  #fafafa 60%,#e6e6e6 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#e6e6e6',GradientType=0 ); /* IE6-9 */
-	box-shadow: inset 0 2px 1px #fff;
-	color: rgba(0,0,0,.8);
-	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
-	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
-	font-size: 12px;
-	font-size: 1.4rem;
-	padding: 1.12em 1.5em .88em;
-	text-shadow: 0 1px 0 rgba(255,255,255,.5);
-}
-button:hover,
-html input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-	background: #f5f5f5; /* Old browsers */
-	background: -moz-linear-gradient(top,  #f5f5f5 60%, #dcdcdc 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%,#f5f5f5), color-stop(100%,#dcdcdc)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #f5f5f5 60%,#dcdcdc 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #f5f5f5 60%,#dcdcdc 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #f5f5f5 60%,#dcdcdc 100%); /* IE10+ */
-	background: linear-gradient(top,  #f5f5f5 60%,#dcdcdc 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#dcdcdc',GradientType=0 ); /* IE6-9 */
-	border-color: #bbb #bbb #aaa #bbb;
-}
-button:focus,
-html input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-button:active,
-html input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
-	border-color: #aaa #bbb #bbb #bbb;
-	box-shadow: inset 0 2px 3px rgba(0,0,0,.15);
-	box-shadow: inset 0 2px 2px rgba(0,0,0,.15);
-}
-input[type="checkbox"],
-input[type="radio"] {
-	box-sizing: border-box; /* Addresses box sizing set to content-box in IE8/9 */
-	padding: 0; /* Addresses excess padding in IE8/9 */
-}
-input[type="search"] {
-	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
-	-moz-box-sizing: content-box;
-	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
-	box-sizing: content-box;
-}
-input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
-	-webkit-appearance: none;
-}
-button::-moz-focus-inner,
-input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+img {
 	border: 0;
-	padding: 0;
+	-ms-interpolation-mode: bicubic; /* Improve IE's resizing of images */
 }
-input[type=text],
-input[type=email],
-textarea {
-	color: #666;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-}
-input[type=text]:focus,
-input[type=email]:focus,
-textarea:focus {
-	color: #111;
-}
-input[type=text],
-input[type=email] {
-	padding: 3px;
-}
-textarea {
-	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
-	padding-left: 3px;
-	vertical-align: top; /* Improves readability and alignment in all browsers */
-	width: 98%;
+svg:not(:root) {
+	overflow: hidden; /* Correct IE9 overflow */
 }
 
-/* Links */
-a {
-	color: royalblue;
+/* Marked, Inserted, Deleted and Highlighted Text */
+abbr[title],
+dfn[title] {
+	border-bottom: 1px dotted #333;
+	cursor: help;
 }
-a:visited {
-	color: purple;
+
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+	color: #000;
 }
-a:hover,
-a:focus,
-a:active {
-	color: midnightblue;
+mark {
+	font-weight: bold;
+}
+::-moz-selection {
+	background: #666;
+	color: #fff; text-shadow: none;
+}
+::selection {
+	background: #666;
+	color: #fff;
+	text-shadow: none;
 }
 
 /* Others
@@ -590,13 +808,14 @@ Based on @stubbornellaâ€™s media object: stubbornella.org/content/2010/06/2
 	display: none;
 }
 
-
 /* =Content
 ----------------------------------------------- */
 
 .sticky {
 }
 .hentry {
+	border-bottom: 1px solid #efefef;
+	padding: 0 0 0.5em;
 	margin: 0 0 1.5em;
 }
 .entry-meta {
