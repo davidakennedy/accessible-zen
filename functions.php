@@ -110,6 +110,33 @@ function zh_widgets_init() {
 add_action( 'widgets_init', 'zh_widgets_init' );
 
 /**
+ * Count the number of footer sidebars to enable dynamic classes for the footer
+ */
+function zh_footer_sidebar_class() {
+	$count = 0;
+
+	if ( is_active_sidebar( 'sidebar-1' ) )
+		$count++;
+
+	if ( is_active_sidebar( 'sidebar-2' ) )
+		$count++;
+
+	$class = '';
+
+	switch ( $count ) {
+		case '1':
+			$class = 'one widget-area cf';
+			break;
+		case '2':
+			$class = 'two widget-area cf';
+			break;
+	}
+
+	if ( $class )
+		echo 'class="' . $class . '"';
+}
+
+/**
  * Enqueue scripts and styles
  */
 function zh_scripts() {

@@ -16,7 +16,7 @@
 	
 	// If we get this far, we have widgets. Let do this.
 	?>
-		<div id="secondary" class="widget-area cf" role="complementary">
+		<div id="secondary" <?php zh_footer_sidebar_class(); ?> role="complementary">
 	        <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 	        <div class="first footer-widgets g2 cf">
 	                <?php dynamic_sidebar( 'sidebar-1' ); ?>

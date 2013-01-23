@@ -193,32 +193,33 @@ h1, .h1 {
 	margin: 0 0 0.5em;
 }
 h2, .h2 {
-	color: #333;
+	color: #7a7a7a;
 	font-size: 2.25em; /* 36px */
 	line-height: 1em;
 	margin: 0 0 0.5em;
 }
 h3, .h3 {
-	color: #666;
+	color: #5c5c5c;
 	font-size: 1.875em; /* 30px */
 	line-height: 1em;
 	margin: 0 0 0.5em;
 } 
 h4, .h4 {
-	color: #000;
+	color: #3d3d3d;
 	font-size: 1.5em; /* 24px */
-	line-height: 1em;
-	margin: 0 0 0.5em;
-}
-h5, .h5 {
-	color: #666;
-	font-size: 1.25em; /* 20px */
+	letter-spacing: 0.1em;
 	line-height: 1em;
 	margin: 0 0 0.5em;
 	text-transform: uppercase;
 }
+h5, .h5 {
+	color: #1f1f1f;
+	font-size: 1.25em; /* 20px */
+	line-height: 1em;
+	margin: 0 0 0.5em;
+}
 h6, .h6 {
-	color: #666;
+	color: #000;
 	font-size: 1em; /* 16px */
 	line-height: 1em;
 	margin: 0 0 0.5em;
@@ -282,7 +283,7 @@ th {
 	text-align: left;
 }
 tr, th, td {
-	border-bottom: 0 solid #000;
+	border-bottom: 0 solid #d3d3d3;
 	padding-right: 1.5em;
 }
 
@@ -308,7 +309,7 @@ textarea {
 }
 legend {
 	border: 0;
-	color: #444;
+	color: #333;
 	display: block;
 	*margin-left: -.75em;
 	padding: 0;
@@ -473,14 +474,14 @@ a {
 	text-decoration: none;
 	border-width: 0 0 1px 0;
 	border-style: none none solid none;
-	border-color: #c0c0c0;
+	border-color: #7a5252;
 }
 a:visited {
 	color: #666;
 	text-decoration: none;
 	border-width: 0 0 1px 0;
 	border-style: none none solid none;
-	border-color: #c0c0c0;
+	border-color: #7a5252;
 }
 a:hover,
 a:active,
@@ -489,7 +490,7 @@ a:focus {
 	text-decoration: none;
 	border-width: 0 0 1px 0;
 	border-style: none none solid none;
-	border-color: #999;
+	border-color: #a32929;
 }
 a:active,
 a:focus {
@@ -515,7 +516,7 @@ h6 a {
 	text-decoration: none;
 	border-width: 0 0 1px 0;
 	border-style: none none solid none;
-	border-color: #666;
+	border-color: #7a5252;
 }
 h1 a:visited,
 h2 a:visited,
@@ -527,7 +528,7 @@ h6 a:visited {
 	text-decoration: none;
 	border-width: 0 0 1px 0;
 	border-style: none none solid none;
-	border-color: #666;
+	border-color: #7a5252;
 }
 h1 a:hover,
 h2 a:hover,
@@ -539,7 +540,7 @@ h6 a:hover {
 	text-decoration: none;
 	border-width: 0 0 1px 0;
 	border-style: none none solid none;
-	border-color: #333;
+	border-color: #a32929;
 }
 
 /* Media */
@@ -757,10 +758,10 @@ Based on @stubbornellaâ€™s media object: stubbornella.org/content/2010/06/2
 /* Site Title and Description */
 .site-title {
 	font-size: 1.625em; /* 26px */
-	margin: 0 0 0.25em;
 	text-align: center;
 }
 .site-description {
+	color: #8f3d3d;
 	font-size: 1.25em; /* 20px */
 	margin: 0 0 0.25em;
 	text-align: center;
@@ -774,7 +775,7 @@ Based on @stubbornellaâ€™s media object: stubbornella.org/content/2010/06/2
 .sticky {
 }
 .hentry {
-	border-bottom: 1px solid #efefef;
+	border-bottom: 1px solid #d3d3d3;
 	margin: 0 0 1.5em;
 }
 .entry-meta {
@@ -904,10 +905,6 @@ object {
 	font-size: 1.125em;
 	text-transform: uppercase;
 }
-.main-navigation a:after,
-.secondary-navigation a:after {
-	content: ':'
-}
 .main-navigation,
 .secondary-navigation {
 	padding-bottom: 1.5em;
@@ -925,12 +922,17 @@ object {
 	padding: 0;
 	position: relative;
 }
+.main-navigation > ul > li + li,
+.secondary-navigation > ul > li + li {
+	border-left: 1px solid #d3d3d3;
+	padding-left: 0.5em;
+}
 .main-navigation a,
 .secondary-navigation a {
 	border-width: 0;
 	border-style: none;
 	display: block;
-	padding: 0.5em 1em;
+	padding: 0 0.5em;
 	color: #666;
 	text-decoration: none;
 }
@@ -946,6 +948,10 @@ object {
 	color: #999;
 	font-weight: bold;
 }
+
+/* =Footer
+----------------------------------------------- */
+
 
 /* =Comments
 ----------------------------------------------- */
