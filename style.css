@@ -973,7 +973,7 @@ object {
 .commentlist {
 	list-style: none;
 	margin: 0 auto;
-	width: 68.9%;
+	width: 100%;
 }
 .commentlist > li.comment {
 	margin: 0 0 1.5em;
@@ -982,6 +982,56 @@ object {
 .commentlist .pingback {
 	margin: 0 0 1.5em;
 }
+.commentlist .comment-author {
+	float: left;
+	padding: 0 1.613%;
+	width: 46.774%;
+}
+.commentlist .comment-author .avatar {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding-right: 0.25em;
+}
+.commentlist .comment-author .fn {
+	vertical-align: top;
+}
+.commentlist .comment-meta {
+	color: #666;
+	float: right;
+	font-size: 0.75em;
+	line-height: 1.25em;
+	padding: 0 1.613%;
+	text-align: right;
+	width: 46.774%;
+}
+.commentlist .comment-meta a {
+	font-weight: bold;
+}
+.commentlist .comment-content {
+	clear: both;
+	padding: 1.5em 1.613% 0;
+	width: 96.774%;
+}
+a.comment-reply-link {
+	background: #f4f4f4;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color: #666;
+	display: inline-block;
+	font-size: 0.75em;
+	margin: 0 1.613%;
+	padding: 0 0.5em;
+}
+a.comment-reply-link:focus,
+a.comment-reply-link:active,
+a.comment-reply-link:hover {
+	background: #666;
+	color: #fff;
+}
+
+/* Children comments */
 .commentlist .children {
 	list-style: none;
 	margin: 0;
@@ -993,14 +1043,6 @@ object {
 .commentlist .children li.comment .fn {
 	display: block;
 }
-.comment-meta .fn {
-	font-style: normal;
-}
-.comment-meta {
-	color: #666;
-	font-size: 0.75em;
-	line-height: 1.25em;
-}
 .commentlist .children li.comment .comment-meta {
 }
 .commentlist .children li.comment .comment-content {
@@ -1010,70 +1052,26 @@ object {
 	-moz-hyphens: auto;
 	hyphens: auto;
 }
-.comment-meta a {
-	font-weight: bold;
-}
-.comment-meta a:focus,
-.comment-meta a:active,
-.comment-meta a:hover {
-}
-.commentlist .comment-author {
-	width: 46.774%;
-}
-a.comment-reply-link {
-	background: #f4f4f4;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	color: #666;
-	display: inline-block;
-	font-size: 0.75em;
-	padding: 0 0.5em;
-}
-
-/* Post author highlighting */
-.commentlist > li.bypostauthor .comment-author {
-	background: #f4f4f4;
-	border-color: #d3d3d3;
-}
-.commentlist > li.bypostauthor .comment-meta {
-	color: #575757;
-}
-.commentlist > li.bypostauthor .comment-meta a:focus,
-.commentlist > li.bypostauthor .comment-meta a:active,
-.commentlist > li.bypostauthor .comment-meta a:hover {
-}
-.commentlist > li.bypostauthor:before {
-}
-
-/* Post Author threaded comments */
-.commentlist .children > li.bypostauthor .comment-author {
-	background: #f4f4f4;
-	border-color: #d3d3d3;
-}
 
 /* Comment Form */
 #respond {
-	background: #ddd;
-	border: 1px solid #d3d3d3;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	margin: 0 auto 1.625em;
-	padding: 1.625em;
+	padding: 1.5em 1.613% 0;
 	position: relative;
-	width: 68.9%;
+	width: 96.774%;
+}
+#cancel-comment-reply-link {
+	position: absolute;
+	right: 0;
+	text-transform: uppercase;
 }
 #respond input[type="text"],
 #respond textarea {
 	background: #fff;
-	border: 4px solid #eee;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	-webkit-box-shadow: inset 0 1px 3px rgba(204,204,204,0.95);
-	-moz-box-shadow: inset 0 1px 3px rgba(204,204,204,0.95);
-	box-shadow: inset 0 1px 3px rgba(204,204,204,0.95);
+	border: 4px solid #f4f4f4;
+	-moz-border-radius: 6px;
+	border-radius: 6x;
 	position: relative;
-	padding: 10px;
+	padding: 0.5em;
 	text-indent: 80px;
 }
 #respond .comment-form-author,
@@ -1086,18 +1084,18 @@ a.comment-reply-link {
 #respond .comment-form-email label,
 #respond .comment-form-url label,
 #respond .comment-form-comment label {
-	background: #eee;
+	background: #f4f4f4;
 	-webkit-box-shadow: 1px 2px 2px rgba(204,204,204,0.8);
 	-moz-box-shadow: 1px 2px 2px rgba(204,204,204,0.8);
 	box-shadow: 1px 2px 2px rgba(204,204,204,0.8);
-	color: #555;
+	color: #666;
 	display: inline-block;
-	font-size: 13px;
-	left: 4px;
-	min-width: 60px;
-	padding: 4px 10px;
+	font-weight: bold;
+	left: 2px;
+	min-width: 3.75em;
+	padding: 0.25em 0.75em;
 	position: relative;
-	top: 40px;
+	top: 66px;
 	z-index: 1;
 }
 #respond input[type="text"]:focus,
@@ -1112,7 +1110,7 @@ a.comment-reply-link {
 #respond .comment-form-author .required,
 #respond .comment-form-email .required {
 	color: #bd3500;
-	font-size: 22px;
+	font-size: 1.5em;
 	font-weight: bold;
 	left: 75%;
 	position: absolute;
@@ -1120,89 +1118,34 @@ a.comment-reply-link {
 }
 #respond .comment-notes,
 #respond .logged-in-as {
-	font-size: 13px;
-}
-#respond p {
-	margin: 10px 0;
+	font-size: 0.75em;
+	margin: 0;
 }
 #respond .form-submit {
 	float: right;
-	margin: -20px 0 10px;
-}
-#respond input#submit {
-	background: #222;
-	border: none;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
-	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
-	box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
-	color: #eee;
-	cursor: pointer;
-	font-size: 15px;
-	margin: 20px 0;
-	padding: 5px 42px 5px 22px;
-	position: relative;
-	left: 30px;
-	text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
-}
-#respond input#submit:active {
-	background: #1982d1;
-	color: #bfddf3;
+	margin: 1.5em 0;
 }
 #respond #cancel-comment-reply-link {
 	color: #666;
-	margin-left: 10px;
-	text-decoration: none;
-}
-#respond .logged-in-as a:hover,
-#respond #cancel-comment-reply-link:hover {
-	text-decoration: underline;
+	margin-left: 0.5em;
 }
 .commentlist #respond {
-	margin: 1.625em 0 0;
+	margin: 1.5em 0 0;
 	width: auto;
 }
-#reply-title {
-	color: #373737;
-	font-size: 24px;
-	font-weight: bold;
-	line-height: 30px;
-}
-#cancel-comment-reply-link {
-	color: #888;
-	display: block;
-	font-size: 10px;
-	font-weight: normal;
-	line-height: 2.2em;
-	letter-spacing: 0.05em;
-	position: absolute;
-	right: 1.625em;
-	text-decoration: none;
-	text-transform: uppercase;
-	top: 1.1em;
-}
-#cancel-comment-reply-link:focus,
-#cancel-comment-reply-link:active,
-#cancel-comment-reply-link:hover {
-	color: #ff4b33;
-}
 #respond label {
-	line-height: 2.2em;
+	line-height: 2em;
 }
 #respond input[type=text] {
 	display: block;
-	height: 24px;
+	height: 2em;
 	width: 75%;
-}
-#respond p {
-	font-size: 12px;
 }
 p.comment-form-comment {
 	margin: 0;
 }
 .form-allowed-tags {
-	display: none;
+	margin-top: 1.5em;
 }
 
 /* =Widgets
