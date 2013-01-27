@@ -785,6 +785,7 @@ Based on @stubbornellaâ€™s media object: stubbornella.org/content/2010/06/2
 .hentry {
 	border-bottom: 1px solid #d3d3d3;
 	margin: 0 0 1.5em;
+	padding: 0 0 1.5em;
 }
 .entry-meta {
 	clear: both;
@@ -804,6 +805,9 @@ Based on @stubbornellaâ€™s media object: stubbornella.org/content/2010/06/2
 .page-title {
 	font-size: 1.125em;
 	text-transform: uppercase;
+}
+.page .edit-link {
+	clear: both;
 }
 
 /* =Asides
@@ -1060,8 +1064,8 @@ a.comment-reply-link:hover {
 	width: 96.774%;
 }
 #cancel-comment-reply-link {
-	position: absolute;
-	right: 0;
+	position: relative;
+	float: right;
 	text-transform: uppercase;
 }
 #respond input[type="text"],
