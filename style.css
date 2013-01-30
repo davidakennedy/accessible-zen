@@ -403,7 +403,7 @@ input[type=email],
 textarea {
 	color: #333;
 	background: #f4f4f4;
-	border: 1px solid #d3d3d3;
+	border: 2px solid #f4f4f4;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -411,7 +411,7 @@ textarea {
 input[type=text]:focus,
 input[type=email]:focus,
 textarea:focus {
-	color: #333;
+	border: 2px solid #d3d3d3;
 }
 input[type=text],
 input[type=email] {
@@ -1047,8 +1047,6 @@ a.comment-reply-link:hover {
 .commentlist .children li.comment .fn {
 	display: block;
 }
-.commentlist .children li.comment .comment-meta {
-}
 .commentlist .children li.comment .comment-content {
 	margin: 1.5em 0 0;
 	word-wrap: break-word;
@@ -1162,9 +1160,9 @@ p.comment-form-comment {
 
 /* Search */
 #s {
-	background: #f4f4f4 url(img/search.png) no-repeat 5px 8px;
+	background: #fff url(img/search.png) no-repeat 5px 8px;
 	height: 30px;
-	padding: 4px 10px 4px 28px;
+	padding: 0.25em 0.625em 0.25em 1.75em;
 	width: 50%; 
 }
 #s:focus {
