@@ -9,10 +9,10 @@
  */
 ?>
 
+	<?php get_sidebar(); ?>
 	</div><!-- #main -->
 
 	<footer id="colophon" class="site-footer cf" role="contentinfo">
-		<?php get_sidebar(); ?>
 		<nav role="navigation" class="promo-navigation secondary-navigation g1 cf">
 			<h1 class="visuallyhidden"><?php _e( 'Secondary Menu', 'zh' ); ?></h1>
 

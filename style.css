@@ -961,10 +961,6 @@ object {
 	font-weight: bold;
 }
 
-/* =Footer
------------------------------------------------ */
-
-
 /* =Comments
 ----------------------------------------------- */
 .nopassword,
@@ -1170,4 +1166,10 @@ p.comment-form-comment {
 }
 #searchsubmit {
 	display: none;
+}
+
+/* =Footer
+----------------------------------------------- */
+.site-info {
+	font-size: 0.75em;
 }
