@@ -977,6 +977,7 @@ object {
 }
 .commentlist > li.comment {
 	margin: 0 0 1.5em;
+	padding: 0.25em;
 	position: relative;
 }
 .commentlist .pingback {
@@ -1015,6 +1016,7 @@ object {
 }
 a.comment-reply-link {
 	background: #f4f4f4;
+	border: 1px solid #ccc;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
@@ -1028,6 +1030,7 @@ a.comment-reply-link:focus,
 a.comment-reply-link:active,
 a.comment-reply-link:hover {
 	background: #666;
+	border: 1px solid #666;
 	color: #fff;
 }
 
@@ -1049,6 +1052,14 @@ a.comment-reply-link:hover {
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
+}
+
+/* Post Author Highlighting */
+.commentlist > li.bypostauthor {
+	background: #f5f5f5;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;	
 }
 
 /* Comment Form */
@@ -1172,4 +1183,34 @@ p.comment-form-comment {
 ----------------------------------------------- */
 .site-info {
 	font-size: 0.75em;
+}
+
+/* Print
+----------------------------------------------- */
+@media print {
+  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+  
+  /* Let's turn off unneeded content */
+  .skip-container,
+  .site-logo,
+  .site-navigation,
+  .site-banner,
+  .footer-navigation,
+  .site-info,
+  .random-info { display: none; }
+  
+  /* Let's modify a few things */
+  .cta,
+  #colophon { border: 0 none; }
 }
