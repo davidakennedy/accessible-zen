@@ -125,10 +125,10 @@ function zh_footer_sidebar_class() {
 
 	switch ( $count ) {
 		case '1':
-			$class = 'one widget-area cf';
+			$class = 'one widget-area';
 			break;
 		case '2':
-			$class = 'two widget-area cf';
+			$class = 'two widget-area';
 			break;
 	}
 

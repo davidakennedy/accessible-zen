@@ -18,13 +18,13 @@
 	?>
 		<div id="secondary" <?php zh_footer_sidebar_class(); ?> role="complementary">
 	        <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
-	        <div class="first footer-widgets cf">
+	        <div class="first sidebar-widgets cf">
 	                <?php dynamic_sidebar( 'sidebar-1' ); ?>
 	        </div><!-- .first -->
 	        <?php endif; ?>
 	
 	        <?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
-	        <div class="second footer-widgets cf">
+	        <div class="second sidebar-widgets cf">
 	                <?php dynamic_sidebar( 'sidebar-2' ); ?>
 	        </div><!-- .second -->
 	        <?php endif; ?>
