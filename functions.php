@@ -80,7 +80,7 @@ function zh_setup() {
 	 * we also set up the default background color.
 	 */
 	add_theme_support( 'custom-background', array(
-		'default-color' => 'fff',
+		'default-color' => '',
 	) );
 }
 endif; // zh_setup

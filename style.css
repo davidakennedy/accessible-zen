@@ -93,6 +93,14 @@ a img {
 
 /* =Structure
 ----------------------------------------------- */
+/* Special styles for custom background support */
+.custom-background #page {
+	background: #fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding: 1em 0;
+}
 #page {
 	margin: 3em auto;
 	max-width: 48em;
