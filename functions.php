@@ -35,6 +35,11 @@ function zh_setup() {
 	 * Custom functions that act independently of the theme templates
 	 */
 	require( get_template_directory() . '/inc/tweaks.php' );
+	
+	/**
+	 * Customizer additions
+	 */
+	require( get_template_directory() . '/inc/customizer.php' );
 
 	/**
 	 * Make theme available for translation
