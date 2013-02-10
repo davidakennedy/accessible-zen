@@ -1160,15 +1160,7 @@ p.comment-form-comment {
   h2, h3 { page-break-after: avoid; }
   
   /* Let's turn off unneeded content */
-  .skip-container,
-  .site-logo,
-  .site-navigation,
-  .site-banner,
-  .footer-navigation,
-  .site-info,
-  .random-info { display: none; }
-  
-  /* Let's modify a few things */
-  .cta,
-  #colophon { border: 0 none; }
+  #masthead,
+  #content .site-navigation,
+  #colophon { display: none; }
 }
