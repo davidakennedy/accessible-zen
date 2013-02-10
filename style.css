@@ -197,39 +197,39 @@ hr {
 h1, .h1 {
 	color: #999;
 	font-size: 2.875em; /* 46px */
-	line-height: 1em;
+	line-height: 1.5;
 	margin: 0 0 0.5em;
 }
 h2, .h2 {
 	color: #7a7a7a;
 	font-size: 2.25em; /* 36px */
-	line-height: 1em;
+	line-height: 1.5;
 	margin: 0 0 0.5em;
 }
 h3, .h3 {
 	color: #5c5c5c;
 	font-size: 1.875em; /* 30px */
-	line-height: 1em;
+	line-height: 1.5;
 	margin: 0 0 0.5em;
 } 
 h4, .h4 {
 	color: #3d3d3d;
 	font-size: 1.5em; /* 24px */
 	letter-spacing: 0.1em;
-	line-height: 1em;
+	line-height: 1.5;
 	margin: 0 0 0.5em;
 	text-transform: uppercase;
 }
 h5, .h5 {
 	color: #1f1f1f;
 	font-size: 1.25em; /* 20px */
-	line-height: 1em;
+	line-height: 1.5;
 	margin: 0 0 0.5em;
 }
 h6, .h6 {
 	color: #000;
 	font-size: 1em; /* 16px */
-	line-height: 1em;
+	line-height: 1.5;
 	margin: 0 0 0.5em;
 }
 p,
@@ -269,7 +269,7 @@ samp {
 	background: #f4f4f4;
 	font-family: Menlo, Consolas, 'DejaVu Sans Mono', Monaco, monospace;
 	font-size: 1em;
-	line-height: 1.5em;
+	line-height: 1.5;
 	margin-bottom: 1.5em;
 	max-width: 100%;
 	overflow: auto;
@@ -669,48 +669,7 @@ sub {
 .invisible {
 	visibility: hidden;
 }
-
-/*
-Use a class of .island whenever you want to box off an area of content as per: csswizardry.com/2011/10/the-island-object/
-Extend with classes like .promo to apply different colours etc to draw attention.
-*/
-.island {
-	padding: 1.5em;
-}
-	.island > :last-child {
-		margin-bottom: 0;
-	}
-/*
-Based on @stubbornellaâ€™s media object: stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
-<a class="media promo">
-	<img src=product.jpg alt="" class=img>
-	<p class=body>Get Product for half price!</p>
-</a>
-*/
-.media {
-	display: block;
-}
-	.media .img {
-		float: left;
-		margin-right: 10px;
-	}
-	.media .body {
-		overflow: hidden;
-		margin-bottom: 0;
-	}
-/* Create an abstraction, as per: csswizardry.com/2011/09/the-nav-abstraction/ */
-.nav {
-	list-style: none none outside;
-	margin-left: 0;
-}
-.nav li {
-	display: inline;
-	padding: 0.3125em;
-}
-.nav a {
-	display: inline;
-	padding: 0.3125em;
-}
+/* Create a ul or ol without bullets or numbers */
 .nolist {
 	list-style: none none outside;
 	margin:0;
@@ -771,7 +730,6 @@ Based on @stubbornellaâ€™s media object: stubbornella.org/content/2010/06/2
 .site-description {
 	color: #8f3d3d;
 	font-size: 1.25em; /* 20px */
-	margin: 0 0 0.25em;
 	text-align: center;
 }
 
