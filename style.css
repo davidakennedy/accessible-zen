@@ -530,9 +530,7 @@ h5 a,
 h6 a {
 	color: #666;
 	text-decoration: none;
-	border-width: 0 0 1px 0;
-	border-style: none none solid none;
-	border-color: #7a5252;
+	border-style: none;
 }
 h1 a:visited,
 h2 a:visited,
@@ -542,9 +540,7 @@ h5 a:visited,
 h6 a:visited {
 	color: #666;
 	text-decoration: none;
-	border-width: 0 0 1px 0;
-	border-style: none none solid none;
-	border-color: #7a5252;
+	border-style: none;
 }
 h1 a:hover,
 h2 a:hover,
@@ -732,12 +728,10 @@ sub {
 
 /* Site Title and Description */
 .site-title {
-	font-size: 1.625em; /* 26px */
 	text-align: center;
 }
 .site-description {
 	color: #8f3d3d;
-	font-size: 1.25em; /* 20px */
 	text-align: center;
 }
 
