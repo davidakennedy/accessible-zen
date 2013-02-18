@@ -34,7 +34,7 @@
 function zh_custom_header_setup() {
 	$args = array(
 		'default-image'          => '',
-		'default-text-color'     => '000',
+		'default-text-color'     => '54413b',
 		'width'                  => 768,
 		'height'                 => 200,
 		'flex-height'            => true,

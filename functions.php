@@ -12,7 +12,7 @@
  * @since ZH 1.0
  */
 if ( ! isset( $content_width ) )
-	$content_width = 640; /* pixels */
+	$content_width = 768; /* pixels */
 
 if ( ! function_exists( 'zh_setup' ) ):
 /**
@@ -98,8 +98,8 @@ function zh_widgets_init() {
 		'description'   => 'A widget area for the left side of the footer',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
-		'before_title' => '<h4 class="widget-title">',
-		'after_title' => '</h4>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
 	) );
 	
 	register_sidebar( array(
@@ -108,8 +108,8 @@ function zh_widgets_init() {
 		'description'   => 'A widget area for the right side of the footer',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
-		'before_title' => '<h4 class="widget-title">',
-		'after_title' => '</h4>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
 	) );
 }
 add_action( 'widgets_init', 'zh_widgets_init' );
@@ -153,8 +153,6 @@ function zh_scripts() {
         'font_stylesheet', # replace with a name for your font stylesheet
         'http://fonts.googleapis.com/css?family=Raleway' # replace with url to your font stylesheet
     );
-
-	wp_enqueue_script( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), '20120206', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

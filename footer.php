@@ -26,9 +26,7 @@
 		</nav><!-- .site-navigation .main-navigation -->
 		
 		<div class="site-info cf">	<?php do_action( 'zh_credits' ); ?>
-			<p><a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'zh' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'zh' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'zh' ), 'Zen Hacker', '<a href="http://davidakennedy.com/">David A. Kennedy</a>' ); ?></p>
+			<p><a href="<?php echo esc_url( __( 'http://wordpress.org/', 'zh' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'zh' ), 'WordPress' ); ?></a> <?php _e( 'with the Zen Hacker theme ', 'zh' ); ?><a href="<?php echo esc_url( __( 'http://davidakennedy.com/', 'zh' ) ); ?>"><?php printf( __( 'by %s', 'zh' ), 'David A. Kennedy' ); ?></a>.</p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon .site-footer -->
 	<div class="skip-container">

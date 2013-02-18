@@ -101,11 +101,7 @@ a img {
 }
 
 /* Inner containers */
-.site-banner {
-	margin: 0 auto;
-	max-width: 48em;
-	padding: 0.5em 0;
-}
+.site-banner,
 .site-content,
 .sidebar,
 .site-info,
@@ -201,11 +197,11 @@ h2, .h2 {
 }
 h3, .h3 {
 	font-size: 1.875em; /* 30px */
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
 } 
 h4, .h4 {
 	font-size: 1.5em; /* 24px */
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
 }
 h5, .h5 {
 	font-size: 1.25em; /* 20px */
@@ -734,42 +730,19 @@ sub {
 
 /* Header
 ----------------------------------------------- */
-.site-header {
-	/* fallback */
-	background-color: #54413b;
-	/* Safari 4-5, Chrome 1-9 */
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3c2e2a), to(#6b534c));
-	/* Safari 5.1, Chrome 10+ */ 
-	background: -webkit-linear-gradient(top, #3c2e2a, #6b534c);
-	/* Firefox 3.6+ */
-	background: -moz-linear-gradient(top, #3c2e2a, #6b534c);
-	/* IE 10 */
-	background: -ms-linear-gradient(top, #3c2e2a, #6b534c);
-	/* Opera 11.10+ */
-	background: -o-linear-gradient(top, #3c2e2a, #6b534c);
-	text-align: center;
-}
 
 /* Site Title and Description */
 .site-title {
-	font-size: 1.25em; /* 20px */
+	font-size: 3.125em; /* 50px */
 	text-align: center;
 }
 .site-title a {
-	color: #faeedb;
+	color: #cc282b;
 	text-decoration: none;
 }
-.site-title a:hover,
-.site-title a:active,
-.site-title a:focus {
-	border-width: 0;
-	border-style: none;
-	color: #faeedb;
-	text-decoration: underline;
-}
 .site-description {
-	color: #f4f4f4;
-	font-size: 1em; /* 16px */
+	color: #54413b;
+	font-size: 1.25em; /* 20px */
 	text-align: center;
 }
 
@@ -779,7 +752,7 @@ sub {
 }
 .hentry {
 	border-bottom: 1px dotted #54413b;
-	padding: 0 0 1.5em;
+	padding: 1.5em 0;
 }
 .page .hentry {
 	border-bottom: none;
@@ -838,6 +811,14 @@ img.size-full {
 	max-width: 100%;
 	width: auto;
 }
+.site-header img {
+	padding-top: 3em;
+}
+
+/* No border on banner image */
+.site-banner a {
+	border: 0 none;
+}
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
 	border: none;
@@ -874,7 +855,7 @@ img.size-full {
 .wp-caption .wp-caption-text {
 	margin: 0.8075em 0;
 }
-#content .gallery {
+.gallery {
 	margin-bottom: 1.5em;
 }
 .gallery-caption {
@@ -971,6 +952,11 @@ object {
 	font-weight: bold;
 	text-align: center;
 }
+.comments-area {
+	border-top: 1px dotted #54413b;
+	margin-top: 1.5em;
+	padding-top: 1.5em;
+}
 .commentlist {
 	list-style: none;
 	margin: 0 auto;
@@ -983,6 +969,7 @@ object {
 }
 .commentlist .pingback {
 	margin: 0 0 1.5em;
+	padding: 0 0.5em;
 }
 .commentlist .comment-author {
 	float: left;
