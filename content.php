@@ -29,6 +29,7 @@
 	<?php endif; ?>
 
 	<footer class="entry-meta">
+		<?php zh_posted_on(); ?>
 		<?php edit_post_link( __( 'Edit', 'zh' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->

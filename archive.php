@@ -10,7 +10,7 @@
 
 get_header(); ?>
 
-		<section id="primary" class="site-content g1">
+		<section id="primary" class="site-content cf">
 			<div id="content" role="main">
 
 			<?php if ( have_posts() ) : ?>
