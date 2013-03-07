@@ -461,6 +461,7 @@ a {
 	border-width: 0 0 1px 0;
 	border-style: none none solid none;
 	border-color: #3b4054;
+	padding-bottom: 0.0625em;
 }
 a:hover,
 a:active,
@@ -761,6 +762,7 @@ sub {
 	clear: both;
 }
 .entry-header .entry-meta {
+	padding-top: 0.375em;
 	text-align: center;
 }
 .entry-content,
