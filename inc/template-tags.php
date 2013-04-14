@@ -4,40 +4,40 @@
  *
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package ZH
- * @since ZH 1.0
+ * @package hellozen
+ * @since hellozen 1.0
  */
 
-if ( ! function_exists( 'zh_content_nav' ) ):
+if ( ! function_exists( 'hellozen_content_nav' ) ):
 /**
  * Display navigation to next/previous pages when applicable
  *
- * @since ZH 1.0
+ * @since hellozen 1.0
  */
-function zh_content_nav( $nav_id ) {
+function hellozen_content_nav( $nav_id ) {
 	global $wp_query;
 
-	$nav_class = 'site-navigation paging-navigation';
+	$nav_class = 'site-navigation paging-navigation cf';
 	if ( is_single() )
-		$nav_class = 'site-navigation post-navigation';
+		$nav_class = 'site-navigation post-navigation cf';
 
 	?>
 	<nav role="navigation" id="<?php echo $nav_id; ?>" class="<?php echo $nav_class; ?>">
-		<h1 class="visuallyhidden"><?php _e( 'Post navigation', 'zh' ); ?></h1>
+		<h1 class="visuallyhidden"><?php _e( 'Post navigation', 'hellozen' ); ?></h1>
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
-		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( 'Previous Post: ', 'Previous post link', 'zh' ) . '</span> %title' ); ?>
-		<?php next_post_link( '<div class="nav-next">%link</div>', '<span class="meta-nav">' . _x( 'Next Post: ', 'Next post link', 'zh' ) . '</span> %title' ); ?>
+		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( 'Previous Post: ', 'Previous post link', 'hellozen' ) . '</span> %title' ); ?>
+		<?php next_post_link( '<div class="nav-next">%link</div>', '<span class="meta-nav">' . _x( 'Next Post: ', 'Next post link', 'hellozen' ) . '</span> %title' ); ?>
 
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 		<?php if ( get_next_posts_link() ) : ?>
-		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'zh' ) ); ?></div>
+		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'hellozen' ) ); ?></div>
 		<?php endif; ?>
 
 		<?php if ( get_previous_posts_link() ) : ?>
-		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'zh' ) ); ?></div>
+		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'hellozen' ) ); ?></div>
 		<?php endif; ?>
 
 	<?php endif; ?>
@@ -45,24 +45,24 @@ function zh_content_nav( $nav_id ) {
 	</nav><!-- #<?php echo $nav_id; ?> -->
 	<?php
 }
-endif; // zh_content_nav
+endif; // hellozen_content_nav
 
-if ( ! function_exists( 'zh_comment' ) ) :
+if ( ! function_exists( 'hellozen_comment' ) ) :
 /**
  * Template for comments and pingbacks.
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
  *
- * @since ZH 1.0
+ * @since hellozen 1.0
  */
-function zh_comment( $comment, $args, $depth ) {
+function hellozen_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) :
 		case 'pingback' :
 		case 'trackback' :
 	?>
 	<li class="post pingback">
-		<p><?php _e( 'Pingback:', 'zh' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'zh' ), ' ' ); ?></p>
+		<p><?php _e( 'Pingback:', 'hellozen' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'hellozen' ), ' ' ); ?></p>
 	<?php
 			break;
 		default :
@@ -75,7 +75,7 @@ function zh_comment( $comment, $args, $depth ) {
 					<?php printf( '<cite class="fn">%s</cite>', get_comment_author_link() ); ?>
 				</div><!-- .comment-author .vcard -->
 				<?php if ( $comment->comment_approved == '0' ) : ?>
-					<em><?php _e( 'Your comment is awaiting moderation.', 'zh' ); ?></em>
+					<em><?php _e( 'Your comment is awaiting moderation.', 'hellozen' ); ?></em>
 					<br />
 				<?php endif; ?>
 
@@ -83,9 +83,9 @@ function zh_comment( $comment, $args, $depth ) {
 					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time pubdate datetime="<?php comment_time( 'c' ); ?>">
 					<?php
 						/* translators: 1: date, 2: time */
-						printf( __( '%1$s at %2$s', 'zh' ), get_comment_date(), get_comment_time() ); ?>
+						printf( __( '%1$s at %2$s', 'hellozen' ), get_comment_date(), get_comment_time() ); ?>
 					</time></a>
-					<?php edit_comment_link( __( '(Edit)', 'zh' ), ' ' );
+					<?php edit_comment_link( __( '(Edit)', 'hellozen' ), ' ' );
 					?>
 				</div><!-- .comment-meta .commentmetadata -->
 			</footer>
@@ -101,16 +101,16 @@ function zh_comment( $comment, $args, $depth ) {
 			break;
 	endswitch;
 }
-endif; // ends check for zh_comment()
+endif; // ends check for hellozen_comment()
 
-if ( ! function_exists( 'zh_posted_on' ) ) :
+if ( ! function_exists( 'hellozen_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  *
- * @since ZH 1.0
+ * @since hellozen 1.0
  */
-function zh_posted_on() {
-	printf( __( 'Posted: <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>.<br />', 'zh' ),
+function hellozen_posted_on() {
+	printf( __( 'Posted: <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>.<br />', 'hellozen' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),
@@ -119,25 +119,25 @@ function zh_posted_on() {
 }
 endif;
 
-if ( ! function_exists( 'zh_archive_page_title_etc' ) ):
+if ( ! function_exists( 'hellozen_archive_page_title_etc' ) ):
 /**
  * Display info for the page title on the archive page
  *
- * @since ZH 1.0
+ * @since hellozen 1.0
  */
-function zh_archive_page_title_etc() {
+function hellozen_archive_page_title_etc() {
 		if ( is_category() ) {
-			printf( __( 'Category Archives: %s', 'zh' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+			printf( __( 'Category Archives: %s', 'hellozen' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 
 		} elseif ( is_tag() ) {
-			printf( __( 'Tag Archives: %s', 'zh' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+			printf( __( 'Tag Archives: %s', 'hellozen' ), '<span>' . single_tag_title( '', false ) . '</span>' );
 
 		} elseif ( is_author() ) {
 			/* Queue the first post, that way we know
 			 * what author we're dealing with (if that is the case).
 			*/
 			the_post();
-			printf( __( 'Author Archives: %s', 'zh' ), '<span class="vcard"><a class="url fn n" href="' . get_author_posts_url( get_the_author_meta( "ID" ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' );
+			printf( __( 'Author Archives: %s', 'hellozen' ), '<span class="vcard"><a class="url fn n" href="' . get_author_posts_url( get_the_author_meta( "ID" ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' );
 			/* Since we called the_post() above, we need to
 			 * rewind the loop back to the beginning that way
 			 * we can run the loop properly, in full.
@@ -145,16 +145,16 @@ function zh_archive_page_title_etc() {
 			rewind_posts();
 
 		} elseif ( is_day() ) {
-			printf( __( 'Daily Archives: %s', 'zh' ), '<span>' . get_the_date() . '</span>' );
+			printf( __( 'Daily Archives: %s', 'hellozen' ), '<span>' . get_the_date() . '</span>' );
 
 		} elseif ( is_month() ) {
-			printf( __( 'Monthly Archives: %s', 'zh' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+			printf( __( 'Monthly Archives: %s', 'hellozen' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
 
 		} elseif ( is_year() ) {
-			printf( __( 'Yearly Archives: %s', 'zh' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+			printf( __( 'Yearly Archives: %s', 'hellozen' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 
 		} else {
-			_e( 'Archives', 'zh' );
+			_e( 'Archives', 'hellozen' );
 
 		}
 	?>
@@ -173,36 +173,36 @@ function zh_archive_page_title_etc() {
 			echo apply_filters( 'tag_archive_meta', '<div class="taxonomy-description">' . $tag_description . '</div>' );
 						}
 }
-endif; // zh_content_nav
+endif; // hellozen_content_nav
 
-if ( ! function_exists( 'zh_cats_and_tags' ) ) :
+if ( ! function_exists( 'hellozen_cats_and_tags' ) ) :
 /**
  * Prints HTML with information for the categories and tags.
  *
- * @since ZH 1.0
+ * @since hellozen 1.0
  */
-function zh_cats_and_tags() {
+function hellozen_cats_and_tags() {
 
 			/* translators: used between list items, there is a space after the comma */
-			$category_list = get_the_category_list( __( ', ', 'zh' ) );
+			$category_list = get_the_category_list( __( ', ', 'hellozen' ) );
 
 			/* translators: used between list items, there is a space after the comma */
 			$tag_list = get_the_tag_list( '', ', ' );
 
-			if ( ! zh_categorized_blog() ) {
+			if ( ! hellozen_categorized_blog() ) {
 				// This blog only has 1 category so we just need to worry about tags in the meta text
 				if ( '' != $tag_list ) {
-					$meta_text = __( 'Tagged: %2$s.<br /> Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.<br />', 'zh' );
+					$meta_text = __( 'Tagged: %2$s.<br /> Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.<br />', 'hellozen' );
 				} else {
-					$meta_text = __( 'Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.<br />', 'zh' );
+					$meta_text = __( 'Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.<br />', 'hellozen' );
 				}
 
 			} else {
 				// But this blog has loads of categories so we should probably display them here
 				if ( '' != $tag_list ) {
-					$meta_text = __( 'Posted in: %1$s.<br /> Tagged: %2$s.<br /> Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.<br />', 'zh' );
+					$meta_text = __( 'Posted in: %1$s.<br /> Tagged: %2$s.<br /> Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.<br />', 'hellozen' );
 				} else {
-					$meta_text = __( 'Posted in: %1$s.<br /> Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.<br />', 'zh' );
+					$meta_text = __( 'Posted in: %1$s.<br /> Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.<br />', 'hellozen' );
 				}
 
 			} // end check for categories on this blog
@@ -218,11 +218,56 @@ function zh_cats_and_tags() {
 endif;
 
 /**
+ * Sets the post excerpt length to 100 words.
+ *
+ * To override this length in a child theme, remove the filter and add your own
+ * function tied to the excerpt_length filter hook.
+ */
+function hellozen_excerpt_length( $length ) {
+	return 100;
+}
+add_filter( 'excerpt_length', 'hellozen_excerpt_length' );
+
+if ( ! function_exists( 'hellozen_continue_reading_link' ) ) :
+/**
+ * Returns a "Continue Reading" link for excerpts
+ */
+function hellozen_continue_reading_link() {
+	return ' <a href="'. esc_url( get_permalink() ) . '">' . ('Continue reading ' . the_title('', '', false) . '' . '</a>');
+}
+endif; // hellozen_continue_reading_link
+
+/**
+ * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and twentyeleven_continue_reading_link().
+ *
+ * To override this in a child theme, remove the filter and add your own
+ * function tied to the excerpt_more filter hook.
+ */
+function hellozen_auto_excerpt_more( $more ) {
+	return ' &hellip;' . hellozen_continue_reading_link();
+}
+add_filter( 'excerpt_more', 'hellozen_auto_excerpt_more' );
+
+/**
+ * Adds a pretty "Continue Reading" link to custom post excerpts.
+ *
+ * To override this link in a child theme, remove the filter and add your own
+ * function tied to the get_the_excerpt filter hook.
+ */
+function hellozen_custom_excerpt_more( $output ) {
+	if ( has_excerpt() && ! is_attachment() ) {
+		$output .= hellozen_continue_reading_link();
+	}
+	return $output;
+}
+add_filter( 'get_the_excerpt', 'hellozen_custom_excerpt_more' );
+
+/**
  * Returns true if a blog has more than 1 category
  *
- * @since ZH 1.0
+ * @since hellozen 1.0
  */
-function zh_categorized_blog() {
+function hellozen_categorized_blog() {
 	if ( false === ( $all_the_cool_cats = get_transient( 'all_the_cool_cats' ) ) ) {
 		// Create an array of all the categories that are attached to posts
 		$all_the_cool_cats = get_categories( array(
@@ -236,22 +281,22 @@ function zh_categorized_blog() {
 	}
 
 	if ( '1' != $all_the_cool_cats ) {
-		// This blog has more than 1 category so zh_categorized_blog should return true
+		// This blog has more than 1 category so hellozen_categorized_blog should return true
 		return true;
 	} else {
-		// This blog has only 1 category so zh_categorized_blog should return false
+		// This blog has only 1 category so hellozen_categorized_blog should return false
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in zh_categorized_blog
+ * Flush out the transients used in hellozen_categorized_blog
  *
- * @since ZH 1.0
+ * @since hellozen 1.0
  */
-function zh_category_transient_flusher() {
+function hellozen_category_transient_flusher() {
 	// Like, beat it. Dig?
 	delete_transient( 'all_the_cool_cats' );
 }
-add_action( 'edit_category', 'zh_category_transient_flusher' );
-add_action( 'save_post', 'zh_category_transient_flusher' );
+add_action( 'edit_category', 'hellozen_category_transient_flusher' );
+add_action( 'save_post', 'hellozen_category_transient_flusher' );

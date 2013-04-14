@@ -1,7 +1,7 @@
 <?php
 /**
- * @package ZH
- * @since ZH 1.0
+ * @package hellozen
+ * @since hellozen 1.0
  */
 ?>
 
@@ -17,12 +17,12 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'zh' ), 'after' => '</div>' ) ); ?>
+		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'hellozen' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
-		<?php zh_posted_on(); ?>
-		<?php zh_cats_and_tags(); ?>
-		<?php edit_post_link( __( 'Edit', 'zh' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php hellozen_posted_on(); ?>
+		<?php hellozen_cats_and_tags(); ?>
+		<?php edit_post_link( __( 'Edit', 'hellozen' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->

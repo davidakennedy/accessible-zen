@@ -4,8 +4,8 @@
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
- * @package ZH
- * @since ZH 1.0
+ * @package hellozen
+ * @since hellozen 1.0
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -30,7 +30,7 @@
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 )
-		echo ' | ' . sprintf( __( 'Page %s', 'zh' ), max( $paged, $page ) );
+		echo ' | ' . sprintf( __( 'Page %s', 'hellozen' ), max( $paged, $page ) );
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -43,10 +43,10 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
+<div id="page" class="hfeed site cf">
 	<?php do_action( 'before' ); ?>
-	<div class="skip-container">
-		<a class="skip-link" href="#colophon"><?php _e( '&darr; Skip to Main Menus', 'zh' ); ?></a>
+	<div class="skip-container cf">
+		<a class="skip-link" href="#colophon"><?php _e( '&darr; Skip to Main Menus', 'hellozen' ); ?></a>
 	</div><!-- .skip-container -->
 	<header id="masthead" class="site-header cf" role="banner">
 		<div class="site-banner">

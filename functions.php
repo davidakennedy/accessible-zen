@@ -1,20 +1,20 @@
 <?php
 /**
- * ZH functions and definitions
+ * hellozen functions and definitions
  *
- * @package ZH
- * @since ZH 1.0
+ * @package hellozen
+ * @since hellozen 1.0
  */
 
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
- * @since ZH 1.0
+ * @since hellozen 1.0
  */
 if ( ! isset( $content_width ) )
 	$content_width = 768; /* pixels */
 
-if ( ! function_exists( 'zh_setup' ) ):
+if ( ! function_exists( 'hellozen_setup' ) ):
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -22,9 +22,9 @@ if ( ! function_exists( 'zh_setup' ) ):
  * before the init hook. The init hook is too late for some features, such as indicating
  * support post thumbnails.
  *
- * @since ZH 1.0
+ * @since hellozen 1.0
  */
-function zh_setup() {
+function hellozen_setup() {
 
 	/**
 	 * Custom template tags for this theme.
@@ -44,10 +44,10 @@ function zh_setup() {
 	/**
 	 * Make theme available for translation
 	 * Translations can be filed in the /languages/ directory
-	 * If you're building a theme based on ZH, use a find and replace
-	 * to change 'zh' to the name of your theme in all the template files
+	 * If you're building a theme based on hellozen, use a find and replace
+	 * to change 'hellozen' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'zh', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'hellozen', get_template_directory() . '/languages' );
 
 	/**
 	 * Add default posts and comments RSS feed links to head
@@ -66,8 +66,8 @@ function zh_setup() {
 	 * This theme uses wp_nav_menu() in two locations.
 	 */
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'zh' ),
-		'secondary' => __( 'Secondary Menu', 'zh' )
+		'primary' => __( 'Primary Menu', 'hellozen' ),
+		'secondary' => __( 'Secondary Menu', 'hellozen' )
 	) );
 
 	/**
@@ -83,17 +83,17 @@ function zh_setup() {
 		'default-color' => '',
 	) );
 }
-endif; // zh_setup
-add_action( 'after_setup_theme', 'zh_setup' );
+endif; // hellozen_setup
+add_action( 'after_setup_theme', 'hellozen_setup' );
 
 /**
  * Register widgetized area and update sidebar with default widgets
  *
- * @since ZH 1.0
+ * @since hellozen 1.0
  */
-function zh_widgets_init() {
+function hellozen_widgets_init() {
 	register_sidebar( array(
-		'name' => __( 'Footer Widget Area One', 'zh' ),
+		'name' => __( 'Footer Widget Area One', 'hellozen' ),
 		'id' => 'sidebar-1',
 		'description'   => 'A widget area for the left side of the footer',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -103,7 +103,7 @@ function zh_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-		'name' => __( 'Footer Widget Area Two', 'zh' ),
+		'name' => __( 'Footer Widget Area Two', 'hellozen' ),
 		'id' => 'sidebar-2',
 		'description'   => 'A widget area for the right side of the footer',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -112,12 +112,12 @@ function zh_widgets_init() {
 		'after_title' => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'zh_widgets_init' );
+add_action( 'widgets_init', 'hellozen_widgets_init' );
 
 /**
  * Count the number of footer sidebars to enable dynamic classes for the footer
  */
-function zh_footer_sidebar_class() {
+function hellozen_footer_sidebar_class() {
 	$count = 0;
 
 	if ( is_active_sidebar( 'sidebar-1' ) )
@@ -141,18 +141,32 @@ function zh_footer_sidebar_class() {
 		echo 'class="' . $class . '"';
 }
 
+function hellozen_body_class( $classes ) {
+	$background_color = get_background_color();
+	
+		if ( empty( $background_color ) )
+		$classes[] = 'custom-background-empty';
+	elseif ( in_array( $background_color, array( 'fff', 'ffffff' ) ) )
+		$classes[] = 'custom-background-white';
+
+	return $classes;
+}
+add_filter( 'body_class', 'hellozen_body_class' );
+
 /**
  * Enqueue scripts and styles
  */
-function zh_scripts() {
+function hellozen_scripts_styles() {
 	global $post;
 
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 	
 	wp_enqueue_style(
-        'font_stylesheet', # replace with a name for your font stylesheet
-        'http://fonts.googleapis.com/css?family=Raleway' # replace with url to your font stylesheet
+        'font_stylesheet',
+        'http://fonts.googleapis.com/css?family=Cardo|Noticia+Text:400,400italic,700,700italic'
     );
+        
+    wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -162,7 +176,7 @@ function zh_scripts() {
 		wp_enqueue_script( 'keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'zh_scripts' );
+add_action( 'wp_enqueue_scripts', 'hellozen_scripts_styles' );
 
 /**
  * Implement the Custom Header feature

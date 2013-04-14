@@ -4,7 +4,7 @@
  * See http://codex.wordpress.org/Custom_Headers
  *
  * @package WordPress
- * @subpackage ZH
+ * @subpackage hellozen
  * @since Zen Hacker 1.0
  */
 
@@ -12,14 +12,14 @@
  * Sets up the WordPress core custom header arguments and settings.
  *
  * @uses add_theme_support() to register support for 3.4 and up.
- * @uses zh_header_style() to style front-end.
- * @uses zh_admin_header_style() to style wp-admin form.
- * @uses zh_admin_header_image() to add custom markup to wp-admin form.
+ * @uses hellozen_header_style() to style front-end.
+ * @uses hellozen_admin_header_style() to style wp-admin form.
+ * @uses hellozen_admin_header_image() to add custom markup to wp-admin form.
  * @uses register_default_headers() to set up the bundled header images.
  *
  * @since Zen Hacker 1.0
  */
-function zh_custom_header_setup() {
+function hellozen_custom_header_setup() {
 	$args = array(
 		// Text color and image (empty to use none).
 		'default-text-color'     => '54413b',
@@ -30,9 +30,9 @@ function zh_custom_header_setup() {
 		'width'                  => 768,
 
 		// Callbacks for styling the header and the admin preview.
-		'wp-head-callback'       => 'zh_header_style',
-		'admin-head-callback'    => 'zh_admin_header_style',
-		'admin-preview-callback' => 'zh_admin_header_image',
+		'wp-head-callback'       => 'hellozen_header_style',
+		'admin-head-callback'    => 'hellozen_admin_header_style',
+		'admin-preview-callback' => 'hellozen_admin_header_image',
 	);
 
 	add_theme_support( 'custom-header', $args );
@@ -45,21 +45,21 @@ function zh_custom_header_setup() {
 		'circle' => array(
 			'url'           => '%s/img/headers/circle.png',
 			'thumbnail_url' => '%s/img/headers/circle-thumbnail.png',
-			'description'   => _x( 'Circle', 'header image description', 'zh' )
+			'description'   => _x( 'Circle', 'header image description', 'hellozen' )
 		),
 		'diamond' => array(
 			'url'           => '%s/img/headers/diamond.png',
 			'thumbnail_url' => '%s/img/headers/diamond-thumbnail.png',
-			'description'   => _x( 'Diamond', 'header image description', 'zh' )
+			'description'   => _x( 'Diamond', 'header image description', 'hellozen' )
 		),
 		'star' => array(
 			'url'           => '%s/img/headers/star.png',
 			'thumbnail_url' => '%s/img/headers/star-thumbnail.png',
-			'description'   => _x( 'Star', 'header image description', 'zh' )
+			'description'   => _x( 'Star', 'header image description', 'hellozen' )
 		),
 	) );
 }
-add_action( 'after_setup_theme', 'zh_custom_header_setup' );
+add_action( 'after_setup_theme', 'hellozen_custom_header_setup' );
 
 /**
  * Styles the header text displayed on the blog.
@@ -68,7 +68,7 @@ add_action( 'after_setup_theme', 'zh_custom_header_setup' );
  *
  * @since Zen Hacker 1.0
  */
-function zh_header_style() {
+function hellozen_header_style() {
 	$header_image = get_header_image();
 	$text_color   = get_header_textcolor();
 
@@ -125,7 +125,7 @@ function zh_header_style() {
  *
  * @since Zen Hacker 1.0
  */
-function zh_admin_header_style() {
+function hellozen_admin_header_style() {
 	$header_image = get_header_image();
 ?>
 	<style type="text/css">
@@ -190,7 +190,7 @@ function zh_admin_header_style() {
  *
  * @since Twenty Thirteen 1.0
  */
-function zh_admin_header_image() {
+function hellozen_admin_header_image() {
 	?>
 	<div id="headimg" style="background: url('<?php esc_url( header_image() ); ?>') no-repeat scroll top; background-size: 768px auto;">
 		<?php $style = ' style="color:#' . get_header_textcolor() . ';"'; ?>

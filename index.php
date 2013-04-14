@@ -8,8 +8,8 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package ZH
- * @since ZH 1.0
+ * @package hellozen
+ * @since hellozen 1.0
  */
 
 get_header(); ?>
@@ -19,7 +19,7 @@ get_header(); ?>
 
 			<?php if ( have_posts() ) : ?>
 
-				<?php zh_content_nav( 'nav-above' ); ?>
+				<?php hellozen_content_nav( 'nav-above' ); ?>
 
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -34,7 +34,7 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php zh_content_nav( 'nav-below' ); ?>
+				<?php hellozen_content_nav( 'nav-below' ); ?>
 
 			<?php elseif ( current_user_can( 'edit_posts' ) ) : ?>
 

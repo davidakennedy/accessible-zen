@@ -2,8 +2,8 @@
 /**
  * The template for displaying Search Results pages.
  *
- * @package ZH
- * @since ZH 1.0
+ * @package hellozen
+ * @since hellozen 1.0
  */
 
 get_header(); ?>
@@ -14,10 +14,10 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'zh' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'hellozen' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 				</header><!-- .page-header -->
 
-				<?php zh_content_nav( 'nav-above' ); ?>
+				<?php hellozen_content_nav( 'nav-above' ); ?>
 
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -26,7 +26,7 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php zh_content_nav( 'nav-below' ); ?>
+				<?php hellozen_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 
