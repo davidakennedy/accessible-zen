@@ -728,9 +728,6 @@ sub {
 ----------------------------------------------- */
 
 /* Site Title and Description */
-.site-banner hgroup {
-	padding-top: 2em;
-}
 .site-title {
 	font-size: 2.8125em; /* 45px */
 	text-align: center;
