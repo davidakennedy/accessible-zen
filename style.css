@@ -747,10 +747,14 @@ sub {
 
 /* =Content
 ----------------------------------------------- */
-#content .sticky {
-	background-color: #e5f7ff;
-	border-bottom: 3px solid #008fcc;
-	border-top: 3px solid #0098d9;
+/* Sticky and Front Page Template */
+#content .sticky,
+.home #content article.page {
+	background-color: #f6fcff;
+	border: 1px solid #0098d9;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 	padding-left: 1em;
 	padding-right: 1em;
 }
@@ -943,10 +947,10 @@ object {
 	margin-bottom: 0;
 }
 .main-navigation a {
-	font-size: 0.8125em;
+	font-size: 1.125em;
 }
 .secondary-navigation a {
-	font-size: 1.125em;
+	font-size: 0.8125em;
 }
 .main-navigation a,
 .secondary-navigation a {
@@ -975,7 +979,7 @@ object {
 ----------------------------------------------- */
 .nopassword,
 .nocomments {
-	color: #aaa;
+	color: #666;
 	font-size: 1.5em;
 	font-weight: bold;
 	text-align: center;
@@ -1203,7 +1207,7 @@ p.comment-form-comment {
 ----------------------------------------------- */
 .site-footer {
 	background-color: #e5F7ff;
-	border-top: 3px solid #0098d9;
+	border-top: 3px solid #008fcc;
 	border-bottom: 3px solid #008fcc;
 }
 .site-info p {

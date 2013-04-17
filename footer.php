@@ -13,17 +13,17 @@
 	</div><!-- #main -->
 
 	<footer id="colophon" class="site-footer cf" role="contentinfo">
-		<nav role="navigation" class="secondary-navigation cf">
-			<h1 class="visuallyhidden"><?php _e( 'Secondary Menu', 'hellozen' ); ?></h1>
-
-			<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class'      => 'nav' ) ); ?>
-		</nav><!-- .promo-navigation .secondary-navigation -->
-		
 		<nav role="navigation" class="main-navigation cf">
 			<h1 class="visuallyhidden"><?php _e( 'Main Menu', 'hellozen' ); ?></h1>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class'      => 'nav' ) ); ?>
-		</nav><!-- .site-navigation .main-navigation -->
+		</nav><!-- .main-navigation -->
+		
+		<nav role="navigation" class="secondary-navigation cf">
+			<h1 class="visuallyhidden"><?php _e( 'Secondary Menu', 'hellozen' ); ?></h1>
+
+			<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class'      => 'nav' ) ); ?>
+		</nav><!-- .secondary-navigation -->
 		
 		<div class="site-info cf">	<?php do_action( 'hellozen_credits' ); ?>
 			<p><a href="<?php echo esc_url( __( 'http://wordpress.org/', 'hellozen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'hellozen' ), 'WordPress' ); ?></a> <?php _e( 'and the ', 'hellozen' ); ?><a href="<?php echo esc_url( __( 'http://davidakennedy.com/hello-zen/', 'hellozen' ) ); ?>"><?php printf( __( 'Hello Zen %s', 'hellozen' ), 'theme' ); ?></a>.</p>

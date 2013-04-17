@@ -16,24 +16,25 @@ get_header(); ?>
 		<div id="primary" class="site-content cf">
 			<div id="content" role="main">
 
-				<?php while ( have_posts() ) : the_post(); ?>
-
-					<?php get_template_part( 'content', 'page' ); ?>
-					
-					<?php endwhile; // end of the loop. ?>
+				<?php while ( have_posts() ) : the_post(); // The  Main Loop ?>
+				
+					<?php if( !empty( $post->post_content) ) {
+					// Grab our content, if not empty
+					get_template_part( 'content', 'page' );
+					} ?>		
+				
+				<?php endwhile; // end of the main loop. ?>
 					
 					<?php
 						$args = array(
-							'post_type'      => 'post',
-							'orderby'        => 'date',
 							'post__not_in' => get_option( 'sticky_posts'),
 							'posts_per_page' => 1
 						);
 						
-						// The Query	
+						// The New Query	
 						$the_query = new WP_Query( $args );
 						
-						// The Loop
+						// The New Loop
 						while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 						
 							<?php
@@ -43,7 +44,7 @@ get_header(); ?>
 						 	*/
 							get_template_part( 'content', get_post_format() ); ?>
 						
-						<?php endwhile;
+						<?php endwhile; // end of the new loop.
 						
 						// Reset Post Data
 						wp_reset_postdata(); ?>

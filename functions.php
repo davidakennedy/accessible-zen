@@ -141,6 +141,9 @@ function hellozen_footer_sidebar_class() {
 		echo 'class="' . $class . '"';
 }
 
+/**
+ * Add body classes for custom background options
+ */
 function hellozen_body_class( $classes ) {
 	$background_color = get_background_color();
 	
