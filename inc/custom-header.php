@@ -22,11 +22,11 @@
 function hellozen_custom_header_setup() {
 	$args = array(
 		// Text color and image (empty to use none).
-		'default-text-color'     => '54413b',
-		'default-image'          => '%s/img/headers/circle.png',
+		'default-text-color'     => '007db2',
+		'default-image'          => '',
 
 		// Set height and width, with a maximum value for the width.
-		'height'                 => 200,
+		'height'                 => 150,
 		'width'                  => 768,
 
 		// Callbacks for styling the header and the admin preview.
@@ -102,7 +102,7 @@ function hellozen_header_style() {
 	<?php
 			if ( empty( $header_image ) ) :
 	?>
-		.site-header hgroup {
+		.site-header {
 			min-height: 0;
 		}
 	<?php
@@ -111,8 +111,7 @@ function hellozen_header_style() {
 		// If the user has set a custom color for the text, use that.
 		elseif ( $text_color != get_theme_support( 'custom-header', 'default-text-color' ) ) :
 	?>
-		.site-title a,
-		.site-description {
+		.site-title a {
 			color: #<?php echo esc_attr( $text_color ); ?> !important;
 		}
 	<?php endif; ?>
@@ -162,9 +161,9 @@ function hellozen_admin_header_style() {
 	}
 	<?php endif; ?>
 	#headimg h1 {
-		font: 46px/1.5 'Raleway', Tahoma, Arial, sans-serif;
+		font: 40px/1.5 'Noticia Text', Georgia, Times, "Times New Roman", serif;
 		margin: 0;
-		padding: 45px 0 0;
+		padding: 0;
 	}
 	#headimg h1 a {
 		text-decoration: none;
@@ -173,7 +172,7 @@ function hellozen_admin_header_style() {
 		text-decoration: underline;
 	}
 	#headimg h2 {
-		font: 20px/1.5 'Raleway', Tahoma, Arial, sans-serif;
+		font: 30px/1.5 'Noticia Text', Georgia, Times, "Times New Roman", serif;
 		margin: 0;
 	}
 	.default-header img {
@@ -188,7 +187,7 @@ function hellozen_admin_header_style() {
  * Outputs markup to be displayed on the Appearance > Header admin panel.
  * This callback overrides the default markup displayed there.
  *
- * @since Twenty Thirteen 1.0
+ * @since Hello Zen 1.0
  */
 function hellozen_admin_header_image() {
 	?>
@@ -196,7 +195,7 @@ function hellozen_admin_header_image() {
 		<?php $style = ' style="color:#' . get_header_textcolor() . ';"'; ?>
 		<div class="hgroup">
 			<h1><a id="name"<?php echo $style; ?> href="#"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></h2>
+			<h2 id="desc"><?php bloginfo( 'description' ); ?></h2>
 		</div>
 	</div>
 <?php }

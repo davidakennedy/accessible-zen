@@ -747,8 +747,8 @@ sub {
 /* Sticky and Front Page Template */
 #content .sticky,
 .home #content article.page {
-	background-color: #f6fcff;
-	border: 1px solid #0098d9;
+	background-color: #f5f5f5;
+	border: 1px solid #d5d5d5;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
@@ -764,7 +764,7 @@ sub {
 	text-transform: uppercase;
 }
 .hentry {
-	border-bottom: 1px dotted #0098d9;
+	border-bottom: 1px dotted #008FCC;
 	padding: 1.5em 0;
 }
 .page .hentry {
@@ -801,8 +801,8 @@ sub {
 }
 .format-aside {
 	background-color: #f5f5f5;
-	border-bottom: 3px solid #d5d5d5;
-	border-top: 3px solid #d5d5d5;
+	border: 1px solid #0098d9;
+	border-top: none;
 	padding-left: 1em;
 	padding-right: 1em;
 }
@@ -982,7 +982,7 @@ object {
 	text-align: center;
 }
 .comments-area {
-	border-top: 1px dotted #54413b;
+	border-top: 1px dotted #008fcc;
 	margin-top: 1.5em;
 	padding-top: 1.5em;
 }
@@ -1180,7 +1180,7 @@ p.comment-form-comment {
 ----------------------------------------------- */
 
 .sidebar {
-	border-top: 1px dotted #0098d9;
+	border-top: 1px solid #0098d9;
 }
 .widget {
 	margin: 0 0 1.5em;
@@ -1217,7 +1217,7 @@ p.comment-form-comment {
 /* Min. width of 600 pixels */
 @media only screen and (min-width: 37.5em) {
 	/* Wrapper div */
-	.custom-background .site { width: 95%; }
+	.custom-background .site { width: 80%; }
 	body.custom-background-empty {
 		background-color: #fff;
 	}

@@ -61,6 +61,7 @@ function hellozen_setup() {
 	 * Enable support for Post Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 768, 150, true );
 
 	/**
 	 * This theme uses wp_nav_menu() in two locations.
@@ -146,8 +147,9 @@ function hellozen_footer_sidebar_class() {
  */
 function hellozen_body_class( $classes ) {
 	$background_color = get_background_color();
+	$background_image = get_background_image();
 	
-		if ( empty( $background_color ) )
+		if ( empty( $background_color ) && empty( $background_image )  )
 		$classes[] = 'custom-background-empty';
 	elseif ( in_array( $background_color, array( 'fff', 'ffffff' ) ) )
 		$classes[] = 'custom-background-white';

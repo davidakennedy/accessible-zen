@@ -300,3 +300,14 @@ function hellozen_category_transient_flusher() {
 }
 add_action( 'edit_category', 'hellozen_category_transient_flusher' );
 add_action( 'save_post', 'hellozen_category_transient_flusher' );
+
+function hellozen_credits() {
+	$credits = printf(
+		'<p>Thanks, <a href="%1$s" title="%2$s" rel="generator">WordPress</a> &amp; <a href="%3$s">%4$s</a>.</p>',
+		esc_url( 'http://wordpress.org' ),
+		__( 'A Semantic Personal Publishing Platform', 'hellozen' ),
+		esc_url( 'http://davidakennedy.com/projects/hello-zen' ),
+		__( 'the Hello Zen theme', 'hellozen' )
+    );
+    return $credits;
+}

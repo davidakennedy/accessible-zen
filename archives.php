@@ -1,24 +1,18 @@
 <?php
 /**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
- *
  * @package hellozen
  * @since hellozen 1.0
+ * Template Name: Archives Template
  */
 
 get_header(); ?>
 
-		<div id="primary" class="site-content cf">
-			<div id="content" role="main">
+		<div id="primary">
+			<div id="content" class="site-content cf" role="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'content', 'page' ); ?>
+					<?php get_template_part( 'content', 'archives' ); ?>
 
 					<?php
 						// If comments are open or we have at least one comment, load up the comment template
