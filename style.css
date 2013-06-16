@@ -643,7 +643,8 @@ sub {
 }
 
 /* Create an abstraction, as per: csswizardry.com/2011/09/the-nav-abstraction/ */
-.nav {
+.nav,
+.nav ul {
 	list-style: none;
 	margin-left: 0;
 }
@@ -728,6 +729,12 @@ sub {
 ----------------------------------------------- */
 
 /* Site Title and Description */
+.site-logo {
+	display: block;
+	margin: 0 auto 1.5em;
+}
+
+/* Site Title and Description */
 .site-title {
 	font-size: 2.8125em; /* 45px */
 	text-align: center;
@@ -792,6 +799,9 @@ sub {
 .page .edit-link {
 	clear: both;
 }
+.author-info {
+	margin: 1.5em 0;
+}
 
 /* =Asides
 ----------------------------------------------- */
@@ -799,10 +809,10 @@ sub {
 .archive .format-aside .entry-title {
 	display: none;
 }
-.format-aside {
+.blog .format-aside,
+.archive .format-aside {
 	background-color: #f5f5f5;
-	border: 1px solid #0098d9;
-	border-top: none;
+	border: 1px dotted #0098d9;
 	padding-left: 1em;
 	padding-right: 1em;
 }
@@ -810,7 +820,6 @@ sub {
 /* =Media
 ----------------------------------------------- */
 /* Fluid images for posts, comments, and widgets */
-.site-header img,
 .entry-content img,
 .comment-content img,
 .widget img {
@@ -818,7 +827,6 @@ sub {
 }
 
 /* Make sure images with WordPress-added height and width attributes are scaled correctly */
-.site-header img,
 .entry-content img,
 .widget img,
 img[class*="align"],
@@ -827,14 +835,10 @@ img[class*="wp-image-"] {
 }
 
 /* Prevent stretching of full-size images with height and width attributes in IE8 */
-.site-header img,
 .entry-content img,
 img.size-full {
 	max-width: 100%;
 	width: auto;
-}
-.site-header img {
-	padding-top: 3em;
 }
 
 /* No border on banner image */
@@ -1180,7 +1184,7 @@ p.comment-form-comment {
 ----------------------------------------------- */
 
 .sidebar {
-	border-top: 1px solid #0098d9;
+	border-top: 1px dotted #008fcc;
 }
 .widget {
 	margin: 0 0 1.5em;
@@ -1216,6 +1220,9 @@ p.comment-form-comment {
 
 /* Min. width of 600 pixels */
 @media only screen and (min-width: 37.5em) {
+	body {
+		font-size: 1.125em;
+	}
 	/* Wrapper div */
 	.custom-background .site { width: 80%; }
 	body.custom-background-empty {
@@ -1233,9 +1240,6 @@ p.comment-form-comment {
 	/* 2 COLUMN GRID */
 	.one .sidebar-widgets {width: 93.458%;}
 	.two .sidebar-widgets {width: 43.458%;}
-	body {
-		font-size: 100%;
-	}
 }
 
 /* Print

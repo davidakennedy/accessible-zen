@@ -1,0 +1,495 @@
+/*
+Theme Name: Hello Zen
+Description: Used to style the TinyMCE editor.
+*/
+
+/* =Global
+----------------------------------------------- */
+html .mceContentBody {
+	font-size: 100%;
+	max-width: 604px;
+}
+body {
+	color: #333;
+	font: 400 112.5%/1.5 'Noticia Text', Georgia, Times, "Times New Roman", serif;
+	line-height: 1.5;
+	text-rendering: optimizeLegibility;
+	vertical-align: baseline;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	color: #007db2;
+  	line-height: 1.5;
+  	margin: 0 0 0.125em;
+  	text-align: center;
+}
+/* Composed to a scale of 16px, 20px, 24px, 30px, 36px and 46px */
+h1, .h1 {
+	font-size: 2.5em; /* 40px */
+}
+h2, .h2 {
+	font-size: 1.875em; /* 30px */
+}
+h3, .h3 {
+	font-size: 1.25em; /* 20px */
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+} 
+h4, .h4 {
+	font-size: 1.125em; /* 18px */
+	font-weight: bold;
+}
+h5, .h5 {
+	font-size: 1.0625em; /* 17px */
+	font-weight: bold;
+}
+h6, .h6 {
+	font-size: 1em; /* 16px */
+	text-transform: uppercase;
+	font-weight: bold;
+}
+hr {
+	border-top: 2px solid #d5d5d5;
+	display: block;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+	padding: 0;
+}
+p,
+ul,
+blockquote,
+pre,
+td,
+th,
+label {
+	font-size: 1em; /* 16px / 24px */
+	line-height: 1.5;
+	margin: 0 0 1.5em;
+}
+small,
+p.small {
+	font-size: 0.875em; /* 14px */
+	line-height: 1.5;
+	margin: 0 0 1.5em;
+}
+big,
+p.big {
+	font-size: 1.125em; /* 18px */
+	line-height: 1.5;
+	margin: 0 0 1.5em;
+}
+
+/* Code */
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word; /* Allow line wrapping of 'pre' */
+}
+pre,
+code,
+kbd,
+samp {
+	background: #f5f5f5;
+	font-family: Menlo, Consolas, 'DejaVu Sans Mono', Monaco, monospace;
+	font-size: 1em;
+	line-height: 1.5;
+	margin-bottom: 1.5em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 0.25em;
+}
+
+/* Tables */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+td {
+	vertical-align: top;
+}
+th {
+	font-weight: bold;
+	text-align: left;
+}
+tr, th, td {
+	border-bottom: 0 solid #e5e5e5;
+	padding-right: 1.5em;
+}
+
+/* Quotes */
+blockquote, q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+blockquote,
+q,
+cite {
+	font-style: italic;
+}
+blockquote {
+	border-left: 3px solid #e5e5e5;
+	color: #666;
+	margin: 1em 1.5em;
+	padding-left: 1.5em;
+}
+blockquote > p {
+	padding: 0;
+}
+
+/* Lists */
+ul,
+ol {
+	list-style-position: inside;
+	margin: 0 0 1.5em 3em;
+	padding: 0;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+.sidebar ul,
+.sidebar ol {
+	list-style: none none outside;
+	margin: 0 0 1.5em 0;
+}
+.sidebar li {
+	margin-bottom: 0.5em;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+dl dd {
+	margin: 0 1.5em 1.5em;
+}
+dt {
+	font-weight: bold;
+}
+
+/* Hyperlinks */
+a {
+	color: #00628c;
+	text-decoration: none;
+	border-width: 0 0 1px 0;
+	border-style: none none solid none;
+	border-color: #00628c;
+	padding-bottom: 0.0625em;
+}
+a:hover,
+a:active,
+a:focus {
+	color: #00354c;
+	text-decoration: none;
+	border-width: 0 0 2px 0;
+	border-style: none none solid none;
+	border-color: #666;
+}
+a:active,
+a:focus {
+	/* Give clicked links a depressed effect. */
+	position: relative;
+	top: 1px;
+}
+a:focus {
+	outline: thin dotted red;
+}
+
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover,
+a:active {
+	outline: 0;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: #007Db2;
+	text-decoration: none;
+	border-style: none;
+}
+h1 a:hover,
+h1 a:active,
+h1 a:focus,
+h2 a:hover,
+h2 a:active,
+h2 a:focus,
+h3 a:hover,
+h3 a:active,
+h3 a:focus,
+h4 a:hover,
+h4 a:active,
+h4 a:focus,
+h5 a:hover,
+h5 a:active,
+h5 a:focus,
+h6 a:hover,
+h6 a:active,
+h6 a:focus {
+	color: #007Db2;
+	text-decoration: none;
+	border-width: 0 0 2px 0;
+	border-style: none none solid none;
+	border-color: #666;
+}
+
+/* Media */
+figure {
+	margin: 0;
+}
+img,
+object,
+embed,
+video {
+	max-width: 100%; /* Fluid images */
+	_width: 100%;
+}
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic; /* Improve IE's resizing of images */
+}
+svg:not(:root) {
+	overflow: hidden; /* Correct IE9 overflow */
+}
+
+/* Marked, Inserted, Deleted and Highlighted Text */
+abbr[title],
+dfn[title] {
+	border-bottom: 1px dotted #444;
+	cursor: help;
+}
+
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+	color: #333;
+}
+mark {
+	font-weight: bold;
+}
+::-moz-selection {
+	background: #007Db2;
+	color: #fff; text-shadow: none;
+}
+::selection {
+	background: #007Db2;
+	color: #fff;
+	text-shadow: none;
+}
+
+/* Others
+----------------------------------------------- */
+strong,
+b,
+dt {
+	font-weight: bold;
+}
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+var,
+address {
+	font-style: normal;
+}
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline; /* Position 'sub' and 'sup' without affecting line-height */
+}
+sup {
+	top: -0.5em; /* Move superscripted text up */
+}
+sub {
+	bottom: -0.25em; /* Move subscripted text down */
+}
+/* Create a ul or ol without bullets or numbers */
+.nolist {
+	list-style: none none outside;
+	margin:0;
+	padding:0;
+}
+.clear {
+	clear: both;
+}
+/* Create an abstraction, as per: csswizardry.com/2011/09/the-nav-abstraction/ */
+.nav,
+.nav ul {
+	list-style: none;
+	margin-left: 0;
+}
+.nav li {
+	display: inline;
+}
+.nav a {
+	display: inline;
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-bottom: 0.5em;
+	margin-right: 1em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-bottom: 0.5em;
+	margin-left: 1em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto 1.5em;
+}
+
+/* =Media
+----------------------------------------------- */
+
+/* Fluid images for posts, comments, and widgets */
+.entry-content img,
+.comment-content img,
+.widget img {
+	max-width: 100%;
+}
+
+/* Make sure images with WordPress-added height and width attributes are scaled correctly */
+.entry-content img,
+.widget img,
+img[class*="align"],
+img[class*="wp-image-"] {
+	height: auto;
+}
+
+/* Prevent stretching of full-size images with height and width attributes in IE8 */
+.entry-content img,
+img.size-full {
+	max-width: 100%;
+	width: auto;
+}
+
+/* No border on banner image */
+.site-banner a {
+	border: 0 none;
+}
+.entry-header .attachment-post-thumbnail {
+	display: block;
+	margin: 0 auto 1.5em;
+}
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+.wp-caption {
+	background: #f5f5f5;
+	-webkit-box-shadow: 0 1px 2px #d5d5d5;
+	-moz-box-shadow: 0 1px 2px #d5d5d5;
+	box-shadow: 0 1px 2px #d5d5d5;
+	border: 1px solid #e5e5e5;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+.wp-caption.aligncenter,
+.wp-caption.alignleft,
+.wp-caption.alignright {
+	margin-bottom: 1.5em;
+}
+.wp-caption img {
+	display: block;
+	margin: 1.2% auto 0;
+	max-width: 96%;
+}
+.wp-caption-text {
+	color: #666;
+	font-size: 0.75em;
+	text-align: center;
+}
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+.gallery {
+	margin-bottom: 1.5em;
+}
+.gallery-caption {
+}
+.gallery-item a {
+	border: 0 none;
+}
+#content .gallery-item a img {
+	border: 3px solid #e5e5e5;
+}
+#content .gallery-item a:hover img,
+#content .gallery-item a:active img,
+#content .gallery-item a:focus img {
+	border: 3px solid #007Db2;
+	height: auto;
+	max-width: 90%;
+}
+#content .gallery dd {
+	margin: 0;
+}
+#content .gallery-columns-4 .gallery-item {
+}
+#content .gallery-columns-4 .gallery-item img {
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* =RTL
+----------------------------------------------- */
+html .mceContentBody.rtl {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+.rtl ol,
+.rtl ul {
+	margin: 0 3em 1.5em 0;
+}
+.rtl .wp-caption,
+.rtl tr th {
+	text-align: right;
+}
+.rtl td {
+	text-align: right;
+}
+.rtl blockquote {
+	border-right: 3px solid #e5e5e5;
+	padding-left: 0;
+	padding-right: 1.5em;
+}

@@ -16,13 +16,13 @@
 		<nav role="navigation" class="main-navigation cf">
 			<h1 class="visuallyhidden"><?php _e( 'Main Menu', 'hellozen' ); ?></h1>
 
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class'      => 'nav' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class'      => 'nav', 'depth' => 1 ) ); ?>
 		</nav><!-- .main-navigation -->
 		
 		<nav role="navigation" class="secondary-navigation cf">
 			<h1 class="visuallyhidden"><?php _e( 'Secondary Menu', 'hellozen' ); ?></h1>
 
-			<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class'      => 'nav' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class'      => 'nav', 'depth' => 1 ) ); ?>
 		</nav><!-- .secondary-navigation -->
 		
 		<div class="site-info cf">

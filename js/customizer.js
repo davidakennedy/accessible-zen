@@ -16,12 +16,7 @@
 			$( '.site-description' ).text( to );
 		} );
 	} );
-	// Header and background color
-	wp.customize( 'header_textcolor', function( value ) {
-		value.bind( function( newval ) {
-			$('.site-title a').css('color', newval );
-		} );
-	} );
+	// Background color
 	wp.customize( 'background_color', function( value ) {
 		value.bind( function( to ) {
 			var body = $( 'body' );

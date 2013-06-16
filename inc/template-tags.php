@@ -218,51 +218,6 @@ function hellozen_cats_and_tags() {
 endif;
 
 /**
- * Sets the post excerpt length to 100 words.
- *
- * To override this length in a child theme, remove the filter and add your own
- * function tied to the excerpt_length filter hook.
- */
-function hellozen_excerpt_length( $length ) {
-	return 100;
-}
-add_filter( 'excerpt_length', 'hellozen_excerpt_length' );
-
-if ( ! function_exists( 'hellozen_continue_reading_link' ) ) :
-/**
- * Returns a "Continue Reading" link for excerpts
- */
-function hellozen_continue_reading_link() {
-	return ' <a href="'. esc_url( get_permalink() ) . '">' . ('Continue reading ' . the_title('', '', false) . '' . '</a>');
-}
-endif; // hellozen_continue_reading_link
-
-/**
- * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and twentyeleven_continue_reading_link().
- *
- * To override this in a child theme, remove the filter and add your own
- * function tied to the excerpt_more filter hook.
- */
-function hellozen_auto_excerpt_more( $more ) {
-	return ' &hellip;' . hellozen_continue_reading_link();
-}
-add_filter( 'excerpt_more', 'hellozen_auto_excerpt_more' );
-
-/**
- * Adds a pretty "Continue Reading" link to custom post excerpts.
- *
- * To override this link in a child theme, remove the filter and add your own
- * function tied to the get_the_excerpt filter hook.
- */
-function hellozen_custom_excerpt_more( $output ) {
-	if ( has_excerpt() && ! is_attachment() ) {
-		$output .= hellozen_continue_reading_link();
-	}
-	return $output;
-}
-add_filter( 'get_the_excerpt', 'hellozen_custom_excerpt_more' );
-
-/**
  * Returns true if a blog has more than 1 category
  *
  * @since hellozen 1.0

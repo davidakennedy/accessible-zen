@@ -24,5 +24,8 @@
 		<?php hellozen_posted_on(); ?>
 		<?php hellozen_cats_and_tags(); ?>
 		<?php edit_post_link( __( 'Edit', 'hellozen' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php if ( is_single() && get_the_author_meta( 'description' ) && is_multi_author() ) : ?>
+			<?php get_template_part( 'author-bio' ); ?>
+		<?php endif; ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->

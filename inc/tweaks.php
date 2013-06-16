@@ -32,7 +32,49 @@ function hellozen_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'hellozen_body_classes' );
+
+/**
+ * Count the number of footer sidebars to enable dynamic classes for the footer
+ */
+function hellozen_footer_sidebar_class() {
+	$count = 0;
+
+	if ( is_active_sidebar( 'sidebar-1' ) )
+		$count++;
+
+	if ( is_active_sidebar( 'sidebar-2' ) )
+		$count++;
+
+	$class = '';
+
+	switch ( $count ) {
+		case '1':
+			$class = 'one sidebar cf';
+			break;
+		case '2':
+			$class = 'two sidebar cf';
+			break;
+	}
+
+	if ( $class )
+		echo 'class="' . $class . '"';
+}
+
+/**
+ * Add body classes for custom background options
+ */
+function hellozen_body_class( $classes ) {
+	$background_color = get_background_color();
+	$background_image = get_background_image();
+	
+		if ( empty( $background_color ) && empty( $background_image )  )
+		$classes[] = 'custom-background-empty';
+	elseif ( in_array( $background_color, array( 'fff', 'ffffff' ) ) )
+		$classes[] = 'custom-background-white';
+
+	return $classes;
+}
+add_filter( 'body_class', 'hellozen_body_class' );
 
 /**
  * Filter in a link to a content ID attribute for the next/previous image links on image attachment pages
@@ -50,3 +92,65 @@ function hellozen_enhanced_image_navigation( $url, $id ) {
 	return $url;
 }
 add_filter( 'attachment_link', 'hellozen_enhanced_image_navigation', 10, 2 );
+
+/**
+ * Sets the post excerpt length to 100 words.
+ *
+ * To override this length in a child theme, remove the filter and add your own
+ * function tied to the excerpt_length filter hook.
+ */
+function hellozen_excerpt_length( $length ) {
+	return 100;
+}
+add_filter( 'excerpt_length', 'hellozen_excerpt_length' );
+
+if ( ! function_exists( 'hellozen_continue_reading_link' ) ) :
+/**
+ * Returns a "Continue Reading" link for excerpts
+ */
+function hellozen_continue_reading_link() {
+	return ' <a href="'. esc_url( get_permalink() ) . '">' . ('Continue reading ' . the_title('', '', false) . '' . '</a>');
+}
+endif; // hellozen_continue_reading_link
+
+/**
+ * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and twentyeleven_continue_reading_link().
+ *
+ * To override this in a child theme, remove the filter and add your own
+ * function tied to the excerpt_more filter hook.
+ */
+function hellozen_auto_excerpt_more( $more ) {
+	return ' &hellip;' . hellozen_continue_reading_link();
+}
+add_filter( 'excerpt_more', 'hellozen_auto_excerpt_more' );
+
+/**
+ * Adds a pretty "Continue Reading" link to custom post excerpts.
+ *
+ * To override this link in a child theme, remove the filter and add your own
+ * function tied to the get_the_excerpt filter hook.
+ */
+function hellozen_custom_excerpt_more( $output ) {
+	if ( has_excerpt() && ! is_attachment() ) {
+		$output .= hellozen_continue_reading_link();
+	}
+	return $output;
+}
+add_filter( 'get_the_excerpt', 'hellozen_custom_excerpt_more' );
+
+/**
+ * Returns the URL from the post.
+ *
+ * @uses get_the_link() to get the URL in the post meta (if it exists) or
+ * the first link found in the post content.
+ *
+ * Falls back to the post permalink if no URL is found in the post.
+ *
+ * @since Hello Zen 1.0
+ * @return string URL
+ */
+function hellozen_get_link_url() {
+	$has_url = get_the_post_format_url();
+
+	return ( $has_url ) ? $has_url : apply_filters( 'the_permalink', get_permalink() );
+}

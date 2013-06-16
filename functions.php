@@ -27,6 +27,12 @@ if ( ! function_exists( 'hellozen_setup' ) ):
 function hellozen_setup() {
 
 	/**
+ 	 * Hello Zen only works in WordPress 3.6 or later.
+ 	 */
+if ( version_compare( $GLOBALS['wp_version'], '3.6-alpha', '<' ) )
+	require( get_template_directory() . '/inc/back-compat.php' );
+
+	/**
 	 * Custom template tags for this theme.
 	 */
 	require( get_template_directory() . '/inc/template-tags.php' );
@@ -48,6 +54,12 @@ function hellozen_setup() {
 	 * to change 'hellozen' to the name of your theme in all the template files
 	 */
 	load_theme_textdomain( 'hellozen', get_template_directory() . '/languages' );
+	
+	/*
+	 * This theme styles the visual editor to resemble the theme style,
+	 * specifically font, colors, and column width.
+	 */
+	add_editor_style( 'css/editor-style.css' );
 
 	/**
 	 * Add default posts and comments RSS feed links to head
@@ -71,10 +83,13 @@ function hellozen_setup() {
 		'secondary' => __( 'Secondary Menu', 'hellozen' )
 	) );
 
-	/**
-	 * Add support for the Aside Post Formats
+	/*
+	 * Add support for all available post formats by default.
+	 * See http://codex.wordpress.org/Post_Formats
 	 */
-	add_theme_support( 'post-formats', array( 'aside', ) );
+	add_theme_support( 'post-formats', array(
+		'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video'
+	) );
 	
 	/*
 	 * This theme supports custom background color and image, and here
@@ -114,49 +129,6 @@ function hellozen_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'hellozen_widgets_init' );
-
-/**
- * Count the number of footer sidebars to enable dynamic classes for the footer
- */
-function hellozen_footer_sidebar_class() {
-	$count = 0;
-
-	if ( is_active_sidebar( 'sidebar-1' ) )
-		$count++;
-
-	if ( is_active_sidebar( 'sidebar-2' ) )
-		$count++;
-
-	$class = '';
-
-	switch ( $count ) {
-		case '1':
-			$class = 'one sidebar cf';
-			break;
-		case '2':
-			$class = 'two sidebar cf';
-			break;
-	}
-
-	if ( $class )
-		echo 'class="' . $class . '"';
-}
-
-/**
- * Add body classes for custom background options
- */
-function hellozen_body_class( $classes ) {
-	$background_color = get_background_color();
-	$background_image = get_background_image();
-	
-		if ( empty( $background_color ) && empty( $background_image )  )
-		$classes[] = 'custom-background-empty';
-	elseif ( in_array( $background_color, array( 'fff', 'ffffff' ) ) )
-		$classes[] = 'custom-background-white';
-
-	return $classes;
-}
-add_filter( 'body_class', 'hellozen_body_class' );
 
 /**
  * Enqueue scripts and styles
