@@ -9,8 +9,123 @@ http://codex.wordpress.org/Right_to_Left_Language_Support
 
 */
 
-
 body {
 	direction: rtl;
 	unicode-bidi: embed;
+}
+
+/* =Global
+----------------------------------------------- */
+
+/* Tables */
+th {
+	text-align: right;
+}
+tr, th, td {
+	padding-left: 1.5em;
+	padding-right: 0;
+}
+
+/* Forms */
+legend {
+	*margin-right: -.75em;
+}
+
+/* Quotes */
+blockquote {
+	border-right: 3px solid #e5e5e5;
+	border-left: 0;
+	padding-left: 0;
+	padding-right: 1.5em;
+}
+
+/* Lists */
+ul,
+ol {
+	margin: 0 3em 1.5em 0;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin-left: 0;
+	margin-right: 1.5em;
+}
+
+/* Others
+----------------------------------------------- */
+
+/* For image replacement */
+.ir {
+	text-align: left;
+	direction: rtl;
+}
+
+/* Skip Links */
+.skip-link {
+	float: left;
+	margin-left: 0;
+	margin-right: -100%;
+}
+
+/* =Navigation
+----------------------------------------------- */
+.nav-previous {
+	float: left;
+}
+.nav-next {
+	float: left;
+	text-align: left;
+}
+
+/* =Comments
+----------------------------------------------- */
+.commentlist .comment-author {
+	float: left;
+}
+.commentlist .comment-author .avatar {
+	padding-left: 0.25em;
+	padding-right: 0;
+}
+.commentlist .comment-meta {
+	float: left;
+	text-align: left;
+}
+
+/* Children comments */
+.commentlist .children {
+	margin: 0 1.5em 0 0;
+}
+
+/* Comment Form */
+#cancel-comment-reply-link {
+	float: left;
+}
+#respond .form-submit {
+	float: left;
+}
+#respond #cancel-comment-reply-link {
+	margin-left: 0;
+	margin-right: 0.5em;
+}
+
+/* =Widgets
+----------------------------------------------- */
+
+/* Search */
+#s {
+	background: #fff url(img/search.png) no-repeat 5px 8px;
+	height: 30px;
+	padding: 0.25em 1.75em 0.25em 0.625em;
+	width: 50%; 
+}
+
+/* Media Queries
+----------------------------------------------- */
+
+/* Min. width of 600 pixels */
+@media only screen and (min-width: 37.5em) {
+	
+	/* COLUMN GRID */
+	.sidebar-widgets {float: right;}
 }
