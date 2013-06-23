@@ -84,8 +84,12 @@ ol ul {
 	float: left;
 }
 .commentlist .comment-author .avatar {
+	float: right;
 	padding-left: 0.25em;
 	padding-right: 0;
+}
+.commentlist .comment-author .fn {
+	float: right;
 }
 .commentlist .comment-meta {
 	float: left;

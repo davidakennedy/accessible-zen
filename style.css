@@ -1014,9 +1014,11 @@ object {
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
+	float: left;
 	padding-right: 0.25em;
 }
 .commentlist .comment-author .fn {
+	float: left;
 	vertical-align: top;
 }
 .commentlist .comment-meta {
