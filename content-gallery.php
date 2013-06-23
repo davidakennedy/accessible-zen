@@ -17,7 +17,7 @@
 			</header>
 			
 			<div class="entry-content">
-				<?php the_post_format_gallery( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'hellozen' ) ); ?>
+				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'hellozen' ) ); ?>
 			</div><!-- .entry-content -->
 		</div><!-- .gallery -->
 

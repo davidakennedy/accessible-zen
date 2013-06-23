@@ -16,14 +16,8 @@
 				<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 			</header>
 			
-			<div class="entry-media">
-				<div class="audio-content">
-					<?php the_post_format_audio(); ?>
-				</div><!-- .audio-content -->
-			</div><!-- .entry-media -->
-			
 			<div class="entry-content">
-				<?php the_remaining_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'hellozen' ) ); ?>
+				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'hellozen' ) ); ?>
 			</div><!-- .entry-content -->
 		</div><!-- .audio -->
 

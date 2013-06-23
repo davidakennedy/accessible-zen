@@ -27,12 +27,6 @@ if ( ! function_exists( 'hellozen_setup' ) ):
 function hellozen_setup() {
 
 	/**
- 	 * Hello Zen only works in WordPress 3.6 or later.
- 	 */
-if ( version_compare( $GLOBALS['wp_version'], '3.6-alpha', '<' ) )
-	require( get_template_directory() . '/inc/back-compat.php' );
-
-	/**
 	 * Custom template tags for this theme.
 	 */
 	require( get_template_directory() . '/inc/template-tags.php' );

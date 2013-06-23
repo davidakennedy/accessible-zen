@@ -9,10 +9,6 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="video">
-			<div class="entry-media">
-				<?php the_post_format_video(); ?>
-			</div><!-- .entry-media -->
-	
 			<header class="entry-header">
 				<span class="title">
 					<?php _e( 'Video', 'hellozen' ); ?>
@@ -21,7 +17,7 @@
 			</header>
 			
 			<div class="entry-content">
-				<?php the_remaining_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'hellozen' ) ); ?>
+				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'hellozen' ) ); ?>
 			</div><!-- .entry-content -->
 		</div><!-- .video -->
 
