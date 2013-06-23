@@ -141,16 +141,18 @@ add_filter( 'get_the_excerpt', 'hellozen_custom_excerpt_more' );
 /**
  * Returns the URL from the post.
  *
- * @uses get_the_link() to get the URL in the post meta (if it exists) or
+ * @uses get_content_url() to get the URL in the post meta (if it exists) or
  * the first link found in the post content.
  *
  * Falls back to the post permalink if no URL is found in the post.
  *
  * @since Hello Zen 1.0
- * @return string URL
+ *
+ * @return string The Link format URL.
  */
 function hellozen_get_link_url() {
-	$has_url = get_the_post_format_url();
+	$content = get_the_content();
+	$has_url = get_content_url( $content );
 
 	return ( $has_url ) ? $has_url : apply_filters( 'the_permalink', get_permalink() );
 }
