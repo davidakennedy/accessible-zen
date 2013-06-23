@@ -45,9 +45,6 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site cf">
 	<?php do_action( 'before' ); ?>
-	<div class="skip-container cf">
-		<a class="skip-link" href="#colophon"><?php _e( '&darr; Skip to Main Menus', 'hellozen' ); ?></a>
-	</div><!-- .skip-container -->
 	<header id="masthead" class="site-header cf" role="banner">
 		<div class="site-banner">
 			<?php if ( get_header_image() ) : ?>
