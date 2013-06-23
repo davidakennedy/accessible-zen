@@ -812,7 +812,6 @@ sub {
 .blog .format-aside,
 .archive .format-aside {
 	background-color: #f5f5f5;
-	border-top: 1px dotted #008fcc;
 	border-left: 1px dotted #008fcc;
 	border-right: 1px dotted #008fcc;
 	padding-left: 1em;
