@@ -132,6 +132,27 @@ function hellozen_archive_page_title_etc() {
 		} elseif ( is_tag() ) {
 			printf( __( 'Tag Archives: %s', 'hellozen' ), '<span>' . single_tag_title( '', false ) . '</span>' );
 
+		} elseif ( has_post_format( 'aside' ) ) {
+			printf( __( '%s Archives', 'hellozen' ), '<span>' . get_post_format_string( get_post_format() ) . '</span>' );
+		} elseif ( has_post_format( 'aside' ) ) {
+			printf( __( '%s Archives', 'hellozen' ), '<span>' . get_post_format_string( get_post_format() ) . '</span>' );
+		} elseif ( has_post_format( 'audio' ) ) {
+			printf( __( '%s Archives', 'hellozen' ), '<span>' . get_post_format_string( get_post_format() ) . '</span>' );
+		} elseif ( has_post_format( 'chat' ) ) {
+			printf( __( '%s Archives', 'hellozen' ), '<span>' . get_post_format_string( get_post_format() ) . '</span>' );
+		} elseif ( has_post_format( 'gallery' ) ) {
+			printf( __( '%s Archives', 'hellozen' ), '<span>' . get_post_format_string( get_post_format() ) . '</span>' );
+		} elseif ( has_post_format( 'image' ) ) {
+			printf( __( '%s Archives', 'hellozen' ), '<span>' . get_post_format_string( get_post_format() ) . '</span>' );
+		} elseif ( has_post_format( 'link' ) ) {
+			printf( __( '%s Archives', 'hellozen' ), '<span>' . get_post_format_string( get_post_format() ) . '</span>' );
+		} 
+		elseif ( has_post_format( 'quote' ) ) {
+			printf( __( '%s Archives', 'hellozen' ), '<span>' . get_post_format_string( get_post_format() ) . '</span>' );
+		} elseif ( has_post_format( 'status' ) ) {
+			printf( __( '%s Archives', 'hellozen' ), '<span>' . get_post_format_string( get_post_format() ) . '</span>' );
+		} elseif ( has_post_format( 'video' ) ) {
+			printf( __( '%s Archives', 'hellozen' ), '<span>' . get_post_format_string( get_post_format() ) . '</span>' );
 		} elseif ( is_author() ) {
 			/* Queue the first post, that way we know
 			 * what author we're dealing with (if that is the case).
@@ -216,6 +237,18 @@ function hellozen_cats_and_tags() {
 			);
 }
 endif;
+
+/**
+ * Prints a link to the Post Format archive page
+ * Use: echo get_post_format_archive_link();
+ * @since hellozen 1.0
+ */
+ 
+ function get_post_format_archive_link() {
+    return sprintf( 
+        'Format: <a href="' . get_post_format_link( get_post_format() ) . '">' . get_post_format_string( get_post_format() ) . '</a><br>' 
+    );
+}
 
 /**
  * Returns true if a blog has more than 1 category

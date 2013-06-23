@@ -23,6 +23,7 @@
 
 		<footer class="entry-meta">
 		<?php hellozen_posted_on(); ?>
+		<?php echo get_post_format_archive_link(); ?>
 		<?php edit_post_link( __( 'Edit', 'hellozen' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 	</article><!-- #post -->
