@@ -1,7 +1,7 @@
 <?php
 /**
- * @package hellozen
- * @since hellozen 1.0
+ * @package accessiblezen
+ * @since accessiblezen 1.0
  * Template Name: Archives Template
  */
 

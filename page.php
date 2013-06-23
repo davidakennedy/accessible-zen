@@ -7,8 +7,8 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package hellozen
- * @since hellozen 1.0
+ * @package accessiblezen
+ * @since accessiblezen 1.0
  */
 
 get_header(); ?>

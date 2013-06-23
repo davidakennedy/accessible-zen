@@ -1,7 +1,7 @@
 <?php
 /**
- * @package hellozen
- * @since hellozen 1.0
+ * @package accessiblezen
+ * @since accessiblezen 1.0
  */
 ?>
 
@@ -11,19 +11,19 @@
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
 		<div class="entry-meta">
-			<p>By <a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>"><?php the_author_meta('display_name'); ?></a>.</p>
+			<p><?php _e( 'By', 'hellozen' ); ?> <a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>"><?php the_author_meta('display_name'); ?></a>.</p>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php the_content(); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'hellozen' ), 'after' => '</div>' ) ); ?>
+		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'accessiblezen' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
-		<?php hellozen_posted_on(); ?>
-		<?php hellozen_cats_and_tags(); ?>
-		<?php edit_post_link( __( 'Edit', 'hellozen' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php accessiblezen_posted_on(); ?>
+		<?php accessiblezen_cats_and_tags(); ?>
+		<?php edit_post_link( __( 'Edit', 'accessiblezen' ), '<span class="edit-link">', '</span>' ); ?>
 		<?php if ( is_single() && get_the_author_meta( 'description' ) && is_multi_author() ) : ?>
 			<?php get_template_part( 'author-bio' ); ?>
 		<?php endif; ?>

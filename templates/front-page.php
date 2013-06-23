@@ -7,8 +7,8 @@
  * in Zen Hacker consists of a page content area for adding text, images, video --
  * anything you'd like -- followed by your most recent post.
  *
- * @package hellozen
- * @since hellozen 1.0
+ * @package accessiblezen
+ * @since accessiblezen 1.0
  */
 
 get_header(); ?>

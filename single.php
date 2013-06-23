@@ -2,8 +2,8 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package hellozen
- * @since hellozen 1.0
+ * @package accessiblezen
+ * @since accessiblezen 1.0
  */
 
 get_header(); ?>
@@ -13,11 +13,11 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php hellozen_content_nav( 'nav-above' ); ?>
+				<?php accessiblezen_content_nav( 'nav-above' ); ?>
 
 				<?php get_template_part( 'content', 'single' ); ?>
 
-				<?php hellozen_content_nav( 'nav-below' ); ?>
+				<?php accessiblezen_content_nav( 'nav-below' ); ?>
 
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template

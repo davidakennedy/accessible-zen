@@ -4,8 +4,8 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package hellozen
- * @since hellozen 1.0
+ * @package accessiblezen
+ * @since accessiblezen 1.0
  */
 
 get_header(); ?>
@@ -17,12 +17,12 @@ get_header(); ?>
 
 				<header class="page-header">
 					<h1 class="page-title">
-						<?php hellozen_archive_page_title_etc(); ?>
+						<?php accessiblezen_archive_page_title_etc(); ?>
 				</header><!-- .page-header -->
 
 				<?php rewind_posts(); ?>
 
-				<?php hellozen_content_nav( 'nav-above' ); ?>
+				<?php accessiblezen_content_nav( 'nav-above' ); ?>
 
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -37,7 +37,7 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php hellozen_content_nav( 'nav-below' ); ?>
+				<?php accessiblezen_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 

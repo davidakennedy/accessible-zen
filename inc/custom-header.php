@@ -4,7 +4,7 @@
  * See http://codex.wordpress.org/Custom_Headers
  *
  * @package WordPress
- * @subpackage hellozen
+ * @subpackage accessiblezen
  * @since Hello Zen 1.0
  */
 
@@ -12,18 +12,18 @@
  * Sets up the WordPress core custom header arguments and settings.
  *
  * @uses add_theme_support() to register support for 3.4 and up.
- * @uses hellozen_header_style() to style front-end.
- * @uses hellozen_admin_header_style() to style wp-admin form.
- * @uses hellozen_admin_header_image() to add custom markup to wp-admin form.
+ * @uses accessiblezen_header_style() to style front-end.
+ * @uses accessiblezen_admin_header_style() to style wp-admin form.
+ * @uses accessiblezen_admin_header_image() to add custom markup to wp-admin form.
  * @uses register_default_headers() to set up the bundled header images.
  *
  * @since Hello Zen 1.0
  */
-function hellozen_custom_header_setup() {
+function accessiblezen_custom_header_setup() {
 	$args = array(
 		// Text color and image (empty to use none).
 		'default-text-color'     => '',
-		'default-image'          => hellozen_get_default_header_image(),
+		'default-image'          => accessiblezen_get_default_header_image(),
 		'header-text'            => false,
 		'uploads'                => true,
 
@@ -43,7 +43,7 @@ function hellozen_custom_header_setup() {
 
 	add_theme_support( 'custom-header', $args );
 }
-add_action( 'after_setup_theme', 'hellozen_custom_header_setup' );
+add_action( 'after_setup_theme', 'accessiblezen_custom_header_setup' );
 
 /**
  * A default header image
@@ -53,7 +53,7 @@ add_action( 'after_setup_theme', 'hellozen_custom_header_setup' );
  *
  * @since Hello Zen 1.0
  */
-function hellozen_get_default_header_image() {
+function accessiblezen_get_default_header_image() {
 
 	// Get default from Discussion Settings.
 	$default = get_option( 'avatar_default', 'mystery' ); // Mystery man default
@@ -70,4 +70,4 @@ function hellozen_get_default_header_image() {
 	), $url );
 
 	return esc_url_raw( $url );
-} // hellozen_get_default_header_image
+} // accessiblezen_get_default_header_image

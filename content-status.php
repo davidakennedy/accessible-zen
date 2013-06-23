@@ -2,8 +2,8 @@
 /**
  * The template for displaying posts in the Status post format
  *
- * @package hellozen
- * @since hellozen 1.0
+ * @package accessiblezen
+ * @since accessiblezen 1.0
  */
 ?>
 
@@ -11,19 +11,19 @@
 		<div class="status">
 			<header class="entry-header">
 				<span class="title">
-					<?php _e( 'Status', 'hellozen' ); ?>
+					<?php _e( 'Status', 'accessiblezen' ); ?>
 				</span>
 				<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 			</header>
 			
 			<div class="entry-content">
-				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'hellozen' ) ); ?>
+				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'accessiblezen' ) ); ?>
 			</div><!-- .entry-content -->
 		</div><!-- .status -->
 
 		<footer class="entry-meta">
-		<?php hellozen_posted_on(); ?>
+		<?php accessiblezen_posted_on(); ?>
 		<?php echo get_post_format_archive_link(); ?>
-		<?php edit_post_link( __( 'Edit', 'hellozen' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'accessiblezen' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 	</article><!-- #post -->

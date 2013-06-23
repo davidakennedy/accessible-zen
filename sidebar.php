@@ -2,8 +2,8 @@
 /**
  * The Sidebar containing the main widget areas.
  *
- * @package hellozen
- * @since hellozen 1.0
+ * @package accessiblezen
+ * @since accessiblezen 1.0
  
  * The footer widget area is triggered if any of the areas
  * have widgets. So let's check that first.
@@ -16,7 +16,7 @@
 	
 	// If we get this far, we have widgets. Let do this.
 	?>
-		<div id="secondary" <?php hellozen_footer_sidebar_class(); ?> role="complementary">
+		<div id="secondary" <?php accessiblezen_footer_sidebar_class(); ?> role="complementary">
 	        <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 	        <div class="first sidebar-widgets cf">
 	                <?php dynamic_sidebar( 'sidebar-1' ); ?>

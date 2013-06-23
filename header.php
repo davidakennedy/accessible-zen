@@ -4,8 +4,8 @@
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
- * @package hellozen
- * @since hellozen 1.0
+ * @package accessiblezen
+ * @since accessiblezen 1.0
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -30,7 +30,7 @@
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 )
-		echo ' | ' . sprintf( __( 'Page %s', 'hellozen' ), max( $paged, $page ) );
+		echo ' | ' . sprintf( __( 'Page %s', 'accessiblezen' ), max( $paged, $page ) );
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />

@@ -2,8 +2,8 @@
 /**
  * The template for displaying image attachments.
  *
- * @package hellozen
- * @since hellozen 1.0
+ * @package accessiblezen
+ * @since accessiblezen 1.0
  */
 
 get_header();
@@ -21,7 +21,7 @@ get_header();
 						<div class="entry-meta">
 							<?php
 								$metadata = wp_get_attachment_metadata();
-								printf( __( 'Published <span class="entry-date"><time class="entry-date" datetime="%1$s" pubdate>%2$s</time></span> at <a href="%3$s" &times; %4$s</a> in <a href="%5$s" title="Return to %6$s" rel="gallery">%7$s</a>', 'hellozen' ),
+								printf( __( 'Published <span class="entry-date"><time class="entry-date" datetime="%1$s" pubdate>%2$s</time></span> at <a href="%3$s" &times; %4$s</a> in <a href="%5$s" title="Return to %6$s" rel="gallery">%7$s</a>', 'accessiblezen' ),
 									esc_attr( get_the_date( 'c' ) ),
 									esc_html( get_the_date() ),
 									wp_get_attachment_url(),
@@ -30,12 +30,12 @@ get_header();
 									get_permalink( $post->post_parent )
 								);
 							?>
-							<?php edit_post_link( __( 'Edit', 'hellozen' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' ); ?>
+							<?php edit_post_link( __( 'Edit', 'accessiblezen' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' ); ?>
 						</div><!-- .entry-meta -->
 
 						<nav id="image-navigation">
-							<span class="previous-image"><?php previous_image_link( false, __( '&larr; Previous', 'hellozen' ) ); ?></span>
-							<span class="next-image"><?php next_image_link( false, __( 'Next &rarr;', 'hellozen' ) ); ?></span>
+							<span class="previous-image"><?php previous_image_link( false, __( '&larr; Previous', 'accessiblezen' ) ); ?></span>
+							<span class="next-image"><?php next_image_link( false, __( 'Next &rarr;', 'accessiblezen' ) ); ?></span>
 						</nav><!-- #image-navigation -->
 					</header><!-- .entry-header -->
 
@@ -69,7 +69,7 @@ get_header();
 								?>
 
 								<a href="<?php echo $next_attachment_url; ?>" rel="attachment"><?php
-									$attachment_size = apply_filters( 'hellozen_attachment_size', array( 1200, 1200 ) ); // Filterable image size.
+									$attachment_size = apply_filters( 'accessiblezen_attachment_size', array( 1200, 1200 ) ); // Filterable image size.
 									echo wp_get_attachment_image( $post->ID, $attachment_size );
 								?></a>
 							</div><!-- .attachment -->
@@ -82,21 +82,21 @@ get_header();
 						</div><!-- .entry-attachment -->
 
 						<?php the_content(); ?>
-						<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'hellozen' ), 'after' => '</div>' ) ); ?>
+						<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'accessiblezen' ), 'after' => '</div>' ) ); ?>
 
 					</div><!-- .entry-content -->
 
 					<footer class="entry-meta">
 						<?php if ( comments_open() && pings_open() ) : // Comments and trackbacks open ?>
-							<?php printf( __( '<a class="comment-link" href="#respond" title="Post a comment">Post a comment</a> or leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'hellozen' ), get_trackback_url() ); ?>
+							<?php printf( __( '<a class="comment-link" href="#respond" title="Post a comment">Post a comment</a> or leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'accessiblezen' ), get_trackback_url() ); ?>
 						<?php elseif ( ! comments_open() && pings_open() ) : // Only trackbacks open ?>
-							<?php printf( __( 'Comments are closed, but you can leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'hellozen' ), get_trackback_url() ); ?>
+							<?php printf( __( 'Comments are closed, but you can leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'accessiblezen' ), get_trackback_url() ); ?>
 						<?php elseif ( comments_open() && ! pings_open() ) : // Only comments open ?>
-							<?php _e( 'Trackbacks are closed, but you can <a class="comment-link" href="#respond" title="Post a comment">post a comment</a>.', 'hellozen' ); ?>
+							<?php _e( 'Trackbacks are closed, but you can <a class="comment-link" href="#respond" title="Post a comment">post a comment</a>.', 'accessiblezen' ); ?>
 						<?php elseif ( ! comments_open() && ! pings_open() ) : // Comments and trackbacks closed ?>
-							<?php _e( 'Both comments and trackbacks are currently closed.', 'hellozen' ); ?>
+							<?php _e( 'Both comments and trackbacks are currently closed.', 'accessiblezen' ); ?>
 						<?php endif; ?>
-						<?php edit_post_link( __( 'Edit', 'hellozen' ), ' <span class="edit-link">', '</span>' ); ?>
+						<?php edit_post_link( __( 'Edit', 'accessiblezen' ), ' <span class="edit-link">', '</span>' ); ?>
 					</footer><!-- .entry-meta -->
 				</article><!-- #post-<?php the_ID(); ?> -->
 
