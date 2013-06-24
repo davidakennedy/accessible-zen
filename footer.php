@@ -13,17 +13,21 @@
 	</div><!-- #main -->
 
 	<footer id="colophon" class="site-footer cf" role="contentinfo">
-		<nav role="navigation" class="main-navigation cf">
-			<h1 class="visuallyhidden"><?php _e( 'Main Menu', 'accessiblezen' ); ?></h1>
+		<?php if ( has_nav_menu( 'primary' ) ) : ?>
+			<nav role="navigation" class="main-navigation cf">
+				<h1 class="visuallyhidden"><?php _e( 'Main Menu', 'accessiblezen' ); ?></h1>
 
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class'      => 'nav', 'depth' => 1 ) ); ?>
-		</nav><!-- .main-navigation -->
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class'      => 'nav', 'depth' => 1 ) ); ?>
+			</nav><!-- .main-navigation -->
+		<?php endif; ?>
 		
-		<nav role="navigation" class="secondary-navigation cf">
-			<h1 class="visuallyhidden"><?php _e( 'Secondary Menu', 'accessiblezen' ); ?></h1>
+		<?php if ( has_nav_menu( 'secondary' ) ) : ?>	
+			<nav role="navigation" class="secondary-navigation cf">
+				<h1 class="visuallyhidden"><?php _e( 'Secondary Menu', 'accessiblezen' ); ?></h1>
 
-			<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class'      => 'nav', 'depth' => 1 ) ); ?>
-		</nav><!-- .secondary-navigation -->
+				<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class'      => 'nav', 'depth' => 1 ) ); ?>
+			</nav><!-- .secondary-navigation -->
+		<?php endif; ?>
 		
 		<div class="site-info cf">
 			<?php accessiblezen_credits(); ?>
