@@ -132,6 +132,8 @@ html {
 	font-size: 100%;
 	height: 100%;
 	overflow-y: scroll;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
 	-webkit-text-size-adjust: 100%
 	/* Force scrollbar in non-IE and Remove iOS text size adjust without disabling user zoom */
 }
