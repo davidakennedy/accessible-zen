@@ -924,12 +924,16 @@ object {
 
 /* =Navigation
 ----------------------------------------------- */
-#nav-above {
+#nav-above,
+#comment-nav-above {
 	display: none;
 	padding: 1.5em 0;
 }
 #nav-below {
 	padding: 1.5em 0 0;
+}
+#comment-nav-below {
+	padding: 0 0 1.5em;
 }
 .nav-previous {
 	float: left;
@@ -983,6 +987,7 @@ object {
 ----------------------------------------------- */
 .nopassword,
 .nocomments {
+	clear: both;
 	color: #666;
 	font-size: 1.5em;
 	font-weight: bold;
