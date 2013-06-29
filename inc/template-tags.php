@@ -134,8 +134,6 @@ function accessiblezen_archive_page_title_etc() {
 
 		} elseif ( has_post_format( 'aside' ) ) {
 			printf( __( '%s Archives', 'accessiblezen' ), '<span>' . get_post_format_string( get_post_format() ) . '</span>' );
-		} elseif ( has_post_format( 'aside' ) ) {
-			printf( __( '%s Archives', 'accessiblezen' ), '<span>' . get_post_format_string( get_post_format() ) . '</span>' );
 		} elseif ( has_post_format( 'audio' ) ) {
 			printf( __( '%s Archives', 'accessiblezen' ), '<span>' . get_post_format_string( get_post_format() ) . '</span>' );
 		} elseif ( has_post_format( 'chat' ) ) {
@@ -244,10 +242,43 @@ endif;
  * @since accessiblezen 1.0
  */
  
- function get_post_format_archive_link() {
+function get_post_format_archive_link() {
     return sprintf( 
-        'Format: <a href="' . get_post_format_link( get_post_format() ) . '">' . get_post_format_string( get_post_format() ) . '</a><br>' 
+        'Format: <a href="' . get_post_format_link( get_post_format() ) . '">' . get_post_format_string( get_post_format() ) . '</a>' 
     );
+}
+
+function get_post_format_icon() {
+	if ( has_post_format('aside') ) {
+    	printf('<span class="genericon genericon-aside"></span><br>');
+    }
+    elseif ( has_post_format('audio') ) {
+    	printf('<span class="genericon genericon-audio"></span><br>');
+    }
+    elseif ( has_post_format('chat') ) {
+    	printf('<span class="genericon genericon-chat"></span><br>');
+    }
+    elseif ( has_post_format('gallery') ) {
+    	printf('<span class="genericon genericon-gallery"></span><br>');
+    }
+    elseif ( has_post_format('image') ) {
+    	printf('<span class="genericon genericon-image"></span><br>');
+    }
+    elseif ( has_post_format('link') ) {
+    	printf('<span class="genericon genericon-link"></span><br>');
+    }
+    elseif ( has_post_format('quote') ) {
+    	printf('<span class="genericon genericon-quote"></span><br>');
+    }
+    elseif ( has_post_format('standard') ) {
+    	printf('<span class="genericon genericon-standard"></span><br>');
+    }
+    elseif ( has_post_format('status') ) {
+    	printf('<span class="genericon genericon-status"></span><br>');
+    }
+    elseif ( has_post_format('video') ) {
+    	printf('<span class="genericon genericon-video"></span><br>');
+    }
 }
 
 /**

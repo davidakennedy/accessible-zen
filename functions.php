@@ -61,7 +61,7 @@ function accessiblezen_setup() {
 	add_theme_support( 'automatic-feed-links' );
 
 	/** This theme styles the visual editor with editor-style.css to match the theme style. */
-	add_editor_style();
+	add_editor_style('css/editor-style.css');
 	
 	/**
 	 * Enable support for Post Thumbnails
@@ -125,17 +125,54 @@ function accessiblezen_widgets_init() {
 add_action( 'widgets_init', 'accessiblezen_widgets_init' );
 
 /**
+ * Returns the Google font stylesheet URL, if available.
+ *
+ * The use of Source Sans Pro and Bitter by default is localized. For languages
+ * that use characters not supported by the font, the font can be disabled.
+ *
+ * @since Twenty Thirteen 1.0
+ *
+ * @return string Font stylesheet or empty string if disabled.
+ */
+function accessiblezen_fonts_url() {
+	$fonts_url = '';
+
+	/* Translators: If there are characters in your language that are not
+	 * supported by Noticia Text, translate this to 'off'. Do not translate
+	 * into your own language.
+	 */
+	$noticia_text = _x( 'on', 'Noticia Text font: on or off', 'accessiblezen' );
+
+	if ( 'off' !== $noticia_text ) {
+		$font_families = array();
+
+		if ( 'off' !== $noticia_text )
+			$font_families[] = 'Noticia+Text:400,400italic,700,700italic';
+
+		$protocol = is_ssl() ? 'https' : 'http';
+		$query_args = array(
+			'family' => implode( '|', $font_families ),
+		);
+		$fonts_url = add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" );
+	}
+
+	return $fonts_url;
+}
+
+/**
  * Enqueue scripts and styles
  */
 function accessiblezen_scripts_styles() {
-	global $post;
+	global $wp_styles;
 
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 	
-	wp_enqueue_style(
-        'font_stylesheet',
-        'http://fonts.googleapis.com/css?family=Cardo|Noticia+Text:400,400italic,700,700italic'
-    );
+    $fonts_url = accessiblezen_fonts_url();
+	if ( ! empty( $fonts_url ) )
+		wp_enqueue_style( 'accessiblezen-fonts', esc_url_raw( $fonts_url ), array(), null );
+		
+	// Loads the icon fonts stylesheet.
+	wp_enqueue_style( 'genericon-icon-font', get_template_directory_uri() . '/font/genericons.css', array(), '20130629' );
         
     wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
