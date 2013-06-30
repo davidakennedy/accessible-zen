@@ -13,6 +13,9 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
 The original Zen Habits 2 theme by Leo Babauta is uncopyrighted.
+Lots of code inspiration from both the Underscores WordPress theme – http://underscores.me/ and the Fluid Baseline Grid – http://fluidbaselinegrid.com/.
+
+Underscores is licensed under the GNU General Public License. Fluid Baseline Grid is licensed under the Unlicense.
 
 Resetting and rebuilding styles have been helped along thanks to the fine work of
 Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
@@ -755,7 +758,8 @@ sub {
 ----------------------------------------------- */
 /* Sticky and Front Page Template */
 #content .sticky,
-.home #content article.page {
+.home #content article.page,
+.page-template-templatesfront-page-php #content article.page {
 	background-color: #f5f5f5;
 	border: 1px solid #d5d5d5;
 	-webkit-border-radius: 3px;
