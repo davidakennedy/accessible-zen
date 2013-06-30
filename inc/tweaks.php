@@ -150,3 +150,30 @@ function accessiblezen_get_link_url() {
 
 	return esc_url_raw( $matches[1] );
 }
+
+/**
+ * Adds a Customize link in the Themes section of the Admin.
+ * @since Hello Zen 1.0
+ */
+
+add_action ('admin_menu', 'accessiblezen_admin');
+function accessiblezen_admin() {
+    add_theme_page( 'Customize', 'Customize', 'edit_theme_options', 'customize.php' );
+}
+
+/**
+ * Adds a styles to the header to correspond with the Theme Customizer settings.
+ * @since Hello Zen 1.0
+ */
+ 
+function accessiblezen_hide_tagline( $wp_customize ) {
+	$options = get_theme_mod( 'displayblogname' );
+	if ( $options == '' ) {
+    ?>
+    	<style type="text/css">
+             .site-description { display: none; }
+        </style>
+    <?php
+    }
+}
+add_action( 'wp_head', 'accessiblezen_hide_tagline');

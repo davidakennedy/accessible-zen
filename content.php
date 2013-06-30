@@ -28,7 +28,13 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
-		<?php the_content('Continue reading ' . the_title('', '', false) . ''); ?>
+		<?php
+		if ( 'option2' == get_theme_mod( 'accessiblezen_post_content' ) ) :
+		the_content('Continue reading ' . the_title('', '', false) . '');
+		else :
+		the_excerpt();
+		endif;
+		?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'accessiblezen' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
