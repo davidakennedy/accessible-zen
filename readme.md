@@ -53,4 +53,4 @@ Why, hello there! This is an open source project, and you can help out in many w
 
 ### Remember
 
-You're awesome! Also, accessibility is more about people than technology. Anyone make the web more accessible. [Start learning how at WebAIM](http://webaim.org/).
+You're awesome! Also, accessibility is more about people than technology. Anyone can make the web more accessible. [Start learning how at WebAIM](http://webaim.org/).
