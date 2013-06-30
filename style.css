@@ -1275,3 +1275,9 @@ p.comment-form-comment {
   #respond,
   #colophon { display: none; }
 }
+
+/* Browser Fixes
+----------------------------------------------- */
+.ie7 .skip-link {
+	margin-left: 0;
+}
