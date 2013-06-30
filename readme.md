@@ -21,9 +21,11 @@ I'd love to hear what you think! You can submit feedback on the [Github issues s
 - Supports all modern browsers, plus Internet Explorer 7 and above.
 - Has a simple one-column layout, and no main menu in the `header` section of the site so users can get to your content quickly.
 - By default, Accessible Zen will display the site owner’s [Gravatar](http://en.gravatar.com/) in the header. You can replace this by uploading a Custom Header Image in Appearance -> Header, or you can remove it completely by selecting Remove Header Image.
+- Features all nine [post formats](http://codex.wordpress.org/Post_Formats).
 - Shows menus only when you need them. Accessible Zen doesn’t display a menu as a default to keep it as simple as possible. Of course, if your site needs a menu you can easily set up a Custom Menu in Appearance -> Menus. The theme features two menus, which display in the `footer' section of the site.
 - Tight integration with the [WordPress Theme Customizer](https://codex.wordpress.org/Theme_Customization_API), allowing site owners to edit the theme's appearance on the fly. They can show/hide the site description and display excerpts or full content on archive pages.
 - Includes two page templates: an archives template, which features an archive of posts in different ways; a front page template, which allows site owners to feature content with unique styling. Plus, the page shows only one post by default, allowing users to focus on your latest and greatest content.
+- Incorporates the font icon, [Genericons](http://genericons.com/) in a few spots throughout the theme.
 - Treats the [WordPress except](http://codex.wordpress.org/Excerpt) and [Read More tag](http://codex.wordpress.org/Customizing_the_Read_More) with care, and displays the post title so excerpts output like this: `Continue reading Post Title`
 
 ## Documentation
@@ -50,4 +52,4 @@ Why, hello there! This is an open source project, and you can help out in many w
 
 ### Remember
 
-Accessibility is more about people than technology. Anyone can help make the web more accessible. [Start learning how at WebAIM](http://webaim.org/).
+You're awesome! Also, accessibility is more about people than technology. Anyone make the web more accessible. [Start learning how at WebAIM](http://webaim.org/).
