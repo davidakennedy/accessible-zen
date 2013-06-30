@@ -21,7 +21,7 @@ I'd love to hear what you think! You can submit feedback on the [Github issues s
 - Code based on Automattic's [Underscores WordPress theme](http://underscores.me/) to help ensure use of WordPress theme standards.
 - Supports all modern browsers, plus Internet Explorer 7 and above.
 - Has a simple one-column layout, and no main menu in the `header` section of the site so users can get to your content quickly.
-- Features the lovely [Noticia+Text web font](http://www.google.com/fonts/specimen/Noticia+Text).
+- Features the lovely [Noticia Text web font](http://www.google.com/fonts/specimen/Noticia+Text).
 - By default, Accessible Zen will display the site owner’s [Gravatar](http://en.gravatar.com/) in the header. You can replace this by uploading a Custom Header Image in Appearance -> Header, or you can remove it completely by selecting Remove Header Image.
 - Features all nine [post formats](http://codex.wordpress.org/Post_Formats).
 - Shows menus only when you need them. Accessible Zen doesn’t display a menu as a default to keep it as simple as possible. Of course, if your site needs a menu you can easily set up a Custom Menu in Appearance -> Menus. The theme features two menus, which display in the `footer' section of the site.
