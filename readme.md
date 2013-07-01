@@ -52,6 +52,11 @@ Why, hello there! This is an open source project, and you can help out in many w
 * Fork the [theme on Github](https://github.com/davidakennedy/Accessible-Zen/) and submit pull requests.
 * Use the theme, and give me ideas for future enhancements. You can submit feedback on the [Github issues section](https://github.com/davidakennedy/Accessible-Zen/issues), or by emailing me at me (at) davidakennedy dot com.
 
+### Changelog
+
+**June 30, 2013**
+Initial release: Version 0.1-alpha
+
 ### Remember
 
 You're awesome! Also, accessibility is more about people than technology. Anyone can make the web more accessible. [Start learning how at WebAIM](http://webaim.org/).
