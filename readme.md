@@ -55,6 +55,7 @@ Why, hello there! This is an open source project, and you can help out in many w
 ### Changelog
 
 **June 30, 2013**
+
 Initial release: Version 0.1-alpha
 
 ### Remember
