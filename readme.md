@@ -12,6 +12,8 @@ Accessible Zen is an accessible, minimalistic, readable, and fully responsive Wo
 
 *I may change the theme significantly before its official release*.
 
+Once the theme hits a stable release, I'll submit it to the [WordPress theme repository](http://wordpress.org/themes/).
+
 I'd love to hear what you think! You can submit feedback on the [Github issues section](https://github.com/davidakennedy/Accessible-Zen/issues), or by emailing me at me (at) davidakennedy dot com.
 
 ## Features
