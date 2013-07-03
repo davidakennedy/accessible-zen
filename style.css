@@ -102,10 +102,19 @@ a img {
 .site {
 	background-color: #fff;
 }
+body.custom-background-empty .site,
+body.custom-background-white .site {
+	box-shadow: none;
+	width: 100%;
+}
+body.custom-background-empty {
+	background-color: #fff;
+}
 .site-header,
 .content,
 .site-footer {
 	padding: 0 2em;
+	position: relative;
 }
 
 /* Inner containers */
@@ -118,6 +127,8 @@ a img {
 	margin: 0 auto;
 	max-width: 48em;
 	padding: 1.5em 0;
+	position: relative;
+	width: 100%;
 }
 /* Column grid */
 .sidebar-widgets {
@@ -152,7 +163,6 @@ textarea {
 	font-smoothing: antialiased;
 	*font-size: 1em; /* IE7 and older can't resize px based text */
 	line-height: 1.5;
-	margin: 0 auto;
 	min-height: 100%;
 	text-rendering: optimizeLegibility; 
 	-webkit-font-smoothing: antialiased; /* Improve default text rendering, handling of kerning pairs and ligatures */
@@ -268,7 +278,7 @@ th {
 }
 tr, th, td {
 	border-bottom: 0 solid #e5e5e5;
-	padding-right: 1.5em;
+	padding-right: 0.5em; /* Just for small screens; see media Query for desktop size */
 }
 
 /* Forms */
@@ -1237,18 +1247,11 @@ p.comment-form-comment {
 /* Min. width of 600 pixels */
 @media only screen and (min-width: 37.5em) {
 	body {
-		font-size: 1.125em;
+		font-size: 100%;
 	}
 	/* Wrapper div */
-	.custom-background .site { width: 80%; }
-	body.custom-background-empty {
-		background-color: #fff;
-	}
-	body.custom-background-empty .site,
-	body.custom-background-white .site {
-		box-shadow: none;
-		width: 100%;
-	}
+	body.custom-background .site { width: 80%; }
+	
 	
 	/* COLUMN GRID */
 	.sidebar-widgets {display: inline; float: left;}
@@ -1256,6 +1259,9 @@ p.comment-form-comment {
 	/* 2 COLUMN GRID */
 	.one .sidebar-widgets {width: 93.458%;}
 	.two .sidebar-widgets {width: 43.458%;}
+	
+	/* Content */
+	.site tr, th, td { padding-right: 1.5em; }
 }
 
 /* Print
