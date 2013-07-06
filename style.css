@@ -1218,12 +1218,8 @@ p.comment-form-comment {
 
 /* Search */
 #s {
-	background-image: url(img/search-icon.png);
-	background-position: 4px center;
-	background-repeat: no-repeat;
-	background-size: 24px 24px;
 	height: 30px;
-	padding: 0.25em 0.625em 0.25em 1.75em;
+	padding: 0.25em 0.625em;
 	width: 50%; 
 }
 #searchsubmit {
@@ -1262,19 +1258,6 @@ p.comment-form-comment {
 	
 	/* Content */
 	.site tr, th, td { padding-right: 1.5em; }
-}
-
-/* Retina-specific styles
------------------------------------------------ */
-@media print,
-	(-o-min-device-pixel-ratio: 5/4),
-	(-webkit-min-device-pixel-ratio: 1.25),
-	(min-resolution: 120dpi) {
-
-	.searchform [type="search"],
-	.searchform [type="text"] {
-		background-image: url(img/search-icon-2x.png);
-	}
 }
 
 /* Print
