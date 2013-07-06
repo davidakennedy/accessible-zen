@@ -21,13 +21,15 @@ get_header();
 						<div class="entry-meta">
 							<?php
 								$metadata = wp_get_attachment_metadata();
-								printf( __( 'Published <span class="entry-date"><time class="entry-date" datetime="%1$s" pubdate>%2$s</time></span> at <a href="%3$s" &times; %4$s</a> in <a href="%5$s" title="Return to %6$s" rel="gallery">%7$s</a>', 'accessiblezen' ),
-									esc_attr( get_the_date( 'c' ) ),
-									esc_html( get_the_date() ),
-									wp_get_attachment_url(),
-									$metadata['width'],
-									$metadata['height'],
-									get_permalink( $post->post_parent )
+							printf( __( 'Published <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> in <a href="%6$s" title="Return to %7$s" rel="gallery">%8$s</a>', '_s' ),
+								esc_attr( get_the_date( 'c' ) ),
+								esc_html( get_the_date() ),
+								wp_get_attachment_url(),
+								$metadata['width'],
+								$metadata['height'],
+								get_permalink( $post->post_parent ),
+								esc_attr( strip_tags( get_the_title( $post->post_parent ) ) ),
+								get_the_title( $post->post_parent )
 								);
 							?>
 							<?php edit_post_link( __( 'Edit', 'accessiblezen' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' ); ?>
