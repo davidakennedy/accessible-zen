@@ -51,11 +51,11 @@
 	<header id="masthead" class="site-header cf" role="banner">
 		<div class="site-banner">
 			<?php if ( get_header_image() ) : ?>
-			<a href="<?php echo home_url( '/' ); ?>" rel="home">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 				<img class="site-logo" src="<?php echo esc_url( get_header_image() ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
 			</a>
 		<?php endif; ?>
-			<h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</div><!-- .site-banner -->
 	</header><!-- #masthead .site-header -->
