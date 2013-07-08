@@ -1208,7 +1208,6 @@ p.comment-form-comment {
 
 /* =Widgets
 ----------------------------------------------- */
-
 .sidebar {
 	border-top: 1px dotted #008fcc;
 }
@@ -1288,4 +1287,15 @@ p.comment-form-comment {
 ----------------------------------------------- */
 .ie7 .skip-link {
 	margin-left: 0;
+}
+#respond .comment-form-author label,
+#respond .comment-form-email label,
+#respond .comment-form-url label,
+#respond .comment-form-comment label {
+	cursor: auto;
+}
+.ie7 #respond input[type="text"],
+.ie7 #respond textarea {
+	padding-top: 2.5em;
+	text-indent: 0;
 }
