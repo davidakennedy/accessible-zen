@@ -60,4 +60,4 @@
 		</div><!-- .site-banner -->
 	</header><!-- #masthead .site-header -->
 
-	<div id="main" class="content cf">
+	<div id="main" class="site-content cf">
