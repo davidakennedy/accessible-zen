@@ -150,7 +150,7 @@ html {
 	overflow-y: scroll;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	-webkit-text-size-adjust: 100%
+	-webkit-text-size-adjust: 100%;
 	/* Force scrollbar in non-IE and Remove iOS text size adjust without disabling user zoom */
 }
 body,
@@ -1285,9 +1285,6 @@ p.comment-form-comment {
 
 /* Browser Fixes
 ----------------------------------------------- */
-.ie7 .skip-link {
-	margin-left: 0;
-}
 #respond .comment-form-author label,
 #respond .comment-form-email label,
 #respond .comment-form-url label,
@@ -1298,4 +1295,11 @@ p.comment-form-comment {
 .ie7 #respond textarea {
 	padding-top: 2.5em;
 	text-indent: 0;
+}
+.ie7 .skip-link {
+	margin-left: 0;
+}
+.ie7 body.custom-background .site,
+.ie8 body.custom-background .site {
+	width: 80%;
 }
