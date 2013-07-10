@@ -429,30 +429,25 @@ blockquote > p {
 /* Lists */
 ul,
 ol {
-	list-style-position: inside;
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em 2em;
 	padding: 0;
 }
 ul {
-	list-style: disc;
+	list-style: square inside none;
 }
 ol {
-	list-style: decimal;
+	list-style: decimal inside none;
 }
 .sidebar ul,
 .sidebar ol {
-	list-style: none none outside;
-	margin: 0 0 1.5em 0;
-}
-.sidebar li {
-	margin-bottom: 0.5em;
+	margin-left: 0;
 }
 ul ul,
 ol ol,
 ul ol,
 ol ul {
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-left: 1em;
 }
 dl dd {
 	margin: 0 1.5em 1.5em;
