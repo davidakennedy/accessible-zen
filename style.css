@@ -3,8 +3,8 @@ Theme Name: Accessible Zen
 Theme URI: http://davidakennedy.com/projects/accessible-zen/
 Author: David A. Kennedy
 Author URI: http://davidakennedy.com
-Description: The Accessible Zen theme is an accessible, minimalistic, readable, and fully responsive HTML5 theme that puts the focus on your content and nothing else. Based on the original Zen Habits theme by Leo Babauta – http://zenhabits.net/theme/ – with more WordPress goodness built in.
-Version: 0.1-alpha-1
+Description: The Accessible Zen theme is an accessible, minimalistic, readable, and fully responsive HTML5 theme that puts the focus on your content and nothing else. Based on the original Zen Habits theme by Leo Babauta: http://zenhabits.net/theme/, with more WordPress goodness built in.
+Version: 0.1-alpha-2
 License: GNU General Public License
 License URI: license.txt
 Tags: white, one-column, flexible-width, custom-background, custom-header, custom-menu, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
@@ -13,11 +13,11 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
 The original Zen Habits 2 theme by Leo Babauta is uncopyrighted.
-Lots of code inspiration from both the Underscores WordPress theme – http://underscores.me/ and the Fluid Baseline Grid – http://fluidbaselinegrid.com/.
+Lots of code inspiration from both the Underscores WordPress theme: http://underscores.me/ and the Fluid Baseline Grid: http://fluidbaselinegrid.com/.
 
 Underscores is licensed under the GNU General Public License. Fluid Baseline Grid is licensed under the Unlicense.
 
-It also uses Genericons – http://genericons.com/, which is licensed under the GNU General Public License.
+It also uses Genericons: http://genericons.com/, which is licensed under the GNU General Public License.
 
 Resetting and rebuilding styles have been helped along thanks to the fine work of
 Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
@@ -62,7 +62,7 @@ figcaption,
 figure,
 footer,
 header,
-hgroup,
+main,
 nav,
 section {
 	display: block;
@@ -102,15 +102,24 @@ a img {
 .site {
 	background-color: #fff;
 }
+body.custom-background-empty .site,
+body.custom-background-white .site {
+	box-shadow: none;
+	width: 100%;
+}
+body.custom-background-empty {
+	background-color: #fff;
+}
 .site-header,
-.content,
+.site-content,
 .site-footer {
 	padding: 0 2em;
+	position: relative;
 }
 
 /* Inner containers */
 .site-banner,
-.site-content,
+.content-area,
 .sidebar,
 .site-info,
 .secondary-navigation,
@@ -118,6 +127,8 @@ a img {
 	margin: 0 auto;
 	max-width: 48em;
 	padding: 1.5em 0;
+	position: relative;
+	width: 100%;
 }
 /* Column grid */
 .sidebar-widgets {
@@ -139,7 +150,7 @@ html {
 	overflow-y: scroll;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	-webkit-text-size-adjust: 100%
+	-webkit-text-size-adjust: 100%;
 	/* Force scrollbar in non-IE and Remove iOS text size adjust without disabling user zoom */
 }
 body,
@@ -152,7 +163,6 @@ textarea {
 	font-smoothing: antialiased;
 	*font-size: 1em; /* IE7 and older can't resize px based text */
 	line-height: 1.5;
-	margin: 0 auto;
 	min-height: 100%;
 	text-rendering: optimizeLegibility; 
 	-webkit-font-smoothing: antialiased; /* Improve default text rendering, handling of kerning pairs and ligatures */
@@ -167,12 +177,12 @@ h1,h2,h3,h4,h5,h6 {
   	text-rendering: optimizelegibility;
   	text-shadow:1px 1px 1px rgba(0,0,0,.10);
 }
-.site-content h1,
-.site-content h2,
-.site-content h3,
-.site-content h4,
-.site-content h5,
-.site-content h6 {
+.content-area h1,
+.content-area h2,
+.content-area h3,
+.content-area h4,
+.content-area h5,
+.content-area h6 {
 	text-align: center;
 }
 hr {
@@ -268,7 +278,7 @@ th {
 }
 tr, th, td {
 	border-bottom: 0 solid #e5e5e5;
-	padding-right: 1.5em;
+	padding-right: 0.5em; /* Just for small screens; see media Query for desktop size */
 }
 
 /* Forms */
@@ -373,7 +383,7 @@ input[type=search],
 textarea {
 	color: #333;
 	background: #f5f5f5;
-	border: 2px solid #f5f5f5;
+	border: 2px solid #e5e5e5;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -419,30 +429,25 @@ blockquote > p {
 /* Lists */
 ul,
 ol {
-	list-style-position: inside;
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em 2em;
 	padding: 0;
 }
 ul {
-	list-style: disc;
+	list-style: square inside none;
 }
 ol {
-	list-style: decimal;
+	list-style: decimal inside none;
 }
 .sidebar ul,
 .sidebar ol {
-	list-style: none none outside;
-	margin: 0 0 1.5em 0;
-}
-.sidebar li {
-	margin-bottom: 0.5em;
+	margin-left: 0;
 }
 ul ul,
 ol ol,
 ul ol,
 ol ul {
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-left: 1em;
 }
 dl dd {
 	margin: 0 1.5em 1.5em;
@@ -1142,7 +1147,7 @@ a.comment-reply-link:hover {
 	min-width: 3.75em;
 	padding: 0.25em 0.75em;
 	position: relative;
-	top: 74px;
+	top: 65px;
 	z-index: 1;
 }
 #respond input[type="text"]:focus,
@@ -1198,7 +1203,6 @@ p.comment-form-comment {
 
 /* =Widgets
 ----------------------------------------------- */
-
 .sidebar {
 	border-top: 1px dotted #008fcc;
 }
@@ -1208,13 +1212,9 @@ p.comment-form-comment {
 
 /* Search */
 #s {
-	background: #fff url(img/search.png) no-repeat 5px 8px;
 	height: 30px;
-	padding: 0.25em 0.625em 0.25em 1.75em;
+	padding: 0.25em 0.625em;
 	width: 50%; 
-}
-#s:focus {
-	border-color: #d5d5d5;
 }
 #searchsubmit {
 	display: none;
@@ -1237,18 +1237,11 @@ p.comment-form-comment {
 /* Min. width of 600 pixels */
 @media only screen and (min-width: 37.5em) {
 	body {
-		font-size: 1.125em;
+		font-size: 100%;
 	}
 	/* Wrapper div */
-	.custom-background .site { width: 80%; }
-	body.custom-background-empty {
-		background-color: #fff;
-	}
-	body.custom-background-empty .site,
-	body.custom-background-white .site {
-		box-shadow: none;
-		width: 100%;
-	}
+	body.custom-background .site { width: 80%; }
+	
 	
 	/* COLUMN GRID */
 	.sidebar-widgets {display: inline; float: left;}
@@ -1256,6 +1249,9 @@ p.comment-form-comment {
 	/* 2 COLUMN GRID */
 	.one .sidebar-widgets {width: 93.458%;}
 	.two .sidebar-widgets {width: 43.458%;}
+	
+	/* Content */
+	.site tr, th, td { padding-right: 1.5em; }
 }
 
 /* Print
@@ -1284,6 +1280,21 @@ p.comment-form-comment {
 
 /* Browser Fixes
 ----------------------------------------------- */
+#respond .comment-form-author label,
+#respond .comment-form-email label,
+#respond .comment-form-url label,
+#respond .comment-form-comment label {
+	cursor: auto;
+}
+.ie7 #respond input[type="text"],
+.ie7 #respond textarea {
+	padding-top: 2.5em;
+	text-indent: 0;
+}
 .ie7 .skip-link {
 	margin-left: 0;
+}
+.ie7 body.custom-background .site,
+.ie8 body.custom-background .site {
+	width: 80%;
 }

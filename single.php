@@ -8,8 +8,8 @@
 
 get_header(); ?>
 
-		<div id="primary" class="site-content cf">
-			<div id="content" role="main">
+		<div id="primary" class="content-area cf">
+			<main id="content" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -27,7 +27,7 @@ get_header(); ?>
 
 			<?php endwhile; // end of the loop. ?>
 
-			</div><!-- #content -->
-		</div><!-- #primary .site-content -->
+			</main><!-- #content -->
+		</div><!-- #primary .content-area -->
 
 <?php get_footer(); ?>
