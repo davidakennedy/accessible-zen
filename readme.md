@@ -2,7 +2,7 @@
 
 Accessible Zen is an accessible, minimalistic, readable, and fully responsive WordPress theme by [David A. Kennedy](http://davidakennedy.com). Inspired by Leo Babauta's [Zen Habits theme](http://zenhabits.net/theme/), Accessible Zen puts the focus on your content and nothing else, plus it has plenty of WordPress goodness built right in.
 
-**Current Release on Github**: 0.1-alpha-1
+**Current Release on Github**: 0.1-alpha-2
 
 **Current Release on WordPress.org Theme Directory**: N/A (Not submitted yet)
 
@@ -19,7 +19,8 @@ I'd love to hear what you think! You can submit feedback on the [Github issues s
 ## Features
 
 - Uses HTML5 with dashes of CSS3 for a future-friendly site.
-- Meets both [Section 508 standards](http://www.section508.gov/index.cfm?&FuseAction=Content&ID=12) and [Web Content Accessibility Guidelines, Level AA](http://www.w3.org/TR/WCAG/). This includes a [carefully-choosen color scheme](http://accessibility.oit.ncsu.edu/tools/color-contrast/accessible-color-palette.php?colors=ffffff,f5f5f5,d5d5d5,e5e5e5,333333,666666,f6fcff,e5f7ff,00354C,00628C,008FCC,007DB2&level=AA).
+- Has a mobile-first responsive design.
+- Meets both [Section 508 standards](http://www.section508.gov/index.cfm?&FuseAction=Content&ID=12) and [Web Content Accessibility Guidelines, Level AA](http://www.w3.org/TR/WCAG/) from the theme template perspective. This includes a [carefully-choosen color scheme](http://accessibility.oit.ncsu.edu/tools/color-contrast/accessible-color-palette.php?colors=ffffff,f5f5f5,d5d5d5,e5e5e5,333333,666666,f6fcff,e5f7ff,00354C,00628C,008FCC,007DB2&level=AA).
 - Code based on Automattic's [Underscores WordPress theme](http://underscores.me/) to help ensure use of WordPress theme standards.
 - Supports all modern browsers, plus Internet Explorer 7 and above.
 - Has a simple one-column layout, and no main menu in the `header` section of the site so users can get to your content quickly.
@@ -50,15 +51,30 @@ This theme would not be possible without the help of countless people. A sincere
 
 Why, hello there! This is an open source project, and you can help out in many ways.
 
-* Visit the [theme demo](http://wpthemes.davidakennedy.com/accessible-zen/), and provide any feedback regarding use of the theme from an assisitive technology standpoint. You can submit feedback on the [Github issues section](https://github.com/davidakennedy/Accessible-Zen/issues), or by emailing me at me (at) davidakennedy dot com.
-* Fork the [theme on Github](https://github.com/davidakennedy/Accessible-Zen/) and submit pull requests.
-* Use the theme, and give me ideas for future enhancements. You can submit feedback on the [Github issues section](https://github.com/davidakennedy/Accessible-Zen/issues), or by emailing me at me (at) davidakennedy dot com.
+- Visit the [theme demo](http://wpthemes.davidakennedy.com/accessible-zen/), and provide any feedback regarding use of the theme from an assisitive technology standpoint. You can submit feedback on the [Github issues section](https://github.com/davidakennedy/Accessible-Zen/issues), or by emailing me at me (at) davidakennedy dot com.
+- Fork the [theme on Github](https://github.com/davidakennedy/Accessible-Zen/) and submit pull requests.
+- Use the theme, and give me ideas for future enhancements. You can submit feedback on the [Github issues section](https://github.com/davidakennedy/Accessible-Zen/issues), or by emailing me at me (at) davidakennedy dot com.
 
 ### Changelog
 
+**July 11, 2013**
+
+Release: Version 0.1-alpha-2
+
+- Tested more in [IE7, resolving a bug or two](https://github.com/davidakennedy/accessible-zen/issues/1).
+- Added [main element](https://github.com/davidakennedy/accessible-zen/issues/6).
+- Removed [unneeded search icon](https://github.com/davidakennedy/accessible-zen/issues/8).
+- Updated [HTML5 shiv](https://github.com/davidakennedy/accessible-zen/issues/9).
+- Fixed [layout bug on mobile with big tables](https://github.com/davidakennedy/accessible-zen/issues/10).
+- Fixed [wonky form labels on IE7](https://github.com/davidakennedy/accessible-zen/issues/13).
+- Fixed [undefined variable and non-object warnings on image posts](https://github.com/davidakennedy/accessible-zen/issues/14).
+- Fixed [Function warning for image.php file](https://github.com/davidakennedy/accessible-zen/issues/15).
+- Fixed [custom background in IE7](https://github.com/davidakennedy/accessible-zen/issues/18).
+- [Unified list item styling](https://github.com/davidakennedy/accessible-zen/issues/19).
+
 **June 30, 2013**
 
-Initial release: Version 0.1-alpha
+Initial release: Version 0.1-alpha-1
 
 ### Remember
 
