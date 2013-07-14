@@ -45,7 +45,7 @@ function accessiblezen_content_nav( $nav_id ) {
 	</nav><!-- #<?php echo $nav_id; ?> -->
 	<?php
 }
-endif; // accessiblezen_content_nav
+endif; // ends check for accessiblezen_content_nav
 
 if ( ! function_exists( 'accessiblezen_comment' ) ) :
 /**
@@ -101,7 +101,7 @@ function accessiblezen_comment( $comment, $args, $depth ) {
 			break;
 	endswitch;
 }
-endif; // ends check for accessiblezen_comment()
+endif; // ends check for accessiblezen_comment
 
 if ( ! function_exists( 'accessiblezen_posted_on' ) ) :
 /**
@@ -117,7 +117,7 @@ function accessiblezen_posted_on() {
 		esc_html( get_the_date( 'm.d.Y' ) )
 	);
 }
-endif;
+endif; // ends check for accessiblezen_posted_on
 
 if ( ! function_exists( 'accessiblezen_archive_page_title_etc' ) ):
 /**
@@ -192,7 +192,7 @@ function accessiblezen_archive_page_title_etc() {
 			echo apply_filters( 'tag_archive_meta', '<div class="taxonomy-description">' . $tag_description . '</div>' );
 						}
 }
-endif; // accessiblezen_content_nav
+endif; // ends check for accessiblezen_archive_page_title_etc
 
 if ( ! function_exists( 'accessiblezen_cats_and_tags' ) ) :
 /**
@@ -234,7 +234,7 @@ function accessiblezen_cats_and_tags() {
 				the_title_attribute( 'echo=0' )
 			);
 }
-endif;
+endif; // ends check for accessiblezen_cats_and_tags
 
 /**
  * Prints a link to the Post Format archive page
