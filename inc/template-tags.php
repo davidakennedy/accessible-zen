@@ -120,7 +120,7 @@ function accessiblezen_posted_on() {
 endif; // ends check for accessiblezen_posted_on
 
 if ( ! function_exists( 'accessiblezen_archive_page_title_etc' ) ):
-/**
+ /**
  * Display info for the page title on the archive page
  *
  * @since accessiblezen 1.0
@@ -171,6 +171,9 @@ function accessiblezen_archive_page_title_etc() {
 
 		} elseif ( is_year() ) {
 			printf( __( 'Yearly Archives: %s', 'accessiblezen' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+
+		} elseif ( is_post_type_archive() ) {
+			printf( __( '%s', 'accessiblezen' ), '<span>' . post_type_archive_title() . '</span>' );
 
 		} else {
 			_e( 'Archives', 'accessiblezen' );
