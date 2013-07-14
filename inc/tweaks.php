@@ -94,6 +94,31 @@ function accessiblezen_enhanced_image_navigation( $url, $id ) {
 add_filter( 'attachment_link', 'accessiblezen_enhanced_image_navigation', 10, 2 );
 
 /**
+ * Filters wp_title to print a neat <title> tag based on what is being viewed.
+ */
+function accessiblezen_wp_title( $title, $sep ) {
+	global $page, $paged;
+
+	if ( is_feed() )
+		return $title;
+
+	// Add the blog name
+	$title .= get_bloginfo( 'name' );
+
+	// Add the blog description for the home/front page.
+	$site_description = get_bloginfo( 'description', 'display' );
+	if ( $site_description && ( is_home() || is_front_page() ) )
+		$title .= " $sep $site_description";
+
+	// Add a page number if necessary:
+	if ( $paged >= 2 || $page >= 2 )
+		$title .= " $sep " . sprintf( __( 'Page %s', '_s' ), max( $paged, $page ) );
+
+	return $title;
+}
+add_filter( 'wp_title', 'accessiblezen_wp_title', 10, 2 );
+
+/**
  * Sets the post excerpt length to 100 words.
  *
  * To override this length in a child theme, remove the filter and add your own
@@ -114,7 +139,7 @@ function accessiblezen_continue_reading_link() {
 endif; // accessiblezen_continue_reading_link
 
 /**
- * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and twentyeleven_continue_reading_link().
+ * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and accessiblezen_continue_reading_link().
  *
  * To override this in a child theme, remove the filter and add your own
  * function tied to the excerpt_more filter hook.
@@ -149,16 +174,6 @@ function accessiblezen_get_link_url() {
 		return false;
 
 	return esc_url_raw( $matches[1] );
-}
-
-/**
- * Adds a Customize link in the Themes section of the Admin.
- * @since Hello Zen 1.0
- */
-
-add_action ('admin_menu', 'accessiblezen_admin');
-function accessiblezen_admin() {
-    add_theme_page( 'Customize', 'Customize', 'edit_theme_options', 'customize.php' );
 }
 
 /**
