@@ -126,74 +126,73 @@ if ( ! function_exists( 'accessiblezen_archive_page_title_etc' ) ):
  * @since accessiblezen 1.0
  */
 function accessiblezen_archive_page_title_etc() {
-		if ( is_category() ) {
-			printf( __( 'Category Archives: %s', 'accessiblezen' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+	if ( is_category() ) :
+		single_cat_title();
 
-		} elseif ( is_tag() ) {
-			printf( __( 'Tag Archives: %s', 'accessiblezen' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+	elseif ( is_tag() ) :
+		single_tag_title();
 
-		} elseif ( has_post_format( 'aside' ) ) {
-			printf( __( '%s Archives', 'accessiblezen' ), '<span>' . get_post_format_string( get_post_format() ) . '</span>' );
-		} elseif ( has_post_format( 'audio' ) ) {
-			printf( __( '%s Archives', 'accessiblezen' ), '<span>' . get_post_format_string( get_post_format() ) . '</span>' );
-		} elseif ( has_post_format( 'chat' ) ) {
-			printf( __( '%s Archives', 'accessiblezen' ), '<span>' . get_post_format_string( get_post_format() ) . '</span>' );
-		} elseif ( has_post_format( 'gallery' ) ) {
-			printf( __( '%s Archives', 'accessiblezen' ), '<span>' . get_post_format_string( get_post_format() ) . '</span>' );
-		} elseif ( has_post_format( 'image' ) ) {
-			printf( __( '%s Archives', 'accessiblezen' ), '<span>' . get_post_format_string( get_post_format() ) . '</span>' );
-		} elseif ( has_post_format( 'link' ) ) {
-			printf( __( '%s Archives', 'accessiblezen' ), '<span>' . get_post_format_string( get_post_format() ) . '</span>' );
-		} 
-		elseif ( has_post_format( 'quote' ) ) {
-			printf( __( '%s Archives', 'accessiblezen' ), '<span>' . get_post_format_string( get_post_format() ) . '</span>' );
-		} elseif ( has_post_format( 'status' ) ) {
-			printf( __( '%s Archives', 'accessiblezen' ), '<span>' . get_post_format_string( get_post_format() ) . '</span>' );
-		} elseif ( has_post_format( 'video' ) ) {
-			printf( __( '%s Archives', 'accessiblezen' ), '<span>' . get_post_format_string( get_post_format() ) . '</span>' );
-		} elseif ( is_author() ) {
-			/* Queue the first post, that way we know
-			 * what author we're dealing with (if that is the case).
-			*/
-			the_post();
-			printf( __( 'Author Archives: %s', 'accessiblezen' ), '<span class="vcard"><a class="url fn n" href="' . get_author_posts_url( get_the_author_meta( "ID" ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' );
-			/* Since we called the_post() above, we need to
-			 * rewind the loop back to the beginning that way
-			 * we can run the loop properly, in full.
-			 */
-			rewind_posts();
+	elseif ( is_author() ) :
+		/* Queue the first post, that way we know
+		 * what author we're dealing with (if that is the case).
+		*/
+		the_post();
+		printf( __( 'Author: %s', 'accessiblezen' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' );
+		/* Since we called the_post() above, we need to
+		 * rewind the loop back to the beginning that way
+		 * we can run the loop properly, in full.
+		 */
+		rewind_posts();
 
-		} elseif ( is_day() ) {
-			printf( __( 'Daily Archives: %s', 'accessiblezen' ), '<span>' . get_the_date() . '</span>' );
+	elseif ( is_day() ) :
+		printf( __( 'Day: %s', 'accessiblezen' ), '<span>' . get_the_date() . '</span>' );
 
-		} elseif ( is_month() ) {
-			printf( __( 'Monthly Archives: %s', 'accessiblezen' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+	elseif ( is_month() ) :
+		printf( __( 'Month: %s', 'accessiblezen' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
 
-		} elseif ( is_year() ) {
-			printf( __( 'Yearly Archives: %s', 'accessiblezen' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+	elseif ( is_year() ) :
+		printf( __( 'Year: %s', 'accessiblezen' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 
-		} elseif ( is_post_type_archive() ) {
-			printf( __( '%s', 'accessiblezen' ), '<span>' . post_type_archive_title() . '</span>' );
+	elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
+		_e( 'Asides', 'accessiblezen' );
+		
+	elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
+		_e( 'Audios', 'accessiblezen' );
+		
+	elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
+		_e( 'Chats', 'accessiblezen' );
+		
+	elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
+		_e( 'Galleries', 'accessiblezen' );
 
-		} else {
-			_e( 'Archives', 'accessiblezen' );
+	elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
+		_e( 'Images', 'accessiblezen');
+		
+	elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
+		_e( 'Statuses', 'accessiblezen' );
 
-		}
-	?>
-</h1>
-<?php
-	if ( is_category() ) {
-		// show an optional category description
-		$category_description = category_description();
-		if ( ! empty( $category_description ) )
-			echo apply_filters( 'category_archive_meta', '<div class="taxonomy-description">' . $category_description . '</div>' );
+	elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
+		_e( 'Videos', 'accessiblezen' );
 
-	} elseif ( is_tag() ) {
-		// show an optional tag description
-		$tag_description = tag_description();
-		if ( ! empty( $tag_description ) )
-			echo apply_filters( 'tag_archive_meta', '<div class="taxonomy-description">' . $tag_description . '</div>' );
-						}
+	elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
+		_e( 'Quotes', 'accessiblezen' );
+
+	elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
+		_e( 'Links', 'accessiblezen' );
+		
+	elseif ( is_post_type_archive() ) :
+		printf( __( '%s', 'accessiblezen' ), '<span>' . post_type_archive_title() . '</span>' );
+
+	else :
+		_e( 'Archives', 'accessiblezen' );
+
+	endif;
+
+	// Show an optional term description.
+	$term_description = term_description();
+	if ( ! empty( $term_description ) ) :
+	printf( '<div class="taxonomy-description">%s</div>', $term_description );
+	endif;
 }
 endif; // ends check for accessiblezen_archive_page_title_etc
 
