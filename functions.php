@@ -127,7 +127,7 @@ add_action( 'widgets_init', 'accessiblezen_widgets_init' );
 /**
  * Returns the Google font stylesheet URL, if available.
  *
- * The use of Source Sans Pro and Bitter by default is localized. For languages
+ * The use of Noticia Text by default is localized. For languages
  * that use characters not supported by the font, the font can be disabled.
  *
  * @since Twenty Thirteen 1.0

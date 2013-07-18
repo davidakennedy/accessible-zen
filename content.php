@@ -17,7 +17,7 @@
 		<?php endif; ?>
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<p>By <a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>"><?php the_author_meta('display_name'); ?></a></p>
+			<p><?php _e( 'By', 'accessiblezen' ); ?> <a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>"><?php the_author_meta('display_name'); ?></a>.</p>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
