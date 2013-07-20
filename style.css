@@ -667,6 +667,16 @@ sub {
 	display: inline;
 }
 
+?* Callout */
+.callout {
+	background: #e5f7ff;
+	border: 1px solid #007db2;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding: 0.25em;
+}
+
 /* Alignment */
 .alignleft {
 	display: inline;
@@ -969,6 +979,10 @@ object {
 .secondary-navigation ul {
 	margin-bottom: 0;
 }
+.main-navigation li,
+.secondary-navigation li {
+	padding-right: 0.5em;
+}
 .main-navigation a {
 	font-size: 1.125em;
 }
@@ -979,7 +993,6 @@ object {
 .secondary-navigation a {
 	border-width: 0;
 	border-style: none;
-	padding-right: 0.5em;
 	text-decoration: none;
 	text-transform: uppercase;
 }
