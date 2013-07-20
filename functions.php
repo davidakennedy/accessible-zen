@@ -130,7 +130,7 @@ add_action( 'widgets_init', 'accessiblezen_widgets_init' );
  * The use of Noticia Text by default is localized. For languages
  * that use characters not supported by the font, the font can be disabled.
  *
- * @since Twenty Thirteen 1.0
+ * @since accessiblezen 1.0
  *
  * @return string Font stylesheet or empty string if disabled.
  */
@@ -138,26 +138,61 @@ function accessiblezen_fonts_url() {
 	$fonts_url = '';
 
 	/* Translators: If there are characters in your language that are not
-	 * supported by Noticia Text, translate this to 'off'. Do not translate
+	 * supported by Source Sans Pro, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$noticia_text = _x( 'on', 'Noticia Text font: on or off', 'accessiblezen' );
+	$merriweather_sans = _x( 'on', 'Merriweather Sans font: on or off', 'accessiblezen' );
 
-	if ( 'off' !== $noticia_text ) {
+	/* Translators: If there are characters in your language that are not
+	 * supported by Bitter, translate this to 'off'. Do not translate into your
+	 * own language.
+	 */
+	$merriweather = _x( 'on', 'Merriweather font: on or off', 'accessiblezen' );
+
+	if ( 'off' !== $merriweather_sans || 'off' !== $merriweather ) {
 		$font_families = array();
 
-		if ( 'off' !== $noticia_text )
-			$font_families[] = 'Noticia+Text:400,400italic,700,700italic';
+		if ( 'off' !== $merriweather_sans )
+			$font_families[] = 'Merriweather+Sans:400,700,400italic,700italic';
+
+		if ( 'off' !== $merriweather )
+			$font_families[] = 'Merriweather:400,700,400italic,700italic';
 
 		$protocol = is_ssl() ? 'https' : 'http';
 		$query_args = array(
 			'family' => implode( '|', $font_families ),
+			'subset' => 'latin',
 		);
 		$fonts_url = add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" );
 	}
 
 	return $fonts_url;
 }
+
+/**
+ * Adds additional stylesheets to the TinyMCE editor if needed.
+ *
+ * @uses accessiblezen_fonts_url() to get the Google Font stylesheet URL.
+ *
+ * @since accessiblezen 1.0
+ *
+ * @param string $mce_css CSS path to load in TinyMCE.
+ * @return string The filtered CSS paths list.
+ */
+function accessiblezen_mce_css( $mce_css ) {
+	$fonts_url = accessiblezen_fonts_url();
+
+	if ( empty( $fonts_url ) )
+		return $mce_css;
+
+	if ( ! empty( $mce_css ) )
+		$mce_css .= ',';
+
+	$mce_css .= esc_url_raw( str_replace( ',', '%2C', $fonts_url ) );
+
+	return $mce_css;
+}
+add_filter( 'mce_css', 'accessiblezen_mce_css' );
 
 /**
  * Enqueue scripts and styles
@@ -172,7 +207,7 @@ function accessiblezen_scripts_styles() {
 		wp_enqueue_style( 'accessiblezen-fonts', esc_url_raw( $fonts_url ), array(), null );
 		
 	// Loads the icon fonts stylesheet.
-	wp_enqueue_style( 'genericon-icon-font', get_template_directory_uri() . '/font/genericons.css', array(), '20130629' );
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/font/genericons.css', array(), '2.09' );
         
     wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 

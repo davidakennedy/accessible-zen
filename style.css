@@ -159,7 +159,7 @@ input,
 select,
 textarea {
 	color: #333;
-	font: 400 112.5%/1.5 'Noticia Text', Georgia, Times, "Times New Roman", serif;
+	font: 400 112.5%/1.5 'Merriweather', Georgia, Times, "Times New Roman", serif;
 	font-smoothing: antialiased;
 	*font-size: 1em; /* IE7 and older can't resize px based text */
 	line-height: 1.5;
@@ -172,6 +172,7 @@ textarea {
 h1,h2,h3,h4,h5,h6 {
 	color: #007db2;
 	clear: both;
+	font-family: 'Merriweather Sans', Verdana, Geneva, sans-serif;
   	line-height: 1.5;
   	margin: 0 0 0.125em;
   	text-rendering: optimizelegibility;
@@ -988,7 +989,7 @@ object {
 .secondary-navigation a:hover,
 .secondary-navigation a:active,
 .secondary-navigation a:focus {
-	text-decoration: underline;
+	border-bottom: 1px solid #00354c;
 }
 .main-navigation li.current_page_item a,
 .main-navigation li.current-menu-item a,

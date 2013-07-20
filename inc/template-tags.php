@@ -333,11 +333,11 @@ add_action( 'save_post', 'accessiblezen_category_transient_flusher' );
 
 function accessiblezen_credits() {
 	$credits = printf(
-		'<p>Made with <a href="%1$s">%2$s</a> &amp; the <a href="%3$s">%4$s</a>.</p>',
+		'<p>Made with <a href="%1$s">%2$s</a> &amp; <a href="%3$s">%4$s</a>.</p>',
 		esc_url( 'http://wordpress.org' ),
 		__( 'WordPress', 'accessiblezen' ),
 		esc_url( 'http://davidakennedy.com/projects/accessible-zen' ),
-		__( 'Accessible Zen theme', 'accessiblezen' )
+		__( 'Accessible Zen', 'accessiblezen' )
     );
     return $credits;
 }
