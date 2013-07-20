@@ -914,7 +914,7 @@ img.size-full {
 .wp-caption .wp-caption-text {
 	margin: 0.8075em 0;
 }
-.gallery {
+#primary .gallery {
 	margin-bottom: 1.5em;
 }
 .gallery-caption {
