@@ -667,7 +667,7 @@ sub {
 	display: inline;
 }
 
-?* Callout */
+/* Callout */
 .callout {
 	background: #e5f7ff;
 	border: 1px solid #007db2;
