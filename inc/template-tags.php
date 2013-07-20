@@ -232,8 +232,7 @@ function accessiblezen_cats_and_tags() {
 				$meta_text,
 				$category_list,
 				$tag_list,
-				get_permalink(),
-				the_title_attribute( 'echo=0' )
+				get_permalink()
 			);
 }
 endif; // ends check for accessiblezen_cats_and_tags

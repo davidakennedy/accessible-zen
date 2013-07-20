@@ -461,18 +461,17 @@ a {
 	color: #00628c;
 	text-decoration: none;
 	border-width: 0 0 1px 0;
-	border-style: none none solid none;
-	border-color: #00628c;
-	padding-bottom: 0.0625em;
+	border-style: none none dotted none;
+	border-color: #00354c;
 }
 a:hover,
 a:active,
 a:focus {
 	color: #00354c;
 	text-decoration: none;
-	border-width: 0 0 2px 0;
+	border-width: 0 0 1px 0;
 	border-style: none none solid none;
-	border-color: #666;
+	border-color: #00354c;
 }
 a:active,
 a:focus {
@@ -481,7 +480,7 @@ a:focus {
 	top: 1px;
 }
 a:focus {
-	outline: thin dotted red;
+	outline: thin dotted #00354c;
 }
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
 a:hover,
@@ -518,9 +517,9 @@ h6 a:active,
 h6 a:focus {
 	color: #007Db2;
 	text-decoration: none;
-	border-width: 0 0 2px 0;
-	border-style: none none solid none;
-	border-color: #666;
+	border-width: 0 0 1px 0;
+	border-style: none none dotted none;
+	border-color: #00354c;
 }
 
 /* Media */
@@ -784,7 +783,7 @@ sub {
 	text-transform: uppercase;
 }
 .hentry {
-	border-bottom: 1px dotted #008fcc;
+	border-bottom: 1px solid #e5e5e5;
 	padding: 1.5em 0;
 }
 .page .hentry {
@@ -825,13 +824,13 @@ sub {
 .blog .format-aside,
 .archive .format-aside {
 	background-color: #f5f5f5;
-	border-left: 1px dotted #008fcc;
-	border-right: 1px dotted #008fcc;
+	border-left: 1px solid #e5e5e5;
+	border-right: 1px solid #e5e5e5;
 	padding-left: 1em;
 	padding-right: 1em;
 }
 .term-post-format-aside .format-aside {
-	border-top: 1px dotted #008fcc;
+	border-top: 1px solid #e5e5e5;
 	margin: 1.5em 0;
 }
 
@@ -1009,7 +1008,7 @@ object {
 	text-align: center;
 }
 .comments-area {
-	border-top: 1px dotted #008fcc;
+	border-top: 1px solid #e5e5e5;
 	margin-top: 1.5em;
 	padding-top: 1.5em;
 }
@@ -1208,7 +1207,7 @@ p.comment-form-comment {
 /* =Widgets
 ----------------------------------------------- */
 .sidebar {
-	border-top: 1px dotted #008fcc;
+	border-top: 1px solid #e5e5e5;
 }
 .widget {
 	margin: 0 0 1.5em;
@@ -1228,8 +1227,9 @@ p.comment-form-comment {
 ----------------------------------------------- */
 .site-footer {
 	background-color: #e5F7ff;
-	border-top: 3px solid #008fcc;
-	border-bottom: 3px solid #008fcc;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	text-align: center;
 }
 .site-info p {
 	font-size: 0.75em;
