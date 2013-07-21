@@ -182,6 +182,10 @@ function accessiblezen_archive_page_title_etc() {
 		
 	elseif ( is_post_type_archive() ) :
 		printf( __( '%s', 'accessiblezen' ), '<span>' . post_type_archive_title() . '</span>' );
+		
+	elseif ( is_tax() ) :
+		$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+		printf( __( '%s', 'accessiblezen' ), '<span>' . $term->name . '</span>' );
 
 	else :
 		_e( 'Archives', 'accessiblezen' );

@@ -860,6 +860,7 @@ sub {
 /* =Pages
 ----------------------------------------------- */
 /* Archives */
+.search-archives,
 .tags {
 	clear: both;
 	margin-bottom: 1.5em;

@@ -7,8 +7,6 @@
  * @package accessiblezen
  * @since accessiblezen 1.0
  */
-
-$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
  
 get_header(); ?>
 
@@ -19,7 +17,7 @@ get_header(); ?>
 
 				<header class="page-header">
 					<h1 class="page-title">
-						<?php echo apply_filters( 'the_title', $term->name ); ?>
+						<?php accessiblezen_archive_page_title_etc() ?>
 				</header><!-- .page-header -->
 
 				<?php rewind_posts(); ?>
