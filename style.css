@@ -450,6 +450,9 @@ ol ul {
 	margin-bottom: 0;
 	margin-left: 1em;
 }
+.site-content li {
+	margin-bottom: 0.25em;
+}
 dl dd {
 	margin: 0 1.5em 1.5em;
 }
@@ -675,6 +678,12 @@ sub {
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	padding: 0.25em;
+}
+
+/* No list style */
+.nolist {
+	list-style: none;
+	margin:0;
 }
 
 /* Alignment */
