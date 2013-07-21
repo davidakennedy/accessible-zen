@@ -22,7 +22,9 @@
 			 <?php wp_list_categories(); ?>
 		</ul>
 		<h2><?php _e( 'Archives by Tag', 'accessiblezen' ); ?></h2>
-		<?php wp_tag_cloud('orderby=count'); ?>
+		<div class="tags">
+			<?php wp_tag_cloud('orderby=count'); ?>
+		</div>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'duster' ), 'after' => '</div>' ) ); ?>
 		<?php edit_post_link( __( 'Edit', 'accessiblezen' ), '<span class="edit-link cf">', '</span>' ); ?>
 	</div><!-- .entry-content -->
