@@ -23,7 +23,7 @@ h4,
 h5,
 h6 {
 	clear: both;
-	color: #007db2;
+	color: #00628c;
   	line-height: 1.5;
   	margin: 0 0 0.125em;
   	text-align: center;
@@ -189,19 +189,14 @@ dt {
 a {
 	color: #00628c;
 	text-decoration: none;
-	border-width: 0 0 1px 0;
-	border-style: none none solid none;
-	border-color: #00628c;
-	padding-bottom: 0.0625em;
+	border-bottom: 1px dotted #00354c;
 }
 a:hover,
 a:active,
 a:focus {
 	color: #00354c;
 	text-decoration: none;
-	border-width: 0 0 2px 0;
-	border-style: none none solid none;
-	border-color: #666;
+	border-bottom: 1px solid #00354c;
 }
 a:active,
 a:focus {
@@ -210,9 +205,8 @@ a:focus {
 	top: 1px;
 }
 a:focus {
-	outline: thin dotted red;
+	outline: thin dotted #00354c;
 }
-
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
 a:hover,
 a:active {
@@ -224,7 +218,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-	color: #007Db2;
+	color: #00628c;
 	text-decoration: none;
 	border-style: none;
 }
@@ -246,11 +240,9 @@ h5 a:focus,
 h6 a:hover,
 h6 a:active,
 h6 a:focus {
-	color: #007Db2;
+	color: #00354c;
 	text-decoration: none;
-	border-width: 0 0 2px 0;
-	border-style: none none solid none;
-	border-color: #666;
+	border-bottom: 1px solid #00354c;
 }
 
 /* Media */
@@ -288,11 +280,11 @@ mark {
 	font-weight: bold;
 }
 ::-moz-selection {
-	background: #007Db2;
+	background: #00628c;
 	color: #fff; text-shadow: none;
 }
 ::selection {
-	background: #007Db2;
+	background: #00628c;
 	color: #fff;
 	text-shadow: none;
 }
@@ -347,6 +339,22 @@ sub {
 }
 .nav a {
 	display: inline;
+}
+
+/* Callout */
+.callout {
+	background: #e5f7ff;
+	border: 1px solid #008fcc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding: 0.25em;
+}
+
+/* No list style */
+.nolist {
+	list-style: none;
+	margin: 0;
 }
 
 /* Alignment */
@@ -452,7 +460,7 @@ img.size-full {
 #content .gallery-item a:hover img,
 #content .gallery-item a:active img,
 #content .gallery-item a:focus img {
-	border: 3px solid #007Db2;
+	border: 3px solid #008fcc;
 	height: auto;
 	max-width: 90%;
 }

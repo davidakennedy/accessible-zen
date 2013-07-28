@@ -170,7 +170,7 @@ textarea {
 
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
-	color: #007db2;
+	color: #00628c;
 	clear: both;
 	font-family: 'Merriweather Sans', Verdana, Geneva, sans-serif;
   	line-height: 1.5;
@@ -330,12 +330,12 @@ button, input {
 button, input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 2px solid #007Db2;
-	border-color: #007Db2 #007Db2 #00354c #007Db2;
+	border: 2px solid #008fcc;
+	border-color: #008fcc #008fcc #00354c #008fcc;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
-	background-color: #007Db2;
+	background-color: #00628c;
 	color: #fff;
 	cursor: pointer;
 	padding: 0.3125em;
@@ -471,7 +471,6 @@ a:active,
 a:focus {
 	color: #00354c;
 	text-decoration: none;
-	background-color: #f5f5f5;
 	border-bottom: 1px solid #00354c;
 }
 a:active,
@@ -488,21 +487,13 @@ a:hover,
 a:active {
 	outline: 0;
 }
-.callout a:hover,
-.callout a:active,
-.callout a:focus,
-.site-footer a:hover,
-.site-footer a:active,
-.site-footer a:focus {
-	background-color: transparent;
-}
 h1 a,
 h2 a,
 h3 a,
 h4 a,
 h5 a,
 h6 a {
-	color: #007Db2;
+	color: #00628c;
 	text-decoration: none;
 	border-style: none;
 }
@@ -524,7 +515,7 @@ h5 a:focus,
 h6 a:hover,
 h6 a:active,
 h6 a:focus {
-	color: #007Db2;
+	color: #00354c;
 	text-decoration: none;
 	border-bottom: 1px solid #00354c;
 }
@@ -564,11 +555,11 @@ mark {
 	font-weight: bold;
 }
 ::-moz-selection {
-	background: #007Db2;
+	background: #00628c;
 	color: #fff; text-shadow: none;
 }
 ::selection {
-	background: #007Db2;
+	background: #00628c;
 	color: #fff;
 	text-shadow: none;
 }
@@ -676,7 +667,7 @@ sub {
 /* Callout */
 .callout {
 	background: #e5f7ff;
-	border: 1px solid #007db2;
+	border: 1px solid #008fcc;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
@@ -686,7 +677,7 @@ sub {
 /* No list style */
 .nolist {
 	list-style: none;
-	margin:0;
+	margin: 0;
 }
 
 /* Alignment */
@@ -774,7 +765,6 @@ sub {
 	text-align: center;
 }
 .site-title a {
-	color: #007Db2;
 	text-decoration: none;
 }
 .site-description {
@@ -949,7 +939,7 @@ img.size-full {
 #content .gallery-item a:hover img,
 #content .gallery-item a:active img,
 #content .gallery-item a:focus img {
-	border: 3px solid #007Db2;
+	border: 3px solid #008fcc;
 	height: auto;
 	max-width: 90%;
 }
@@ -983,12 +973,12 @@ object {
 }
 .nav-previous {
 	float: left;
-	width: 50%;
+	width: 49%;
 }
 .nav-next {
 	float: right;
 	text-align: right;
-	width: 50%;
+	width: 49%;
 }
 
 /* Menus */

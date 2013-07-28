@@ -51,7 +51,7 @@ function displayblogname_sanitize_checkbox( $input ) {
 		'sanitize_callback' => 'accessiblezen_post_content_sanitize_radio_buttons',
 		'capability' => 'edit_theme_options',
 		) );
-		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'debut_post_content', array(
+		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'accessiblezen_post_content', array(
 		'label'	=> __( 'Post content', 'accessiblezen' ),
 		'section'	=> 'accessiblezen_layout_section',
 		'settings'	=> 'accessiblezen_post_content',
@@ -75,6 +75,32 @@ function accessiblezen_post_content_sanitize_radio_buttons( $input ) {
     }
 }
 
+// Show more posts link on Front Page template
+	$wp_customize->add_setting(
+    'show_more_posts_link',
+    array(
+        'default' => '',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'accessiblezen_sanitize_dropdown_integer',
+    )
+);
+ 
+$wp_customize->add_control(
+		 new WP_Customize_Control( $wp_customize, 'show_more_posts_link', array(
+				'label' => __( 'Show More Posts link on Front Page Template', 'accessiblezen' ),
+				'section' => 'static_front_page',
+				'type'       => 'dropdown-pages',
+				'settings' => 'show_more_posts_link',
+			)
+		)
+	);
+
+function accessiblezen_sanitize_dropdown_integer( $input ) {
+    if( is_numeric( $input ) ) {
+        return intval( $input );
+    }
+}
+
 }
 add_action( 'customize_register', 'accessiblezen_customize_register' );
 
@@ -87,3 +113,15 @@ function accessiblezen_customize_preview_js() {
 	wp_enqueue_script( 'accessiblezen_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20120827', true );
 }
 add_action( 'customize_preview_init', 'accessiblezen_customize_preview_js' );
+
+/**
+ * Load extra jQuery script to theme customizer page to toggle options.
+ *
+ * @since accessiblezen 1.0
+ */
+function modify_customize_preview_page_script() {
+	wp_enqueue_script( 'modify-customize-preview-page-script', get_template_directory_uri() . '/js/modify-customize-preview-page.js',
+		array( 'jquery' ), '20120827', true );
+}
+// Action will load script to customizer.php only.
+add_action( 'customize_controls_print_footer_scripts', 'modify_customize_preview_page_script' );
