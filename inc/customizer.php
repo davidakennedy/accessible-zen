@@ -18,6 +18,7 @@ function accessiblezen_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 	$wp_customize->get_setting('displayblogname')->transport='postMessage';
+	$wp_customize->get_setting('show_more_posts_link')->transport='postMessage';
 	
 	// Hide the site/blog description
 	$wp_customize->add_setting( 'displayblogname', array(
@@ -47,7 +48,7 @@ function displayblogname_sanitize_checkbox( $input ) {
 		'description' => 'Change how Accessible Zen displays posts',
 		) );
 		$wp_customize->add_setting( 'accessiblezen_post_content', array(
-		'default'	=> 'option1',
+		'default'	=> 'option2',
 		'sanitize_callback' => 'accessiblezen_post_content_sanitize_radio_buttons',
 		'capability' => 'edit_theme_options',
 		) );
@@ -87,7 +88,7 @@ function accessiblezen_post_content_sanitize_radio_buttons( $input ) {
  
 $wp_customize->add_control(
 		 new WP_Customize_Control( $wp_customize, 'show_more_posts_link', array(
-				'label' => __( 'Show More Posts link on Front Page Template', 'accessiblezen' ),
+				'label' => __( 'Link to this page in Read More Posts on Front Page Template', 'accessiblezen' ),
 				'section' => 'static_front_page',
 				'type'       => 'dropdown-pages',
 				'settings' => 'show_more_posts_link',

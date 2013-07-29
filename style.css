@@ -212,7 +212,7 @@ h4, .h4 {
 }
 h5, .h5 {
 	font-size: 1.0625em; /* 17px */
-	font-weight: bold;
+	font-style: italic;
 }
 h6, .h6 {
 	font-size: 1em; /* 16px */

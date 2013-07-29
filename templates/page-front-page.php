@@ -43,6 +43,14 @@ get_header(); ?>
 						 	* called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 	*/
 							get_template_part( 'content', get_post_format() ); ?>
+							
+							<?php
+							$value = get_theme_mod( 'show_more_posts_link' );
+							if ( 'default' != get_theme_mod( 'show_more_posts_link' ) ) : ?>
+		
+							<span class="h6"><a href="<?php echo get_permalink($value); ?>" rel="bookmark"><?php _e( 'Read more posts &rarr;', 'accessiblezen' ); ?></a></span>
+							
+							<?php endif; ?>
 						
 						<?php endwhile; // end of the new loop.
 						
