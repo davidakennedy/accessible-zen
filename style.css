@@ -170,7 +170,7 @@ textarea {
 
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
-	color: #00628c;
+	color: #006e9d;
 	clear: both;
 	font-family: 'Merriweather Sans', Verdana, Geneva, sans-serif;
   	line-height: 1.5;
@@ -493,7 +493,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-	color: #00628c;
+	color: #006e9d;
 	text-decoration: none;
 	border-style: none;
 }
@@ -555,11 +555,11 @@ mark {
 	font-weight: bold;
 }
 ::-moz-selection {
-	background: #00628c;
+	background: #006e9d;
 	color: #fff; text-shadow: none;
 }
 ::selection {
-	background: #00628c;
+	background: #006e9d;
 	color: #fff;
 	text-shadow: none;
 }
