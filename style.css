@@ -821,11 +821,15 @@ sub {
 	font-size: 1.125em;
 	text-transform: uppercase;
 }
-.page .edit-link {
-	clear: both;
-}
 .author-info {
 	margin: 1.5em 0;
+}
+.post-date,
+.post-categories,
+.post-tags,
+post-permalink,
+.edit-link {
+	display: block;
 }
 
 /* =Asides

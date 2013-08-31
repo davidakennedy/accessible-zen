@@ -110,7 +110,7 @@ if ( ! function_exists( 'accessiblezen_posted_on' ) ) :
  * @since accessiblezen 1.0
  */
 function accessiblezen_posted_on() {
-	printf( __( 'Posted: <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>.<br />', 'accessiblezen' ),
+	printf( __( '<span class="post-date">Posted: <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>.</span>', 'accessiblezen' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),
@@ -217,17 +217,17 @@ function accessiblezen_cats_and_tags() {
 			if ( ! accessiblezen_categorized_blog() ) {
 				// This blog only has 1 category so we just need to worry about tags in the meta text
 				if ( '' != $tag_list ) {
-					$meta_text = __( 'Tagged: %2$s.<br /> Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.<br />', 'accessiblezen' );
+					$meta_text = __( '<span class="post-tags">Tagged: %2$s.</span> <span class="post-permalink">Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.</span>', 'accessiblezen' );
 				} else {
-					$meta_text = __( 'Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.<br />', 'accessiblezen' );
+					$meta_text = __( '<span class="post-permalink">Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.</span>', 'accessiblezen' );
 				}
 
 			} else {
 				// But this blog has loads of categories so we should probably display them here
 				if ( '' != $tag_list ) {
-					$meta_text = __( 'Posted in: %1$s.<br /> Tagged: %2$s.<br /> Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.<br />', 'accessiblezen' );
+					$meta_text = __( '<span class="post-categories">Posted in: %1$s.</span> <span class="post-tags">Tagged: %2$s.</span> <span class="post-permalink">Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.</span>', 'accessiblezen' );
 				} else {
-					$meta_text = __( 'Posted in: %1$s.<br /> Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.<br />', 'accessiblezen' );
+					$meta_text = __( '<span class="post-categories">Posted in: %1$s.</span> <span class="post-permalink">Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.</span>', 'accessiblezen' );
 				}
 
 			} // end check for categories on this blog
