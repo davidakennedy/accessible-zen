@@ -55,6 +55,10 @@ function accessiblezen_setup() {
 	 */
 	load_theme_textdomain( 'accessiblezen', get_template_directory() . '/languages' );
 	
+	// Switches default core markup for search form, comment form, and comments
+	// to output valid HTML5.
+	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );
+	
 	/*
 	 * This theme styles the visual editor to resemble the theme style,
 	 * specifically font, colors, and column width.
