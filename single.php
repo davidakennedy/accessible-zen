@@ -15,7 +15,7 @@ get_header(); ?>
 
 				<?php accessiblezen_content_nav( 'nav-above' ); ?>
 
-				<?php get_template_part( 'content', 'single' ); ?>
+				<?php get_template_part( 'partials/content', 'single' ); ?>
 
 				<?php accessiblezen_content_nav( 'nav-below' ); ?>
 

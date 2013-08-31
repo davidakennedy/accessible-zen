@@ -22,7 +22,7 @@ get_header(); ?>
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'content', 'search' ); ?>
+					<?php get_template_part( 'partials/content', 'search' ); ?>
 
 				<?php endwhile; ?>
 
@@ -30,7 +30,7 @@ get_header(); ?>
 
 			<?php else : ?>
 
-				<?php get_template_part( 'no-results', 'search' ); ?>
+				<?php get_template_part( 'partials/no-results', 'search' ); ?>
 
 			<?php endif; ?>
 
