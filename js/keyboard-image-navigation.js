@@ -1,4 +1,8 @@
-jQuery( document ).ready( function( $ ) {
+/**
+ * Keyboard image navigation for image attachments.
+ */
+ 
+ jQuery( document ).ready( function( $ ) {
 	$( document ).keydown( function( e ) {
 		var url = false;
 		if ( e.which == 37 ) {  // Left arrow key code

@@ -1,4 +1,7 @@
-// Hide theme option on Customizer panel, based on selection
+/**
+ * Hide theme option on Customizer panel, based on selection.
+ */
+ 
 jQuery(document).ready(function( $ ) {
 	// Hide divs on Customizer panel, based on selection
 	$('input[value="posts"]').change(function() {

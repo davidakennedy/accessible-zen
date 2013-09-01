@@ -3,9 +3,8 @@
  * Implements a custom header for Hello Zen.
  * See http://codex.wordpress.org/Custom_Headers
  *
- * @package WordPress
- * @subpackage accessiblezen
- * @since Hello Zen 1.0
+ * @package accessiblezen
+ * @since accessiblezen 0.1
  */
 
 /**
@@ -17,7 +16,7 @@
  * @uses accessiblezen_admin_header_image() to add custom markup to wp-admin form.
  * @uses register_default_headers() to set up the bundled header images.
  *
- * @since Hello Zen 1.0
+ * @since Hello Zen 0.1
  */
 function accessiblezen_custom_header_setup() {
 	$args = array(
@@ -51,7 +50,7 @@ add_action( 'after_setup_theme', 'accessiblezen_custom_header_setup' );
  * Use the admin email's gravatar as the default header image.
  * Thanks Konstantin Kovshenin and the Publish theme!
  *
- * @since Hello Zen 1.0
+ * @since Hello Zen 0.1
  */
 function accessiblezen_get_default_header_image() {
 

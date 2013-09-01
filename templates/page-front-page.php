@@ -1,14 +1,13 @@
 <?php
 /**
- * Template Name: Front Page Template
- *
  * Description: A page template that provides a key component of WordPress as a CMS
  * by meeting the need for a carefully crafted introductory page. The front page template
  * in Zen Hacker consists of a page content area for adding text, images, video --
  * anything you'd like -- followed by your most recent post.
+ * Template Name: Front Page Template
  *
  * @package accessiblezen
- * @since accessiblezen 1.0
+ * @since accessiblezen 0.1
  */
 
 get_header(); ?>

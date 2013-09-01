@@ -6,16 +6,15 @@
  * since this theme is not meant to be backwards compatible and relies on
  * many new functions and markup changes introduced in 3.6.
  *
- * @package WordPress
- * @subpackage accessiblezen
- * @since Accessible Zen 1.0
+ * @package accessiblezen
+ * @since accessiblezen 0.1
  */
 
 /**
  * Prevent switching to Accessible Zen on old versions of WordPress. Switches
  * to the default theme.
  *
- * @since Accessible Zen 1.0
+ * @since Accessible Zen 0.1
  *
  * @return void
  */
@@ -30,7 +29,7 @@ add_action( 'after_switch_theme', 'accessiblezen_switch_theme' );
  * Prints an update nag after an unsuccessful attempt to switch to
  * Accessible Zen on WordPress versions prior to 3.6.
  *
- * @since Accessible Zen 1.0
+ * @since Accessible Zen 0.1
  *
  * @return void
  */
@@ -42,7 +41,7 @@ function accessiblezen_upgrade_notice() {
 /**
  * Prevents the Customizer from being loaded on WordPress versions prior to 3.6.
  *
- * @since Accessible Zen 1.0
+ * @since Accessible Zen 0.1
  *
  * @return void
  */
@@ -56,7 +55,7 @@ add_action( 'load-customize.php', 'accessiblezen_customize' );
 /**
  * Prevents the Theme Preview from being loaded on WordPress versions prior to 3.4.
  *
- * @since Accessible Zen 1.0
+ * @since Accessible Zen 0.1
  *
  * @return void
  */

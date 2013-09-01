@@ -1,9 +1,9 @@
 <?php
 /**
- * The template for displaying posts in the Link post format
+ * The template for displaying posts in the Link post format.
  *
  * @package accessiblezen
- * @since accessiblezen 1.0
+ * @since accessiblezen 0.1
  */
 ?>
 

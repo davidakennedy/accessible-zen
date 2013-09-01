@@ -3,7 +3,7 @@
  * The Sidebar containing the main widget areas.
  *
  * @package accessiblezen
- * @since accessiblezen 1.0
+ * @since accessiblezen 0.1
  
  * The footer widget area is triggered if any of the areas
  * have widgets. So let's check that first.

@@ -3,7 +3,7 @@
  * The template for displaying posts in the Status post format
  *
  * @package accessiblezen
- * @since accessiblezen 1.0
+ * @since accessiblezen 0.1
  */
 ?>
 

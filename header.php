@@ -2,10 +2,10 @@
 /**
  * The Header for our theme.
  *
- * Displays all of the <head> section and everything up till <div id="main">
+ * Displays all of the <head> section and everything up till <div id="main">.
  *
  * @package accessiblezen
- * @since accessiblezen 1.0
+ * @since accessiblezen 0.1
  */
 ?><!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" <?php language_attributes(); ?>> <![endif]-->

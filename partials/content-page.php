@@ -1,9 +1,9 @@
 <?php
 /**
- * The template used for displaying page content in page.php
+ * The template used for displaying page content in page.php.
  *
- * @package hellozen
- * @since hellozen 1.0
+ * @package accessiblezen
+ * @since accessiblezen 0.1
  */
 ?>
 

@@ -1,15 +1,15 @@
 <?php
 /**
- * accessiblezen functions and definitions
+ * accessiblezen functions and definitions.
  *
  * @package accessiblezen
- * @since accessiblezen 1.0
+ * @since accessiblezen 0.1
  */
 
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
- * @since accessiblezen 1.0
+ * @since accessiblezen 0.1
  */
 if ( ! isset( $content_width ) )
 	$content_width = 768; /* pixels */
@@ -22,7 +22,7 @@ if ( ! function_exists( 'accessiblezen_setup' ) ):
  * before the init hook. The init hook is too late for some features, such as indicating
  * support post thumbnails.
  *
- * @since accessiblezen 1.0
+ * @since accessiblezen 0.1
  */
 function accessiblezen_setup() {
 
@@ -109,7 +109,7 @@ add_action( 'after_setup_theme', 'accessiblezen_setup' );
 /**
  * Register widgetized area and update sidebar with default widgets
  *
- * @since accessiblezen 1.0
+ * @since accessiblezen 0.1
  */
 function accessiblezen_widgets_init() {
 	register_sidebar( array(
@@ -140,7 +140,7 @@ add_action( 'widgets_init', 'accessiblezen_widgets_init' );
  * The use of Noticia Text by default is localized. For languages
  * that use characters not supported by the font, the font can be disabled.
  *
- * @since accessiblezen 1.0
+ * @since accessiblezen 0.1
  *
  * @return string Font stylesheet or empty string if disabled.
  */
@@ -184,7 +184,7 @@ function accessiblezen_fonts_url() {
  *
  * @uses accessiblezen_fonts_url() to get the Google Font stylesheet URL.
  *
- * @since accessiblezen 1.0
+ * @since accessiblezen 0.1
  *
  * @param string $mce_css CSS path to load in TinyMCE.
  * @return string The filtered CSS paths list.

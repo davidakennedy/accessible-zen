@@ -1,8 +1,10 @@
 <?php
 /**
- * @package accessiblezen
- * @since accessiblezen 1.0
+ * The template part used for displaying content for the Archive page template.
  * Template Name: Archives Template
+ *
+ * @package accessiblezen
+ * @since accessiblezen 0.1
  */
 
 get_header(); ?>

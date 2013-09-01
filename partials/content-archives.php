@@ -1,8 +1,9 @@
 <?php
 /**
- * A content part to display site archives
+ * A content part to display site archives.
+ *
  * @package accessiblezen
- * @since accessiblezen 1.0
+ * @since accessiblezen 0.1
  *
  */
 ?>

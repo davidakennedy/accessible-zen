@@ -8,7 +8,7 @@
  * different template.
  *
  * @package accessiblezen
- * @since accessiblezen 1.0
+ * @since accessiblezen 0.1
  */
 
 get_header(); ?>

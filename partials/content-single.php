@@ -1,7 +1,9 @@
 <?php
 /**
+ * The template part used for displaying content for single pages.
+ *
  * @package accessiblezen
- * @since accessiblezen 1.0
+ * @since accessiblezen 0.1
  */
 ?>
 

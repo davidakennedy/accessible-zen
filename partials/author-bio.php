@@ -3,7 +3,7 @@
  * The template for displaying Author bios.
  *
  * @package accessiblezen
- * @since accessiblezen 1.0
+ * @since accessiblezen 0.1
  */
 ?>
 
