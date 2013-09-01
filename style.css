@@ -651,17 +651,14 @@ sub {
 	padding:0;
 }
 
-/* Create an abstraction, as per: csswizardry.com/2011/09/the-nav-abstraction/ */
+/* Create an abstraction, as per: http://csswizardry.com/2011/09/the-nav-abstraction/ */
 .nav,
 .nav ul {
 	list-style: none;
 	margin-left: 0;
 }
 .nav li {
-	display: inline;
-}
-.nav a {
-	display: inline;
+	display: block;
 }
 
 /* Callout */
@@ -1284,11 +1281,14 @@ p.comment-form-comment {
 	
 	
 	/* COLUMN GRID */
-	.sidebar-widgets {display: inline; float: left;}
+	.sidebar-widgets { display: inline; float: left; }
 	
 	/* 2 COLUMN GRID */
-	.one .sidebar-widgets {width: 93.458%;}
-	.two .sidebar-widgets {width: 43.458%;}
+	.one .sidebar-widgets { width: 93.458%; }
+	.two .sidebar-widgets { width: 43.458%; }
+	
+	/* Nav abstraction adjustment */
+	.nav li { display: inline; }
 	
 	/* Content */
 	.site tr, th, td { padding-right: 1.5em; }
