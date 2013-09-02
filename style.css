@@ -317,7 +317,7 @@ label {
 button, input, select, textarea {
 	font-size: 100%;
 	margin: 1px;
-	max-width: 100%;
+	max-width: 99%;
 	vertical-align: baseline;
 	*vertical-align: middle; /* IE7 and older */
 }
