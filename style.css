@@ -148,9 +148,10 @@ html {
 	font-size: 100%;
 	height: 100%;
 	overflow-y: scroll;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	-webkit-text-size-adjust: 100%;
 	/* Force scrollbar in non-IE and Remove iOS text size adjust without disabling user zoom */
 }
 body,
@@ -159,13 +160,11 @@ input,
 select,
 textarea {
 	color: #333;
-	font: 400 112.5%/1.5 'Merriweather', Georgia, Times, "Times New Roman", serif;
-	font-smoothing: antialiased;
-	*font-size: 1em; /* IE7 and older can't resize px based text */
+	font-family: 'Merriweather', Georgia, Times, "Times New Roman", serif;
+	font-size: 112.5%;
+	font-weight: 400;
 	line-height: 1.5;
 	min-height: 100%;
-	text-rendering: optimizeLegibility; 
-	-webkit-font-smoothing: antialiased; /* Improve default text rendering, handling of kerning pairs and ligatures */
 }
 
 /* Headings */
@@ -175,7 +174,6 @@ h1,h2,h3,h4,h5,h6 {
 	font-family: 'Merriweather Sans', Verdana, Geneva, sans-serif;
   	line-height: 1.2;
   	margin: 0 0 0.125em;
-  	text-rendering: optimizelegibility;
   	text-shadow:1px 1px 1px rgba(0,0,0,.10);
 }
 .content-area h1,
@@ -187,7 +185,7 @@ h1,h2,h3,h4,h5,h6 {
 	text-align: center;
 }
 hr {
-	border-top: 2px solid #d5d5d5;
+	border-top: 1px solid #d5d5d5;
 	display: block;
 	border: 0;
 	height: 1px;
@@ -318,7 +316,7 @@ label {
 }
 button, input, select, textarea {
 	font-size: 100%;
-	margin: 0;
+	margin: 1px;
 	max-width: 100%;
 	vertical-align: baseline;
 	*vertical-align: middle; /* IE7 and older */
@@ -341,6 +339,7 @@ input[type="submit"] {
 	padding: 0.3125em;
 	text-shadow: 0 1px 0 rgba(255,255,255,.8);
 	text-transform: uppercase;
+	-moz-appearance: button;
 	-webkit-appearance: button;
 }
 button:hover,
@@ -366,12 +365,14 @@ input[type="radio"] {
 	box-sizing: border-box;
 }
 input[type="search"] {
+	-moz-appearance: textfield;
 	-webkit-appearance: textfield;
 	-moz-box-sizing: content-box;
 	-webkit-box-sizing: content-box;
 	box-sizing: content-box;
 }
 input[type="search"]::-webkit-search-decoration {
+	-moz-appearance: none;
 	-webkit-appearance: none;
 }
 button::-moz-focus-inner, input::-moz-focus-inner {
@@ -529,7 +530,6 @@ object,
 embed,
 video {
 	max-width: 100%; /* Fluid images */
-	_width: 100%;
 }
 img {
 	border: 0;
@@ -773,8 +773,8 @@ sub {
 /* =Content
 ----------------------------------------------- */
 /* Sticky and Front Page Template */
-#content .sticky,
-.home #content article.page,
+.content-area .sticky,
+.home .content-area article.page,
 .page-template-templatesfront-page-php #content article.page {
 	background-color: #f5f5f5;
 	border: 1px solid #d5d5d5;
@@ -862,23 +862,11 @@ post-permalink,
 /* Fluid images for posts, comments, and widgets */
 .entry-content img,
 .comment-content img,
-.widget img {
-	max-width: 100%;
-}
-
-/* Make sure images with WordPress-added height and width attributes are scaled correctly */
-.entry-content img,
 .widget img,
 img[class*="align"],
 img[class*="wp-image-"] {
 	height: auto;
-}
-
-/* Prevent stretching of full-size images with height and width attributes in IE8 */
-.entry-content img,
-img.size-full {
 	max-width: 100%;
-	width: auto;
 }
 
 /* No border on banner image */
@@ -926,7 +914,7 @@ img.size-full {
 .wp-caption .wp-caption-text {
 	margin: 0.8075em 0;
 }
-#primary .gallery {
+.content-area .gallery {
 	margin-bottom: 1.5em;
 }
 .gallery-caption {
@@ -934,22 +922,22 @@ img.size-full {
 .gallery-item a {
 	border: 0 none;
 }
-#content .gallery-item a img {
+.content-area .gallery-item a img {
 	border: 3px solid #e5e5e5;
 }
-#content .gallery-item a:hover img,
-#content .gallery-item a:active img,
-#content .gallery-item a:focus img {
+.content-area .gallery-item a:hover img,
+.content-area .gallery-item a:active img,
+.content-area .gallery-item a:focus img {
 	border: 3px solid #008fcc;
 	height: auto;
 	max-width: 90%;
 }
-#content .gallery dd {
+.content-area .gallery dd {
 	margin: 0;
 }
-#content .gallery-columns-4 .gallery-item {
+.content-area .gallery-columns-4 .gallery-item {
 }
-#content .gallery-columns-4 .gallery-item img {
+.content-area .gallery-columns-4 .gallery-item img {
 }
 
 /* Make sure embeds and iframes fit their containers */
@@ -1025,8 +1013,9 @@ object {
 
 /* =Comments
 ----------------------------------------------- */
-.nopassword,
-.nocomments {
+.no-password,
+.no-comments,
+.comment-awaiting-moderation {
 	clear: both;
 	color: #666;
 	font-size: 1.5em;
@@ -1051,17 +1040,15 @@ object {
 	width: 98.0%;
 }
 .comment-list > li.comment {
-	margin: 0 0 1.5em;
-	padding: 1em 0.5em;
+	margin: 1.5em 0;
 	position: relative;
 }
 .comment-list .pingback {
-	margin: 0 0 1.5em;
-	padding: 0 0.5em;
+	margin: 1.5em 1.613%;
 }
 .comment-list .comment-author {
 	float: left;
-	padding: 0 1.613%;
+	margin: 0 1.613% 1.5em;
 	width: 46.774%;
 }
 .comment-list .comment-author .avatar {
@@ -1073,6 +1060,7 @@ object {
 }
 .comment-list .comment-author .fn {
 	float: left;
+	padding-right: 0.25em;
 	vertical-align: top;
 }
 .comment-list .comment-metadata {
@@ -1080,7 +1068,7 @@ object {
 	float: right;
 	font-size: 0.75em;
 	line-height: 1.25em;
-	padding: 0 1.613%;
+	margin: 0 1.613% 1.5em;
 	text-align: right;
 	width: 46.774%;
 }
@@ -1089,7 +1077,7 @@ object {
 }
 .comment-list .comment-content {
 	clear: both;
-	padding: 1.5em 1.613% 0;
+	margin: 0 1.613%;
 	width: 96.774%;
 }
 a.comment-reply-link {
@@ -1133,17 +1121,18 @@ a.comment-reply-link:hover {
 }
 
 /* Post Author Highlighting */
-.comment-list > li.bypostauthor {
+.comment-list li.bypostauthor {
 	background: #f5f5f5;
 	border: 1px solid #008fcc;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;	
+	padding: 1.5em 1.5em 0;
 }
 
 /* Comment Form */
 #respond {
-	padding: 1.5em 1.613% 0;
+	margin: 1.5em 1.613% 0;
 	position: relative;
 	width: 96.774%;
 }
