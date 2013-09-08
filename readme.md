@@ -2,7 +2,7 @@
 
 Accessible Zen is an accessible, minimalistic, readable, and fully responsive WordPress theme by [David A. Kennedy](http://davidakennedy.com). Inspired by Leo Babauta's [Zen Habits theme](http://zenhabits.net/theme/), Accessible Zen puts the focus on your content and nothing else, plus it has plenty of WordPress goodness built right in.
 
-**Current Release on Github**: 0.1-alpha-3
+**Current Release on Github**: 0.1-alpha-4
 
 **Current Release on WordPress.org Theme Directory**: N/A (Not submitted yet)
 
@@ -23,7 +23,7 @@ I'd love to hear what you think! You can submit feedback on the [Github issues s
 - Meets both [Section 508 standards](http://www.section508.gov/index.cfm?&FuseAction=Content&ID=12) and [Web Content Accessibility Guidelines, Level AA](http://www.w3.org/TR/WCAG/) from the theme template perspective. This includes a [carefully-choosen color scheme](http://accessibility.oit.ncsu.edu/tools/color-contrast/accessible-color-palette.php?&colors=ffffff,f5f5f5,d5d5d5,e5e5e5,333333,666666,e5f7ff,00628c,00354C,00628,C,008FCC,006e9d&main=ffffff&level=AA).
 - Code based on Automattic's [Underscores WordPress theme](http://underscores.me/) to help ensure use of WordPress theme standards.
 - Supports all modern browsers, plus Internet Explorer 7 and above.
-- Has a simple one-column layout, and no main menu in the `header` section of the site so users can get to your content quickly.
+- Has a simple one-column layout, and no main menu in the `header` section of the site so users can get to your content quickly. But it does include an invisible (visible on keyboard focus) skip link for screen reader and keyboard users.
 - Features the lovely [Merriweather Sans](http://www.google.com/fonts/specimen/Merriweather+Sans) and [Merriweather](hhttp://www.google.com/fonts/specimen/Merriweather).
 - By default, Accessible Zen will display the site owner’s [Gravatar](http://en.gravatar.com/) in the header. You can replace this by uploading a Custom Header Image in Appearance -> Header, or you can remove it completely by selecting Remove Header Image.
 - Features all nine [post formats](http://codex.wordpress.org/Post_Formats).
@@ -56,6 +56,19 @@ Why, hello there! This is an open source project, and you can help out in many w
 - Use the theme, and give me ideas for future enhancements. You can submit feedback on the [Github issues section](https://github.com/davidakennedy/Accessible-Zen/issues), or by emailing me at me (at) davidakennedy dot com.
 
 ### Changelog
+
+**September 8, 2013**
+
+Release: Version 0.1-alpha-4
+
+- [Consistent CSS comments, form tweaks and other CSS clean up](https://github.com/davidakennedy/accessible-zen/issues/4).
+- [Reorganize file structure and clean up template comments](https://github.com/davidakennedy/accessible-zen/issues/16).
+- [No more `<br>` tags in the footer meta](https://github.com/davidakennedy/accessible-zen/issues/17).
+- Use the [HTML5 support from WordPress core for certain elements](https://github.com/davidakennedy/accessible-zen/issues/27).
+- [Improve menus on mobile devices](https://github.com/davidakennedy/accessible-zen/issues/29).
+- [Better line height on headings](https://github.com/davidakennedy/accessible-zen/issues/30).
+- [Add compatibility file for WordPress 3.6](https://github.com/davidakennedy/accessible-zen/issues/31).
+- [More support for RTL languages in the editor](https://github.com/davidakennedy/accessible-zen/issues/32).
 
 **July 29, 2013**
 
