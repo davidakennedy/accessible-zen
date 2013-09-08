@@ -732,7 +732,6 @@ sub {
 	font-size: 0.8125em;
 	margin-left: -100%;
 	padding: 0.5em;
-	position: relative;
 	text-transform: uppercase;
 }
 .skip-link:hover,
