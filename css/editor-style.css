@@ -347,7 +347,10 @@ sub {
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
-	padding: 0.25em;
+	padding: 1em;
+}
+div.callout {
+	margin-bottom: 1.5em;
 }
 
 /* No list style */
