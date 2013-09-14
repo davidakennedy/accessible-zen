@@ -80,7 +80,7 @@ function accessiblezen_post_content_sanitize_radio_buttons( $input ) {
 	$wp_customize->add_setting(
     'show_more_posts_link',
     array(
-        'default' => '',
+        'default' => null,
 		'capability' => 'edit_theme_options',
 		'sanitize_callback' => 'accessiblezen_sanitize_dropdown_integer',
     )
