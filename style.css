@@ -753,9 +753,12 @@ div.callout {
 ----------------------------------------------- */
 
 /* Site Title and Description */
+.site-banner {
+	text-align: center;
+}
+
 .site-logo {
-	display: block;
-	margin: 0 auto 1.5em;
+	margin: 0 0 1.5em;
 }
 
 /* Site Title and Description */
