@@ -6,7 +6,7 @@ Accessible Zen is an accessible, minimalistic, readable, and fully responsive Wo
 
 Accessible Zen takes advantage of the Custom Header feature in WordPress. When you visit the `Appearance > Header` menu, you can upload your own image to help personalize your site. Here’s what you need to know:
 
-1. The image will appear near the very top of your site. You can check out the official [Accessible Zen demo](http://wpthemes.davidakennedy.com) for a better look.
+1. The image will appear near the very top of your site. You can check out the official [Accessible Zen demo](http://wpthemes.davidakennedy.com/accessible-zen/) for a better look.
 2. By default, Accessible Zen uses the [Gravatar](http://gravatar.com) of your WordPress site’s Administrator. If you don’t want to use that image, you can either change it on your [Gravatar](http://gravatar.com) profile or upload a new image via the `Appearance > Header` menu.
 3. When you upload a new image or select an image from your Media Library for use as a Custom Header on your site, you’ll be asked to crop the image to the preferred image size. The preferred size is 150 pixels wide by 150 pixels tall. However, you can upload images with different dimensions because the theme supports Custom Headers with flexible widths and heights.
 
@@ -37,7 +37,7 @@ Accessible Zen supports two Menus areas. When you visit the `Appearance > Menus`
 Accessible Zen comes with two custom page templates that help you customize your site. Here’s what you need to know:
 
 1. **Front Page Template**: The Front Page Template allows you to go with a minimalist approach on your site’s front page. Selecting it will display **one** post from your site, excluding Sticky posts, on the page. You can also enter content on the page itself within the WordPress Admin, and that content will appear in a callout box above the one post. Check out the [Accessible Zen demo](http://wpthemes.davidakennedy.com/accessible-zen/) for an example.
-2. **Archives Template**: The Archives Template allows your site’s users to navigate your blog posts in an a few easy ways. It shows a search box, post archives by month, category and tag.
+2. **Archives Template**: The Archives Template allows your site’s users to navigate your blog posts in an a few easy ways. It shows a search box, post archives by month, category and tag. Check our the [Accessible Zen demo](http://wpthemes.davidakennedy.com/accessible-zen/page-template-archives/) for an example.
 
 ## Theme Customizer
 
