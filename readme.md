@@ -2,15 +2,13 @@
 
 Accessible Zen is an accessible, minimalistic, readable, and fully responsive WordPress theme by [David A. Kennedy](http://davidakennedy.com). Inspired by Leo Babauta's [Zen Habits theme](http://zenhabits.net/theme/), Accessible Zen puts the focus on your content and nothing else, plus it has plenty of WordPress goodness built right in.
 
-**Current Release on Github**: 0.1-alpha-4
+**Current Release on Github**: 0.1-beta-1
 
 **Current Release on WordPress.org Theme Directory**: N/A (Not submitted yet)
 
-## Alpha Release
+## Beta Release
 
-**Just so you know...** This is an Alpha release. That means it's early in the game. I'm still developing the theme and I really don’t recommend that you run it on a production site — set up a test site just to play with it.
-
-*I may change the theme significantly before its official release*.
+**Just so you know...** This is an Beta release. That means it's close to finished, but not quite there yet. I'm still developing the theme and I really don’t recommend that you run it on a production site — set up a test site just to play with it.
 
 Once the theme hits a stable release, I'll submit it to the [WordPress theme repository](http://wordpress.org/themes/).
 
@@ -33,9 +31,13 @@ I'd love to hear what you think! You can submit feedback on the [Github issues s
 - Incorporates the font icon, [Genericons](http://genericons.com/) in a few spots throughout the theme.
 - Treats the [WordPress except](http://codex.wordpress.org/Excerpt) and [Read More tag](http://codex.wordpress.org/Customizing_the_Read_More) with care, and displays the post title so excerpts output like this: `Continue reading Post Title`
 
+## Demo
+
+View the [Accessible Zen demo](http://wpthemes.davidakennedy.com/accessible-zen/).
+
 ## Documentation
 
-Coming soon. Promise! I plan to include basic documentation in this `readme.md` file, and create a series of blog posts about the theme and the lessons I learned.
+In addition to this `readme` file, the [documentation file](https://github.com/davidakennedy/accessible-zen/blob/master/accessible-zen-documentation.md) provides details on how to use Accessible Zen's features.
 
 ## Inspiration and Thanks!
  
@@ -56,6 +58,18 @@ Why, hello there! This is an open source project, and you can help out in many w
 - Use the theme, and give me ideas for future enhancements. You can submit feedback on the [Github issues section](https://github.com/davidakennedy/Accessible-Zen/issues), or by emailing me at me (at) davidakennedy dot com.
 
 ### Changelog
+
+**September 22, 2013**
+
+Release: Version 0.1-beta-1
+
+- [Add documentation](https://github.com/davidakennedy/accessible-zen/issues/33).
+- [Read More Posts link now more versatile](https://github.com/davidakennedy/accessible-zen/issues/36).
+
+Recent hotfixes include:
+
+- A [better Read More Posts link](https://github.com/davidakennedy/accessible-zen/issues/35).
+- Other small fixes.
 
 **September 8, 2013**
 
