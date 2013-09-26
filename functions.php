@@ -27,7 +27,7 @@ if ( ! function_exists( 'accessiblezen_setup' ) ):
 function accessiblezen_setup() {
 
 	/**
-	 * Twenty Thirteen only works in WordPress 3.6 or later.
+	 * Accessible Zen only works in WordPress 3.6 or later.
 	 */
 	if ( version_compare( $GLOBALS['wp_version'], '3.6-alpha', '<' ) )
 		require get_template_directory() . '/inc/back-compat.php';
