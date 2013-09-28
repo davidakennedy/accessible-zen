@@ -46,8 +46,17 @@ This theme would not be possible without the help of countless people. A sincere
 - Leo Babauta and his [Zen Habits theme](http://zenhabits.net/theme/). I love reading his blog, and the experience it provides.
 - Automattic and all the contributors to the [Underscores WordPress theme](http://underscores.me/). I hope to contribute soon!
 - Josh Hopkins and 40 Horse for their [Fluid Baseline Grid](http://fluidbaselinegrid.com/), which helped me develop the theme quickly.
+- The folks who have contributed to [Genericons](http://genericons.com/), the free, flexible icon font for blogs.
 - [Joeleen Kennedy](http://joeleen.net) for her endless encouragement and design feedback.
 - The crew at [Make WordPress Accessible](http://make.wordpress.org/accessibility/) because they're so helpful and awesome. You should [get involved](http://make.wordpress.org/accessibility/join-us/)!
+
+The original Zen Habits 2 theme by Leo Babauta is uncopyrighted.
+
+Underscores is licensed under the [GNU General Public License](http://www.gnu.org/licenses/gpl-2.0.html).
+
+The Fluid Baseline Grid is licensed under the [Unlicense](http://unlicense.org/).
+
+Genericons is licensed under the [GNU General Public License](http://www.gnu.org/licenses/gpl-2.0.html).
 
 ## Get Involved
 
