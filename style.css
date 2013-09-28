@@ -646,7 +646,7 @@ sub {
 
 /* Create a ul or ol without bullets or numbers */
 .nolist {
-	list-style: none none outside;
+	list-style: none;
 	margin: 0;
 	padding: 0;
 }
@@ -672,12 +672,6 @@ sub {
 }
 div.callout {
 	margin-bottom: 1.5em;
-}
-
-/* No list style */
-.nolist {
-	list-style: none;
-	margin: 0;
 }
 
 /* Alignment */

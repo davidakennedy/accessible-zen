@@ -57,4 +57,58 @@ Here’s what you need to know:
 * If you are using the Front Page Template, but do not select a page to link to, nothing will show up.
 * The link will say: “Read More Posts”.
 
+## Extra Styles
+
+Accessible Zen has some extra CSS styles built in that you can use to help customize your site. They are:
+
+### Image Replacement
+
+**Class name**: `ir`
+
+**What it does**: Helps replace text with an image.
+
+### Hidden
+
+**Class name**: `hidden`
+
+**What it does**: Hide from both screen readers and browsers.
+
+### Screen Reader Text
+
+**Class name**: `screen-reader-text`
+
+**What it does**: Hide from browsers, but not screen readers.
+
+### Invisible
+
+**Class name**: `invisible`
+
+**What it does**: Hide visually and from screenreaders, but maintain layout.
+
+### No List
+
+**Class name**: `nolist`
+
+**What it does**: Create a unordered list or ordered list without bullets or numbers.
+
+### Nav
+
+**Class name**: `nav`
+
+**What it does**: Create an horizontal list of navigation items, bested used on an unordered list.
+
+### Callout
+
+**Class name**: `callout`
+
+**What it does**: Create a colored box around content to highlight it. Best used on paragraph or divs.
+
+### CF
+
+**Class name**: `cf`
+
+**What it does**: Contain floats.
+
+These are also [documented on the Demo site](http://wpthemes.davidakennedy.com/accessible-zen/theme-demo-extra-styles/).
+
 Enjoy Accessible Zen!
