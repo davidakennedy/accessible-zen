@@ -7,7 +7,7 @@ Description: The Accessible Zen theme is an accessible, minimalistic, readable, 
 Version: 0.1-beta-1
 License: GNU General Public License
 License URI: license.txt
-Tags: white, one-column, flexible-width, custom-background, custom-header, custom-menu, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Tags: white, blue, one-column, flexible-width, accessibility-ready, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -161,7 +161,7 @@ select,
 textarea {
 	color: #333;
 	font-family: 'Merriweather', Georgia, Times, "Times New Roman", serif;
-	font-size: 112.5%;
+	font-size: 100%;
 	font-weight: 400;
 	line-height: 1.5;
 	min-height: 100%;
@@ -1267,12 +1267,8 @@ p.comment-form-comment {
 
 /* Min. width of 600 pixels */
 @media only screen and (min-width: 37.5em) {
-	body {
-		font-size: 100%;
-	}
 	/* Wrapper div */
 	body.custom-background .site { width: 80%; }
-	
 	
 	/* COLUMN GRID */
 	.sidebar-widgets { display: inline; float: left; }
