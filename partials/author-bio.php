@@ -3,15 +3,15 @@
  * The template for displaying Author bios.
  *
  * @package accessiblezen
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 ?>
 
 <div class="author-info cf">
-	<div class="author-avatar alignleft">
+	<div class="author-avatar">
 		<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'accessiblezen_author_bio_avatar_size', 64 ) ); ?>
 	</div><!-- .author-avatar -->
-	<div class="author-description alignright">
+	<div class="author-description">
 		<h2><?php printf( __( 'About %s', 'accessiblezen' ), get_the_author() ); ?></h2>
 		<p>
 			<?php the_author_meta( 'description' ); ?>

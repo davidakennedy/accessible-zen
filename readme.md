@@ -2,17 +2,9 @@
 
 Accessible Zen is an accessible, minimalistic, readable, and fully responsive WordPress theme by [David A. Kennedy](http://davidakennedy.com). Inspired by Leo Babauta's [Zen Habits theme](http://zenhabits.net/theme/), Accessible Zen puts the focus on your content and nothing else, plus it has plenty of WordPress goodness built right in.
 
-**Current Release on Github**: 0.1-beta-1
+**Current Release on Github**: 1.0
 
-**Current Release on WordPress.org Theme Directory**: N/A (Not submitted yet)
-
-## Beta Release
-
-**Just so you know...** This is an Beta release. That means it's close to finished, but not quite there yet. I'm still developing the theme and I really don’t recommend that you run it on a production site — set up a test site just to play with it.
-
-Once the theme hits a stable release, I'll submit it to the [WordPress theme repository](http://wordpress.org/themes/).
-
-I'd love to hear what you think! You can submit feedback on the [Github issues section](https://github.com/davidakennedy/accessible-zen/issues), or by emailing me at me (at) davidakennedy dot com.
+**Current Release on WordPress.org Theme Directory**: N/A
 
 ## Features
 
@@ -38,6 +30,10 @@ View the [Accessible Zen demo](http://wpthemes.davidakennedy.com/accessible-zen/
 ## Documentation
 
 In addition to this `readme` file, the [documentation file](https://github.com/davidakennedy/accessible-zen/blob/master/accessible-zen-documentation.md) provides details on how to use Accessible Zen's features.
+
+## Feedback
+
+I'd love to hear what you think! You can submit feedback on the [Github issues section](https://github.com/davidakennedy/accessible-zen/issues), or by emailing me at me (at) davidakennedy dot com.
 
 ## Inspiration and Thanks!
  
@@ -67,6 +63,21 @@ Why, hello there! This is an open source project, and you can help out in many w
 - Use the theme, and give me ideas for future enhancements. You can submit feedback on the [Github issues section](https://github.com/davidakennedy/Accessible-Zen/issues), or by emailing me at me (at) davidakennedy dot com.
 
 ### Changelog
+
+**September 29, 2013**
+
+Release: Version 1.0
+
+- [Version number bump](https://github.com/davidakennedy/accessible-zen/issues/46) for submission to WordPress theme repository.
+- [Fix broken author bios](https://github.com/davidakennedy/accessible-zen/issues/45).
+- Fix [broken comment styles](https://github.com/davidakennedy/accessible-zen/issues/41).
+- [Fix typos](https://github.com/davidakennedy/accessible-zen/issues/40) and firm up acknowledgements in files.
+- [Rename page templates](https://github.com/davidakennedy/accessible-zen/issues/43).
+- [Adjust font size](https://github.com/davidakennedy/accessible-zen/issues/44).
+- [Improve docs](https://github.com/davidakennedy/accessible-zen/issues/38).
+- [Better print styles](https://github.com/davidakennedy/accessible-zen/issues/42).
+- [Update Genericons](https://github.com/davidakennedy/accessible-zen/issues/39).
+
 
 **September 22, 2013**
 

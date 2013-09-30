@@ -5,13 +5,13 @@
  * Eventually, some of the functionality here could be replaced by core features.
  *
  * @package accessiblezen
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  *
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 function accessiblezen_page_menu_args( $args ) {
 	$args['show_home'] = true;
@@ -22,7 +22,7 @@ add_filter( 'wp_page_menu_args', 'accessiblezen_page_menu_args' );
 /**
  * Adds custom classes to the array of body classes.
  *
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 function accessiblezen_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author
@@ -79,7 +79,7 @@ add_filter( 'body_class', 'accessiblezen_body_class' );
 /**
  * Filter in a link to a content ID attribute for the next/previous image links on image attachment pages
  *
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 function accessiblezen_enhanced_image_navigation( $url, $id ) {
 	if ( ! is_attachment() && ! wp_attachment_is_image( $id ) )
@@ -166,7 +166,7 @@ add_filter( 'get_the_excerpt', 'accessiblezen_custom_excerpt_more' );
 /**
  * Return the URL for the first link found in the post content.
  *
- * @since Hello Zen 0.1
+ * @since accessiblezen 1.0
  * @return string|bool URL or false when no link is present.
  */
 function accessiblezen_get_link_url() {
@@ -178,9 +178,8 @@ function accessiblezen_get_link_url() {
 
 /**
  * Adds a styles to the header to correspond with the Theme Customizer settings.
- * @since Hello Zen 0.1
+ * @since accessiblezen 1.0
  */
- 
 function accessiblezen_hide_tagline( $wp_customize ) {
 	$options = get_theme_mod( 'displayblogname' );
 	if ( $options == '' ) {

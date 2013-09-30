@@ -5,14 +5,14 @@
  * Eventually, some of the functionality here could be replaced by core features.
  *
  * @package accessiblezen
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 
 if ( ! function_exists( 'accessiblezen_content_nav' ) ):
 /**
  * Display navigation to next/previous pages when applicable
  *
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 function accessiblezen_content_nav( $nav_id ) {
 	global $wp_query;
@@ -51,7 +51,7 @@ if ( ! function_exists( 'accessiblezen_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  *
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 function accessiblezen_posted_on() {
 	printf( __( '<span class="post-date">Posted: <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>.</span>', 'accessiblezen' ),
@@ -67,7 +67,7 @@ if ( ! function_exists( 'accessiblezen_archive_page_title_etc' ) ):
  /**
  * Display info for the page title on the archive page
  *
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 function accessiblezen_archive_page_title_etc() {
 	if ( is_category() ) :
@@ -148,7 +148,7 @@ if ( ! function_exists( 'accessiblezen_cats_and_tags' ) ) :
 /**
  * Prints HTML with information for the categories and tags.
  *
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 function accessiblezen_cats_and_tags() {
 
@@ -189,7 +189,7 @@ if ( ! function_exists( 'get_post_format_archive_link' ) ): {
 /**
  * Prints a link to the Post Format archive page
  * Use: echo get_post_format_archive_link();
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 function get_post_format_archive_link() {
     return sprintf( 
@@ -203,7 +203,7 @@ if ( ! function_exists( 'get_post_format_icon' ) ): {
 /**
  * Prints the markup for the genericon icon font
  *
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 function get_post_format_icon() {
 	if ( has_post_format('aside') ) {
@@ -243,7 +243,7 @@ endif; // ends check for get_post_format_icon
 /**
  * Returns true if a blog has more than 1 category
  *
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 function accessiblezen_categorized_blog() {
 	if ( false === ( $all_the_cool_cats = get_transient( 'all_the_cool_cats' ) ) ) {
@@ -270,7 +270,7 @@ function accessiblezen_categorized_blog() {
 /**
  * Flush out the transients used in accessiblezen_categorized_blog
  *
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 function accessiblezen_category_transient_flusher() {
 	// Like, beat it. Dig?

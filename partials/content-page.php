@@ -3,7 +3,7 @@
  * The template used for displaying page content in page.php.
  *
  * @package accessiblezen
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 ?>
 

@@ -3,7 +3,7 @@
  * The template part used for displaying content for single pages.
  *
  * @package accessiblezen
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 ?>
 
@@ -27,7 +27,7 @@
 		<?php accessiblezen_cats_and_tags(); ?>
 		<?php edit_post_link( __( 'Edit', 'accessiblezen' ), '<span class="edit-link">', '</span>' ); ?>
 		<?php if ( is_single() && get_the_author_meta( 'description' ) && is_multi_author() ) : ?>
-			<?php get_template_part( 'author-bio' ); ?>
+			<?php get_template_part( 'partials/author-bio' ); ?>
 		<?php endif; ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->

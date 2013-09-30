@@ -3,7 +3,7 @@
  * The template part used for displaying content for the theme.
  *
  * @package accessiblezen
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 ?>
 

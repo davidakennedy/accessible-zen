@@ -3,7 +3,7 @@
  * Accessible Zen Theme Customizer.
  *
  * @package accessiblezen
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 
 /**
@@ -11,7 +11,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  *
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 function accessiblezen_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
@@ -108,7 +108,7 @@ add_action( 'customize_register', 'accessiblezen_customize_register' );
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  *
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 function accessiblezen_customize_preview_js() {
 	wp_enqueue_script( 'accessiblezen_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20120827', true );
@@ -118,7 +118,7 @@ add_action( 'customize_preview_init', 'accessiblezen_customize_preview_js' );
 /**
  * Load extra jQuery script to theme customizer page to toggle options.
  *
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 function modify_customize_preview_page_script() {
 	wp_enqueue_script( 'modify-customize-preview-page-script', get_template_directory_uri() . '/js/modify-customize-preview-page.js',

@@ -3,13 +3,13 @@
  * accessiblezen functions and definitions.
  *
  * @package accessiblezen
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 if ( ! isset( $content_width ) )
 	$content_width = 768; /* pixels */
@@ -22,7 +22,7 @@ if ( ! function_exists( 'accessiblezen_setup' ) ):
  * before the init hook. The init hook is too late for some features, such as indicating
  * support post thumbnails.
  *
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 function accessiblezen_setup() {
 
@@ -109,7 +109,7 @@ add_action( 'after_setup_theme', 'accessiblezen_setup' );
 /**
  * Register widgetized area and update sidebar with default widgets
  *
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 function accessiblezen_widgets_init() {
 	register_sidebar( array(
@@ -140,7 +140,7 @@ add_action( 'widgets_init', 'accessiblezen_widgets_init' );
  * The use of Noticia Text by default is localized. For languages
  * that use characters not supported by the font, the font can be disabled.
  *
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  *
  * @return string Font stylesheet or empty string if disabled.
  */
@@ -184,7 +184,7 @@ function accessiblezen_fonts_url() {
  *
  * @uses accessiblezen_fonts_url() to get the Google Font stylesheet URL.
  *
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  *
  * @param string $mce_css CSS path to load in TinyMCE.
  * @return string The filtered CSS paths list.
@@ -217,7 +217,7 @@ function accessiblezen_scripts_styles() {
 		wp_enqueue_style( 'accessiblezen-fonts', esc_url_raw( $fonts_url ), array(), null );
 		
 	// Loads the icon fonts stylesheet.
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/font/genericons.css', array(), '3.0.1' );
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/font/genericons.css', array(), '3.1.0' );
         
     wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 

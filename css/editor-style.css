@@ -11,7 +11,7 @@ html .mceContentBody {
 }
 body {
 	color: #333;
-	font: 400 112.5%/1.5 'Noticia Text', Georgia, Times, "Times New Roman", serif;
+	font: 400 100%/1.5 'Merriweather', Georgia, Times, "Times New Roman", serif;
 	line-height: 1.5;
 	text-rendering: optimizeLegibility;
 	vertical-align: baseline;

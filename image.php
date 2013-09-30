@@ -3,7 +3,7 @@
  * The template for displaying image attachments.
  *
  * @package accessiblezen
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 
 get_header();

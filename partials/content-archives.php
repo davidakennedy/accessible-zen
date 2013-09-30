@@ -3,7 +3,7 @@
  * A content part to display site archives.
  *
  * @package accessiblezen
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  *
  */
 ?>

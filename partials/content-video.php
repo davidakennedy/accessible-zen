@@ -3,7 +3,7 @@
  * The template for displaying posts in the Video post format.
  *
  * @package accessiblezen
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 ?>
 

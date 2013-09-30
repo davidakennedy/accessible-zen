@@ -5,7 +5,7 @@
  * Contains the closing of the id=main div and all content after.
  *
  * @package accessiblezen
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 ?>
 

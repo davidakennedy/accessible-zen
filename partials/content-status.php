@@ -1,9 +1,9 @@
 <?php
 /**
- * The template for displaying posts in the Status post format
+ * The template for displaying posts in the Status post format.
  *
  * @package accessiblezen
- * @since accessiblezen 0.1
+ * @since accessiblezen 1.0
  */
 ?>
 
