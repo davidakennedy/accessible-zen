@@ -58,7 +58,7 @@ Why, hello there! This is an open source project, and you can help out in many w
 
 - Visit the [theme demo](http://wpthemes.davidakennedy.com/accessible-zen/), and provide any feedback regarding use of the theme from an assisitive technology standpoint. You can submit feedback on the [Github issues section](https://github.com/davidakennedy/Accessible-Zen/issues), or by emailing me at me (at) davidakennedy dot com.
 - Fork the [theme on Github](https://github.com/davidakennedy/Accessible-Zen/) and submit pull requests.
-- Use the theme, and give me ideas for future enhancements. You can submit feedback on the [Github issues section](https://github.com/davidakennedy/Accessible-Zen/issues), or by emailing me at me (at) davidakennedy dot com.
+- Use the theme, and give me ideas for future enhancements. You can submit feedback on the [Github issues section](https://github.com/davidakennedy/Accessible-Zen/issues), the WordPress forums for this theme or by emailing me at me (at) davidakennedy dot com.
 
 ### Changelog
 
