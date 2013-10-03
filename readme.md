@@ -29,10 +29,6 @@ View the [Accessible Zen demo](http://wpthemes.davidakennedy.com/accessible-zen/
 
 In addition to this `readme` file, the [documentation file (accessible-zen-documentation)](https://github.com/davidakennedy/accessible-zen/blob/master/accessible-zen-documentation.md) provides details on how to use Accessible Zen's features.
 
-## Feedback
-
-I'd love to hear what you think! You can submit feedback on the [Github issues section](https://github.com/davidakennedy/accessible-zen/issues), the WordPress forums for this theme or by emailing me at me (at) davidakennedy dot com.
-
 ## Inspiration and Thanks!
  
 This theme would not be possible without the help of countless people. A sincere thanks to the web workers listed below for their inspiration, code and ideas!
@@ -52,13 +48,18 @@ The Fluid Baseline Grid is licensed under the [Unlicense](http://unlicense.org/)
 
 Genericons is licensed under the [GNU General Public License](http://www.gnu.org/licenses/gpl-2.0.html).
 
-## Get Involved
+## Contribute
 
 Why, hello there! This is an open source project, and you can help out in many ways.
 
-- Visit the [theme demo](http://wpthemes.davidakennedy.com/accessible-zen/), and provide any feedback regarding use of the theme from an assisitive technology standpoint. You can submit feedback on the [Github issues section](https://github.com/davidakennedy/Accessible-Zen/issues), or by emailing me at me (at) davidakennedy dot com.
-- Fork the [theme on Github](https://github.com/davidakennedy/Accessible-Zen/) and submit pull requests.
-- Use the theme, and give me ideas for future enhancements. You can submit feedback on the [Github issues section](https://github.com/davidakennedy/Accessible-Zen/issues), the WordPress forums for this theme or by emailing me at me (at) davidakennedy dot com.
+**Theme Users**
+- Use the theme, and submit ideas for future enhancements. You can submit feedback on the [Github issues section](https://github.com/davidakennedy/accessible-zen/issues), the WordPress.org forums for this theme or by emailing me at me (at) davidakennedy dot com.
+
+**Users with Disabilities**
+- Visit the [theme demo](http://wpthemes.davidakennedy.com/accessible-zen/) or any site running the theme, and provide any feedback regarding use of the theme from an assisitive technology standpoint. You can submit feedback on the [Github issues section](https://github.com/davidakennedy/accessible-zen/issues), the WordPress.org forums for this theme or by emailing me at me (at) davidakennedy dot com.
+
+**Developers**
+- Use the [fork and pull model of Github](https://help.github.com/articles/using-pull-requests#fork--pull). Fork the [theme on Github](https://github.com/davidakennedy/accessible-zen/) and submit pull requests.
 
 ### Changelog
 
