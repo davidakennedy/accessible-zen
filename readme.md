@@ -63,6 +63,12 @@ Why, hello there! This is an open source project, and you can help out in many w
 
 ### Changelog
 
+**October 6, 2013**
+
+Release: Version 1.0.1
+
+- [Fix 404 page layout issue](https://github.com/davidakennedy/accessible-zen/issues/47).
+
 **September 29, 2013**
 
 Release: Version 1.0
