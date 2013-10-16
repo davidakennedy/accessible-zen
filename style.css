@@ -1246,16 +1246,6 @@ p.comment-form-comment {
 	margin: 0 0 1.5em;
 }
 
-/* Search */
-#s {
-	height: 30px;
-	padding: 0.25em 0.625em;
-	width: 50%; 
-}
-#searchsubmit {
-	display: none;
-}
-
 /* =Footer
 ----------------------------------------------- */
 .site-footer {
