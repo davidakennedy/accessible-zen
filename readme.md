@@ -61,6 +61,13 @@ Why, hello there! This is an open source project, and you can help out in many w
 
 ### Changelog
 
+**TBD**
+
+Release: Version 1.0.3
+
+- [Remove unneeded search styles](https://github.com/davidakennedy/accessible-zen/issues/50).
+- [Better selection styles on header image](https://github.com/davidakennedy/accessible-zen/issues/51).
+
 **October 8, 2013**
 
 Release: Version 1.0.2
