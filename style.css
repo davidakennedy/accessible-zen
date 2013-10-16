@@ -165,7 +165,6 @@ textarea {
 	font-size: 100%;
 	font-weight: 400;
 	line-height: 1.5;
-	min-height: 100%;
 }
 
 /* Headings */
@@ -864,6 +863,7 @@ div.callout {
 /* =Media
 ----------------------------------------------- */
 /* Fluid images for posts, comments, and widgets */
+.site-banner img,
 .entry-content img,
 .comment-content img,
 .widget img,
@@ -876,6 +876,7 @@ img[class*="wp-image-"] {
 /* No border on banner image */
 .site-banner a {
 	border: 0 none;
+	display: inline-block;
 }
 .entry-header .attachment-post-thumbnail {
 	display: block;
