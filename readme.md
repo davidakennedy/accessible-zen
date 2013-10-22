@@ -51,17 +51,17 @@ Genericons is licensed under the [GNU General Public License](http://www.gnu.org
 Why, hello there! This is an open source project, and you can help out in many ways.
 
 **Theme Users**
-- Use the theme, and submit ideas for future enhancements. You can submit feedback on the [Github issues section](https://github.com/davidakennedy/accessible-zen/issues), the WordPress.org forums for this theme or by emailing me at me (at) davidakennedy dot com.
+- Use the theme, and submit ideas for future enhancements. You can submit feedback on the [Github issues section](https://github.com/davidakennedy/accessible-zen/issues), the [WordPress.org forums for this theme](http://wordpress.org/support/theme/accessible-zen) or by emailing me at me (at) davidakennedy dot com.
 
 **Users with Disabilities**
-- Visit the [theme demo](http://wpthemes.davidakennedy.com/accessible-zen/) or any site running the theme, and provide any feedback regarding use of the theme from an assisitive technology standpoint. You can submit feedback on the [Github issues section](https://github.com/davidakennedy/accessible-zen/issues), the WordPress.org forums for this theme or by emailing me at me (at) davidakennedy dot com.
+- Visit the [theme demo](http://wpthemes.davidakennedy.com/accessible-zen/) or any site running the theme, and provide any feedback regarding use of the theme from an assisitive technology standpoint. You can submit feedback on the [Github issues section](https://github.com/davidakennedy/accessible-zen/issues), the [WordPress.org forums for this theme](http://wordpress.org/support/theme/accessible-zen) or by emailing me at me (at) davidakennedy dot com.
 
 **Developers**
 - Use the [fork and pull model of Github](https://help.github.com/articles/using-pull-requests#fork--pull). Fork the [theme on Github](https://github.com/davidakennedy/accessible-zen/) and submit pull requests.
 
 ### Changelog
 
-**TBD**
+**October 21, 2013**
 
 Release: Version 1.0.3
 

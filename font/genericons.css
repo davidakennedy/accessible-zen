@@ -39,7 +39,8 @@
 	text-decoration: inherit;
 	font-weight: normal;
 	font-style: normal;
-	vertical-align: top;
+	vertical-align: middle;
+	padding: 0 0.125em;
 }
 
 /**
