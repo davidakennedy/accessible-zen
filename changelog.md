@@ -1,5 +1,13 @@
 # Changelog
 
+**December 23, 2013**
+
+Release: Version 1.0.4
+
+- Add appropriate theme tags for WordPress, version 3.8, including accessibility-ready.
+- Add new screenshot according to WordPress, version 3.8 standards.
+- Move changelog to separate file.
+
 **October 21, 2013**
 
 Release: Version 1.0.3
