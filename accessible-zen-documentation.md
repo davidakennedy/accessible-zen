@@ -43,13 +43,15 @@ Accessible Zen comes with two custom page templates that help you customize your
 
 Accessible Zen has tight integration with the WordPress Theme Customizer, allowing you to preview and save many of the changes you make on your site. Accessible Zen also adds two additional options that you can use to customize your site. Here’s what you need to know:
 
-**Full Content or Excerpts**: This option gives you greater control over how your content displays on certain pages of your site. Here’s what you need to know:
+**Hide Site Tagline** (Under the Site Title & Tagline Setting): This checkbox allows you to hide your site's tagline if you wish. Checking the box will hide it, while leaving it unchecked will display it. It's displayed by default.
+
+**Full Content or Excerpts** (Under the Content Setting): This option gives you greater control over how your content displays on certain pages of your site. Here’s what you need to know:
 
 Full Content means that on your archive pages, like the blog page, the entire post content will be displayed. Select Full Content if you’d prefer this. It’s the default setting.
 
 Excerpts means that on your archive pages, like the blog page, the except will be displayed. This is a manually set, handcrafted summary of your posts. You can read more about [excepts in WordPress on the Codex](http://codex.wordpress.org/Posts#Descriptions_of_Post_Fields). By default, your category archive, tag archive, author archive, day archive, month archive, year archive and search pages show excepts by default. This does not change by selecting either Full Content or Excerpts.
 
-**Read More Link**: The Read More Posts Link takes advantage of one of Accessible Zen’s page templates. It’s an option you only need to worry about if you’re using the Front Page Template. It allows you to add an additional link after your post on the Front Page Template. That link will say: “Read More Posts”
+**Read More Link** (Under the Static Front Page Setting, when a static page is selected): The Read More Posts Link takes advantage of one of Accessible Zen’s page templates. It’s an option you only need to worry about if you’re using the Front Page Template. It allows you to add an additional link after your post on the Front Page Template. That link will say: “Read More Posts”
 
 Here’s what you need to know:
 
