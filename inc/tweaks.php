@@ -175,19 +175,3 @@ function accessiblezen_get_link_url() {
 
 	return esc_url_raw( $matches[1] );
 }
-
-/**
- * Adds a styles to the header to correspond with the Theme Customizer settings.
- * @since accessiblezen 1.0
- */
-function accessiblezen_hide_tagline( $wp_customize ) {
-	$options = get_theme_mod( 'displayblogname' );
-	if ( $options == '' ) {
-    ?>
-    	<style type="text/css">
-             .site-description { display: none; }
-        </style>
-    <?php
-    }
-}
-add_action( 'wp_head', 'accessiblezen_hide_tagline');

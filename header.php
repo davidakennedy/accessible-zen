@@ -39,7 +39,9 @@
 			</a>
 		<?php endif; ?>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<?php if( get_theme_mod( 'displayblogname' ) == '') : ?>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+		<?php endif; // end if ?>
 		</div><!-- .site-banner -->
 	</header><!-- #masthead .site-header -->
 

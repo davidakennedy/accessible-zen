@@ -31,7 +31,7 @@
 	<?php else : ?>
 	<div class="entry-content">
 		<?php
-		if ( 'option2' == get_theme_mod( 'accessiblezen_post_content' ) ) :
+		if ( get_theme_mod( 'accessiblezen_post_content' ) == '' || 'option2' ) :
 		the_content('Continue reading ' . the_title('', '', false) . '');
 		else :
 		the_excerpt();

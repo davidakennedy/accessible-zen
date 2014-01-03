@@ -16,15 +16,6 @@
 			$( '.site-description' ).text( to );
 		} );
 	} );
-	wp.customize( 'displayblogname', function( value ) {
-		value.bind( function( to ) {
-		
-			if ( ( 'displayblogname' == '' ) )
-				$('head').append('<style type=\"text/css\" charset=\"utf-8\">.site-description{display: none;}');
-			else ( ( 'displayblogname' == '1' ) )
-				$(this).parent().remove();
-			} );
-	} );
 	// Background color
 	wp.customize( 'background_color', function( value ) {
 		value.bind( function( to ) {

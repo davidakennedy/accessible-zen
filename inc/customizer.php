@@ -17,24 +17,22 @@ function accessiblezen_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
-	$wp_customize->get_setting('displayblogname')->transport='postMessage';
-	$wp_customize->get_setting('show_more_posts_link')->transport='postMessage';
 	
 	// Hide the site/blog description
 	$wp_customize->add_setting( 'displayblogname', array(
-		'default'	=> '1',
 		'sanitize_callback' => 'displayblogname_sanitize_checkbox',
 		'capability' => 'edit_theme_options',
 	) );
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'displayblogname', array(
-	'label'	=> __( 'Display Site Tagline', 'accessiblezen' ),
-	'section'    => 'title_tagline',
-	'settings'	=> 'displayblogname',
+	'label'	=> __( 'Hide Site Tagline', 'accessiblezen' ),
+	'section'  => 'title_tagline',
+	'settings' => 'displayblogname',
 	'type'     => 'checkbox',
 ) ) );
 
-function displayblogname_sanitize_checkbox( $input ) {
-    if ( $input == 1 ) {
+function displayblogname_sanitize_checkbox( $displayblognameinput ) {
+
+    if ( $displayblognameinput == 1 ) {
         return 1;
     } else {
         return '';
@@ -63,14 +61,14 @@ function displayblogname_sanitize_checkbox( $input ) {
 		),
 ) ) );
 
-function accessiblezen_post_content_sanitize_radio_buttons( $input ) {
+function accessiblezen_post_content_sanitize_radio_buttons( $postcontentinput ) {
     $valid = array(
         'option1'	=> 'Excerpts',
 		'option2'	=> 'Full content',
     );
  
-    if ( array_key_exists( $input, $valid ) ) {
-        return $input;
+    if ( array_key_exists( $postcontentinput, $valid ) ) {
+        return $postcontentinput;
     } else {
         return '';
     }
@@ -96,9 +94,9 @@ $wp_customize->add_control(
 		)
 	);
 
-function accessiblezen_sanitize_dropdown_integer( $input ) {
-    if( is_numeric( $input ) ) {
-        return intval( $input );
+function accessiblezen_sanitize_dropdown_integer( $dropdownintegerinput ) {
+    if( is_numeric( $dropdownintegerinput ) ) {
+        return intval( $dropdownintegerinput );
     }
 }
 
