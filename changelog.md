@@ -4,6 +4,7 @@
 
 Release: Version 1.1
 
+- [Add contextual help to theme](https://github.com/davidakennedy/accessible-zen/issues/54). 
 - [Improve Customizer features and set better default options](https://github.com/davidakennedy/accessible-zen/issues/53).
 - Add appropriate theme tags for WordPress, version 3.8, including accessibility-ready.
 - Add new screenshot according to WordPress, version 3.8 standards.
