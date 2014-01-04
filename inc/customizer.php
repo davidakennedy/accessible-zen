@@ -124,3 +124,28 @@ function modify_customize_preview_page_script() {
 }
 // Action will load script to customizer.php only.
 add_action( 'customize_controls_print_footer_scripts', 'modify_customize_preview_page_script' );
+
+/**
+ * Add contextual help to the Themes screens.
+ *
+ * @since accessiblezen 1.0
+ *
+ * @return void
+ */
+function accessiblezen_contextual_help() {
+	if ( 'admin_head-edit.php' === current_filter() && 'post' !== $GLOBALS['typenow'] ) {
+		return;
+	}
+
+	get_current_screen()->add_help_tab( array(
+		'id'      => 'accessiblezen',
+		'title'   => __( 'Accessible Zen', 'accessiblezen' ),
+		'content' =>
+			'<ul>' .
+				'<li>' . sprintf( __( 'Accessible Zen uses the WordPress Theme Customizer to allow you to adjust several settings, including showing/hiding the site tagline, displaying post excerpts and much more. Get started customizing the theme under <a href="%s">Appearance &rarr; Customize</a>.', 'accessiblezen' ), admin_url( 'customize.php' ) ) . '</li>' .
+				'<li>' . sprintf( __( 'If you have questions about the theme, want to suggest a new feature or need support, visit the <a href="%s">Accessible Zen support forum</a>.', 'accessiblezen' ), 'http://wordpress.org/support/theme/accessible-zen' ) . '</li>' .
+				'<li>' . sprintf( __( 'For in-depth documentation on Accessible Zen, see the file bundled with the theme called <code>accessible-zen-documentation</code>, or view it <a href="%s">in the Github repository</a>.', 'accessiblezen' ), 'https://github.com/davidakennedy/accessible-zen/blob/master/accessible-zen-documentation.md' ) . '</li>' .
+			'</ul>',
+	) );
+}
+add_action( 'admin_head-themes.php', 'accessiblezen_contextual_help' );
