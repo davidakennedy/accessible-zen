@@ -217,7 +217,7 @@ function accessiblezen_scripts_styles() {
 		wp_enqueue_style( 'accessiblezen-fonts', esc_url_raw( $fonts_url ), array(), null );
 		
 	// Loads the icon fonts stylesheet.
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/font/genericons.css', array(), '3.1.0' );
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/font/genericons.css', array(), '3.0.2' );
         
     wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
