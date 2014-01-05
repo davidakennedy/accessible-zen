@@ -750,7 +750,6 @@ div.callout {
 .site-banner {
 	text-align: center;
 }
-
 .site-logo {
 	margin: 0 0 1.5em;
 }
@@ -762,6 +761,9 @@ div.callout {
 }
 .site-title a {
 	text-decoration: none;
+}
+.site-title a:hover {
+	border-bottom: 0;
 }
 .site-description {
 	color: #666;
