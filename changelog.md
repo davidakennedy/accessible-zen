@@ -1,11 +1,11 @@
 # Changelog
 
-**TBD**
+**January 4, 2014**
 
 Release: Version 1.1
 
 - [Add contextual help to theme](https://github.com/davidakennedy/accessible-zen/issues/54). 
-- [Improve Customizer features and set better default options](https://github.com/davidakennedy/accessible-zen/issues/53).
+- [Improve Customizer features and set better default options](https://github.com/davidakennedy/accessible-zen/issues/53). This may cause users to have to set their options again via the Customizer.
 - Add appropriate theme tags for WordPress, version 3.8, including accessibility-ready.
 - Add new screenshot according to WordPress, version 3.8 standards.
 - Move changelog to separate file.
