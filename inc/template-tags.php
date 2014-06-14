@@ -156,7 +156,7 @@ function accessiblezen_cats_and_tags() {
 			$category_list = get_the_category_list( __( ', ', 'accessiblezen' ) );
 
 			/* translators: used between list items, there is a space after the comma */
-			$tag_list = get_the_tag_list( '', ', ' );
+			$tag_list = get_the_tag_list( '', __( ', ', 'accessiblezen' ) );
 
 			if ( ! accessiblezen_categorized_blog() ) {
 				// This blog only has 1 category so we just need to worry about tags in the meta text
