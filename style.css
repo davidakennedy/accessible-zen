@@ -785,6 +785,9 @@ div.callout {
 	padding-left: 1em;
 	padding-right: 1em;
 }
+.updated {
+	display: none;
+}
 .title {
 	color: #666;
 	font-weight: bold;

@@ -47,19 +47,47 @@ function accessiblezen_content_nav( $nav_id ) {
 }
 endif; // ends check for accessiblezen_content_nav
 
+if ( ! function_exists( 'accessiblezen_author' ) ) :
+/**
+ * Prints HTML with author information for the current post.
+ *
+ * @since accessiblezen 1.1.1
+ */
+function accessiblezen_author() {
+	$byline = sprintf(
+		_x( 'By %s', 'post author', 'accessiblezen' ),
+		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+	);
+
+	echo '<span class="byline"> ' . $byline . '</span>';
+}
+endif; // ends check for accessiblezen_author
+
 if ( ! function_exists( 'accessiblezen_posted_on' ) ) :
 /**
- * Prints HTML with meta information for the current post-date/time and author.
+ * Prints HTML with meta information for the current post-date/time.
  *
  * @since accessiblezen 1.0
  */
 function accessiblezen_posted_on() {
-	printf( __( '<span class="post-date">Posted: <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>.</span>', 'accessiblezen' ),
-		esc_url( get_permalink() ),
-		esc_attr( get_the_time() ),
+	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+		$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
+	}
+
+	$time_string = sprintf( $time_string,
 		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date( 'm.d.Y' ) )
+		esc_html( get_the_date( 'm.d.Y' ) ),
+		esc_attr( get_the_modified_date( 'c' ) ),
+		esc_html( get_the_modified_date( 'm.d.Y' ) )
 	);
+
+	$posted_on = sprintf(
+		_x( 'Posted: %s', 'post date', 'accessiblezen' ),
+		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+	);
+
+	echo '<span class="posted-on">' . $posted_on . '</span>';
 }
 endif; // ends check for accessiblezen_posted_on
 

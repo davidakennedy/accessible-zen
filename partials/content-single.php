@@ -13,7 +13,7 @@
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
 		<div class="entry-meta">
-			<p><?php _e( 'By', 'accessiblezen' ); ?> <a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>"><?php the_author_meta('display_name'); ?></a>.</p>
+			<p><?php accessiblezen_author(); ?></p>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
