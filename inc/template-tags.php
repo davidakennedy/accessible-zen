@@ -220,9 +220,12 @@ if ( ! function_exists( 'get_post_format_archive_link' ) ): {
  * @since accessiblezen 1.0
  */
 function get_post_format_archive_link() {
-    return sprintf( 
-        'Format: <a href="' . get_post_format_link( get_post_format() ) . '">' . get_post_format_string( get_post_format() ) . '</a>' 
-    );
+    $get_post_format_archive_link = sprintf(
+		_x( 'Format: %s', 'accessiblezen' ),
+		'<a href="' . esc_url( get_post_format_link( get_post_format() ) ) . '">' . get_post_format_string( get_post_format() ) . '</a>'
+	);
+
+	echo '<span class="post-format-archive-link">' . $get_post_format_archive_link . '</span>';
 }
 }
 endif; // ends check for get_post_format_archive_link
