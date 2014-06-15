@@ -1304,7 +1304,7 @@ p.comment-form-comment {
 	.two .sidebar-widgets { width: 43.458%; }
 	
 	/* Nav abstraction adjustment */
-	.nav li { display: inline; }
+	.nav li { display: inline-block; }
 	
 	/* Content */
 	.site tr, th, td { padding-right: 1.5em; }
@@ -1336,6 +1336,11 @@ p.comment-form-comment {
 
 /* Browser Fixes
 ----------------------------------------------- */
+.ie7 .nav li {
+	/* IE7 hack to mimic inline-block on block elements */
+    *display: inline;
+    *zoom: 1;
+}
 #respond .comment-form-author label,
 #respond .comment-form-email label,
 #respond .comment-form-url label,
