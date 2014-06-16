@@ -211,15 +211,15 @@ add_filter( 'mce_css', 'accessiblezen_mce_css' );
  */
 function accessiblezen_scripts_styles() {
 	global $wp_styles;
-
-	wp_enqueue_style( 'style', get_stylesheet_uri() );
 	
     $fonts_url = accessiblezen_fonts_url();
 	if ( ! empty( $fonts_url ) )
 		wp_enqueue_style( 'accessiblezen-fonts', esc_url_raw( $fonts_url ), array(), null );
 		
 	// Loads the icon fonts stylesheet.
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/font/genericons.css', array(), '3.0.2' );
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.0.3' );
+
+	wp_enqueue_style( 'style', get_stylesheet_uri() );
         
     wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
