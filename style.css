@@ -1368,3 +1368,6 @@ p.comment-form-comment {
 .ie8 body.custom-background .site {
 	width: 80%;
 }
+.ie7 .genericon {
+	display: none;
+}
