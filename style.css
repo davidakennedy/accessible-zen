@@ -828,7 +828,8 @@ div.callout {
 .author-info > .author-avatar {
 	text-align: center;
 }
-.post-date,
+.posted-on,
+.post-format-info,
 .post-categories,
 .post-tags,
 .post-permalink,

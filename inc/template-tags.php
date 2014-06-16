@@ -65,7 +65,7 @@ endif; // ends check for accessiblezen_author
 
 if ( ! function_exists( 'accessiblezen_posted_on' ) ) :
 /**
- * Prints HTML with meta information for the current post-date/time.
+ * Prints HTML with meta information for the current post date/time.
  *
  * @since accessiblezen 1.0
  */
