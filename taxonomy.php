@@ -17,7 +17,9 @@ get_header(); ?>
 
 				<header class="page-header">
 					<h1 class="page-title">
-						<?php accessiblezen_archive_page_title_etc() ?>
+						<?php accessiblezen_archive_page_title_etc(); ?>
+					</h1>
+					<?php accessiblezen_term_description(); ?>
 				</header><!-- .page-header -->
 
 				<?php rewind_posts(); ?>

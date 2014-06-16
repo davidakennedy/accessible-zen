@@ -163,14 +163,26 @@ function accessiblezen_archive_page_title_etc() {
 		_e( 'Archives', 'accessiblezen' );
 
 	endif;
-
-	// Show an optional term description.
-	$term_description = term_description();
-	if ( ! empty( $term_description ) ) :
-	printf( '<div class="taxonomy-description">%s</div>', $term_description );
-	endif;
 }
 endif; // ends check for accessiblezen_archive_page_title_etc
+
+if ( ! function_exists( 'accessiblezen_term_description' ) ):
+ /**
+ * Display optional term description for category, tag and custom taxonomy pages.
+ *
+ * @since accessiblezen 1.1.1
+ */
+function accessiblezen_term_description() {
+
+// Show an optional term description.
+$term_description = term_description();
+
+if ( is_category() || is_tag || is_tax && ! empty( $term_description ) ) :
+	printf( '<div class="taxonomy-description">%s</div>', $term_description, 'accessiblezen' );
+endif;
+
+}
+endif; // ends check for accessiblezen_term_description
 
 if ( ! function_exists( 'accessiblezen_cats_and_tags' ) ) :
 /**

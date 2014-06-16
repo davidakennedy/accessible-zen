@@ -1,13 +1,16 @@
 # Changelog
 
-**June 16, 2014**
+**TBD**
 
 Release: Version 1.1.1
 
 - [Add author and updated microformats](https://github.com/davidakennedy/accessible-zen/issues/56).
-- - [Add HTNL5 output for galleries and captions](https://github.com/davidakennedy/accessible-zen/issues/55).
+- [Add HTNL5 output for galleries and captions](https://github.com/davidakennedy/accessible-zen/issues/55).
 - [Make tag list translatable](https://github.com/davidakennedy/accessible-zen/issues/57).
+- [Fix unclosed h1 on certain templates](https://github.com/davidakennedy/accessible-zen/issues/58).
 - Add more robust styles for menu abstraction on desktop.
+- Add version 3.0.3 of Genericons.
+- Improve stylesheet loading order.
 
 **January 4, 2014**
 

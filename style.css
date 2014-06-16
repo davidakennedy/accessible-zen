@@ -822,6 +822,14 @@ div.callout {
 	font-size: 1.125em;
 	text-transform: uppercase;
 }
+.taxonomy-description {
+	color: #666;
+	font-size: 1em;
+	text-align: center;
+}
+.taxonomy-description p {
+	margin-bottom: 0;
+}
 .author-info {
 	margin: 1.5em 0;
 }
