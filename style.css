@@ -991,6 +991,11 @@ object {
 	max-width: 100%;
 }
 
+/* WP Audio Embeds */
+.wp-audio-shortcode {
+	margin-bottom: 1.5em;
+}
+
 /* =Navigation
 ----------------------------------------------- */
 #nav-above,

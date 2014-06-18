@@ -233,7 +233,7 @@ if ( ! function_exists( 'get_post_format_archive_link' ) ): {
  */
 function get_post_format_archive_link() {
     $get_post_format_archive_link = sprintf(
-		_x( 'Format: %s', 'accessiblezen' ),
+		_x( 'Format: %s', 'post-format-archive-link', 'accessiblezen' ),
 		'<a href="' . esc_url( get_post_format_link( get_post_format() ) ) . '">' . get_post_format_string( get_post_format() ) . '</a>'
 	);
 
