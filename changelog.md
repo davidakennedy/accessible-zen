@@ -1,6 +1,6 @@
 # Changelog
 
-**TBD**
+**June 20, 2014**
 
 Release: Version 1.1.2
 
