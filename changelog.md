@@ -1,5 +1,11 @@
 # Changelog
 
+**TBD**
+
+Release: Version 1.1.2
+
+- General code clean-up in some template tags.
+
 **June 17, 2014**
 
 Release: Version 1.1.1
