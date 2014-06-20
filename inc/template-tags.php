@@ -84,7 +84,7 @@ function accessiblezen_posted_on() {
 
 	$posted_on = sprintf(
 		_x( 'Posted: %s', 'post date', 'accessiblezen' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>.'
 	);
 
 	echo '<span class="posted-on">' . $posted_on . '</span>';
@@ -250,34 +250,34 @@ if ( ! function_exists( 'get_post_format_icon' ) ): {
  */
 function get_post_format_icon() {
 	if ( has_post_format('aside') ) {
-    	printf('<span class="genericon genericon-aside"></span><br>');
+    	printf('<span class="genericon genericon-aside"></span>');
     }
     elseif ( has_post_format('audio') ) {
-    	printf('<span class="genericon genericon-audio"></span><br>');
+    	printf('<span class="genericon genericon-audio"></span>');
     }
     elseif ( has_post_format('chat') ) {
-    	printf('<span class="genericon genericon-chat"></span><br>');
+    	printf('<span class="genericon genericon-chat"></span>');
     }
     elseif ( has_post_format('gallery') ) {
-    	printf('<span class="genericon genericon-gallery"></span><br>');
+    	printf('<span class="genericon genericon-gallery"></span>');
     }
     elseif ( has_post_format('image') ) {
-    	printf('<span class="genericon genericon-image"></span><br>');
+    	printf('<span class="genericon genericon-image"></span>');
     }
     elseif ( has_post_format('link') ) {
-    	printf('<span class="genericon genericon-link"></span><br>');
+    	printf('<span class="genericon genericon-link"></span>');
     }
     elseif ( has_post_format('quote') ) {
-    	printf('<span class="genericon genericon-quote"></span><br>');
+    	printf('<span class="genericon genericon-quote"></span>');
     }
     elseif ( has_post_format('standard') ) {
-    	printf('<span class="genericon genericon-standard"></span><br>');
+    	printf('<span class="genericon genericon-standard"></span>');
     }
     elseif ( has_post_format('status') ) {
-    	printf('<span class="genericon genericon-status"></span><br>');
+    	printf('<span class="genericon genericon-status"></span>');
     }
     elseif ( has_post_format('video') ) {
-    	printf('<span class="genericon genericon-video"></span><br>');
+    	printf('<span class="genericon genericon-video"></span>');
     }
 }
 }
