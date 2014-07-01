@@ -5,6 +5,7 @@
 Release: Version 1.1.3
 
 - Add basic translation files.
+- French translation by [Brieuc Segalen](http://briseg.com).
 
 **June 20, 2014**
 
