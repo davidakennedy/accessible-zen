@@ -1,0 +1,504 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Accessible Zen\n"
+"POT-Creation-Date: 2014-06-21 15:52-0500\n"
+"PO-Revision-Date: 2014-06-24 06:46+0100\n"
+"Last-Translator: Brieuc <brieuc@me.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:16
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oups ! La page n'existe pas."
+
+#: 404.php:20
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr "Il n'y a rien à cet endroit. Essayez un des liens ci-dessous ?"
+
+#: 404.php:27
+msgid "Most Used Categories"
+msgstr "Catégories les plus utilisées"
+
+#. translators: %1$s: smilie
+#: 404.php:35
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Essayez les archives mensuelles. %1$s"
+
+# erreur de format pour un argument
+#: comments.php:30
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Une idée sur &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s idées sur &ldquo;%2$s&rdquo;"
+
+#: comments.php:50
+msgid "Comment navigation"
+msgstr "Commentaires"
+
+#: comments.php:51
+msgid "&larr; Older Comments"
+msgstr "&larr; Anciens commentaires"
+
+#: comments.php:52
+msgid "Newer Comments &rarr;"
+msgstr "Nouveaux commentaires &rarr;"
+
+#: comments.php:57
+msgid "Comments are closed."
+msgstr "Les commentaires sont désactivés."
+
+#: footer.php:18
+msgid "Main Menu"
+msgstr "Menu principal"
+
+#: footer.php:26 functions.php:89
+msgid "Secondary Menu"
+msgstr "Menu secondaire"
+
+#: footer.php:37
+msgid "&uarr; Back to the Top"
+msgstr "&uarr; Retour en haut de page"
+
+#: functions.php:88
+msgid "Primary Menu"
+msgstr "Menu principal"
+
+#: functions.php:118
+msgid "Footer Widget Area One"
+msgstr "Widget pour le Footer Un"
+
+#: functions.php:128
+msgid "Footer Widget Area Two"
+msgstr "Widget pour le Footer Deux"
+
+#: functions.php:156
+msgctxt "Merriweather Sans font: on or off"
+msgid "on"
+msgstr "activé"
+
+#: functions.php:162
+msgctxt "Merriweather font: on or off"
+msgid "on"
+msgstr "activé"
+
+#: header.php:32
+msgid "&darr; Skip to Main Content"
+msgstr "&darr; passer au contenu principal"
+
+#: image.php:24
+#, php-format
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size "
+"image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" "
+"rel=\"gallery\">%8$s</a>"
+msgstr ""
+"Publié <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s"
+"\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size image\">"
+"%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel="
+"\"gallery\">%8$s</a>"
+
+#: image.php:35 image.php:101 partials/content-archives.php:34
+#: partials/content-aside.php:29 partials/content-audio.php:29
+#: partials/content-chat.php:29 partials/content-gallery.php:29
+#: partials/content-image.php:29 partials/content-link.php:29
+#: partials/content-page.php:18 partials/content-quote.php:29
+#: partials/content-single.php:28 partials/content-status.php:29
+#: partials/content-video.php:29 partials/content.php:46
+msgid "Edit"
+msgstr "Édition"
+
+#: image.php:39
+msgid "&larr; Previous"
+msgstr "&larr; Précédent"
+
+#: image.php:40
+msgid "Next &rarr;"
+msgstr "Suivant &rarr;"
+
+#: image.php:87 partials/content-archives.php:33 partials/content-page.php:17
+#: partials/content-single.php:22 partials/content.php:40
+msgid "Pages:"
+msgstr "Pages :"
+
+#: image.php:93
+#, php-format
+msgid ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a "
+"comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" "
+"title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a "
+"comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" "
+"title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+
+#: image.php:95
+#, php-format
+msgid ""
+"Comments are closed, but you can leave a trackback: <a class=\"trackback-link"
+"\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback"
+"\">Trackback URL</a>."
+msgstr ""
+"Les commentaires sont désactivés, mais vous pouvez laisser une trace ici :<a "
+"class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" "
+"rel=\"trackback\">Trackback URL</a>."
+
+#: image.php:97
+msgid ""
+"Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond"
+"\" title=\"Post a comment\">post a comment</a>."
+msgstr ""
+"Les traces sont désactivées, mais vous pouvez <a class=\"comment-link\" href="
+"\"#respond\" title=\"Post a comment\">post a comment</a>."
+
+#: image.php:99
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Commentaires et traces sont désactivés."
+
+#: inc/back-compat.php:37 inc/back-compat.php:49 inc/back-compat.php:64
+#, php-format
+msgid ""
+"Accessible Zen requires at least WordPress version 3.6. You are running "
+"version %s. Please upgrade and try again."
+msgstr ""
+"Accessible Zen nécessite au moins la version 3.6 de WordPress. Vous utilisez "
+"la version %s. Merci de faire la mise à jour. et de réessayer."
+
+#: inc/customizer.php:27
+msgid "Hide Site Tagline"
+msgstr "Cacher la description du site"
+
+#: inc/customizer.php:44
+msgid "Content"
+msgstr "Contenu"
+
+#: inc/customizer.php:54
+msgid "Post content"
+msgstr "Contenu de l'article"
+
+#: inc/customizer.php:89
+msgid "Link to this page in Read More Posts on Front Page Template"
+msgstr "Lien sur cette page dans Lire plus d'articles sur le modèle de page"
+
+#: inc/customizer.php:142 inc/template-tags.php:331
+msgid "Accessible Zen"
+msgstr "Accessible Zen"
+
+#: inc/customizer.php:145
+#, php-format
+msgid ""
+"Accessible Zen uses the WordPress Theme Customizer to allow you to adjust "
+"several settings, including showing/hiding the site tagline, displaying post "
+"excerpts and much more. Get started customizing the theme under <a href=\"%s"
+"\">Appearance &rarr; Customize</a>."
+msgstr ""
+"Accessible Zen utilise le générateur de thèmes WordPress pour vous permettre "
+"d'ajuster les réglages, tels que montrer/cacher la description du site "
+"tagline, activer les extraits d'articles, et bien d'autres fonctionnalités. "
+"Personnalisez votre thème avec <a href=\"%s\">Appearance &rarr; Customize</"
+"a>."
+
+#: inc/customizer.php:146
+#, php-format
+msgid ""
+"If you have questions about the theme, want to suggest a new feature or need "
+"support, visit the <a href=\"%s\">Accessible Zen support forum</a>."
+msgstr ""
+"Si vous avez des questions, ou si vous souhaitez de nouvelles "
+"fonctionnalités, ou si vous avez besoin d'aide, consultez le forum <a href="
+"\"%s\">Accessible Zen support forum</a>."
+
+#: inc/customizer.php:147
+#, php-format
+msgid ""
+"For in-depth documentation on Accessible Zen, see the file bundled with the "
+"theme called <code>accessible-zen-documentation</code>, or view it <a href="
+"\"%s\">in the Github repository</a>."
+msgstr ""
+"For in-depth documentation on Accessible Zen, see the file bundled with the "
+"theme called <code>accessible-zen-documentation</code>, or view it <a href="
+"\"%s\">in the Github repository</a>."
+
+#: inc/template-tags.php:26
+msgid "Post navigation"
+msgstr "Navigation des articles"
+
+#: inc/template-tags.php:30
+msgctxt "Previous post link"
+msgid "Previous Post: "
+msgstr "Article précédent :"
+
+#: inc/template-tags.php:31
+msgctxt "Next post link"
+msgid "Next Post: "
+msgstr "Article suivant :"
+
+#: inc/template-tags.php:36
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Articles anciens"
+
+#: inc/template-tags.php:40
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Nouveau articles <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:58
+#, php-format
+msgctxt "post author"
+msgid "By %s"
+msgstr "Par %s"
+
+#: inc/template-tags.php:86
+#, php-format
+msgctxt "post date"
+msgid "Posted: %s"
+msgstr "Date de mise en ligne : %s"
+
+#: inc/template-tags.php:112
+#, php-format
+msgid "Author: %s"
+msgstr "Auteur : %s"
+
+#: inc/template-tags.php:120
+#, php-format
+msgid "Day: %s"
+msgstr "Jour : %s"
+
+#: inc/template-tags.php:123
+#, php-format
+msgid "Month: %s"
+msgstr "Mois : %s"
+
+#: inc/template-tags.php:126
+#, php-format
+msgid "Year: %s"
+msgstr "Année : %s"
+
+#: inc/template-tags.php:129
+msgid "Asides"
+msgstr "À-côtés"
+
+#: inc/template-tags.php:132
+msgid "Audios"
+msgstr "Audios"
+
+#: inc/template-tags.php:135
+msgid "Chats"
+msgstr "Chats"
+
+#: inc/template-tags.php:138
+msgid "Galleries"
+msgstr "Galleries"
+
+#: inc/template-tags.php:141
+msgid "Images"
+msgstr "Images"
+
+#: inc/template-tags.php:144
+msgid "Statuses"
+msgstr "Statuts"
+
+#: inc/template-tags.php:147
+msgid "Videos"
+msgstr "Videos"
+
+#: inc/template-tags.php:150
+msgid "Quotes"
+msgstr "Citations"
+
+#: inc/template-tags.php:153
+msgid "Links"
+msgstr "Liens"
+
+#: inc/template-tags.php:156 inc/template-tags.php:160
+#, php-format
+msgid "%s"
+msgstr "%s"
+
+#: inc/template-tags.php:163
+msgid "Archives"
+msgstr "Archives"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:196 inc/template-tags.php:199
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:204
+#, php-format
+msgid ""
+"<span class=\"post-tags\">Tagged: %2$s.</span> <span class=\"post-permalink"
+"\">Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>.</span>"
+msgstr ""
+"<span class=\"post-tags\">Tagged: %2$s.</span> <span class=\"post-permalink"
+"\">Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>.</span>"
+
+#: inc/template-tags.php:206
+#, php-format
+msgid ""
+"<span class=\"post-permalink\">Bookmark the <a href=\"%3$s\" rel=\"bookmark"
+"\">permalink</a>.</span>"
+msgstr ""
+"<span class=\"post-permalink\">Bookmark the <a href=\"%3$s\" rel=\"bookmark"
+"\">permalink</a>.</span>"
+
+#: inc/template-tags.php:212
+#, php-format
+msgid ""
+"<span class=\"post-categories\">Posted in: %1$s.</span> <span class=\"post-"
+"tags\">Tagged: %2$s.</span> <span class=\"post-permalink\">Bookmark the <a "
+"href=\"%3$s\" rel=\"bookmark\">permalink</a>.</span>"
+msgstr ""
+"<span class=\"post-categories\">Posted in: %1$s.</span> <span class=\"post-"
+"tags\">Tagged: %2$s.</span> <span class=\"post-permalink\">Bookmark the <a "
+"href=\"%3$s\" rel=\"bookmark\">permalink</a>.</span>"
+
+#: inc/template-tags.php:214
+#, php-format
+msgid ""
+"<span class=\"post-categories\">Posted in: %1$s.</span> <span class=\"post-"
+"permalink\">Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>.</"
+"span>"
+msgstr ""
+"<span class=\"post-categories\">Posted in: %1$s.</span> <span class=\"post-"
+"permalink\">Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>.</"
+"span>"
+
+#: inc/template-tags.php:236
+#, php-format
+msgctxt "post-format-archive-link"
+msgid "Format: %s"
+msgstr "Format: %s"
+
+#: inc/template-tags.php:329
+msgid "WordPress"
+msgstr "WordPress"
+
+#: inc/tweaks.php:115
+#, php-format
+msgid "Page %s"
+msgstr "Page %s"
+
+#: partials/author-bio.php:15
+#, php-format
+msgid "About %s"
+msgstr "À propos de %s"
+
+#: partials/author-bio.php:19
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Voir tous les articles par %s <span class=\"meta-nav\">&rarr;</span>"
+
+#: partials/content-archives.php:18
+msgid "Try searching to find something."
+msgstr "Rechercher."
+
+#: partials/content-archives.php:21
+msgid "Archives by Month"
+msgstr "Archives mensuelles"
+
+#: partials/content-archives.php:25
+msgid "Archives by Category"
+msgstr "Archives par Catégorie"
+
+#: partials/content-archives.php:29
+msgid "Archives by Tag"
+msgstr "Archives par marqueur"
+
+#: partials/content-aside.php:14
+msgid "Aside"
+msgstr "À-côté"
+
+#: partials/content-aside.php:20 partials/content-audio.php:20
+#: partials/content-chat.php:20 partials/content-gallery.php:20
+#: partials/content-image.php:20 partials/content-link.php:20
+#: partials/content-quote.php:20 partials/content-status.php:20
+#: partials/content-video.php:20
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Lire la suite de <span class=\"meta-nav\">&rarr;</span>"
+
+#: partials/content-audio.php:14
+msgid "Audio"
+msgstr "Audio"
+
+#: partials/content-chat.php:14
+msgid "Chat"
+msgstr "Chat"
+
+#: partials/content-gallery.php:14
+msgid "Gallery"
+msgstr "Gallerie"
+
+#: partials/content-image.php:14
+msgid "Image"
+msgstr "Image"
+
+#: partials/content-link.php:14
+msgid "Link"
+msgstr "Lien"
+
+#: partials/content-quote.php:14
+msgid "Quote"
+msgstr "Citation"
+
+#: partials/content-status.php:14
+msgid "Status"
+msgstr "Statut"
+
+#: partials/content-video.php:14
+msgid "Video"
+msgstr "Vidéo"
+
+#: partials/content.php:14
+msgid "Featured"
+msgstr "Figuré"
+
+#: partials/no-results.php:14
+msgid "Nothing Found"
+msgstr "Aucun résultat"
+
+#: partials/no-results.php:20
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Prêt pour la publication de votre premier article ? <a href=\"%1$s\">Get "
+"started here</a>."
+
+#: partials/no-results.php:24
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Désolé, rien ne correspond à votre recherche. Merci d'essayer avec d'autres "
+"mots-clés."
+
+#: partials/no-results.php:29
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "Il semble que votre recherche ne donne rien."
+
+#: search.php:17
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Résultats de la recherche pour : %s"
+
+#: templates/front-page-template.php:53
+msgid "Read more posts"
+msgstr "Autres articles"
