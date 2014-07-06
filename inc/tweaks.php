@@ -134,7 +134,7 @@ if ( ! function_exists( 'accessiblezen_continue_reading_link' ) ) :
  * Returns a "Continue Reading" link for excerpts
  */
 function accessiblezen_continue_reading_link() {
-	return ' <a href="'. esc_url( get_permalink() ) . '">' . ('Continue reading ' . the_title('', '', false) . '' . '</a>');
+	return ' <a href="'. esc_url( get_permalink() ) . '">' . ( __( 'Continue reading ', 'accessiblezen' ) . the_title( '', '', false ) . '' . '</a>');
 }
 endif; // accessiblezen_continue_reading_link
 

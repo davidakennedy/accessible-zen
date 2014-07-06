@@ -32,7 +32,7 @@
 	<div class="entry-content">
 		<?php
 		if ( get_theme_mod( 'accessiblezen_post_content' ) == '' || 'option2' ) :
-		the_content('Continue reading ' . the_title('', '', false) . '');
+		the_content( __( 'Continue reading ', 'accessiblezen' ) . the_title('', '', false) . '');
 		else :
 		the_excerpt();
 		endif;
