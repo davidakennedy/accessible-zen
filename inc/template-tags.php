@@ -23,7 +23,7 @@ function accessiblezen_content_nav( $nav_id ) {
 
 	?>
 	<nav role="navigation" id="<?php echo $nav_id; ?>" class="<?php echo $nav_class; ?>">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'accessiblezen' ); ?></h1>
+		<h2 class="screen-reader-text"><?php _e( 'Post navigation', 'accessiblezen' ); ?></h2>
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 

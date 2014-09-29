@@ -6,8 +6,7 @@
  * @since accessiblezen 1.0
  */
 
-get_header();
-?>
+get_header(); ?>
 
 		<div id="primary" class="content-area image-attachment cf">
 			<main id="content" role="main">

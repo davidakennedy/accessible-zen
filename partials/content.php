@@ -12,10 +12,10 @@
 		<?php if ( is_sticky() ) : ?>
 		<?php the_post_thumbnail(); ?>
 		<span class="title"><?php _e( 'Featured', 'accessiblezen' ); ?></span>
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+		<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 		<?php else : ?>	
 		<?php the_post_thumbnail(); ?>
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+		<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 		<?php endif; ?>
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">

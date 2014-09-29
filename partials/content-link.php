@@ -13,7 +13,7 @@
 				<span class="title">
 					<?php _e( 'Link', 'accessiblezen' ); ?>
 				</span>
-				<h1 class="entry-title"><a href="<?php echo esc_url( accessiblezen_get_link_url() ); ?>"><?php the_title(); ?></a></h1>
+				<h2 class="entry-title"><a href="<?php echo esc_url( accessiblezen_get_link_url() ); ?>"><?php the_title(); ?></a></h2>
 			</header>
 			
 			<div class="entry-content">
