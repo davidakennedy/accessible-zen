@@ -18,6 +18,7 @@ get_header(); ?>
 				<header class="page-header">
 					<h1 class="page-title">
 						<?php accessiblezen_archive_page_title_etc(); ?>
+					</h1>
 				</header><!-- .page-header -->
 
 				<?php rewind_posts(); ?>
