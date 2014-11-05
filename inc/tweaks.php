@@ -118,6 +118,7 @@ function accessiblezen_wp_title( $title, $sep ) {
 }
 add_filter( 'wp_title', 'accessiblezen_wp_title', 10, 2 );
 
+if ( ! function_exists( 'accessiblezen_excerpt_length' ) ) :
 /**
  * Sets the post excerpt length to 100 words.
  *
@@ -128,16 +129,22 @@ function accessiblezen_excerpt_length( $length ) {
 	return 100;
 }
 add_filter( 'excerpt_length', 'accessiblezen_excerpt_length' );
+endif; // accessiblezen_excerpt_length
 
 if ( ! function_exists( 'accessiblezen_continue_reading_link' ) ) :
 /**
  * Returns a "Continue Reading" link for excerpts
  */
 function accessiblezen_continue_reading_link() {
-	return ' <a href="'. esc_url( get_permalink() ) . '">' . ( __( 'Continue reading ', 'accessiblezen' ) . the_title( '', '', false ) . '' . '</a>');
+	return sprintf( '<a href="%1$s" class="more-link">%2$s</a>',
+		esc_url( get_permalink( get_the_ID() ) ),
+		/* translators: %s: Name of current post */
+		sprintf( esc_html__( 'Continue reading %s', 'accessiblezen' ), get_the_title( get_the_ID() ) )
+		);
 }
 endif; // accessiblezen_continue_reading_link
 
+if ( ! function_exists( 'accessiblezen_auto_excerpt_more' ) && ! is_admin() ) :
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and accessiblezen_continue_reading_link().
  *
@@ -145,23 +152,10 @@ endif; // accessiblezen_continue_reading_link
  * function tied to the excerpt_more filter hook.
  */
 function accessiblezen_auto_excerpt_more( $more ) {
-	return ' &hellip;' . accessiblezen_continue_reading_link();
+	return ' &hellip; ' . accessiblezen_continue_reading_link();
 }
 add_filter( 'excerpt_more', 'accessiblezen_auto_excerpt_more' );
-
-/**
- * Adds a pretty "Continue Reading" link to custom post excerpts.
- *
- * To override this link in a child theme, remove the filter and add your own
- * function tied to the get_the_excerpt filter hook.
- */
-function accessiblezen_custom_excerpt_more( $output ) {
-	if ( has_excerpt() && ! is_attachment() ) {
-		$output .= accessiblezen_continue_reading_link();
-	}
-	return $output;
-}
-add_filter( 'get_the_excerpt', 'accessiblezen_custom_excerpt_more' );
+endif; // accessiblezen_auto_excerpt_more
 
 /**
  * Return the URL for the first link found in the post content.
