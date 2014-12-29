@@ -1,6 +1,9 @@
 # Accessible Zen
 
-Accessible Zen is an accessible, minimalistic, readable, and fully responsive WordPress theme by [David A. Kennedy](http://davidakennedy.com). Inspired by Leo Babauta's [Zen Habits theme](http://zenhabits.net/theme/), Accessible Zen puts the focus on your content and nothing else, plus it has plenty of WordPress goodness built right in.
+The Accessible Zen theme is an accessible, minimalistic, readable, and fully responsive HTML5 theme that puts the focus on your content and nothing else. Inspired by the writing and design work of Leo Babauta at Zen Habits.
+
+Created by [David A. Kennedy](http://davidakennedy.com).
+Inspired by Leo Babauta's [work](http://zenhabits.net/) and [theme](http://zenhabits.net/theme/) at Zen Habits.
 
 ## Features
 
@@ -50,6 +53,10 @@ Underscores is licensed under the [GNU General Public License](http://www.gnu.or
 The Fluid Baseline Grid is licensed under the [Unlicense](http://unlicense.org/).
 
 Genericons is licensed under the [GNU General Public License](http://www.gnu.org/licenses/gpl-2.0.html).
+
+Merriweather font is licensed under the [SIL Open Font License, 1.1](http://scripts.sil.org/OFL).
+
+Merriweather Sans font is licensed under the [SIL Open Font License, 1.1](http://scripts.sil.org/OFL).
 
 ## Contribute
 

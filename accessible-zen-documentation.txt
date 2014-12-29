@@ -1,6 +1,9 @@
 # Accessible Zen Documentation
 
-Accessible Zen is an accessible, minimalistic, readable, and fully responsive WordPress theme by [David A. Kennedy](http://davidakennedy.com). Inspired by Leo Babauta's [Zen Habits theme](http://zenhabits.net/theme/), Accessible Zen puts the focus on your content and nothing else, plus it has plenty of WordPress goodness built right in.
+The Accessible Zen theme is an accessible, minimalistic, readable, and fully responsive HTML5 theme that puts the focus on your content and nothing else. Inspired by the writing and design work of Leo Babauta at Zen Habits.
+
+Created by [David A. Kennedy](http://davidakennedy.com).
+Inspired by Leo Babauta's [work](http://zenhabits.net/) and [theme](http://zenhabits.net/theme/) at Zen Habits.
 
 ## Header
 
