@@ -161,7 +161,7 @@ input,
 select,
 textarea {
 	color: #333;
-	font-family: 'Merriweather', Georgia, Times, "Times New Roman", serif;
+	font-family: "Merriweather", Georgia, Times, "Times New Roman", serif;
 	font-size: 100%;
 	font-weight: 400;
 	line-height: 1.5;
@@ -171,10 +171,10 @@ textarea {
 h1,h2,h3,h4,h5,h6 {
 	color: #006e9d;
 	clear: both;
-	font-family: 'Merriweather Sans', Verdana, Geneva, sans-serif;
-  	line-height: 1.2;
-  	margin: 0 0 0.125em;
-  	text-shadow:1px 1px 1px rgba(0,0,0,.10);
+	font-family: "Merriweather Sans", Verdana, Geneva, sans-serif;
+	line-height: 1.2;
+	margin: 0 0 0.125em;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.10);
 }
 .content-area h1,
 .content-area h2,
@@ -695,11 +695,11 @@ div.callout {
 /* Contain floats: h5bp.com/q */
 .cf:before,
 .cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+	content: " "; /* 1 */
+	display: table; /* 2 */
 }
 .cf:after {
-    clear: both;
+	clear: both;
 }
 
 /**
@@ -707,7 +707,7 @@ div.callout {
  * Include this rule to trigger hasLayout and contain floats.
  */
 .cf {
-    *zoom: 1;
+	*zoom: 1;
 }
 .clear {
 	clear: both;
@@ -757,7 +757,12 @@ div.callout {
 /* Site Title and Description */
 .site-title {
 	font-size: 2.8125em; /* 45px */
+	color: #006e9d;
+	font-family: "Merriweather Sans", Verdana, Geneva, sans-serif;
+	line-height: 1.2;
+	margin: 0 0 0.125em;
 	text-align: center;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.10);
 }
 .site-title a {
 	text-decoration: none;
@@ -767,8 +772,12 @@ div.callout {
 }
 .site-description {
 	color: #666;
+	font-family: "Merriweather Sans", Verdana, Geneva, sans-serif;
 	font-size: 1.25em; /* 20px */
+	line-height: 1.2;
+	margin: 0 0 0.125em;
 	text-align: center;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.10);
 }
 
 /* =Content
@@ -943,8 +952,8 @@ img[class*="wp-image-"] {
 	vertical-align: top;
 	width: 100%;
 	/* IE7 hack to mimic inline-block on block elements */
-    *display: inline;
-    *zoom: 1;
+	*display: inline;
+	*zoom: 1;
 }
 .gallery-columns-2 .gallery-item {
 	max-width: 50%;
@@ -1355,8 +1364,8 @@ p.comment-form-comment {
 ----------------------------------------------- */
 .ie7 .nav li {
 	/* IE7 hack to mimic inline-block on block elements */
-    *display: inline;
-    *zoom: 1;
+	*display: inline;
+	*zoom: 1;
 }
 #respond .comment-form-author label,
 #respond .comment-form-email label,

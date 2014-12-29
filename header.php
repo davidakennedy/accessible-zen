@@ -38,9 +38,15 @@
 				<img class="site-logo" src="<?php echo esc_url( get_header_image() ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
 			</a>
 		<?php endif; ?>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<?php
+			if ( is_front_page() && is_home() ) : ?>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php else : ?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+			<?php endif;
+		?>
 		<?php if( get_theme_mod( 'displayblogname' ) == '') : ?>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 		<?php endif; // end if ?>
 		</div><!-- .site-banner -->
 	</header><!-- #masthead .site-header -->
