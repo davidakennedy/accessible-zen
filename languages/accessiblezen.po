@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Accessible Zen\n"
-"POT-Creation-Date: 2014-07-06 15:55-0500\n"
-"PO-Revision-Date: 2014-07-06 15:56-0500\n"
+"POT-Creation-Date: 2014-12-28 21:55-0500\n"
+"PO-Revision-Date: 2014-12-28 21:55-0500\n"
 "Last-Translator: David A. Kennedy <me@davidakennedy.com>\n"
 "Language-Team: \n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.6\n"
+"X-Generator: Poedit 1.7.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -100,7 +100,7 @@ msgstr ""
 msgid "&darr; Skip to Main Content"
 msgstr ""
 
-#: image.php:24
+#: image.php:23
 #, php-format
 msgid ""
 "Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
@@ -109,7 +109,7 @@ msgid ""
 "rel=\"gallery\">%8$s</a>"
 msgstr ""
 
-#: image.php:35 image.php:101 partials/content-archives.php:34
+#: image.php:34 image.php:100 partials/content-archives.php:34
 #: partials/content-aside.php:29 partials/content-audio.php:29
 #: partials/content-chat.php:29 partials/content-gallery.php:29
 #: partials/content-image.php:29 partials/content-link.php:29
@@ -119,20 +119,20 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: image.php:39
+#: image.php:38
 msgid "&larr; Previous"
 msgstr ""
 
-#: image.php:40
+#: image.php:39
 msgid "Next &rarr;"
 msgstr ""
 
-#: image.php:87 partials/content-archives.php:33 partials/content-page.php:17
+#: image.php:86 partials/content-archives.php:33 partials/content-page.php:17
 #: partials/content-single.php:22 partials/content.php:40
 msgid "Pages:"
 msgstr ""
 
-#: image.php:93
+#: image.php:92
 #, php-format
 msgid ""
 "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a "
@@ -140,7 +140,7 @@ msgid ""
 "title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
 msgstr ""
 
-#: image.php:95
+#: image.php:94
 #, php-format
 msgid ""
 "Comments are closed, but you can leave a trackback: <a class=\"trackback-link"
@@ -148,13 +148,13 @@ msgid ""
 "\">Trackback URL</a>."
 msgstr ""
 
-#: image.php:97
+#: image.php:96
 msgid ""
 "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond"
 "\" title=\"Post a comment\">post a comment</a>."
 msgstr ""
 
-#: image.php:99
+#: image.php:98
 msgid "Both comments and trackbacks are currently closed."
 msgstr ""
 
@@ -358,8 +358,10 @@ msgstr ""
 msgid "Page %s"
 msgstr ""
 
-#: inc/tweaks.php:137 partials/content.php:35
-msgid "Continue reading "
+#. translators: %s: Name of current post
+#: inc/tweaks.php:142
+#, php-format
+msgid "Continue reading %s"
 msgstr ""
 
 #: partials/author-bio.php:15
@@ -434,6 +436,10 @@ msgstr ""
 
 #: partials/content.php:14
 msgid "Featured"
+msgstr ""
+
+#: partials/content.php:35
+msgid "Continue reading "
 msgstr ""
 
 #: partials/no-results.php:14
