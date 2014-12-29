@@ -783,7 +783,7 @@ div.callout {
 	color: #006e9d;
 	font-family: "Merriweather Sans", Verdana, Geneva, sans-serif;
 	line-height: 1.2;
-	margin: 0 0 0.125em;
+	margin: 0 0 0.5em;
 	text-align: center;
 	text-shadow: 1px 1px 1px rgba(0,0,0,.10);
 }
@@ -798,7 +798,7 @@ div.callout {
 	font-family: "Merriweather Sans", Verdana, Geneva, sans-serif;
 	font-size: 1.25em; /* 20px */
 	line-height: 1.2;
-	margin: 0 0 0.125em;
+	margin: 0 0 0.5em;
 	text-align: center;
 	text-shadow: 1px 1px 1px rgba(0,0,0,.10);
 }
