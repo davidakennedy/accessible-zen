@@ -168,12 +168,17 @@ textarea {
 }
 
 /* Headings */
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	color: #006e9d;
 	clear: both;
 	font-family: "Merriweather Sans", Verdana, Geneva, sans-serif;
 	line-height: 1.2;
-	margin: 0 0 0.125em;
+	margin: 0;
 	text-shadow: 1px 1px 1px rgba(0,0,0,.10);
 }
 .content-area h1,
@@ -193,29 +198,41 @@ hr {
 	padding: 0;
 }
 /* Composed to a scale of 16px, 20px, 24px, 30px, 36px and 46px */
-h1, .h1 {
+h1,
+.h1 {
 	font-size: 2.5em; /* 40px */
+	margin-bottom: 0.5em;
 }
-h2, .h2 {
+h2,
+.h2 {
 	font-size: 1.875em; /* 30px */
+	margin-bottom: 0.5em;
 }
-h3, .h3 {
+h3,
+.h3 {
 	font-size: 1.25em; /* 20px */
 	letter-spacing: 0.1em;
+	margin-bottom: 0.5em;
 	text-transform: uppercase;
 } 
-h4, .h4 {
+h4,
+.h4 {
 	font-size: 1.125em; /* 18px */
 	font-weight: bold;
+	margin-bottom: 0.25em;
 }
-h5, .h5 {
+h5,
+.h5 {
 	font-size: 1.0625em; /* 17px */
 	font-style: italic;
+	margin-bottom: 0.25em;
 }
-h6, .h6 {
+h6,
+.h6 {
 	font-size: 1em; /* 16px */
 	text-transform: uppercase;
 	font-weight: bold;
+	margin-bottom: 0.25em;
 }
 p,
 ul,
@@ -325,7 +342,8 @@ button, input {
 	line-height: normal;
 	*overflow: visible;
 }
-button, input[type="button"],
+button,
+input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border: 2px solid #008fcc;
@@ -343,18 +361,18 @@ input[type="submit"] {
 	-webkit-appearance: button;
 }
 button:hover,
-html input[type="button"]:hover,
+input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
 	background-color: #666;
 	border-color: #666 #666 #333 #666;
 }
 button:focus,
-html input[type="button"]:focus,
+input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus,
 button:active,
-html input[type="button"]:active,
+input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
 	background-color: #666;
@@ -403,7 +421,8 @@ input[type="search"] {
 }
 
 /* Quotes */
-blockquote, q {
+blockquote,
+q {
 	quotes: none;
 }
 blockquote:before,
@@ -545,7 +564,6 @@ dfn[title] {
 	border-bottom: 1px dotted #444;
 	cursor: help;
 }
-
 mark, ins {
 	background: #fff9c0;
 	text-decoration: none;
@@ -630,7 +648,8 @@ sub {
 }
 
 /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
-.screen-reader-text.focusable:active, .screen-reader-text.focusable:focus {
+.screen-reader-text.focusable:active,
+.screen-reader-text.focusable:focus {
 	clip: auto;
 	height: auto;
 	margin: 0;
@@ -692,6 +711,7 @@ div.callout {
 	display: block;
 	margin: 0 auto 1.5em;
 }
+
 /* Contain floats: h5bp.com/q */
 .cf:before,
 .cf:after {
