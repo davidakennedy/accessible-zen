@@ -173,7 +173,7 @@ function accessiblezen_fonts_url() {
 		$protocol = is_ssl() ? 'https' : 'http';
 		$query_args = array(
 			'family' => implode( '|', $font_families ),
-			'subset' => 'latin',
+			'subset' => 'latin,latin-ext',
 		);
 		$fonts_url = add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" );
 	}
