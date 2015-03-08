@@ -32,6 +32,7 @@ In addition to this `readme` file, the file bundled with the theme called `acces
 
 == Translations ==
 * French translation by [Brieuc Segalen](http://briseg.com).
+* German translation by Lutz Donnerhacke.
 
 If you're interested in translating Accessible Zen, you can submit feedback on the [Github issues section](https://github.com/davidakennedy/accessible-zen/issues), the [WordPress.org forums for this theme](http://wordpress.org/support/theme/accessible-zen) or by emailing me at me (at) davidakennedy dot com.
 
