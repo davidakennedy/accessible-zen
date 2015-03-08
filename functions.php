@@ -31,7 +31,7 @@ function accessiblezen_setup() {
 	 */
 	if ( version_compare( $GLOBALS['wp_version'], '3.6-alpha', '<' ) )
 		require get_template_directory() . '/inc/back-compat.php';
-	
+
 	/**
 	 * Custom template tags for this theme.
 	 */
@@ -41,7 +41,7 @@ function accessiblezen_setup() {
 	 * Custom functions that act independently of the theme templates
 	 */
 	require( get_template_directory() . '/inc/tweaks.php' );
-	
+
 	/**
 	 * Customizer additions
 	 */
@@ -54,13 +54,13 @@ function accessiblezen_setup() {
 	 * to change 'accessiblezen' to the name of your theme in all the template files
 	 */
 	load_theme_textdomain( 'accessiblezen', get_template_directory() . '/languages' );
-	
+
 	// Switches default core markup for search form, comment form, and comments
 	// to output valid HTML5.
 	add_theme_support( 'html5', array(
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
 	) );
-	
+
 	/*
 	 * This theme styles the visual editor to resemble the theme style,
 	 * specifically font, colors, and column width.
@@ -72,9 +72,17 @@ function accessiblezen_setup() {
 	 */
 	add_theme_support( 'automatic-feed-links' );
 
+	/*
+	 * Let WordPress manage the document title.
+	 * By adding theme support, we declare that this theme does not use a
+	 * hard-coded <title> tag in the document head, and expect WordPress to
+	 * provide it for us.
+	 */
+	add_theme_support( 'title-tag' );
+
 	/** This theme styles the visual editor with editor-style.css to match the theme style. */
 	add_editor_style('css/editor-style.css');
-	
+
 	/**
 	 * Enable support for Post Thumbnails
 	 */
@@ -96,7 +104,7 @@ function accessiblezen_setup() {
 	add_theme_support( 'post-formats', array(
 		'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video'
 	) );
-	
+
 	/*
 	 * This theme supports custom background color and image, and here
 	 * we also set up the default background color.
@@ -123,7 +131,7 @@ function accessiblezen_widgets_init() {
 		'before_title' => '<h2 class="widget-title">',
 		'after_title' => '</h2>',
 	) );
-	
+
 	register_sidebar( array(
 		'name' => __( 'Footer Widget Area Two', 'accessiblezen' ),
 		'id' => 'sidebar-2',
@@ -211,16 +219,16 @@ add_filter( 'mce_css', 'accessiblezen_mce_css' );
  */
 function accessiblezen_scripts_styles() {
 	global $wp_styles;
-	
+
     $fonts_url = accessiblezen_fonts_url();
 	if ( ! empty( $fonts_url ) )
 		wp_enqueue_style( 'accessiblezen-fonts', esc_url_raw( $fonts_url ), array(), null );
-		
+
 	// Loads the icon fonts stylesheet.
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.2' );
 
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
-        
+
     wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
