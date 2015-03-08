@@ -1,149 +1,152 @@
-# Changelog
+=== Changelog ===
 
 **TBD**
 
 Release: Version 1.1.4
 
-- [Add missing translatable strings for Continue Reading area](https://github.com/davidakennedy/accessible-zen/issues/61).
-- [Fix unclosed h1 tag in archive.php](https://github.com/davidakennedy/accessible-zen/commit/d07cca141e18a1d868d187b4cf762552b18132fd).
-- [Change some top level headings to h2](https://github.com/davidakennedy/accessible-zen/issues/62).
-- [Update Genericons to 3.2](https://github.com/davidakennedy/accessible-zen/issues/64).
-- [Update theme description and make it tighter](https://github.com/davidakennedy/accessible-zen/issues/65).
-- [Update screenshot](https://github.com/davidakennedy/accessible-zen/issues/65).
-- [Add bottom padding to post author comments for better spacing](https://github.com/davidakennedy/accessible-zen/issues/63).
-- [Clean up Continue reading links](https://github.com/davidakennedy/accessible-zen/issues/68).
-- [Make theme have only one h1 per page for better accessibility](https://github.com/davidakennedy/accessible-zen/commit/e975d88004c1749801795b0ac4324766b2236298).
-- [Update translation files](https://github.com/davidakennedy/accessible-zen/commit/8c247cb03cc0e2664cfc2e146fbb7b6eac89b674).
-- Clean up spacing in style.css.
-- [Update licensing information](https://github.com/davidakennedy/accessible-zen/commit/77f6000a8f5f9442ab113d1a6593554a568c69e7).
-- [Add latin extended character support in Google web fonts](https://github.com/davidakennedy/accessible-zen/commit/2ed76b0c3207156145aead251c820a7d68bb9860).
-- Adjust spacing around headings for better design See https://github.com/davidakennedy/accessible-zen/commit/29a3c2966328339548ab9dc21a1857c3a3e4f61a and https://github.com/davidakennedy/accessible-zen/commit/56a965716c5b4b80176505427aec1d452fb9d5e5.
+* [Add missing translatable strings for Continue Reading area](https://github.com/davidakennedy/accessible-zen/issues/61).
+* [Fix unclosed h1 tag in archive.php](https://github.com/davidakennedy/accessible-zen/commit/d07cca141e18a1d868d187b4cf762552b18132fd).
+* [Change some top level headings to h2](https://github.com/davidakennedy/accessible-zen/issues/62).
+* [Update Genericons to 3.2](https://github.com/davidakennedy/accessible-zen/issues/64).
+* [Update theme description and make it tighter](https://github.com/davidakennedy/accessible-zen/issues/65).
+* [Update screenshot](https://github.com/davidakennedy/accessible-zen/issues/65).
+* [Add bottom padding to post author comments for better spacing](https://github.com/davidakennedy/accessible-zen/issues/63).
+* [Clean up Continue reading links](https://github.com/davidakennedy/accessible-zen/issues/68).
+* [Make theme have only one h1 per page for better accessibility](https://github.com/davidakennedy/accessible-zen/commit/e975d88004c1749801795b0ac4324766b2236298).
+* [Update translation files](https://github.com/davidakennedy/accessible-zen/commit/8c247cb03cc0e2664cfc2e146fbb7b6eac89b674).
+* Clean up spacing in style.css.
+* [Update licensing information](https://github.com/davidakennedy/accessible-zen/commit/77f6000a8f5f9442ab113d1a6593554a568c69e7).
+* [Add latin extended character support in Google web fonts](https://github.com/davidakennedy/accessible-zen/commit/2ed76b0c3207156145aead251c820a7d68bb9860).
+* Adjust spacing around headings for better design See https://github.com/davidakennedy/accessible-zen/commit/29a3c2966328339548ab9dc21a1857c3a3e4f61a and https://github.com/davidakennedy/accessible-zen/commit/56a965716c5b4b80176505427aec1d452fb9d5e5.
+* Update tranlation files.
+* Add German translation file by Lutz Donnerhacke.
+* Add theme support for title tag. [More information](https://make.wordpress.org/core/2014/10/29/title-tags-in-4-1/).
 
 **July 1, 2014**
 
 Release: Version 1.1.3
 
-- Add basic translation files.
-- French translation by [Brieuc Segalen](http://briseg.com).
+* Add basic translation files.
+* French translation by [Brieuc Segalen](http://briseg.com).
 
 **June 20, 2014**
 
 Release: Version 1.1.2
 
-- General code clean-up in some template tags.
+* General code clean-up in some template tags.
 
 **June 17, 2014**
 
 Release: Version 1.1.1
 
-- [Add author and updated microformats](https://github.com/davidakennedy/accessible-zen/issues/56).
-- [Add HTML5 output for galleries and captions](https://github.com/davidakennedy/accessible-zen/issues/55).
-- [Make tag list translatable](https://github.com/davidakennedy/accessible-zen/issues/57).
-- [Fix unclosed h1 on certain templates](https://github.com/davidakennedy/accessible-zen/issues/58).
-- Add more robust styles for menu abstraction on desktop.
-- Add bottom margin for audio embeds.
-- Add version 3.0.3 of Genericons.
-- Improve stylesheet loading order.
+* [Add author and updated microformats](https://github.com/davidakennedy/accessible-zen/issues/56).
+* [Add HTML5 output for galleries and captions](https://github.com/davidakennedy/accessible-zen/issues/55).
+* [Make tag list translatable](https://github.com/davidakennedy/accessible-zen/issues/57).
+* [Fix unclosed h1 on certain templates](https://github.com/davidakennedy/accessible-zen/issues/58).
+* Add more robust styles for menu abstraction on desktop.
+* Add bottom margin for audio embeds.
+* Add version 3.0.3 of Genericons.
+* Improve stylesheet loading order.
 
 **January 4, 2014**
 
 Release: Version 1.1
 
-- [Add contextual help to theme](https://github.com/davidakennedy/accessible-zen/issues/54). 
-- [Improve Customizer features and set better default options](https://github.com/davidakennedy/accessible-zen/issues/53). This may cause users to have to set their options again via the Customizer.
-- Add appropriate theme tags for WordPress, version 3.8, including accessibility-ready.
-- Remove bottom border on hover on site title.
-- Add new screenshot according to WordPress, version 3.8 standards.
-- Update Genericons to version 3.0.2.
-- Move changelog to separate file.
+* [Add contextual help to theme](https://github.com/davidakennedy/accessible-zen/issues/54).
+* [Improve Customizer features and set better default options](https://github.com/davidakennedy/accessible-zen/issues/53). This may cause users to have to set their options again via the Customizer.
+* Add appropriate theme tags for WordPress, version 3.8, including accessibility-ready.
+* Remove bottom border on hover on site title.
+* Add new screenshot according to WordPress, version 3.8 standards.
+* Update Genericons to version 3.0.2.
+* Move changelog to separate file.
 
 **October 21, 2013**
 
 Release: Version 1.0.3
 
-- [Remove unneeded search styles](https://github.com/davidakennedy/accessible-zen/issues/50).
-- [Better selection styles on header image](https://github.com/davidakennedy/accessible-zen/issues/51).
-- [Fix Genericons alignment](https://github.com/davidakennedy/accessible-zen/issues/52).
+* [Remove unneeded search styles](https://github.com/davidakennedy/accessible-zen/issues/50).
+* [Better selection styles on header image](https://github.com/davidakennedy/accessible-zen/issues/51).
+* [Fix Genericons alignment](https://github.com/davidakennedy/accessible-zen/issues/52).
 
 **October 8, 2013**
 
 Release: Version 1.0.2
 
-- [Make floats clear properly in posts](https://github.com/davidakennedy/accessible-zen/issues/48).
-- [Add copyright info](https://github.com/davidakennedy/accessible-zen/issues/49).
+* [Make floats clear properly in posts](https://github.com/davidakennedy/accessible-zen/issues/48).
+* [Add copyright info](https://github.com/davidakennedy/accessible-zen/issues/49).
 
 **October 6, 2013**
 
 Release: Version 1.0.1
 
-- [Fix 404 page layout issue](https://github.com/davidakennedy/accessible-zen/issues/47).
+* [Fix 404 page layout issue](https://github.com/davidakennedy/accessible-zen/issues/47).
 
 **September 29, 2013**
 
 Release: Version 1.0
 
-- [Version number bump](https://github.com/davidakennedy/accessible-zen/issues/46) for submission to WordPress theme repository.
-- [Fix broken author bios](https://github.com/davidakennedy/accessible-zen/issues/45).
-- Fix [broken comment styles](https://github.com/davidakennedy/accessible-zen/issues/41).
-- [Fix typos](https://github.com/davidakennedy/accessible-zen/issues/40) and firm up acknowledgements in files.
-- [Rename page templates](https://github.com/davidakennedy/accessible-zen/issues/43).
-- [Adjust font size](https://github.com/davidakennedy/accessible-zen/issues/44).
-- [Improve docs](https://github.com/davidakennedy/accessible-zen/issues/38).
-- [Better print styles](https://github.com/davidakennedy/accessible-zen/issues/42).
-- [Update Genericons](https://github.com/davidakennedy/accessible-zen/issues/39).
+* [Version number bump](https://github.com/davidakennedy/accessible-zen/issues/46) for submission to WordPress theme repository.
+* [Fix broken author bios](https://github.com/davidakennedy/accessible-zen/issues/45).
+* Fix [broken comment styles](https://github.com/davidakennedy/accessible-zen/issues/41).
+* [Fix typos](https://github.com/davidakennedy/accessible-zen/issues/40) and firm up acknowledgements in files.
+* [Rename page templates](https://github.com/davidakennedy/accessible-zen/issues/43).
+* [Adjust font size](https://github.com/davidakennedy/accessible-zen/issues/44).
+* [Improve docs](https://github.com/davidakennedy/accessible-zen/issues/38).
+* [Better print styles](https://github.com/davidakennedy/accessible-zen/issues/42).
+* [Update Genericons](https://github.com/davidakennedy/accessible-zen/issues/39).
 
 
 **September 22, 2013**
 
 Release: Version 0.1-beta-1
 
-- [Add documentation](https://github.com/davidakennedy/accessible-zen/issues/33).
-- [Read More Posts link now more versatile](https://github.com/davidakennedy/accessible-zen/issues/36).
+* [Add documentation](https://github.com/davidakennedy/accessible-zen/issues/33).
+* [Read More Posts link now more versatile](https://github.com/davidakennedy/accessible-zen/issues/36).
 
 Recent hotfixes include:
 
-- A [better Read More Posts link](https://github.com/davidakennedy/accessible-zen/issues/35).
-- Other small fixes.
+* A [better Read More Posts link](https://github.com/davidakennedy/accessible-zen/issues/35).
+* Other small fixes.
 
 **September 8, 2013**
 
 Release: Version 0.1-alpha-4
 
-- [Consistent CSS comments, form tweaks and other CSS clean up](https://github.com/davidakennedy/accessible-zen/issues/4).
-- [Reorganize file structure and clean up template comments](https://github.com/davidakennedy/accessible-zen/issues/16).
-- [No more `<br>` tags in the footer meta](https://github.com/davidakennedy/accessible-zen/issues/17).
-- Use the [HTML5 support from WordPress core for certain elements](https://github.com/davidakennedy/accessible-zen/issues/27).
-- [Improve menus on mobile devices](https://github.com/davidakennedy/accessible-zen/issues/29).
-- [Better line height on headings](https://github.com/davidakennedy/accessible-zen/issues/30).
-- [Add compatibility file for WordPress 3.6](https://github.com/davidakennedy/accessible-zen/issues/31).
-- [More support for RTL languages in the editor](https://github.com/davidakennedy/accessible-zen/issues/32).
+* [Consistent CSS comments, form tweaks and other CSS clean up](https://github.com/davidakennedy/accessible-zen/issues/4).
+* [Reorganize file structure and clean up template comments](https://github.com/davidakennedy/accessible-zen/issues/16).
+* [No more `<br>` tags in the footer meta](https://github.com/davidakennedy/accessible-zen/issues/17).
+* Use the [HTML5 support from WordPress core for certain elements](https://github.com/davidakennedy/accessible-zen/issues/27).
+* [Improve menus on mobile devices](https://github.com/davidakennedy/accessible-zen/issues/29).
+* [Better line height on headings](https://github.com/davidakennedy/accessible-zen/issues/30).
+* [Add compatibility file for WordPress 3.6](https://github.com/davidakennedy/accessible-zen/issues/31).
+* [More support for RTL languages in the editor](https://github.com/davidakennedy/accessible-zen/issues/32).
 
 **July 29, 2013**
 
 Release: Version 0.1-alpha-3
 
-- Various design tweaks including a lighter footer area and new fonts.
-- Add better support for [taxonomy descriptions on archive pages](https://github.com/davidakennedy/accessible-zen/issues/25).
-- Add [category and tag templates](https://github.com/davidakennedy/accessible-zen/issues/24).
-- Add [custom taxonomy support for archive page titles](https://github.com/davidakennedy/accessible-zen/issues/23).
-- Add [post type support for archive page titles](https://github.com/davidakennedy/accessible-zen/issues/22).
-- Add ["show more posts option"](https://github.com/davidakennedy/accessible-zen/issues/21) on Front Page Template.
-- Make [functions more pluggable](https://github.com/davidakennedy/accessible-zen/issues/20) and easier for child theme support.
+* Various design tweaks including a lighter footer area and new fonts.
+* Add better support for [taxonomy descriptions on archive pages](https://github.com/davidakennedy/accessible-zen/issues/25).
+* Add [category and tag templates](https://github.com/davidakennedy/accessible-zen/issues/24).
+* Add [custom taxonomy support for archive page titles](https://github.com/davidakennedy/accessible-zen/issues/23).
+* Add [post type support for archive page titles](https://github.com/davidakennedy/accessible-zen/issues/22).
+* Add ["show more posts option"](https://github.com/davidakennedy/accessible-zen/issues/21) on Front Page Template.
+* Make [functions more pluggable](https://github.com/davidakennedy/accessible-zen/issues/20) and easier for child theme support.
 
 **July 11, 2013**
 
 Release: Version 0.1-alpha-2
 
-- Tested more in [IE7, resolving a bug or two](https://github.com/davidakennedy/accessible-zen/issues/1).
-- Added [main element](https://github.com/davidakennedy/accessible-zen/issues/6).
-- Removed [unneeded search icon](https://github.com/davidakennedy/accessible-zen/issues/8).
-- Updated [HTML5 shiv](https://github.com/davidakennedy/accessible-zen/issues/9).
-- Fixed [layout bug on mobile with big tables](https://github.com/davidakennedy/accessible-zen/issues/10).
-- Fixed [wonky form labels on IE7](https://github.com/davidakennedy/accessible-zen/issues/13).
-- Fixed [undefined variable and non-object warnings on image posts](https://github.com/davidakennedy/accessible-zen/issues/14).
-- Fixed [Function warning for image.php file](https://github.com/davidakennedy/accessible-zen/issues/15).
-- Fixed [custom background in IE7](https://github.com/davidakennedy/accessible-zen/issues/18).
-- [Unified list item styling](https://github.com/davidakennedy/accessible-zen/issues/19).
+* Tested more in [IE7, resolving a bug or two](https://github.com/davidakennedy/accessible-zen/issues/1).
+* Added [main element](https://github.com/davidakennedy/accessible-zen/issues/6).
+* Removed [unneeded search icon](https://github.com/davidakennedy/accessible-zen/issues/8).
+* Updated [HTML5 shiv](https://github.com/davidakennedy/accessible-zen/issues/9).
+* Fixed [layout bug on mobile with big tables](https://github.com/davidakennedy/accessible-zen/issues/10).
+* Fixed [wonky form labels on IE7](https://github.com/davidakennedy/accessible-zen/issues/13).
+* Fixed [undefined variable and non-object warnings on image posts](https://github.com/davidakennedy/accessible-zen/issues/14).
+* Fixed [Function warning for image.php file](https://github.com/davidakennedy/accessible-zen/issues/15).
+* Fixed [custom background in IE7](https://github.com/davidakennedy/accessible-zen/issues/18).
+* [Unified list item styling](https://github.com/davidakennedy/accessible-zen/issues/19).
 
 **June 30, 2013**
 

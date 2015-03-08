@@ -125,6 +125,7 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	 *
 	 * @link https://make.wordpress.org/core/2014/10/29/title-tags-in-4-1/
 	 * @todo Remove this function when WordPress 4.3 is released.
+	 * @since accessiblezen 1.1.4
 	 */
 	function accessiblezen_render_title() {
 		?>
