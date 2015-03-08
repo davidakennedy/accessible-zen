@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Accessible Zen\n"
-"POT-Creation-Date: 2015-03-07 22:44-0500\n"
-"PO-Revision-Date: 2015-03-07 22:44-0500\n"
+"POT-Creation-Date: 2015-03-07 23:03-0500\n"
+"PO-Revision-Date: 2015-03-07 23:03-0500\n"
 "Last-Translator: David A. Kennedy <me@davidakennedy.com>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -66,7 +66,7 @@ msgstr ""
 msgid "Main Menu"
 msgstr ""
 
-#: footer.php:26 functions.php:89
+#: footer.php:26 functions.php:97
 msgid "Secondary Menu"
 msgstr ""
 
@@ -74,24 +74,24 @@ msgstr ""
 msgid "&uarr; Back to the Top"
 msgstr ""
 
-#: functions.php:88
+#: functions.php:96
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:118
+#: functions.php:126
 msgid "Footer Widget Area One"
 msgstr ""
 
-#: functions.php:128
+#: functions.php:136
 msgid "Footer Widget Area Two"
 msgstr ""
 
-#: functions.php:156
+#: functions.php:164
 msgctxt "Merriweather Sans font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:162
+#: functions.php:170
 msgctxt "Merriweather font: on or off"
 msgid "on"
 msgstr ""
@@ -346,13 +346,13 @@ msgstr ""
 msgid "WordPress"
 msgstr ""
 
-#: inc/tweaks.php:115
+#: inc/tweaks.php:118
 #, php-format
 msgid "Page %s"
 msgstr ""
 
 #. translators: %s: Name of current post
-#: inc/tweaks.php:142
+#: inc/tweaks.php:160
 #, php-format
 msgid "Continue reading %s"
 msgstr ""
