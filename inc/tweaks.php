@@ -66,7 +66,7 @@ function accessiblezen_footer_sidebar_class() {
 function accessiblezen_body_class( $classes ) {
 	$background_color = get_background_color();
 	$background_image = get_background_image();
-	
+
 		if ( empty( $background_color ) && empty( $background_image )  )
 		$classes[] = 'custom-background-empty';
 	elseif ( in_array( $background_color, array( 'fff', 'ffffff' ) ) )
@@ -112,7 +112,7 @@ function accessiblezen_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 )
-		$title .= " $sep " . sprintf( __( 'Page %s', '_s' ), max( $paged, $page ) );
+		$title .= " $sep " . sprintf( __( 'Page %s', 'accessiblezen' ), max( $paged, $page ) );
 
 	return $title;
 }
