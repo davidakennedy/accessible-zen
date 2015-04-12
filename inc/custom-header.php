@@ -29,7 +29,7 @@ function accessiblezen_custom_header_setup() {
 		// Set height and width, with a maximum value for the width.
 		'height'                 => 150,
 		'width'                  => 150,
-		
+
 		// Add flex height and width.
 		'flex-width'             => true,
 		'flex-height'            => true,

@@ -17,7 +17,7 @@ function accessiblezen_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
-	
+
 	// Hide the site/blog description
 	$wp_customize->add_setting( 'displayblogname', array(
 		'sanitize_callback' => 'displayblogname_sanitize_checkbox',
@@ -66,7 +66,7 @@ function accessiblezen_post_content_sanitize_radio_buttons( $postcontentinput ) 
         'option1'	=> 'Excerpts',
 		'option2'	=> 'Full content',
     );
- 
+
     if ( array_key_exists( $postcontentinput, $valid ) ) {
         return $postcontentinput;
     } else {
@@ -83,7 +83,7 @@ function accessiblezen_post_content_sanitize_radio_buttons( $postcontentinput ) 
 		'sanitize_callback' => 'accessiblezen_sanitize_dropdown_integer',
     )
 );
- 
+
 $wp_customize->add_control(
 		 new WP_Customize_Control( $wp_customize, 'show_more_posts_link', array(
 				'label' => __( 'Link to this page in Read More Posts on Front Page Template', 'accessiblezen' ),

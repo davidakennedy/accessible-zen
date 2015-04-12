@@ -121,7 +121,7 @@ ol ul {
 	background: #fff url(img/search.png) no-repeat 5px 8px;
 	height: 30px;
 	padding: 0.25em 1.75em 0.25em 0.625em;
-	width: 50%; 
+	width: 50%;
 }
 
 /* Media Queries
@@ -129,7 +129,7 @@ ol ul {
 
 /* Min. width of 600 pixels */
 @media only screen and (min-width: 37.5em) {
-	
+
 	/* COLUMN GRID */
 	.sidebar-widgets {float: right;}
 }

@@ -13,7 +13,7 @@
 		<?php the_post_thumbnail(); ?>
 		<span class="title"><?php _e( 'Featured', 'accessiblezen' ); ?></span>
 		<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-		<?php else : ?>	
+		<?php else : ?>
 		<?php the_post_thumbnail(); ?>
 		<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 		<?php endif; ?>

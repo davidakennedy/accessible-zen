@@ -127,19 +127,19 @@ function accessiblezen_archive_page_title_etc() {
 
 	elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
 		_e( 'Asides', 'accessiblezen' );
-		
+
 	elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
 		_e( 'Audios', 'accessiblezen' );
-		
+
 	elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
 		_e( 'Chats', 'accessiblezen' );
-		
+
 	elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
 		_e( 'Galleries', 'accessiblezen' );
 
 	elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
 		_e( 'Images', 'accessiblezen');
-		
+
 	elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
 		_e( 'Statuses', 'accessiblezen' );
 
@@ -151,10 +151,10 @@ function accessiblezen_archive_page_title_etc() {
 
 	elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
 		_e( 'Links', 'accessiblezen' );
-		
+
 	elseif ( is_post_type_archive() ) :
 		printf( __( '%s', 'accessiblezen' ), '<span>' . post_type_archive_title() . '</span>' );
-		
+
 	elseif ( is_tax() ) :
 		$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 		printf( __( '%s', 'accessiblezen' ), '<span>' . $term->name . '</span>' );
@@ -224,7 +224,7 @@ function accessiblezen_cats_and_tags() {
 			);
 }
 endif; // ends check for accessiblezen_cats_and_tags
- 
+
 if ( ! function_exists( 'get_post_format_archive_link' ) ): {
 /**
  * Prints a link to the Post Format archive page

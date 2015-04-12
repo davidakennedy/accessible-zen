@@ -15,7 +15,7 @@
 				</span>
 				<h2 class="entry-title"><a href="<?php echo esc_url( accessiblezen_get_link_url() ); ?>"><?php the_title(); ?></a></h2>
 			</header>
-			
+
 			<div class="entry-content">
 				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'accessiblezen' ) ); ?>
 			</div><!-- .entry-content -->

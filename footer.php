@@ -20,15 +20,15 @@
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class'      => 'nav', 'depth' => 1 ) ); ?>
 			</nav><!-- .main-navigation -->
 		<?php endif; ?>
-		
-		<?php if ( has_nav_menu( 'secondary' ) ) : ?>	
+
+		<?php if ( has_nav_menu( 'secondary' ) ) : ?>
 			<nav role="navigation" class="secondary-navigation cf">
 				<h2 class="screen-reader-text"><?php _e( 'Secondary Menu', 'accessiblezen' ); ?></h2>
 
 				<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class'      => 'nav', 'depth' => 1 ) ); ?>
 			</nav><!-- .secondary-navigation -->
 		<?php endif; ?>
-		
+
 		<div class="site-info cf">
 			<?php accessiblezen_credits(); ?>
 		</div><!-- .site-info -->

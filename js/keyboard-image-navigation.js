@@ -1,7 +1,7 @@
 /**
  * Keyboard image navigation for image attachments.
  */
- 
+
  jQuery( document ).ready( function( $ ) {
 	$( document ).keydown( function( e ) {
 		var url = false;
