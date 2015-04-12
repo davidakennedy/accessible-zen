@@ -1,6 +1,6 @@
 === Changelog ===
 
-**TBD**
+**April 12, 2015**
 
 Release: Version 1.1.4
 
