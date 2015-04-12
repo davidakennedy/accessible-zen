@@ -7,6 +7,7 @@ Description: The Accessible Zen theme is an accessible, minimalistic, readable, 
 Version: 1.1.4
 License: GNU General Public License
 License URI: license.txt
+Text Domain: accessiblezen
 Tags: white, blue, light, one-column, responsive-layout, accessibility-ready, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 
 Accessible Zen WordPress Theme, (C) 2013-2015 David A. Kennedy.
@@ -217,7 +218,7 @@ h3,
 	letter-spacing: 0.1em;
 	margin-bottom: 0.5em;
 	text-transform: uppercase;
-} 
+}
 h4,
 .h4 {
 	font-size: 1.125em; /* 18px */
@@ -1207,7 +1208,7 @@ a.comment-reply-link:hover {
 	border: 1px solid #008fcc;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
-	border-radius: 3px;	
+	border-radius: 3px;
 	padding: 1.5em 1.5em 0;
 }
 .comment-list li.bypostauthor {
@@ -1344,17 +1345,17 @@ p.comment-form-comment {
 @media only screen and (min-width: 37.5em) {
 	/* Wrapper div */
 	body.custom-background .site { width: 80%; }
-	
+
 	/* COLUMN GRID */
 	.sidebar-widgets { display: inline; float: left; }
-	
+
 	/* 2 COLUMN GRID */
 	.one .sidebar-widgets { width: 93.458%; }
 	.two .sidebar-widgets { width: 43.458%; }
-	
+
 	/* Nav abstraction adjustment */
 	.nav li { display: inline-block; }
-	
+
 	/* Content */
 	.site tr, th, td { padding-right: 1.5em; }
 }
@@ -1374,7 +1375,7 @@ p.comment-form-comment {
   @page { margin: 0.5cm; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
-  
+
   /* Let's turn off unneeded content */
   .skip-container,
   #masthead,
