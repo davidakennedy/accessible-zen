@@ -1,5 +1,11 @@
 === Changelog ===
 
+**May 7, 2015**
+
+Release: Version 1.1.6
+
+* Critical security update: Remove Genericons' `example.html` file due to DOM-based cross-site scripting (XSS) vulnerability. See: https://blog.sucuri.net/2015/05/jetpack-and-twentyfifteen-vulnerable-to-dom-based-xss.html
+
 **April 12, 2015**
 
 Release: Version 1.1.5
