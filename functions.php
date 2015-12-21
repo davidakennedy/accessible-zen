@@ -2,14 +2,14 @@
 /**
  * accessiblezen functions and definitions.
  *
- * @package accessiblezen
- * @since accessiblezen 1.0
+ * @package Accessible_Zen
+ * @since Accessible Zen 1.0
  */
 
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
- * @since accessiblezen 1.0
+ * @since Accessible Zen 1.0
  */
 if ( ! isset( $content_width ) )
 	$content_width = 768; /* pixels */
@@ -22,7 +22,7 @@ if ( ! function_exists( 'accessiblezen_setup' ) ):
  * before the init hook. The init hook is too late for some features, such as indicating
  * support post thumbnails.
  *
- * @since accessiblezen 1.0
+ * @since Accessible Zen 1.0
  */
 function accessiblezen_setup() {
 
@@ -51,9 +51,9 @@ function accessiblezen_setup() {
 	 * Make theme available for translation
 	 * Translations can be filed in the /languages/ directory
 	 * If you're building a theme based on accessiblezen, use a find and replace
-	 * to change 'accessiblezen' to the name of your theme in all the template files
+	 * to change 'accessible-zen' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'accessiblezen', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'accessible-zen' );
 
 	// Switches default core markup for search form, comment form, and comments
 	// to output valid HTML5.
@@ -93,8 +93,8 @@ function accessiblezen_setup() {
 	 * This theme uses wp_nav_menu() in two locations.
 	 */
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'accessiblezen' ),
-		'secondary' => __( 'Secondary Menu', 'accessiblezen' )
+		'primary' => __( 'Primary Menu', 'accessible-zen' ),
+		'secondary' => __( 'Secondary Menu', 'accessible-zen' )
 	) );
 
 	/*
@@ -119,11 +119,11 @@ add_action( 'after_setup_theme', 'accessiblezen_setup' );
 /**
  * Register widgetized area and update sidebar with default widgets
  *
- * @since accessiblezen 1.0
+ * @since Accessible Zen 1.0
  */
 function accessiblezen_widgets_init() {
 	register_sidebar( array(
-		'name' => __( 'Footer Widget Area One', 'accessiblezen' ),
+		'name' => __( 'Footer Widget Area One', 'accessible-zen' ),
 		'id' => 'sidebar-1',
 		'description'   => 'A widget area for the left side of the footer',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -133,7 +133,7 @@ function accessiblezen_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Footer Widget Area Two', 'accessiblezen' ),
+		'name' => __( 'Footer Widget Area Two', 'accessible-zen' ),
 		'id' => 'sidebar-2',
 		'description'   => 'A widget area for the right side of the footer',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -150,7 +150,7 @@ add_action( 'widgets_init', 'accessiblezen_widgets_init' );
  * The use of Noticia Text by default is localized. For languages
  * that use characters not supported by the font, the font can be disabled.
  *
- * @since accessiblezen 1.0
+ * @since Accessible Zen 1.0
  *
  * @return string Font stylesheet or empty string if disabled.
  */
@@ -161,13 +161,13 @@ function accessiblezen_fonts_url() {
 	 * supported by Source Sans Pro, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$merriweather_sans = _x( 'on', 'Merriweather Sans font: on or off', 'accessiblezen' );
+	$merriweather_sans = _x( 'on', 'Merriweather Sans font: on or off', 'accessible-zen' );
 
 	/* Translators: If there are characters in your language that are not
 	 * supported by Bitter, translate this to 'off'. Do not translate into your
 	 * own language.
 	 */
-	$merriweather = _x( 'on', 'Merriweather font: on or off', 'accessiblezen' );
+	$merriweather = _x( 'on', 'Merriweather font: on or off', 'accessible-zen' );
 
 	if ( 'off' !== $merriweather_sans || 'off' !== $merriweather ) {
 		$font_families = array();
@@ -194,7 +194,7 @@ function accessiblezen_fonts_url() {
  *
  * @uses accessiblezen_fonts_url() to get the Google Font stylesheet URL.
  *
- * @since accessiblezen 1.0
+ * @since Accessible Zen 1.0
  *
  * @param string $mce_css CSS path to load in TinyMCE.
  * @return string The filtered CSS paths list.

@@ -2,8 +2,8 @@
 /**
  * The template for displaying posts in the Status post format.
  *
- * @package accessiblezen
- * @since accessiblezen 1.0
+ * @package Accessible_Zen
+ * @since Accessible Zen 1.0
  */
 ?>
 
@@ -11,13 +11,13 @@
 		<div class="status">
 			<header class="entry-header">
 				<span class="title">
-					<?php _e( 'Status', 'accessiblezen' ); ?>
+					<?php _e( 'Status', 'accessible-zen' ); ?>
 				</span>
 				<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 			</header>
 
 			<div class="entry-content">
-				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'accessiblezen' ) ); ?>
+				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'accessible-zen' ) ); ?>
 			</div><!-- .entry-content -->
 		</div><!-- .status -->
 
@@ -26,6 +26,6 @@
 			<span class="post-format-info">
 				<?php echo get_post_format_archive_link(); ?><?php get_post_format_icon(); ?>
 			</span>
-			<?php edit_post_link( __( 'Edit', 'accessiblezen' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php edit_post_link( __( 'Edit', 'accessible-zen' ), '<span class="edit-link">', '</span>' ); ?>
 		</footer><!-- .entry-meta -->
 	</article><!-- #post -->

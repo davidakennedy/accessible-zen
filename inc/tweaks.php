@@ -4,14 +4,14 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package accessiblezen
- * @since accessiblezen 1.0
+ * @package Accessible_Zen
+ * @since Accessible Zen 1.0
  */
 
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  *
- * @since accessiblezen 1.0
+ * @since Accessible Zen 1.0
  */
 function accessiblezen_page_menu_args( $args ) {
 	$args['show_home'] = true;
@@ -22,7 +22,7 @@ add_filter( 'wp_page_menu_args', 'accessiblezen_page_menu_args' );
 /**
  * Adds custom classes to the array of body classes.
  *
- * @since accessiblezen 1.0
+ * @since Accessible Zen 1.0
  */
 function accessiblezen_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author
@@ -79,7 +79,7 @@ add_filter( 'body_class', 'accessiblezen_body_class' );
 /**
  * Filter in a link to a content ID attribute for the next/previous image links on image attachment pages
  *
- * @since accessiblezen 1.0
+ * @since Accessible Zen 1.0
  */
 function accessiblezen_enhanced_image_navigation( $url, $id ) {
 	if ( ! is_attachment() && ! wp_attachment_is_image( $id ) )
@@ -99,6 +99,8 @@ if ( ! function_exists( 'accessiblezen_excerpt_length' ) ) :
  *
  * To override this length in a child theme, remove the filter and add your own
  * function tied to the excerpt_length filter hook.
+ * @since Accessible Zen 1.0
+ * @return integer.
  */
 function accessiblezen_excerpt_length( $length ) {
 	return 100;
@@ -109,14 +111,14 @@ endif; // accessiblezen_excerpt_length
 if ( ! function_exists( 'accessiblezen_continue_reading_link' ) ) :
 /**
  * Returns a "Continue Reading" link for excerpts
- * @since accessiblezen 1.0
+ * @since Accessible Zen 1.0
  * @return string with 'Continue reading' link.
  */
 function accessiblezen_continue_reading_link() {
 	return sprintf( '<a href="%1$s" class="more-link">%2$s</a>',
 		esc_url( get_permalink( get_the_ID() ) ),
 		/* translators: %s: Name of current post */
-		sprintf( esc_html__( 'Continue reading %s', 'accessiblezen' ), get_the_title( get_the_ID() ) )
+		sprintf( esc_html__( 'Continue reading %s', 'accessible-zen' ), get_the_title( get_the_ID() ) )
 		);
 }
 endif; // accessiblezen_continue_reading_link
@@ -127,7 +129,7 @@ if ( ! function_exists( 'accessiblezen_auto_excerpt_more' ) && ! is_admin() ) :
  *
  * To override this in a child theme, remove the filter and add your own
  * function tied to the excerpt_more filter hook.
- * @since accessiblezen 1.0
+ * @since Accessible Zen 1.0
  * @return string 'Continue reading' link prepended with an ellipsis.
  */
 function accessiblezen_auto_excerpt_more( $more ) {
@@ -139,7 +141,7 @@ endif; // accessiblezen_auto_excerpt_more
 /**
  * Return the URL for the first link found in the post content.
  *
- * @since accessiblezen 1.0
+ * @since Accessible Zen 1.0
  * @return string|bool URL or false when no link is present.
  */
 function accessiblezen_get_link_url() {

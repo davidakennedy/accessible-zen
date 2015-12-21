@@ -3,8 +3,8 @@
  * The template part used for displaying content for the Archive page template.
  * Template Name: Archives Template
  *
- * @package accessiblezen
- * @since accessiblezen 1.0
+ * @package Accessible_Zen
+ * @since Accessible Zen 1.0
  */
 
 get_header(); ?>

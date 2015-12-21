@@ -4,8 +4,8 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package accessiblezen
- * @since accessiblezen 1.0
+ * @package Accessible_Zen
+ * @since Accessible Zen 1.0
  */
 
 get_header(); ?>

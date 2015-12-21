@@ -2,8 +2,8 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package accessiblezen
- * @since accessiblezen 1.0
+ * @package Accessible_Zen
+ * @since Accessible Zen 1.0
  */
 
 get_header(); ?>

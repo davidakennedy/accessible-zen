@@ -2,8 +2,8 @@
 /**
  * The template used for displaying page content in page.php.
  *
- * @package accessiblezen
- * @since accessiblezen 1.0
+ * @package Accessible_Zen
+ * @since Accessible Zen 1.0
  */
 ?>
 
@@ -14,7 +14,7 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'hellozen' ), 'after' => '</div>' ) ); ?>
-		<?php edit_post_link( __( 'Edit', 'hellozen' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'accessible-zen' ), 'after' => '</div>' ) ); ?>
+		<?php edit_post_link( __( 'Edit', 'accessible-zen' ), '<span class="edit-link">', '</span>' ); ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
