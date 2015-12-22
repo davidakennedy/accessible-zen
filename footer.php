@@ -15,7 +15,7 @@
 	<footer id="colophon" class="site-footer cf" role="contentinfo">
 		<?php if ( has_nav_menu( 'primary' ) ) : ?>
 			<nav role="navigation" class="main-navigation cf">
-				<h2 class="screen-reader-text"><?php _e( 'Main Menu', 'accessible-zen' ); ?></h2>
+				<h2 class="screen-reader-text"><?php esc_html_e( 'Main Menu', 'accessible-zen' ); ?></h2>
 
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class'      => 'nav', 'depth' => 1 ) ); ?>
 			</nav><!-- .main-navigation -->
@@ -23,7 +23,7 @@
 
 		<?php if ( has_nav_menu( 'secondary' ) ) : ?>
 			<nav role="navigation" class="secondary-navigation cf">
-				<h2 class="screen-reader-text"><?php _e( 'Secondary Menu', 'accessible-zen' ); ?></h2>
+				<h2 class="screen-reader-text"><?php esc_html_e( 'Secondary Menu', 'accessible-zen' ); ?></h2>
 
 				<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class'      => 'nav', 'depth' => 1 ) ); ?>
 			</nav><!-- .secondary-navigation -->
@@ -34,7 +34,7 @@
 		</div><!-- .site-info -->
 	</footer><!-- #colophon .site-footer -->
 	<div class="skip-container cf">
-		<a class="skip-link" href="#page"><?php _e( '&uarr; Back to the Top', 'accessible-zen' ); ?></a>
+		<a class="skip-link" href="#page"><?php esc_html_e( '&uarr; Back to the Top', 'accessible-zen' ); ?></a>
 	</div><!-- .skip-container -->
 </div><!-- #page .hfeed .site -->
 
