@@ -25,13 +25,6 @@ if ( ! function_exists( 'accessiblezen_setup' ) ):
  * @since Accessible Zen 1.0
  */
 function accessiblezen_setup() {
-
-	/**
-	 * Accessible Zen only works in WordPress 3.6 or later.
-	 */
-	if ( version_compare( $GLOBALS['wp_version'], '3.6-alpha', '<' ) )
-		require get_template_directory() . '/inc/back-compat.php';
-
 	/**
 	 * Custom template tags for this theme.
 	 */
