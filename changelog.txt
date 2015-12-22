@@ -10,6 +10,7 @@ Release: Version 1.1.7
 * [Makes package information consistent across all files](https://github.com/davidakennedy/accessible-zen/issues/71).
 * [Makes some spaces vs. tabs issues consistent](https://github.com/davidakennedy/accessible-zen/issues/71).
 * Remove unneeded backward compatibility call in `functions.php` file.
+* Update screenshot to be retina ready.
 
 **May 7, 2015**
 
