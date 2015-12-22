@@ -28,7 +28,7 @@
 <div id="page" class="hfeed site cf">
 	<?php do_action( 'before' ); ?>
 	<div class="skip-container cf">
-		<a class="skip-link screen-reader-text focusable" href="#main"><?php _e( '&darr; Skip to Main Content', 'accessible-zen' ); ?></a>
+		<a class="skip-link screen-reader-text focusable" href="#main"><?php esc_html_e( '&darr; Skip to Main Content', 'accessible-zen' ); ?></a>
 	</div><!-- .skip-container -->
 	<header id="masthead" class="site-header cf" role="banner">
 		<div class="site-banner">
