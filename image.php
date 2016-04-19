@@ -20,23 +20,23 @@ get_header(); ?>
 						<div class="entry-meta">
 							<?php
 								$metadata = wp_get_attachment_metadata();
-							printf( __( 'Published <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> in <a href="%6$s" title="Return to %7$s" rel="gallery">%8$s</a>', 'accessible-zen' ),
-								esc_attr( get_the_date( 'c' ) ),
-								esc_html( get_the_date() ),
-								wp_get_attachment_url(),
-								$metadata['width'],
-								$metadata['height'],
-								get_permalink( $post->post_parent ),
-								esc_attr( strip_tags( get_the_title( $post->post_parent ) ) ),
-								get_the_title( $post->post_parent )
+								printf(
+									wp_kses( __( 'Published <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> at <a href="%3$s">%4$s &times; %5$s</a> in <a href="%6$s" rel="gallery">%7$s</a>', 'accessible-zen' ), array( 'span' => array( 'class' => array() ), 'time' => array( 'class' => array(), 'datetime' => array() ), 'a' => array( 'class' => array(), 'href' => array() ) ) ),
+										esc_attr( get_the_date( 'c' ) ),
+										esc_html( get_the_date() ),
+										esc_url( wp_get_attachment_url() ),
+										absint( $metadata['width'] ),
+										absint( $metadata['height'] ),
+										esc_url( get_permalink( $post->post_parent ) ),
+										get_the_title( $post->post_parent )
 								);
 							?>
-							<?php edit_post_link( __( 'Edit', 'accessible-zen' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' ); ?>
+							<?php edit_post_link( esc_html__( 'Edit', 'accessible-zen' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' ); ?>
 						</div><!-- .entry-meta -->
 
 						<nav id="image-navigation">
-							<span class="previous-image"><?php previous_image_link( false, __( '&larr; Previous', 'accessible-zen' ) ); ?></span>
-							<span class="next-image"><?php next_image_link( false, __( 'Next &rarr;', 'accessible-zen' ) ); ?></span>
+							<span class="previous-image"><?php previous_image_link( false, esc_html__( '&larr; Previous', 'accessible-zen' ) ); ?></span>
+							<span class="next-image"><?php next_image_link( false, esc_html__( 'Next &rarr;', 'accessible-zen' ) ); ?></span>
 						</nav><!-- #image-navigation -->
 					</header><!-- .entry-header -->
 
@@ -69,7 +69,7 @@ get_header(); ?>
 									}
 								?>
 
-								<a href="<?php echo $next_attachment_url; ?>" rel="attachment"><?php
+								<a href="<?php echo esc_url( $next_attachment_url ); ?>" rel="attachment"><?php
 									$attachment_size = apply_filters( 'accessiblezen_attachment_size', array( 1200, 1200 ) ); // Filterable image size.
 									echo wp_get_attachment_image( $post->ID, $attachment_size );
 								?></a>
@@ -83,21 +83,21 @@ get_header(); ?>
 						</div><!-- .entry-attachment -->
 
 						<?php the_content(); ?>
-						<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'accessible-zen' ), 'after' => '</div>' ) ); ?>
+						<?php wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'accessible-zen' ), 'after' => '</div>' ) ); ?>
 
 					</div><!-- .entry-content -->
 
 					<footer class="entry-meta">
 						<?php if ( comments_open() && pings_open() ) : // Comments and trackbacks open ?>
-							<?php printf( __( '<a class="comment-link" href="#respond" title="Post a comment">Post a comment</a> or leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'accessible-zen' ), get_trackback_url() ); ?>
+							<?php printf( wp_kses( __( '<a class="comment-link" href="#respond">Post a comment</a> or leave a trackback: <a class="trackback-link" href="%s" rel="trackback">Trackback URL</a>.' ), 'accessible-zen', array( 'a' => array( 'class' => array() ), array( 'href' => array() ), 'rel' => array() ) ), get_trackback_url() ); ?>
 						<?php elseif ( ! comments_open() && pings_open() ) : // Only trackbacks open ?>
-							<?php printf( __( 'Comments are closed, but you can leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'accessible-zen' ), get_trackback_url() ); ?>
+							<?php printf( wp_kses( __( 'Comments are closed, but you can leave a trackback: <a class="trackback-link" href="%s" rel="trackback">Trackback URL</a>.' ), 'accessible-zen', array( 'a' => array( 'class' => array() ), array( 'href' => array() ), 'rel' => array() ) ), get_trackback_url() ); ?>
 						<?php elseif ( comments_open() && ! pings_open() ) : // Only comments open ?>
-							<?php _e( 'Trackbacks are closed, but you can <a class="comment-link" href="#respond" title="Post a comment">post a comment</a>.', 'accessible-zen' ); ?>
+							<?php wp_kses( _e( 'Trackbacks are closed, but you can <a class="comment-link" href="#respond">post a comment</a>.' ), 'accessible-zen', array( 'a' => array( 'class' => array() ), array( 'href' => array() ) ) ); ?>
 						<?php elseif ( ! comments_open() && ! pings_open() ) : // Comments and trackbacks closed ?>
-							<?php _e( 'Both comments and trackbacks are currently closed.', 'accessible-zen' ); ?>
+							<?php esc_html_e( 'Both comments and trackbacks are currently closed.', 'accessible-zen' ); ?>
 						<?php endif; ?>
-						<?php edit_post_link( __( 'Edit', 'accessible-zen' ), ' <span class="edit-link">', '</span>' ); ?>
+						<?php edit_post_link( esc_html__( 'Edit', 'accessible-zen' ), ' <span class="edit-link">', '</span>' ); ?>
 					</footer><!-- .entry-meta -->
 				</article><!-- #post-<?php the_ID(); ?> -->
 
