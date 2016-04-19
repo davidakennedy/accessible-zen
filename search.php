@@ -14,7 +14,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'accessible-zen' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+					<h1 class="page-title"><?php printf( wp_kses( __( 'Search Results for: %s', 'accessible-zen' ), array( 'span' => array() ) ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<?php accessiblezen_content_nav( 'nav-above' ); ?>
