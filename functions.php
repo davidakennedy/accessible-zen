@@ -42,8 +42,8 @@ function accessiblezen_setup() {
 
 	/**
 	 * Make theme available for translation
-	 * Translations can be filed in the /languages/ directory
-	 * If you're building a theme based on accessiblezen, use a find and replace
+	 * Translations can be filed on https://translate.wordpress.org/
+	 * If you're building a theme based on Accessible Zen, use a find and replace
 	 * to change 'accessible-zen' to the name of your theme in all the template files
 	 */
 	load_theme_textdomain( 'accessible-zen' );
