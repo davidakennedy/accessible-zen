@@ -86,8 +86,8 @@ function accessiblezen_setup() {
 	 * This theme uses wp_nav_menu() in two locations.
 	 */
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'accessible-zen' ),
-		'secondary' => __( 'Secondary Menu', 'accessible-zen' )
+		'primary' => esc_html__( 'Primary Menu', 'accessible-zen' ),
+		'secondary' => esc_html__( 'Secondary Menu', 'accessible-zen' )
 	) );
 
 	/*
@@ -116,9 +116,9 @@ add_action( 'after_setup_theme', 'accessiblezen_setup' );
  */
 function accessiblezen_widgets_init() {
 	register_sidebar( array(
-		'name' => __( 'Footer Widget Area One', 'accessible-zen' ),
+		'name' => esc_html__( 'Footer Widget Area One', 'accessible-zen' ),
 		'id' => 'sidebar-1',
-		'description'   => 'A widget area for the left side of the footer',
+		'description'   => esc_html__( 'A widget area for the left side of the footer', 'accessible-zen' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h2 class="widget-title">',
@@ -126,9 +126,9 @@ function accessiblezen_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Footer Widget Area Two', 'accessible-zen' ),
+		'name' => esc_html__( 'Footer Widget Area Two', 'accessible-zen' ),
 		'id' => 'sidebar-2',
-		'description'   => 'A widget area for the right side of the footer',
+		'description'   => esc_html__( 'A widget area for the right side of the footer', 'accessible-zen' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h2 class="widget-title">',
@@ -154,13 +154,13 @@ function accessiblezen_fonts_url() {
 	 * supported by Source Sans Pro, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$merriweather_sans = _x( 'on', 'Merriweather Sans font: on or off', 'accessible-zen' );
+	$merriweather_sans = esc_html_x( 'on', 'Merriweather Sans font: on or off', 'accessible-zen' );
 
 	/* Translators: If there are characters in your language that are not
 	 * supported by Bitter, translate this to 'off'. Do not translate into your
 	 * own language.
 	 */
-	$merriweather = _x( 'on', 'Merriweather font: on or off', 'accessible-zen' );
+	$merriweather = esc_html_x( 'on', 'Merriweather font: on or off', 'accessible-zen' );
 
 	if ( 'off' !== $merriweather_sans || 'off' !== $merriweather ) {
 		$font_families = array();
