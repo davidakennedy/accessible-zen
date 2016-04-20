@@ -22,27 +22,27 @@ function accessiblezen_content_nav( $nav_id ) {
 		$nav_class = 'site-navigation post-navigation cf';
 
 	?>
-	<nav role="navigation" id="<?php echo $nav_id; ?>" class="<?php echo $nav_class; ?>">
-		<h2 class="screen-reader-text"><?php _e( 'Post navigation', 'accessible-zen' ); ?></h2>
+	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo esc_attr( $nav_class ); ?>">
+		<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'accessible-zen' ); ?></h2>
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
-		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( 'Previous Post: ', 'Previous post link', 'accessible-zen' ) . '</span> %title' ); ?>
-		<?php next_post_link( '<div class="nav-next">%link</div>', '<span class="meta-nav">' . _x( 'Next Post: ', 'Next post link', 'accessible-zen' ) . '</span> %title' ); ?>
+		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . esc_html_x( 'Previous Post: ', 'Previous post link', 'accessible-zen' ) . '</span>%title' ); ?>
+		<?php next_post_link( '<div class="nav-next">%link</div>', '<span class="meta-nav">' . esc_html_x( 'Next Post: ', 'Next post link', 'accessible-zen' ) . '</span>%title' ); ?>
 
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 		<?php if ( get_next_posts_link() ) : ?>
-		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'accessible-zen' ) ); ?></div>
+		<div class="nav-previous"><?php next_posts_link( wp_kses( __( '<span class="meta-nav">&larr;</span> Older posts', 'accessible-zen' ), array( 'span' => array() ) ) ); ?></div>
 		<?php endif; ?>
 
 		<?php if ( get_previous_posts_link() ) : ?>
-		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'accessible-zen' ) ); ?></div>
+		<div class="nav-next"><?php previous_posts_link( wp_kses( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'accessible-zen' ), array( 'span' => array() ) ) ); ?></div>
 		<?php endif; ?>
 
 	<?php endif; ?>
 
-	</nav><!-- #<?php echo $nav_id; ?> -->
+	</nav><!-- #<?php echo esc_attr( $nav_id ); ?> -->
 	<?php
 }
 endif; // ends check for accessiblezen_content_nav
@@ -55,11 +55,11 @@ if ( ! function_exists( 'accessiblezen_author' ) ) :
  */
 function accessiblezen_author() {
 	$byline = sprintf(
-		_x( 'By %s', 'post author', 'accessible-zen' ),
+		esc_html_x( 'By %s', 'post author', 'accessible-zen' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="byline"> ' . $byline . '</span>';
+	echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
 }
 endif; // ends check for accessiblezen_author
 
@@ -83,11 +83,11 @@ function accessiblezen_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		_x( 'Posted: %s', 'post date', 'accessible-zen' ),
+		esc_html_x( 'Posted: %s', 'post date', 'accessible-zen' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>.'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span>';
+	echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
 }
 endif; // ends check for accessiblezen_posted_on
 
@@ -109,7 +109,7 @@ function accessiblezen_archive_page_title_etc() {
 		 * what author we're dealing with (if that is the case).
 		*/
 		the_post();
-		printf( __( 'Author: %s', 'accessible-zen' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' );
+		printf( esc_html__( 'Author: %s', 'accessible-zen' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' );
 		/* Since we called the_post() above, we need to
 		 * rewind the loop back to the beginning that way
 		 * we can run the loop properly, in full.
@@ -117,50 +117,50 @@ function accessiblezen_archive_page_title_etc() {
 		rewind_posts();
 
 	elseif ( is_day() ) :
-		printf( __( 'Day: %s', 'accessible-zen' ), '<span>' . get_the_date() . '</span>' );
+		printf( esc_html__( 'Day: %s', 'accessible-zen' ), '<span>' . get_the_date() . '</span>' );
 
 	elseif ( is_month() ) :
-		printf( __( 'Month: %s', 'accessible-zen' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+		printf( esc_html__( 'Month: %s', 'accessible-zen' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
 
 	elseif ( is_year() ) :
-		printf( __( 'Year: %s', 'accessible-zen' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+		printf( esc_html__( 'Year: %s', 'accessible-zen' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 
 	elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-		_e( 'Asides', 'accessible-zen' );
+		esc_html_e( 'Asides', 'accessible-zen' );
 
 	elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
-		_e( 'Audios', 'accessible-zen' );
+		esc_html_e( 'Audios', 'accessible-zen' );
 
 	elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
-		_e( 'Chats', 'accessible-zen' );
+		esc_html_e( 'Chats', 'accessible-zen' );
 
 	elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
-		_e( 'Galleries', 'accessible-zen' );
+		esc_html_e( 'Galleries', 'accessible-zen' );
 
 	elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-		_e( 'Images', 'accessible-zen');
+		esc_html_e( 'Images', 'accessible-zen');
 
 	elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
-		_e( 'Statuses', 'accessible-zen' );
+		esc_html_e( 'Statuses', 'accessible-zen' );
 
 	elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-		_e( 'Videos', 'accessible-zen' );
+		esc_html_e( 'Videos', 'accessible-zen' );
 
 	elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-		_e( 'Quotes', 'accessible-zen' );
+		esc_html_e( 'Quotes', 'accessible-zen' );
 
 	elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-		_e( 'Links', 'accessible-zen' );
+		esc_html_e( 'Links', 'accessible-zen' );
 
 	elseif ( is_post_type_archive() ) :
-		printf( __( '%s', 'accessible-zen' ), '<span>' . post_type_archive_title() . '</span>' );
+		printf( esc_html__( '%s', 'accessible-zen' ), '<span>' . post_type_archive_title() . '</span>' );
 
 	elseif ( is_tax() ) :
 		$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
-		printf( __( '%s', 'accessible-zen' ), '<span>' . $term->name . '</span>' );
+		printf( esc_html__( '%s', 'accessible-zen' ), '<span>' . esc_html( $term->name ) . '</span>' );
 
 	else :
-		_e( 'Archives', 'accessible-zen' );
+		esc_html_e( 'Archives', 'accessible-zen' );
 
 	endif;
 }
@@ -177,8 +177,8 @@ function accessiblezen_term_description() {
 // Show an optional term description.
 $term_description = term_description();
 
-if ( is_category() || is_tag || is_tax && ! empty( $term_description ) ) :
-	printf( '<div class="taxonomy-description">%s</div>', $term_description, 'accessible-zen' );
+if ( is_category() || is_tag() || is_tax() && ! empty( $term_description ) ) :
+	printf( '<div class="taxonomy-description">%s</div>', $term_description, 'accessible-zen' ); // WPCS: XSS OK.
 endif;
 
 }
@@ -193,35 +193,30 @@ if ( ! function_exists( 'accessiblezen_cats_and_tags' ) ) :
 function accessiblezen_cats_and_tags() {
 
 			/* translators: used between list items, there is a space after the comma */
-			$category_list = get_the_category_list( __( ', ', 'accessible-zen' ) );
+			$category_list = get_the_category_list( esc_html__( ', ', 'accessible-zen' ) );
 
 			/* translators: used between list items, there is a space after the comma */
-			$tag_list = get_the_tag_list( '', __( ', ', 'accessible-zen' ) );
+			$tag_list = get_the_tag_list( '', esc_html__( ', ', 'accessible-zen' ) );
 
 			if ( ! accessiblezen_categorized_blog() ) {
 				// This blog only has 1 category so we just need to worry about tags in the meta text
 				if ( '' != $tag_list ) {
-					$meta_text = __( '<span class="post-tags">Tagged: %2$s.</span> <span class="post-permalink">Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.</span>', 'accessible-zen' );
+					$meta_text = wp_kses( __( '<span class="post-tags">Tagged: %2$s.</span> <span class="post-permalink">Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.</span>', 'accessible-zen' ), array( 'span' => array( 'class' => array() ), 'a' => array( 'href' => array(), 'rel' => array() ) ) );
 				} else {
-					$meta_text = __( '<span class="post-permalink">Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.</span>', 'accessible-zen' );
+					$meta_text = wp_kses( __( '<span class="post-permalink">Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.</span>', 'accessible-zen' ), array( 'span' => array( 'class' => array() ), 'a' => array( 'href' => array(), 'rel' => array() ) ) );
 				}
 
 			} else {
 				// But this blog has loads of categories so we should probably display them here
 				if ( '' != $tag_list ) {
-					$meta_text = __( '<span class="post-categories">Posted in: %1$s.</span> <span class="post-tags">Tagged: %2$s.</span> <span class="post-permalink">Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.</span>', 'accessible-zen' );
+					$meta_text = wp_kses( __( '<span class="post-categories">Posted in: %1$s.</span> <span class="post-tags">Tagged: %2$s.</span> <span class="post-permalink">Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.</span>', 'accessible-zen' ), array( 'span' => array( 'class' => array() ), 'a' => array( 'href' => array(), 'rel' => array() ) ) );
 				} else {
-					$meta_text = __( '<span class="post-categories">Posted in: %1$s.</span> <span class="post-permalink">Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.</span>', 'accessible-zen' );
+					$meta_text = wp_kses( __( '<span class="post-categories">Posted in: %1$s.</span> <span class="post-permalink">Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.</span>', 'accessible-zen' ), array( 'span' => array( 'class' => array() ), 'a' => array( 'href' => array(), 'rel' => array() ) ) );
 				}
 
 			} // end check for categories on this blog
 
-			printf(
-				$meta_text,
-				$category_list,
-				$tag_list,
-				get_permalink()
-			);
+			printf( $meta_text, $category_list, $tag_list, get_permalink() ); // WPCS: XSS OK.
 }
 endif; // ends check for accessiblezen_cats_and_tags
 
@@ -233,11 +228,11 @@ if ( ! function_exists( 'get_post_format_archive_link' ) ): {
  */
 function get_post_format_archive_link() {
 	$get_post_format_archive_link = sprintf(
-		_x( 'Format: %s', 'post-format-archive-link', 'accessible-zen' ),
+		esc_html_x( 'Format: %s', 'post-format-archive-link', 'accessible-zen' ),
 		'<a href="' . esc_url( get_post_format_link( get_post_format() ) ) . '">' . get_post_format_string( get_post_format() ) . '</a>'
 	);
 
-	echo '<span class="post-format-archive-link">' . $get_post_format_archive_link . '</span>';
+	echo '<span class="post-format-archive-link">' . $get_post_format_archive_link . '</span>'; // WPCS: XSS OK.
 }
 }
 endif; // ends check for get_post_format_archive_link
@@ -250,31 +245,31 @@ if ( ! function_exists( 'get_post_format_icon' ) ): {
  */
 function get_post_format_icon() {
 	if ( has_post_format('aside') ) {
-		printf('<span class="genericon genericon-aside"></span>');
+		printf( '<span class="genericon genericon-aside"></span>' );
 	}
 	elseif ( has_post_format('audio') ) {
-		printf('<span class="genericon genericon-audio"></span>');
+		printf( '<span class="genericon genericon-audio"></span>' );
 	}
 	elseif ( has_post_format('chat') ) {
-		printf('<span class="genericon genericon-chat"></span>');
+		printf( '<span class="genericon genericon-chat"></span>' );
 	}
 	elseif ( has_post_format('gallery') ) {
-		printf('<span class="genericon genericon-gallery"></span>');
+		printf( '<span class="genericon genericon-gallery"></span>' );
 	}
 	elseif ( has_post_format('image') ) {
-		printf('<span class="genericon genericon-image"></span>');
+		printf( '<span class="genericon genericon-image"></span>' );
 	}
 	elseif ( has_post_format('link') ) {
-		printf('<span class="genericon genericon-link"></span>');
+		printf( '<span class="genericon genericon-link"></span>' );
 	}
 	elseif ( has_post_format('quote') ) {
-		printf('<span class="genericon genericon-quote"></span>');
+		printf( '<span class="genericon genericon-quote"></span>' );
 	}
 	elseif ( has_post_format('standard') ) {
-		printf('<span class="genericon genericon-standard"></span>');
+		printf( '<span class="genericon genericon-standard"></span>' );
 	}
 	elseif ( has_post_format('status') ) {
-		printf('<span class="genericon genericon-status"></span>');
+		printf( '<span class="genericon genericon-status"></span>' );
 	}
 	elseif ( has_post_format('video') ) {
 		printf('<span class="genericon genericon-video"></span>');
@@ -322,13 +317,18 @@ function accessiblezen_category_transient_flusher() {
 add_action( 'edit_category', 'accessiblezen_category_transient_flusher' );
 add_action( 'save_post', 'accessiblezen_category_transient_flusher' );
 
+/**
+ * Adds credits to the footer.
+ *
+ * @since Accessible Zen 1.0
+ */
 function accessiblezen_credits() {
 	$credits = printf(
 		'<p>Made with <a href="%1$s">%2$s</a> &amp; <a href="%3$s">%4$s</a>.</p>',
 		esc_url( 'http://wordpress.org' ),
-		__( 'WordPress', 'accessible-zen' ),
+		esc_html__( 'WordPress', 'accessible-zen' ),
 		esc_url( 'http://davidakennedy.com/projects/accessible-zen' ),
-		__( 'Accessible Zen', 'accessible-zen' )
+		esc_html__( 'Accessible Zen', 'accessible-zen' )
 	);
 	return $credits;
 }
