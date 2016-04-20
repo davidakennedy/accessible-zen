@@ -57,7 +57,7 @@ function accessiblezen_footer_sidebar_class() {
 	}
 
 	if ( $class )
-		echo 'class="' . $class . '"';
+		echo 'class="' . $class . '"'; // WPCS: XSS OK.
 }
 
 /**
