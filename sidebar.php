@@ -16,7 +16,7 @@
 
 	// If we get this far, we have widgets. Let do this.
 	?>
-		<div id="secondary" <?php accessiblezen_footer_sidebar_class(); ?> role="complementary">
+		<aside id="secondary" <?php accessiblezen_footer_sidebar_class(); ?> role="complementary">
 			<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 			<div class="first sidebar-widgets cf">
 					<?php dynamic_sidebar( 'sidebar-1' ); ?>
@@ -28,4 +28,4 @@
 					<?php dynamic_sidebar( 'sidebar-2' ); ?>
 			</div><!-- .second -->
 			<?php endif; ?>
-	</div><!-- #secondary -->
+	</aside><!-- #secondary -->

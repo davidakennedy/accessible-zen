@@ -119,8 +119,8 @@ function accessiblezen_widgets_init() {
 		'name' => esc_html__( 'Footer Widget Area One', 'accessible-zen' ),
 		'id' => 'sidebar-1',
 		'description'   => esc_html__( 'A widget area for the left side of the footer', 'accessible-zen' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => "</div>",
 		'before_title' => '<h2 class="widget-title">',
 		'after_title' => '</h2>',
 	) );
@@ -129,8 +129,8 @@ function accessiblezen_widgets_init() {
 		'name' => esc_html__( 'Footer Widget Area Two', 'accessible-zen' ),
 		'id' => 'sidebar-2',
 		'description'   => esc_html__( 'A widget area for the right side of the footer', 'accessible-zen' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => "</div>",
 		'before_title' => '<h2 class="widget-title">',
 		'after_title' => '</h2>',
 	) );
