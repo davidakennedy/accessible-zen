@@ -11,7 +11,7 @@
 	<header class="entry-header">
 		<?php if ( is_sticky() ) : ?>
 		<?php the_post_thumbnail(); ?>
-		<span class="title"><?php _e( 'Featured', 'accessible-zen' ); ?></span>
+		<span class="title"><?php esc_html_e( 'Featured', 'accessible-zen' ); ?></span>
 		<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 		<?php else : ?>
 		<?php the_post_thumbnail(); ?>
@@ -32,17 +32,17 @@
 	<div class="entry-content">
 		<?php
 		if ( get_theme_mod( 'accessiblezen_post_content' ) == '' || 'option2' ) :
-		the_content( __( 'Continue reading ', 'accessible-zen' ) . the_title( '', '', false ) . '' );
+		the_content( esc_html__( 'Continue reading ', 'accessible-zen' ) . the_title( '', '', false ) . '' );
 		else :
 		the_excerpt();
 		endif;
 		?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'accessible-zen' ), 'after' => '</div>' ) ); ?>
+		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'accessible-zen' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 
 	<footer class="entry-meta">
 		<?php accessiblezen_posted_on(); ?>
-		<?php edit_post_link( __( 'Edit', 'accessible-zen' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( esc_html__( 'Edit', 'accessible-zen' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->

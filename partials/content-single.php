@@ -19,13 +19,13 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'accessible-zen' ), 'after' => '</div>' ) ); ?>
+		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'accessible-zen' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
 		<?php accessiblezen_posted_on(); ?>
 		<?php accessiblezen_cats_and_tags(); ?>
-		<?php edit_post_link( __( 'Edit', 'accessible-zen' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( esc_html__( 'Edit', 'accessible-zen' ), '<span class="edit-link">', '</span>' ); ?>
 		<?php if ( is_single() && get_the_author_meta( 'description' ) && is_multi_author() ) : ?>
 			<?php get_template_part( 'partials/author-bio' ); ?>
 		<?php endif; ?>
