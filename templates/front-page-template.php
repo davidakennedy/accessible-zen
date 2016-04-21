@@ -17,7 +17,7 @@ get_header(); ?>
 
 				<?php while ( have_posts() ) : the_post(); // The  Main Loop ?>
 
-					<?php if( !empty( $post->post_content) ) {
+					<?php if ( ! empty( $post->post_content) ) {
 					// Grab our content, if not empty
 					get_template_part( 'partials/content', 'page' );
 					} ?>
@@ -50,7 +50,7 @@ get_header(); ?>
 						$value = get_theme_mod( 'show_more_posts_link' );
 						if ( 'default' != get_theme_mod( 'show_more_posts_link' ) ) : ?>
 
-						<span class="h6"><a href="<?php echo get_permalink($value); ?>" rel="bookmark"><?php _e( 'Read more posts', 'accessible-zen' ); ?></a></span>
+						<span class="h6"><a href="<?php echo esc_url( get_permalink( $value ) ); ?>" rel="bookmark"><?php esc_html_e( 'Read more posts', 'accessible-zen' ); ?></a></span>
 						<?php endif; ?>
 
 					<?php endwhile; // end of the new loop. ?>
