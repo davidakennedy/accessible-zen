@@ -29,7 +29,7 @@
 		<footer class="entry-meta">
 			<?php accessiblezen_posted_on(); ?>
 			<span class="post-format-info">
-				<?php echo get_post_format_archive_link(); // WPCS: XSS OK. ?>
+				<?php get_post_format_archive_link(); ?>
 				<?php get_post_format_icon(); ?>
 			</span>
 			<?php edit_post_link( __( 'Edit', 'accessible-zen' ), '<span class="edit-link">', '</span>' ); ?>
