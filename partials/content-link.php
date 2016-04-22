@@ -8,7 +8,7 @@
 ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<div class="aside">
+		<div class="link">
 			<header class="entry-header">
 				<span class="title">
 					<?php esc_html_e( 'Link', 'accessible-zen' ); ?>
@@ -24,7 +24,7 @@
 					);
 				?>
 			</div><!-- .entry-content -->
-		</div><!-- .aside -->
+		</div><!-- .link -->
 
 		<footer class="entry-meta">
 			<?php accessiblezen_posted_on(); ?>
