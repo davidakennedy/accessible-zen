@@ -26,21 +26,6 @@ if ( ! function_exists( 'accessiblezen_setup' ) ):
  */
 function accessiblezen_setup() {
 	/**
-	 * Custom template tags for this theme.
-	 */
-	require( get_template_directory() . '/inc/template-tags.php' );
-
-	/**
-	 * Custom functions that act independently of the theme templates
-	 */
-	require( get_template_directory() . '/inc/tweaks.php' );
-
-	/**
-	 * Customizer additions
-	 */
-	require( get_template_directory() . '/inc/customizer.php' );
-
-	/**
 	 * Make theme available for translation
 	 * Translations can be filed on https://translate.wordpress.org/
 	 * If you're building a theme based on Accessible Zen, use a find and replace
@@ -238,3 +223,18 @@ add_action( 'wp_enqueue_scripts', 'accessiblezen_scripts_styles' );
  * Implement the Custom Header feature
  */
 require( get_template_directory() . '/inc/custom-header.php' );
+
+/**
+ * Custom template tags for this theme.
+ */
+require( get_template_directory() . '/inc/template-tags.php' );
+
+/**
+ * Custom functions that act independently of the theme templates
+ */
+require( get_template_directory() . '/inc/tweaks.php' );
+
+/**
+ * Customizer additions
+ */
+require( get_template_directory() . '/inc/customizer.php' );
