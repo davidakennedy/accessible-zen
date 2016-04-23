@@ -179,7 +179,7 @@ function accessiblezen_fonts_url() {
 		$fonts_url = add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" );
 	}
 
-	return $fonts_url;
+	return esc_url_raw( $fonts_url );
 }
 
 /**
