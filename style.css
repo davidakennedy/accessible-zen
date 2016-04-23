@@ -898,6 +898,11 @@ div.callout {
 	margin: 1.5em 0;
 }
 
+/* Vertically align all Genericons */
+.genericon {
+	vertical-align: middle;
+}
+
 /* =Pages
 ----------------------------------------------- */
 /* Archives */
