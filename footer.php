@@ -17,7 +17,7 @@
 			<nav role="navigation" class="main-navigation cf">
 				<h2 class="screen-reader-text"><?php esc_html_e( 'Main Menu', 'accessible-zen' ); ?></h2>
 
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class'      => 'nav', 'depth' => 1 ) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav', 'depth' => 1 ) ); ?>
 			</nav><!-- .main-navigation -->
 		<?php endif; ?>
 
@@ -25,7 +25,7 @@
 			<nav role="navigation" class="secondary-navigation cf">
 				<h2 class="screen-reader-text"><?php esc_html_e( 'Secondary Menu', 'accessible-zen' ); ?></h2>
 
-				<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class'      => 'nav', 'depth' => 1 ) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'nav', 'depth' => 1 ) ); ?>
 			</nav><!-- .secondary-navigation -->
 		<?php endif; ?>
 
