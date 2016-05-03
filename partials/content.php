@@ -43,6 +43,16 @@
 
 	<footer class="entry-meta">
 		<?php accessiblezen_posted_on(); ?>
-		<?php edit_post_link( esc_html__( 'Edit', 'accessible-zen' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php
+			edit_post_link(
+				sprintf(
+					/* translators: %s: Name of current post */
+					esc_html__( 'Edit %s', 'accessible-zen' ),
+					the_title( '<span class="screen-reader-text">"', '"</span>', false )
+				),
+				'<span class="edit-link">',
+				'</span>'
+			);
+		?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->

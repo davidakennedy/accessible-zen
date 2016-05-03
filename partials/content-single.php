@@ -25,7 +25,17 @@
 	<footer class="entry-meta">
 		<?php accessiblezen_posted_on(); ?>
 		<?php accessiblezen_cats_and_tags(); ?>
-		<?php edit_post_link( esc_html__( 'Edit', 'accessible-zen' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php
+			edit_post_link(
+				sprintf(
+					/* translators: %s: Name of current post */
+					esc_html__( 'Edit %s', 'accessible-zen' ),
+					the_title( '<span class="screen-reader-text">"', '"</span>', false )
+				),
+				'<span class="edit-link">',
+				'</span>'
+			);
+		?>
 		<?php if ( is_single() && get_the_author_meta( 'description' ) && is_multi_author() ) : ?>
 			<?php get_template_part( 'partials/author-bio' ); ?>
 		<?php endif; ?>

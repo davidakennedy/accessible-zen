@@ -31,7 +31,17 @@ get_header(); ?>
 										get_the_title( $post->post_parent )
 								);
 							?>
-							<?php edit_post_link( esc_html__( 'Edit', 'accessible-zen' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' ); ?>
+							<?php
+								edit_post_link(
+									sprintf(
+										/* translators: %s: Name of current post */
+										esc_html__( 'Edit %s', 'accessible-zen' ),
+										the_title( '<span class="screen-reader-text">"', '"</span>', false )
+									),
+									'<span class="sep"> | </span> <span class="edit-link">',
+									'</span>'
+								);
+							?>
 						</div><!-- .entry-meta -->
 
 						<nav id="image-navigation">
@@ -117,7 +127,17 @@ get_header(); ?>
 						<?php elseif ( ! comments_open() && ! pings_open() ) : // Comments and trackbacks closed ?>
 							<?php esc_html_e( 'Both comments and trackbacks are currently closed.', 'accessible-zen' ); ?>
 						<?php endif; ?>
-						<?php edit_post_link( esc_html__( 'Edit', 'accessible-zen' ), ' <span class="edit-link">', '</span>' ); ?>
+						<?php
+							edit_post_link(
+								sprintf(
+									/* translators: %s: Name of current post */
+									esc_html__( 'Edit %s', 'accessible-zen' ),
+									the_title( '<span class="screen-reader-text">"', '"</span>', false )
+								),
+								' <span class="edit-link">',
+								'</span>'
+							);
+						?>
 					</footer><!-- .entry-meta -->
 				</article><!-- #post-<?php the_ID(); ?> -->
 
