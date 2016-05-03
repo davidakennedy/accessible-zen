@@ -49,8 +49,8 @@
 			// Are there comments to navigate through?
 			if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
 		?>
-		<nav class="navigation comment-navigation cf" role="navigation">
-			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'accessible-zen' ); ?></h2>
+		<nav class="navigation comment-navigation cf" role="navigation" aria-labelledby="comment-menu-heading">
+			<h2 id="comment-menu-heading" class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'accessible-zen' ); ?></h2>
 			<div class="nav-previous"><?php previous_comments_link( esc_html__( '&larr; Older Comments', 'accessible-zen' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments &rarr;', 'accessible-zen' ) ); ?></div>
 		</nav><!-- .comment-navigation -->

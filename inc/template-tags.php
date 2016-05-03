@@ -22,8 +22,8 @@ function accessiblezen_content_nav( $nav_id ) {
 		$nav_class = 'site-navigation post-navigation cf';
 
 	?>
-	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo esc_attr( $nav_class ); ?>">
-		<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'accessible-zen' ); ?></h2>
+	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo esc_attr( $nav_class ); ?>" aria-labelledby="<?php echo esc_attr( $nav_id ); ?>-post-menu-heading">
+		<h2 id="<?php echo esc_attr( $nav_id ); ?>-post-menu-heading" class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'accessible-zen' ); ?></h2>
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
