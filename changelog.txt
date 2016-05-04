@@ -1,4 +1,4 @@
-T=== Changelog ===
+=== Changelog ===
 
 **May 4, 2016**
 
