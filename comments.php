@@ -57,7 +57,7 @@
 		<?php endif; // Check for comment navigation ?>
 
 		<?php if ( ! comments_open() && get_comments_number() ) : ?>
-		<p class="no-comments"><?php esc_html_e( 'Comments are closed.' , 'accessible-zen' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.' , 'accessible-zen' ); ?></p>
 		<?php endif; ?>
 
 	<?php endif; // have_comments() ?>

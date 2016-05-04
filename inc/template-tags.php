@@ -8,7 +8,7 @@
  * @since Accessible Zen 1.0
  */
 
-if ( ! function_exists( 'accessiblezen_content_nav' ) ):
+if ( ! function_exists( 'accessiblezen_content_nav' ) ) :
 /**
  * Display navigation to next/previous pages when applicable
  *
@@ -91,7 +91,7 @@ function accessiblezen_posted_on() {
 }
 endif; // ends check for accessiblezen_posted_on
 
-if ( ! function_exists( 'accessiblezen_archive_page_title_etc' ) ):
+if ( ! function_exists( 'accessiblezen_archive_page_title_etc' ) ) :
  /**
  * Display info for the page title on the archive page
  *
@@ -166,21 +166,19 @@ function accessiblezen_archive_page_title_etc() {
 }
 endif; // ends check for accessiblezen_archive_page_title_etc
 
-if ( ! function_exists( 'accessiblezen_term_description' ) ):
+if ( ! function_exists( 'accessiblezen_term_description' ) ) :
  /**
  * Display optional term description for category, tag and custom taxonomy pages.
  *
  * @since Accessible Zen 1.1.1
  */
 function accessiblezen_term_description() {
+	// Show an optional term description.
+	$term_description = term_description();
 
-// Show an optional term description.
-$term_description = term_description();
-
-if ( is_category() || is_tag() || is_tax() && ! empty( $term_description ) ) :
-	printf( '<div class="taxonomy-description">%s</div>', $term_description, 'accessible-zen' ); // WPCS: XSS OK.
-endif;
-
+	if ( is_category() || is_tag() || is_tax() && ! empty( $term_description ) ) :
+		printf( '<div class="taxonomy-description">%s</div>', $term_description, 'accessible-zen' ); // WPCS: XSS OK.
+	endif;
 }
 endif; // ends check for accessiblezen_term_description
 
@@ -192,35 +190,35 @@ if ( ! function_exists( 'accessiblezen_cats_and_tags' ) ) :
  */
 function accessiblezen_cats_and_tags() {
 
-			/* translators: used between list items, there is a space after the comma */
-			$category_list = get_the_category_list( esc_html__( ', ', 'accessible-zen' ) );
+	/* translators: used between list items, there is a space after the comma */
+	$category_list = get_the_category_list( esc_html__( ', ', 'accessible-zen' ) );
 
-			/* translators: used between list items, there is a space after the comma */
-			$tag_list = get_the_tag_list( '', esc_html__( ', ', 'accessible-zen' ) );
+	/* translators: used between list items, there is a space after the comma */
+	$tag_list = get_the_tag_list( '', esc_html__( ', ', 'accessible-zen' ) );
 
-			if ( ! accessiblezen_categorized_blog() ) {
-				// This blog only has 1 category so we just need to worry about tags in the meta text
-				if ( '' != $tag_list ) {
-					$meta_text = wp_kses( __( '<span class="post-tags">Tagged: %2$s.</span> <span class="post-permalink">Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.</span>', 'accessible-zen' ), array( 'span' => array( 'class' => array() ), 'a' => array( 'href' => array(), 'rel' => array() ) ) );
-				} else {
-					$meta_text = wp_kses( __( '<span class="post-permalink">Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.</span>', 'accessible-zen' ), array( 'span' => array( 'class' => array() ), 'a' => array( 'href' => array(), 'rel' => array() ) ) );
-				}
+	if ( ! accessiblezen_categorized_blog() ) {
+		// This blog only has 1 category so we just need to worry about tags in the meta text
+		if ( '' != $tag_list ) {
+			$meta_text = wp_kses( __( '<span class="post-tags">Tagged: %2$s.</span> <span class="post-permalink">Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.</span>', 'accessible-zen' ), array( 'span' => array( 'class' => array() ), 'a' => array( 'href' => array(), 'rel' => array() ) ) );
+		} else {
+			$meta_text = wp_kses( __( '<span class="post-permalink">Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.</span>', 'accessible-zen' ), array( 'span' => array( 'class' => array() ), 'a' => array( 'href' => array(), 'rel' => array() ) ) );
+		}
 
-			} else {
-				// But this blog has loads of categories so we should probably display them here
-				if ( '' != $tag_list ) {
-					$meta_text = wp_kses( __( '<span class="post-categories">Posted in: %1$s.</span> <span class="post-tags">Tagged: %2$s.</span> <span class="post-permalink">Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.</span>', 'accessible-zen' ), array( 'span' => array( 'class' => array() ), 'a' => array( 'href' => array(), 'rel' => array() ) ) );
-				} else {
-					$meta_text = wp_kses( __( '<span class="post-categories">Posted in: %1$s.</span> <span class="post-permalink">Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.</span>', 'accessible-zen' ), array( 'span' => array( 'class' => array() ), 'a' => array( 'href' => array(), 'rel' => array() ) ) );
-				}
+	} else {
+		// But this blog has loads of categories so we should probably display them here
+		if ( '' != $tag_list ) {
+			$meta_text = wp_kses( __( '<span class="post-categories">Posted in: %1$s.</span> <span class="post-tags">Tagged: %2$s.</span> <span class="post-permalink">Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.</span>', 'accessible-zen' ), array( 'span' => array( 'class' => array() ), 'a' => array( 'href' => array(), 'rel' => array() ) ) );
+		} else {
+			$meta_text = wp_kses( __( '<span class="post-categories">Posted in: %1$s.</span> <span class="post-permalink">Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.</span>', 'accessible-zen' ), array( 'span' => array( 'class' => array() ), 'a' => array( 'href' => array(), 'rel' => array() ) ) );
+		}
 
-			} // end check for categories on this blog
+	} // end check for categories on this blog
 
-			printf( $meta_text, $category_list, $tag_list, get_permalink() ); // WPCS: XSS OK.
+	printf( $meta_text, $category_list, $tag_list, get_permalink() ); // WPCS: XSS OK.
 }
 endif; // ends check for accessiblezen_cats_and_tags
 
-if ( ! function_exists( 'get_post_format_archive_link' ) ): {
+if ( ! function_exists( 'get_post_format_archive_link' ) ) :
 /**
  * Prints a link to the Post Format archive page
  * Use: echo get_post_format_archive_link();
@@ -234,10 +232,9 @@ function get_post_format_archive_link() {
 
 	echo '<span class="post-format-archive-link">' . $get_post_format_archive_link . '</span>'; // WPCS: XSS OK.
 }
-}
 endif; // ends check for get_post_format_archive_link
 
-if ( ! function_exists( 'get_post_format_icon' ) ): {
+if ( ! function_exists( 'get_post_format_icon' ) ) :
 /**
  * Prints the markup for the genericon icon font
  *
@@ -274,7 +271,6 @@ function get_post_format_icon() {
 	elseif ( has_post_format('video') ) {
 		printf('<span class="genericon genericon-video"></span>');
 	}
-}
 }
 endif; // ends check for get_post_format_icon
 
