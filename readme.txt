@@ -15,12 +15,12 @@ Inspired by Leo Babauta's [work](http://zenhabits.net/) and [theme](http://zenha
 * Has a simple one-column layout, and no main menu in the `header` section of the site so users can get to your content quickly. But it does include an invisible (visible on keyboard focus) skip link for screen reader and keyboard users.
 * Features the lovely [Merriweather Sans](http://www.google.com/fonts/specimen/Merriweather+Sans) and [Merriweather](hhttp://www.google.com/fonts/specimen/Merriweather).
 * By default, Accessible Zen will display the site owner’s [Gravatar](http://en.gravatar.com/) in the header. You can replace this by uploading a Custom Header Image in Appearance -> Header, or you can remove it completely by selecting Remove Header Image.
-* Features all nine [post formats](http://codex.wordpress.org/Post_Formats).
+* Features all nine [post formats](https://codex.wordpress.org/Post_Formats).
 * Shows menus only when you need them. Accessible Zen doesn’t display a menu as a default to keep it as simple as possible. Of course, if your site needs a menu you can easily set up a Custom Menu in Appearance -> Menus. The theme features two menus, which display in the `footer` section of the site.
 * Tight integration with the [WordPress Theme Customizer](https://codex.wordpress.org/Theme_Customization_API), allowing site owners to edit the theme's appearance on the fly. They can show/hide the site description, display excerpts or full content on archive pages and more.
 * Includes two page templates: an archives template, which features an archive of posts in different ways; a front page template, which allows site owners to feature content with unique styling. Plus, the page shows only one post by default, allowing users to focus on your latest and greatest content.
 * Incorporates the font icon, [Genericons](http://genericons.com/) in a few spots throughout the theme.
-* Treats the [WordPress except](http://codex.wordpress.org/Excerpt) and [Read More tag](http://codex.wordpress.org/Customizing_the_Read_More) with care, and displays the post title so excerpts output like this: `Continue reading Post Title`
+* Treats the [WordPress except](https://codex.wordpress.org/Excerpt) and [Read More tag](https://codex.wordpress.org/Customizing_the_Read_More) with care, and displays the post title so excerpts output like this: `Continue reading Post Title`
 
 == Demo ==
 

@@ -1,14 +1,14 @@
 T=== Changelog ===
 
-**December 15, 2015**
+**May 4, 2016**
 
-Release: Version 1.1.7
+Release: Version 1.2
 
 * [Remove support for `wp_title` for rendering title tag and fix bug in theme](https://github.com/davidakennedy/accessible-zen/issues/70).
 * [Make theme compatible with WordPress.org language packs](https://github.com/davidakennedy/accessible-zen/issues/71).
-* [Also fixes some wrong text domains](https://github.com/davidakennedy/accessible-zen/issues/71).
-* [Makes package information consistent across all files](https://github.com/davidakennedy/accessible-zen/issues/71).
-* [Makes some spaces vs. tabs issues consistent](https://github.com/davidakennedy/accessible-zen/issues/71).
+* [Fix some wrong text domains](https://github.com/davidakennedy/accessible-zen/issues/71).
+* [Make package information consistent across all files](https://github.com/davidakennedy/accessible-zen/issues/71).
+* [Make some spaces vs. tabs issues consistent](https://github.com/davidakennedy/accessible-zen/issues/71).
 * Remove unneeded backward compatibility call in `functions.php` file.
 * Update screenshot to be retina ready.
 * [Escape all output, including translations](https://github.com/davidakennedy/accessible-zen/issues/72).

@@ -52,7 +52,7 @@ Accessible Zen has tight integration with the WordPress Theme Customizer, allowi
 
 Full Content means that on your archive pages, like the blog page, the entire post content will be displayed. Select Full Content if you’d prefer this. It’s the default setting.
 
-Excerpts means that on your archive pages, like the blog page, the except will be displayed. This is a manually set, handcrafted summary of your posts. You can read more about [excepts in WordPress on the Codex](http://codex.wordpress.org/Posts#Descriptions_of_Post_Fields). By default, your category archive, tag archive, author archive, day archive, month archive, year archive and search pages show excepts by default. This does not change by selecting either Full Content or Excerpts.
+Excerpts means that on your archive pages, like the blog page, the except will be displayed. This is a manually set, handcrafted summary of your posts. You can read more about [excepts in WordPress on the Codex](https://codex.wordpress.org/Posts#Descriptions_of_Post_Fields). By default, your category archive, tag archive, author archive, day archive, month archive, year archive and search pages show excepts by default. This does not change by selecting either Full Content or Excerpts.
 
 **Read More Link** (Under the Static Front Page Setting, when a static page is selected): The Read More Posts Link takes advantage of one of Accessible Zen’s page templates. It’s an option you only need to worry about if you’re using the Front Page Template. It allows you to add an additional link after your post on the Front Page Template. That link will say: “Read More Posts”
 
