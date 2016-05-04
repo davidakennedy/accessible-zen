@@ -29,8 +29,8 @@
 	<footer class="entry-meta">
 		<?php accessiblezen_posted_on(); ?>
 		<span class="post-format-info">
-			<?php get_post_format_archive_link(); ?>
-			<?php get_post_format_icon(); ?>
+			<?php accessiblezen_get_post_format_archive_link(); ?>
+			<?php accessiblezen_get_post_format_icon(); ?>
 		</span>
 		<?php
 			edit_post_link(

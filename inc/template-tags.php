@@ -218,29 +218,29 @@ function accessiblezen_cats_and_tags() {
 }
 endif; // ends check for accessiblezen_cats_and_tags
 
-if ( ! function_exists( 'get_post_format_archive_link' ) ) :
+if ( ! function_exists( 'accessiblezen_get_post_format_archive_link' ) ) :
 /**
  * Prints a link to the Post Format archive page
- * Use: echo get_post_format_archive_link();
+ * Use: accessiblezen_get_post_format_archive_link();
  * @since Accessible Zen 1.0
  */
-function get_post_format_archive_link() {
-	$get_post_format_archive_link = sprintf(
+function accessiblezen_get_post_format_archive_link() {
+	$accessiblezen_get_post_format_archive_link = sprintf(
 		esc_html_x( 'Format: %s', 'post-format-archive-link', 'accessible-zen' ),
 		'<a href="' . esc_url( get_post_format_link( get_post_format() ) ) . '">' . get_post_format_string( get_post_format() ) . '</a>'
 	);
 
-	echo '<span class="post-format-archive-link">' . $get_post_format_archive_link . '</span>'; // WPCS: XSS OK.
+	echo '<span class="post-format-archive-link">' . $accessiblezen_get_post_format_archive_link . '</span>'; // WPCS: XSS OK.
 }
-endif; // ends check for get_post_format_archive_link
+endif; // ends check for accessiblezen_get_post_format_archive_link
 
-if ( ! function_exists( 'get_post_format_icon' ) ) :
+if ( ! function_exists( 'accessiblezen_get_post_format_icon' ) ) :
 /**
  * Prints the markup for the genericon icon font
  *
  * @since Accessible Zen 1.0
  */
-function get_post_format_icon() {
+function accessiblezen_get_post_format_icon() {
 	if ( has_post_format('aside') ) {
 		printf( '<span class="genericon genericon-aside"></span>' );
 	}
@@ -272,7 +272,7 @@ function get_post_format_icon() {
 		printf('<span class="genericon genericon-video"></span>');
 	}
 }
-endif; // ends check for get_post_format_icon
+endif; // ends check for accessiblezen_get_post_format_icon
 
 /**
  * Returns true if a blog has more than 1 category
