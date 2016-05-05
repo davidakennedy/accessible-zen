@@ -10,7 +10,7 @@
 
 if ( ! function_exists( 'accessiblezen_content_nav' ) ) :
 /**
- * Display navigation to next/previous pages when applicable
+ * Display navigation to next/previous pages when applicable.
  *
  * @since Accessible_Zen 1.0
  */
@@ -93,7 +93,7 @@ endif; // ends check for accessiblezen_posted_on
 
 if ( ! function_exists( 'accessiblezen_archive_page_title_etc' ) ) :
  /**
- * Display info for the page title on the archive page
+ * Display info for the page title on the archive page.
  *
  * @since Accessible Zen 1.0
  */
@@ -220,8 +220,8 @@ endif; // ends check for accessiblezen_cats_and_tags
 
 if ( ! function_exists( 'accessiblezen_get_post_format_archive_link' ) ) :
 /**
- * Prints a link to the Post Format archive page
- * Use: accessiblezen_get_post_format_archive_link();
+ * Prints a link to the Post Format archive page.
+ *
  * @since Accessible Zen 1.0
  */
 function accessiblezen_get_post_format_archive_link() {
@@ -236,7 +236,7 @@ endif; // ends check for accessiblezen_get_post_format_archive_link
 
 if ( ! function_exists( 'accessiblezen_get_post_format_icon' ) ) :
 /**
- * Prints the markup for the genericon icon font
+ * Prints the markup for the genericon icon font.
  *
  * @since Accessible Zen 1.0
  */
@@ -275,7 +275,7 @@ function accessiblezen_get_post_format_icon() {
 endif; // ends check for accessiblezen_get_post_format_icon
 
 /**
- * Returns true if a blog has more than 1 category
+ * Returns true if a blog has more than 1 category.
  *
  * @since Accessible Zen 1.0
  */
@@ -302,7 +302,7 @@ function accessiblezen_categorized_blog() {
 }
 
 /**
- * Flush out the transients used in accessiblezen_categorized_blog
+ * Flush out the transients used in accessiblezen_categorized_blog.
  *
  * @since Accessible Zen 1.0
  */

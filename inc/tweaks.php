@@ -110,7 +110,7 @@ endif; // accessiblezen_excerpt_length
 
 if ( ! function_exists( 'accessiblezen_continue_reading_link' ) ) :
 /**
- * Returns a "Continue Reading" link for excerpts
+ * Returns a "Continue Reading" link for excerpts.
  * @since Accessible Zen 1.0
  * @return string with 'Continue reading' link.
  */

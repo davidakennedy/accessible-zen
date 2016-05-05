@@ -193,7 +193,7 @@ function accessiblezen_mce_css( $mce_css ) {
 add_filter( 'mce_css', 'accessiblezen_mce_css' );
 
 /**
- * Enqueue scripts and styles
+ * Enqueue scripts and styles.
  */
 function accessiblezen_scripts_styles() {
 	global $wp_styles;
@@ -220,7 +220,7 @@ function accessiblezen_scripts_styles() {
 add_action( 'wp_enqueue_scripts', 'accessiblezen_scripts_styles' );
 
 /**
- * Implement the Custom Header feature
+ * Implement the Custom Header feature.
  */
 require( get_template_directory() . '/inc/custom-header.php' );
 
@@ -230,11 +230,11 @@ require( get_template_directory() . '/inc/custom-header.php' );
 require( get_template_directory() . '/inc/template-tags.php' );
 
 /**
- * Custom functions that act independently of the theme templates
+ * Add custom functions that act independently of the theme templates.
  */
 require( get_template_directory() . '/inc/tweaks.php' );
 
 /**
- * Customizer additions
+ * Add Customizer additions.
  */
 require( get_template_directory() . '/inc/customizer.php' );
